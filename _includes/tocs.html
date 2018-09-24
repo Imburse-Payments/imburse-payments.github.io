@@ -1,0 +1,30 @@
+<div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+    <div id="doc-nav" class="doc-nav">
+        <nav id="doc-menu" class="nav doc-menu flex-column sticky">                                 
+            
+            {% case include.toc %}
+
+                {% when 'guide_list' %}
+
+                    <a class="nav-link scrollto" href="#white-label">White Label</a>                        
+
+                {% when 'wl_workflows' %}
+
+                    <a class="nav-link scrollto" href="#collect-workflow">Collect Workflow</a>                          
+
+                {% when 'wl_integration' %}
+
+                    <a class="nav-link scrollto" href="#getting-started">Getting Started</a>                             
+                    <a class="nav-link scrollto" href="#api-endpoints">API Endpoints</a>                             
+                    <a class="nav-link scrollto" href="#localization">Localization</a>                             
+                    <a class="nav-link scrollto" href="#how-to-host-the-white-label-page">How to host the White Label page</a>                             
+                    <a class="nav-link scrollto" href="#events">Events</a>                             
+                    <a class="nav-link scrollto" href="#customization">Customization</a>                             
+                    <a class="nav-link scrollto" href="#white-label-document">White Label document</a>                             
+                    <a class="nav-link scrollto" href="#stylesheet-classes">Stylesheet Classes</a>                     
+                
+            {% endcase %}
+
+        </nav>                        
+    </div>
+</div>

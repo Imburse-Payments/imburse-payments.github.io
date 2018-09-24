@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}     
+
+<body class="{{ page.body_color }}">
+
+    <div class="page-wrapper">
+     
+        {% include header.html %}     
+
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><i class="{{ page.icon_class}}"></i> {{ page.title }}</h1>
+                    <div class="meta"><i class="far fa-clock"></i> Last updated: {{ page.last_updated }}</div>
+                </div>
+                <div class="doc-body row">
+                    <div class="doc-content col-md-9 col-12 order-1">
+                        <div class="content-inner">
+                            {{content}}           
+                        </div>
+                    </div>
+                                 
+                    {% if page.toc %}
+                        {% include tocs.html toc=page.toc %}
+                    {% endif %}    
+
+                </div>           
+            </div>
+        </div>
+        
+        <!-- {% include promo.html %} -->
+        
+    </div>
+
+    {% include footer.html %}
+ 
+    {% include main_javascript.html %}    
+    
+</body>
+</html> 

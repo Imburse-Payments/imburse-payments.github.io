@@ -1,133 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
+    <title>Imburse developers documentation</title>
     <meta charset="utf-8">
-    <title>Imburse - Developer Documentation</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="favicon.png">  
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">    
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+</head> 
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<body class="landing-page">   
+	
+	<!-- GITHUB BUTTON JS -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+         
+    <div class="page-wrapper">
+        
+        <header class="header text-center">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <img src="assets/images/logo-white-m.png">
+                        <span class="text-highlight">IMBURSE</span><span class="text-bold">DOCS</span>
+                    </h1>
+                </div>
+                <div class="tagline">
+                    <p>Guides, docs, and APIs!</p>                    
+                    <p>Your development hub for integrating with <span class="text-highlight">IMBURSE</span></p>
+                </div>
+                <div class="social-container">
+	                <div class="github-btn mb-2">
+                        <a class="github-button" href="https://github.com/Imburse-Payments" data-size="large" aria-label="Follow Imburse Payments on GitHub">Follow Imburse Payments on GitHub</a>
+	                </div>
+                </div>
+            </div>
+        </header>
+        
+        <section class="cards-section text-center">
+            <div class="container">
+                <h2 class="title">Getting started is easy!</h2>
+                <div class="intro">
+                    <p>Welcome to Imburse Docs. Everything your development team needs to successfully integrate Imburse into your solutions.</p>
+                </div>
 
-    <meta http-equiv="cleartype" content="on">
+                <div id="cards-wrapper" class="cards-wrapper row">
 
-    <style>
-      @font-face {
-        font-family: 'proximanova-light';
-        src: url('/resources/fonts/ProximaNovaLight.eot');
-        src: url('/resources/fonts/ProximaNovaLight.eot?#iefix') format('embedded-opentype'),
-             url('/resources/fonts/ProximaNovaLight.woff') format('woff'),
-             url('/resources/fonts/ProximaNovaLight.ttf') format('truetype');
-      }
+                    <div class="item item-green item-2 col-lg-4 col-6">
+                        <div class="item-inner">
+                            <div class="icon-holder">
+                                <span aria-hidden="true" class="icon icon_documents_alt"></span>
+                            </div>
+                            <h3 class="title">Guides</h3>
+                            <p class="intro">Our guides cover the core topics</p>
+                            <a class="link" href="pages/guides/"><span></span></a>
+                        </div>
+                    </div>
 
-      @font-face {
-        font-family: 'proximanova-regular';
-        src: url('/resources/fonts/ProximaNovaRegular.eot');
-        src: url('/resources/fonts/ProximaNovaRegular.eot?#iefix') format('embedded-opentype'),
-             url('/resources/fonts/ProximaNovaRegular.woff') format('woff'),
-             url('/resources/fonts/ProximaNovaRegular.ttf') format('truetype');
-      }
+                    <div class="item item-orange col-lg-4 col-6">
+                        <div class="item-inner">
+                            <div class="icon-holder">
+                                <span aria-hidden="true" class="icon fa fa-stream"></span>
+                            </div>
+                            <h3 class="title">APIs</h3>
+                            <p class="intro">View and download our postman hosted APIs documentation</p>
+                            <a class="link" href="https://api-docs.imbursepayments.com/" target="_blank"><span></span></a>
+                        </div>
+                    </div>
+             
+                    <div class="item item-blue col-lg-4 col-6">
+                        <div class="item-inner">
+                            <div class="icon-holder">
+                                <i class="icon fas fa-code"></i>
+                            </div>
+                            <h3 class="title">Code Samples</h3>
+                            <p class="intro">Imburse code samples hosted on Github</p>
+                            <a class="link" href="https://github.com/orgs/Imburse-Payments" target="_blank"><span></span></a>
+                        </div>
+                    </div>                 
 
-      @font-face {
-        font-family: 'proximanova-italic';
-        src: url('/resources/fonts/ProximaNovaRegularIt.eot');
-        src: url('/resources/fonts/ProximaNovaRegularIt.eot?#iefix') format('embedded-opentype'),
-             url('/resources/fonts/ProximaNovaRegularIt.woff') format('woff'),
-             url('/resources/fonts/ProximaNovaRegularIt.ttf') format('truetype');
-      }
+                    <!-- <div class="item item-purple col-lg-4 col-6">
+                        <div class="item-inner">
+                            <div class="icon-holder">
+                                <span aria-hidden="true" class="icon icon_lifesaver"></span>
+                            </div>
+                            <h3 class="title">FAQs</h3>
+                            <p class="intro">Your common questions answered</p>
+                            <a class="link" href="faqs.html"><span></span></a>
+                        </div>
+                    </div> -->
 
-      @font-face {
-        font-family: 'proximanova-semibold';
-        src: url('/resources/fonts/ProximaNovaSemibold.eot');
-        src: url('/resources/fonts/ProximaNovaSemibold.eot?#iefix') format('embedded-opentype'),
-             url('/resources/fonts/ProximaNovaSemibold.woff') format('woff'),
-             url('/resources/fonts/ProximaNovaSemibold.ttf') format('truetype');
-      }
+                    <!-- <div class="item item-primary col-lg-4 col-6">
+                        <div class="item-inner">
+                            <div class="icon-holder">
+                                <span aria-hidden="true" class="icon icon_genius"></span>
+                            </div>
+                            <h3 class="title">Showcase</h3>
+                            <p class="intro">Layout for showcase page. Lorem ipsum dolor sit amet, consectetuer adipiscing elit </p>
+                            <a class="link" href="showcase.html"><span></span></a>
+                        </div>
+                    </div> -->
 
-      @font-face {
-        font-family: 'proximanova-bold';
-        src: url('/resources/fonts/ProximaNovaBold.eot');
-        src: url('/resources/fonts/ProximaNovaBold.eot?#iefix') format('embedded-opentype'),
-             url('/resources/fonts/ProximaNovaBold.woff') format('woff'),
-             url('/resources/fonts/ProximaNovaBold.ttf') format('truetype');
-      }
-    </style>
+                    <!-- <div class="item item-pink col-lg-4 col-6">
+                        <div class="item-inner">
+                            <div class="icon-holder">
+                                <span aria-hidden="true" class="icon icon_gift"></span>
+                            </div>
+                            <h3 class="title">License &amp; Credits</h3>
+                            <p class="intro">Layout for license &amp; credits page. Consectetuer adipiscing elit.</p>
+                            <a class="link" href="license.html"><span></span></a>
+                        </div>
+                    </div> -->
 
-    <link href="/resources/css/application.css" rel="stylesheet">
-
-    <!-- Le HTML5 shim -->
-    <!--[if lt IE 9]>
-      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-  </head>
-
-  <body>
-
-    <div class="layout-header">
-      <div class="container">
-        <div class="logo-container">
-          <a href="/" class="logo"><img alt="Logo" src="/resources/images/imburse-blue.png"></a>
-          <div class="description">
-            Imburse Developer Documentation
-          </div>
-        </div>
-        <nav>
-          <a href="https://www.imbursepayments.com/">Home</a>
-          <a href="#" target="_blank">Developer Documentation</a>
-          <a href="#" target="_blank">API Documentation</a>
-        </nav>
-      </div>
-    </div>
-
-    <div class="layout-content">
-      <div class="container">
-        <div class="row">
-          <div class="span2 sidenav">
-            <h6>API</h6>
-            <ul>
-              <li><a href="#">Endpoint one</a></li>
-              <li><a href="#">Endpoint two</a></li>
-              <li><a href="#">Endpoint three</a></li>
-            </ul>
-
-            <h6>Article</h6>
-            <ul>
-              <li><a href="#">Article one</a></li>
-              <li><a href="#">Article two</a></li>
-              <li><a href="#">Article </a></li>
-            </ul>
-          </div>
-          <div class="span10 content-area">
-
-            <h3>Article title</h3>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vulputate nulla ligula, et sollicitudin augue fermentum suscipit. Nullam eget congue nulla, a malesuada sapien. Phasellus et ullamcorper augue. Suspendisse non orci in dolor ultricies tincidunt. Praesent blandit egestas metus, a maximus dui molestie vel. Nullam at vestibulum nisi. Cras a lectus erat. Fusce a arcu metus. Sed rutrum odio a nunc molestie feugiat. Maecenas ac ipsum a enim ultricies fringilla. Sed facilisis erat justo, cursus condimentum ante condimentum vel. In fermentum sem eget lobortis auctor. Nunc non enim ornare, venenatis eros a, tristique nisl. Suspendisse nulla ligula, sollicitudin ut congue vitae, hendrerit nec augue. Vivamus non ultrices massa. Pellentesque tristique mauris sit amet est congue mattis quis sed felis.</p>
-
-            <p>Duis lectus tortor, ornare nec lorem sed, auctor maximus dui. Nullam in dictum massa. Vivamus commodo, quam a gravida semper, justo libero ullamcorper magna, in venenatis nisl urna sed lorem. Curabitur vel vulputate eros, et gravida ex. Nunc convallis iaculis nisl, vitae ultrices purus consectetur non. Aenean egestas bibendum urna. Etiam molestie est vitae bibendum consectetur. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas vel lacinia massa, vitae porta erat. Nunc dapibus fermentum purus, eget suscipit massa scelerisque ac. Phasellus sed porttitor neque, in pellentesque ex. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam sed gravida nisl, a feugiat diam.</p>
+                </div>
                 
-            <p>Nullam dapibus enim ac magna lobortis vehicula. Nulla facilisi. Maecenas tincidunt pellentesque sollicitudin. Nam sagittis odio at augue iaculis, eget elementum lacus facilisis. Suspendisse potenti. Ut nec varius lectus. Nunc sed odio et ante pellentesque auctor. Praesent non eleifend ligula. Nulla aliquet odio nibh, id laoreet dolor sagittis ac. Quisque finibus in massa vel interdum. Cras fermentum libero sed nisi hendrerit ullamcorper. Morbi porta odio at risus dapibus, id sollicitudin leo faucibus.</p>
-                
-            <p>Vestibulum elit eros, condimentum et leo at, pharetra egestas augue. Praesent vehicula lectus justo, viverra mollis turpis cursus tempus. Nunc ac quam dui. Sed justo mauris, tempus quis lacinia at, placerat non neque. Quisque ornare arcu fringilla egestas fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed at tincidunt nunc. Sed eget lorem id dui tincidunt aliquam. Praesent non vestibulum nisl. Vivamus efficitur, tellus vitae pulvinar vulputate, lacus turpis elementum nibh, a vestibulum leo nisl eu augue. Quisque ullamcorper porttitor nisi, at facilisis diam vestibulum eu. Aenean in felis luctus lacus hendrerit laoreet eget in turpis. Curabitur ultricies ultricies magna, in egestas elit placerat id. Sed et enim leo.</p>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="layout-footer clearfix">
-      <div class="container">
-        <div class="row">
-          <div class="section span6 align-right">
-            <a href="https://www.imbursepayments.com/"><img src="/resources/images/imburse-white.png" style="width:100px;"></a>
-          </div>
-          <div class="section span6">
-            <h6>Imburse AG</h6>
-            <p>Stockerstrasse 44 <br/> 8002 Zurich, Switzerland.</p>
-          </div>
-        </div>
-      </div>
+            </div>
+        </section>
     </div>
     
-  </body>
-</html>
+    <footer class="footer text-center">
+        <div class="container">
+            <small class="copyright">Designed by <img src="assets/images/logo-white-small.png"> for developers</small>            
+        </div>
+    </footer>    
+     
+    <!-- Main Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>     
+    <script type="text/javascript" src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>                                                                
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    
+</body>
+</html> 
+
