@@ -1,3 +1,7 @@
+---
+layout: page
+title: Clients Title
+---
 # Clients
 
 Client objects allow you to perform updates to clients. The API allows you to create, delete, and update your clients. You can retrieve individual clients as well as a list of all your clients.
