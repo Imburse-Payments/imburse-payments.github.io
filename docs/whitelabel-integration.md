@@ -1,5 +1,5 @@
 ---
-layout: bt
+layout: slate
 title: White Label Integration
 ---
 # White Label Integration

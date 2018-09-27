@@ -1,5 +1,5 @@
 ---
-layout: bt
+layout: slate
 title: Index title
 ---
 # Guides Overview
