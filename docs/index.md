@@ -2,12 +2,8 @@
 layout: bt
 title: Index title
 ---
-# Index header 
+# Guides Overview
 
-Index header bla bla bla
-
-## Index subheader 1
-
-Index sub header bla bla bla
+We've compiled guides for integration to White Label.........
 
 
