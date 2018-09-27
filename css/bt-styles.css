@@ -2726,6 +2726,13 @@ Animation
   .ie9 .logo {
     margin-top: 36px; }
 
+.logo--fallback {
+  display: none;
+  font-family: monospace;
+  font-size: 18px; }
+  .ie8 .logo--fallback {
+    display: block; }
+
 /**
  * Modifier
  */
