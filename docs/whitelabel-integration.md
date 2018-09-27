@@ -33,7 +33,7 @@ To test the interface, a sandbox test environment with the following endpoint is
 The sandbox will not trigger any postings to any bank accounts, even with a test bank account.
 </aside>
 
-###Transport Layer Security
+### Transport Layer Security
 Imburse can only be accessed via encrypted endpoints (HTTPS). The Payment Card Industry Security Standards Council already recommends the use of TLS 1.2 for API connections. The following cipher suites are recommended for TLS 1.2: ECDHE-RSA-AES256-GCM-SHA384
 
 Statement:
@@ -93,7 +93,7 @@ The example below will shows an `IFrame` hosting the sandbox site targeting the 
 
 The White Label solution will raise Events during the workflow lifecycle. The API documentation for individual workflows, ie. `collect`, will cover the specific events. Listen for these events and take appropriate action in the host system. See the example on the right hand panel.
 
-##Customization
+## Customization
 
 Our White Label solution is built using `Bootstrap v4.1.3`, using the `container-fluid` container class. 
 
