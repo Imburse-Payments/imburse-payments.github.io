@@ -72,7 +72,7 @@
         {% endunless %}
 
         {% unless include.anchor_class == blank %}
-            {% capture anchorClass %}{:.{{ include.anchor_class | replace: '%level%', headerLevel }}}{% endcapture %}
+            {% capture anchorClass %}{{ include.anchor_class | replace: '%level%', headerLevel }}{% endcapture %}
         {% endunless %}        
 
         {% capture my_toc %}{{ my_toc }}
