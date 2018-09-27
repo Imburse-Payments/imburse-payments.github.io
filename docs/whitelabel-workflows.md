@@ -1,5 +1,5 @@
 ---
-layout: slate
+layout: bt
 title: White Label Workflows
 ---
 # White Label Workflows
