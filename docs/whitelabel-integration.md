@@ -33,7 +33,9 @@ To test the interface, a sandbox test environment with the following endpoint is
 The sandbox will not trigger any postings to any bank accounts, even with a test bank account.
 </aside>
 
+
 ### Transport Layer Security
+
 Imburse can only be accessed via encrypted endpoints (HTTPS). The Payment Card Industry Security Standards Council already recommends the use of TLS 1.2 for API connections. The following cipher suites are recommended for TLS 1.2: ECDHE-RSA-AES256-GCM-SHA384
 
 Statement:
