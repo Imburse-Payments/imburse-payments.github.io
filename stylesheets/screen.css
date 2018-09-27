@@ -453,7 +453,7 @@ html,body {
     min-height: 100%;
     padding-bottom: 1px
 }
-
+/* 
 .page-wrapper .dark-box {
     width: 50%;
     background-color: #2E3336;
@@ -461,7 +461,7 @@ html,body {
     right: 0;
     top: 0;
     bottom: 0
-}
+} */
 
 .page-wrapper .lang-selector {
     position: fixed;
