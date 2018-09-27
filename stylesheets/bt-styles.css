@@ -2739,7 +2739,7 @@ Animation
 .logo--mark {
   display: inline-block;
   text-indent: -999em;
-  background: url("/images/imburse-blue.png") no-repeat center center;
+  background: url("/images/logo.png") no-repeat center center;
   width: 20px;
   height: 36px;
   background-position: left center;
