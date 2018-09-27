@@ -2732,53 +2732,19 @@ Animation
 .logo--mark {
   display: inline-block;
   text-indent: -999em;
-  background: url("../img/svg/logo-tiny.svg") no-repeat center center;
+  background: url("/images/imburse-blue.png") no-repeat center center;
   width: 20px;
   height: 36px;
   background-position: left center;
   position: relative;
   width: 15px; }
-  .logo--mark .no-svg,
-  .ie8 .logo--mark {
-    background: url("../img/svg/logo-tiny.png") no-repeat center center; }
-  .logo--mark:focus {
-    border-bottom: 2px solid #1524D9; }
-  @media (min-width: 880px) {
-    .logo--mark {
-      display: inline-block;
-      text-indent: -999em;
-      background: url("../img/svg/logo.svg") no-repeat center center;
-      width: 130px;
-      height: 30px; }
-      .logo--mark .no-svg,
-      .ie8 .logo--mark {
-        background: url("../img/svg/logo.png") no-repeat center center; } }
-  .support__brand .logo--mark {
-    display: inline-block;
-    text-indent: -999em;
-    background: url("../img/svg/logo.svg") no-repeat center center;
-    width: 130px;
-    height: 30px; }
-    .support__brand .logo--mark .no-svg,
-    .ie8 .support__brand .logo--mark {
-      background: url("../img/svg/logo.png") no-repeat center center; }
-
 .logo--mark--light {
   display: inline-block;
   text-indent: -999em;
-  background: url("../img/svg/logo--light.svg") no-repeat center center;
+  background: url("/images/imburse-white.png") no-repeat center center;
   width: 130px;
   height: 30px; }
-  .logo--mark--light .no-svg,
-  .ie8 .logo--mark--light {
-    background: url("../img/svg/logo--light.png") no-repeat center center; }
-
-.logo--fallback {
-  display: none;
-  font-family: monospace;
-  font-size: 18px; }
-  .ie8 .logo--fallback {
-    display: block; }
+ 
 
 /* ==========================================================================
    Keyframes
