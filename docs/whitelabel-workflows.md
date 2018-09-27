@@ -41,7 +41,7 @@ Event name | Trigger |  Description
 
 
 
-####imburse:payment_succeeded
+#### imburse:payment_succeeded
 
 > Example Payment Succeeded Message
 

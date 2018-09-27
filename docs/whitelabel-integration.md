@@ -68,9 +68,9 @@ Users should host the White Label page within an **IFrame** element.
 
 The example below will shows an `IFrame` hosting the sandbox site targeting the `collect` workflow. 
 
-`
+```
  <iframe src='https://sandbox.whitelabel.imbursepayments.com/?workflow=collect&bearerToken={bearerToken}&language=en-gb' />
-`
+```
 
 ## Events
 
