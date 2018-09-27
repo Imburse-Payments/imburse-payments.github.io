@@ -54,7 +54,6 @@
                             </div>
 
                             <div class="toc-wrapper">
-                                <img src="/images/logo.png" class="logo" alt="Logo" />
                                 <div class="search">
                                     <input type="text" class="search" id="input-search" placeholder="Search">
                                 </div>
@@ -66,14 +65,22 @@
                         </div>
                     </div>
 
-                    <div class="page-wrapper">
+                    <div class="flex-content documentation-content__wrapper page-wrapper">
+                        <div class="content">
+                            {{ content }}
+                        </div>
+                        <div class="dark-box">
+                        </div>
+                    </div>  
+
+                    <!-- <div class="page-wrapper">
                         <div class="dark-box"></div>
                         <div class="content">
                             {{ content }}
                         </div>
                         <div class="dark-box">
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 
             </div>
