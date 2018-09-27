@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: bt
 title: Index title
 ---
 # Index header 

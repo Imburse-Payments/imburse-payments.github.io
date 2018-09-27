@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: bt
 title: Clients Title
 ---
 # Clients
