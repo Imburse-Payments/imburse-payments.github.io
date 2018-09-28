@@ -14,78 +14,58 @@
         <script src="{{ site.baseurl }}/javascripts/all.js"></script>
     </head> 
 
-    <body class="developers-site" data-languages="[]">
-        <div class="root ">
-            <div class="flex app">
+    <body class="index" data-languages="[]">      
 
-                <header class="header">
-                    <a class="logo" href="/">
-                        <h1 class="logo--fallback">Imburse Developers</h1>
-                        <div class="logo--mark"></div>
-                    </a>
-                    <div class="header__nav">
-                        <ul class="nav__list" id="main-nav-links">
-                            <li class="nav__item">
-                                <a class="nav__link " href="/start" data-autotrack="dd__navbar--get-started" data-track-event-properties="project=journey&docs,context=navbar,component=link,action=click,container=header,descriptor=get started,origin=b_docs">Get Started</a>
-                            </li>
-                            <li class="nav__item">
-                                <a class="nav__link is-active" href="/guides" data-autotrack="dd__navbar--guides" data-track-event-properties="project=journey&docs,context=navbar,component=link,action=click,container=header,descriptor=guides,origin=b_docs">Guides</a>
-                            </li>
-                            <li class="nav__item">
-                                <a class="nav__link " href="/reference" data-autotrack="dd__navbar--reference" data-track-event-properties="project=journey&docs,context=navbar,component=link,action=click,container=header,descriptor=reference,origin=b_docs">Reference</a>
-                            </li>
-                        </ul>
-                    </div>
-                </header>
+        <header class="header">
+            <a class="logo" href="/">
+                <h1 class="logo--fallback">Imburse Developers</h1>
+                <div class="logo--mark"></div>
+            </a>
+            <div class="header__nav">
+                <ul class="nav__list" id="main-nav-links">
+                    <li class="nav__item">
+                        <a class="nav__link " href="/start" data-autotrack="dd__navbar--get-started" data-track-event-properties="project=journey&docs,context=navbar,component=link,action=click,container=header,descriptor=get started,origin=b_docs">Get Started</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link is-active" href="/guides" data-autotrack="dd__navbar--guides" data-track-event-properties="project=journey&docs,context=navbar,component=link,action=click,container=header,descriptor=guides,origin=b_docs">Guides</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link " href="/reference" data-autotrack="dd__navbar--reference" data-track-event-properties="project=journey&docs,context=navbar,component=link,action=click,container=header,descriptor=reference,origin=b_docs">Reference</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
 
-                <a href="#" id="nav-button">
-                    <span>
-                    MENU
-                    <img src="/images/navbar.png" alt="Navbar" />
-                    </span>
-                </a>
+        <a href="#" id="nav-button">
+            <span>
+            MENU
+            <img src="/images/navbar.png" alt="Navbar" />
+            </span>
+        </a>
 
-                <div class="flex-body">
-                    <div class="flex-sidebar documentation-sidebar">
-                        <div class="sidebar">
-                        <div class="sidebar__inner">
-                            <div class="sidebar__title">
-                                GUIDE TITLE GOES HERE
-                            </div>
+        <div>
+            GUIDE TITLE GOES HERE
+        </div>
 
-                            <div class="toc-wrapper">
-                                <div class="search">
-                                    <input type="text" class="search" id="input-search" placeholder="Search">
-                                </div>
-                                <ul class="search-results"></ul>
-                                <div id="toc" class="toc-list-h1">
-                                    {% include toc.html html=content sanitize=true anchor_class="toc-h%level%.toc-link" h_min=1 h_max=3 %}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flex-content documentation-content__wrapper page-wrapper">
-                        <div class="content">
-                            {{ content }}
-                        </div>
-                        <div class="dark-box">
-                        </div>
-                    </div>  
-
-                    <!-- <div class="page-wrapper">
-                        <div class="dark-box"></div>
-                        <div class="content">
-                            {{ content }}
-                        </div>
-                        <div class="dark-box">
-                        </div>
-                    </div> -->
-                </div>
-                
+        <div class="toc-wrapper">
+            <div class="search">
+                <input type="text" class="search" id="input-search" placeholder="Search">
+            </div>
+            <ul class="search-results"></ul>
+            <div id="toc" class="toc-list-h1">
+                {% include toc.html html=content sanitize=true anchor_class="toc-h%level%.toc-link" h_min=1 h_max=3 %}
             </div>
         </div>
 
+        <div class="page-wrapper">
+            <div class="dark-box"></div>
+            <div class="content">
+                {{ content }}
+            </div>
+            <div class="dark-box">
+            </div>
+        </div>  
+      
     </body>
 </html>     
 
