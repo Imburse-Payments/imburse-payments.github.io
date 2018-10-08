@@ -257,10 +257,16 @@ select {
   text-decoration: none;
 }
 
-.branding .logo img {
-  margin-bottom: 10px;
+.landing-page .branding .logo img {
+  margin-bottom: 8px;
   margin-right: -10px;
-  height: 30px;
+  height: 27px;
+}
+
+.branding .logo img {
+  margin-bottom: 6px;
+  margin-right: 0px;
+  height: 20px;
 }
 
 .branding .text-highlight {
