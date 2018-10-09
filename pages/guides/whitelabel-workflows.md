@@ -1,7 +1,7 @@
 ---
 layout: default
 title: White Label Workflows
-toc: wl_integration
+toc: wl_workflows
 body_color: body-green
 section_name: Guides
 last_updated: October 1st, 2018
