@@ -22,20 +22,20 @@ Before you can successfully integrate the White Label solution into your site, y
 - **BearerToken**
 
 	Each time you call the White Label URL, you will need to pass a valid `bearerToken` parameter. 
-	The `bearerToken` is a secure token representing the requirements of the transaction (ie. `amount`, `currency`, `payment scheme`, etc). Please refer to the [Transaction API documentation](TransactionApi) for details of how to create this.
+	The `bearerToken` is a secure token representing the requirements of the transaction (ie. `amount`, `currency`, `payment scheme`, etc). Please refer to the Payments API documentation for details of how to create this.
 
 ## API Endpoints
 
 The Imburse White Label interface can be reached via the following URL:
 
-`https://whitelabel.imbursepayments.com`
+`https://live.imbursepayments.com/wl/`
 
 To test the interface, a sandbox test environment with the following endpoint is available. 
 
-`https://sandbox-whitelabel.imbursepayments.com`
+`https://sandbox.imbursepayments.com/wl/`
 
 <aside class="notice">
-The sandbox will not trigger any postings to any bank accounts, even with a test bank account.
+The sandbox will not trigger any postings to any PSPs.
 </aside>
 
 
@@ -69,21 +69,46 @@ Language | Language parameter
 English  | en-GB
 German   | de-DE
 
-## How to host the White Label page
+## Hosting Options
 
-Users should host the White Label page within an **IFrame** element. 
+The White Label solution can be hosted in an **IFrame** element 
 
-The example below will shows an `IFrame` hosting the sandbox site targeting the `collect` workflow. 
+The example below shows an `IFrame` hosting the sandbox site targeting the `collect` workflow. 
 
 ``` html
- <iframe src='https://sandbox.whitelabel.imbursepayments.com/?workflow=collect&bearerToken={bearerToken}&language=en-gb' />
+ <iframe src='https://sandbox.imbursepayments.com/wl/?workflow=collect&bearerToken={bearerToken}&language=en-GB' />
 ```
+
+## Workflows
+
+Imburse currently supports the following workflows:
+
+1. **Collect** - for the Collection of money
+
+### The Collect Workflow
+
+The Collect workflow is used to initiate the collection of money. The Collect workflow follows these steps:
+
+1.	**Select Payment Method** - User selects the payment method they would like to use
+2.	**Submit Payment Details** - Depending on the payment method chosen, a relevent work flow will be initiated ie. `Credit Card entry`, `PayPal authentication`, `PayDirekt logon`, etc.
+
+#### Parameters
+
+Parameter | Description
+-|-
+workflow | Use `collect` for the *Collect Workflow*.
+bearerToken  | The `bearerToken` parameter value is obtained by calling the Transaction API. Refer to the [Transaction API](Transaction-API) for further details.
+language       | The `language` parameter can be used to localize the site to the language of your choice. If the `language` parameter is not specified, localization will default to **English**. Refer to the [Localization](#localization) section for valid language parameter values.
+
+#### Usage
+
+`https://whitelabel.imbursepayments.com/workflow=collect?bearerToken={bearerToken}&language={language}`
 
 ## Events
 
-The White Label solution will raise Events during the workflow lifecycle. The API documentation for individual workflows, ie. `collect`, will cover the specific events. Listen for these events and take appropriate action in the host system. See the example on the right hand panel.
+The White Label solution will raise Events during a workflows lifecycle. Attaching a listener to listen for these events allows you to respond appropriately in your host application.
 
-##### Example Event Listener
+#### Example Event Listener
 
 ```javascript
 <script> 
@@ -98,6 +123,149 @@ The White Label solution will raise Events during the workflow lifecycle. The AP
 
 	},false); 
 </script>
+```
+
+#### Event Types
+
+The table below shows the available events you can listen and respond to.
+
+Event name | Trigger |  Description
+-|-|-
+**imburse_payment_succeeded** | Successful payment submission. | Raised to indicate successful payment submission.<br/><br/>See [imburse_payment_succeeded](#imburse_payment_succeeded).
+**imburse_payment_failed** | Failed payment submission. | Raised to indicate an unsuccessful payment submission. The `messageDescription` property contains the failure reason or reasons.<br/><br/>See [imburse_payment_failed](#imburse_payment_failed).
+**imburse_invalid_token** | Bearer Token Invalid | The bearer token had expired, was invalid, or had already been submitted.<br/><br/>See [imburse_invalid_token](#imburse_invalid_token).
+**imburse_internal_server_error** | Unexpected Error | An error occurred internally when submitting the payment.<br/><br/>See [imburse_internal_server_error](#imburse_internal_server_error).
+**imburse_tokenization_error** | Tokenization error on PSPs' server | Occurs when there is a tokenisation failure on the PSP server.<br/><br/>See [imburse_tokenization_error](#imburse_tokenization_error).
+**imburse_gateway_error** | Gateway error on PSPs' server | Occurs when the PSP gateway cannot be contacted.<br/><br/>See [imburse_gateway_error](#imburse_gateway_error).
+**imburse_unexpected_error** | Unexpected error on the PSPs server | Occurs when there is an unexpected failure on PSP server.<br/><br/>See [imburse_unexpected_error](#imburse_unexpected_error).
+
+
+##### imburse_payment_succeeded
+
+Property | Description
+---------|------------
+bearerToken | The `bearerToken` that was passed into the White Label url. Use this to correlate events to specific transactions in your host system.
+providerName | The `providerName` will be the name of the PSP connected to the selected payment method.
+messageType | Value will be `imburse_payment_succeeded`.
+
+##### Example Payment Succeeded Message
+
+```json
+{ 
+	"bearerToken": "{bearerToken}", 
+    "providerName": "{providerName}",
+	"messageType": "imburse_payment_succeeded" 
+}
+```
+
+#### imburse_payment_failed
+
+Property | Description
+---------|------------
+bearerToken | The `bearerToken` that was passed into the White Label url. Use this to correlate events to specific transactions in your host system.
+providerName | The `providerName` will be the name of the PSP connected to the selected payment method.
+messageType | Value will be `imburse_payment_failed`.
+messageDescription | The failure reason or reasons.
+
+##### Example Payment Failed Message
+
+```json
+{ 
+	"bearerToken": "{bearerToken}", 
+    "providerName": "{providerName}",
+	"messageType": "imburse_payment_failed", 
+	"messageDescription": "{error message}" 
+}
+```
+
+#### imburse_invalid_token
+
+Property | Description
+---------|------------
+bearerToken | The `bearerToken` that was passed into the White Label url. Use this to correlate events to specific transactions in your host system.
+providerName | The `providerName` will be the name of the PSP connected to the selected payment method.
+messageType | Value will be `imburse_invalid_token`.
+
+##### Example Invalid Token Message
+
+```json
+{ 
+	"bearerToken": "{bearerToken}", 
+    "providerName": "{providerName}",
+	"messageType": "imburse_invalid_token" 
+}
+```
+
+#### imburse_internal_server_error
+
+Property | Description
+---------|------------
+bearerToken | The `bearerToken` that was passed into the White Label url. Use this to correlate events to specific transactions in your host system.
+providerName | The `providerName` will be the name of the PSP connected to the selected payment method.
+messageType | Value will be `imburse_internal_server_error`.
+
+##### Example Internal Server Error Message
+
+```json
+{ 
+	"bearerToken": "{bearerToken}", 
+    "providerName": "{providerName}",
+	"messageType": "imburse_internal_server_error" 
+}
+```
+
+#### imburse_tokenization_error
+
+Property | Description
+---------|------------
+bearerToken | The `bearerToken` that was passed into the White Label url. Use this to correlate events to specific transactions in your host system.
+providerName | The `providerName` will be the name of the PSP connected to the selected payment method.
+messageType | Value will be `imburse_tokenization_error`.
+
+##### Example Tokenization Error Message
+
+```json
+{ 
+	"bearerToken": "{bearerToken}", 
+    "providerName": "{providerName}",
+	"messageType": "imburse_tokenization_error" 
+}
+```
+
+#### imburse_gateway_error
+
+Property | Description
+---------|------------
+bearerToken | The `bearerToken` that was passed into the White Label url. Use this to correlate events to specific transactions in your host system.
+providerName | The `providerName` will be the name of the PSP connected to the selected payment method.
+messageType | Value will be `imburse_gateway_error`.
+
+##### Example Gateway Error Message
+
+```json
+{ 
+	"bearerToken": "{bearerToken}", 
+    "providerName": "{providerName}",
+	"messageType": "imburse_gateway_error" 
+}
+```
+
+#### imburse_unexpected_error
+
+Property | Description
+---------|------------
+bearerToken | The `bearerToken` that was passed into the White Label url. Use this to correlate events to specific transactions in your host system.
+providerName | The `providerName` will be the name of the PSP connected to the selected payment method.
+messageType | Value will be `imburse_unexpected_error`.
+
+##### Example Unexpected Error Message
+
+```json
+{ 
+	"bearerToken": "{bearerToken}", 
+    "providerName": "{providerName}",
+	"messageType": "imburse_unexpected_error" 
+}
 ```
 
 ## Customization
@@ -456,7 +624,7 @@ CSS Property | Description
 `.expiration-month` | Expiration month field and label styling
 `.expiration-year`  | Expiration year field styling
 `.payment-methods` | List of available payment method icons styling 
-`.payment-method`  | Styling for the payment method icon<br/><br/>Payment method specific styles are also available; just append the payment method name to the end of this class name.<br/></br>ie. `payment-method-visa-debit`, `payment-method-paypal`, etc.<br/><br/>For a complete list of available payment methods, see the [Payment Method Specific Styles](#payment-method-specific-styles) section below.
+`.payment-method`  | Styling for the payment method icon<br/><br/>Payment method specific styles are also available; just append the payment method name to the end of this class name.<br/><br/>ie. `payment-method-visa-debit`, `payment-method-paypal`, etc.<br/><br/>For a complete list of available payment methods, see the [Payment Method Specific Styles](#payment-method-specific-styles) section below.
 `.payment-method img`  | Payment method styling for the `img` tag
 `.invalid` | Styling applied when a field has an invalid value
 
