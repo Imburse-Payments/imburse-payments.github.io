@@ -103,7 +103,7 @@ language       | The `language` parameter can be used to localize the site to th
 
 `https://whitelabel.imbursepayments.com/bearerToken={bearerToken}&language={language}`
 
-## Webhook callbacks
+## Webhook Callbacks
 
 The White Label solution will send a webhook callback during a workflows' lifecycle. 
 
@@ -112,8 +112,7 @@ You can configure webhook callback addresses from the Imburse Portal.
 The body of the webhook will contain a JSON payload with details of the event.
 
 
-
-### Webhook events
+### Webhook Events
 
 The table below shows the events that you can respond to from your webhook.
 
