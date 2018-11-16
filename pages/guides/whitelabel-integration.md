@@ -28,11 +28,11 @@ Before you can successfully integrate the White Label solution into your site, y
 
 The Imburse White Label interface can be reached via the following URL:
 
-`https://live.imbursepayments.com/wl/`
+`https://whitelabel.imbursepayments.com/`
 
 To test the interface, a sandbox test environment with the following endpoint is available. 
 
-`https://sandbox.imbursepayments.com/wl/`
+`https://sandbox-whitelabel.imbursepayments.com/`
 
 <aside class="notice">
 The sandbox will not trigger any postings to any PSPs.
@@ -73,10 +73,10 @@ German   | de-DE
 
 The White Label solution can be hosted in an **IFrame** element 
 
-The example below shows an `IFrame` hosting the sandbox site targeting the `collect` workflow. 
+The example below shows an `IFrame` hosting the sandbox whitelabel site. 
 
 ``` html
- <iframe src='https://sandbox.imbursepayments.com/wl/?workflow=collect&bearerToken={bearerToken}&language=en-GB' />
+ <iframe src='https://sandbox-whitelabel.imbursepayments.com?bearerToken={bearerToken}&language=en-GB' />
 ```
 
 ## Workflows
@@ -89,45 +89,33 @@ Imburse currently supports the following workflows:
 
 The Collect workflow is used to initiate the collection of money. The Collect workflow follows these steps:
 
-1.	**Select Payment Method** - User selects the payment method they would like to use
-2.	**Submit Payment Details** - Depending on the payment method chosen, a relevent work flow will be initiated ie. `Credit Card entry`, `PayPal authentication`, `PayDirekt logon`, etc.
+1.  **Collect Billing Details** - Billing name, address, etc.
+2.	**Select Payment Method** -  If existing pre-authorised payment methods are available then the user can select one OR they may select a new payment method
 
 #### Parameters
 
 Parameter | Description
 -|-
-workflow | Use `collect` for the *Collect Workflow*.
 bearerToken  | The `bearerToken` parameter value is obtained by calling the Transaction API. Refer to the [Transaction API](Transaction-API) for further details.
 language       | The `language` parameter can be used to localize the site to the language of your choice. If the `language` parameter is not specified, localization will default to **English**. Refer to the [Localization](#localization) section for valid language parameter values.
 
 #### Usage
 
-`https://whitelabel.imbursepayments.com/workflow=collect?bearerToken={bearerToken}&language={language}`
+`https://whitelabel.imbursepayments.com/bearerToken={bearerToken}&language={language}`
 
-## Events
+## Webhook callbacks
 
-The White Label solution will raise Events during a workflows lifecycle. Attaching a listener to listen for these events allows you to respond appropriately in your host application.
+The White Label solution will send a webhook callback during a workflows' lifecycle. 
 
-#### Example Event Listener
+You can configure webhook callback addresses from the Imburse Portal.
 
-```javascript
-<script> 
-	window.addEventListener("message", function (e) {
-        // replace {url} in the line below with either the sandbox or production endpoint.
- 		if (e.origin !== '{url}') {
-  			return;
-        }
+The body of the webhook will contain a JSON payload with details of the event.
 
-        // e.data will contain the appropriate message object
-        console.log(e.data);
 
-	},false); 
-</script>
-```
 
-#### Event Types
+### Webhook events
 
-The table below shows the available events you can listen and respond to.
+The table below shows the events that you can respond to from your webhook.
 
 Event name | Trigger |  Description
 -|-|-
