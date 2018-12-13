@@ -9,7 +9,7 @@ icon_class: icon_documents_alt icon
 ---
 # Overview
 
-Imburse's White Label integration offloads the need to provide payment method selection and collection features yourself. We do all the heavy lifting. It's the easiest way to integrate into Imburse. 
+Imburse's White Label integration offloads the need to provide your own payment collection features yourself. We do all the heavy lifting. It's the easiest way to integrate into Imburse. 
 
 ## Getting Started
 
@@ -22,9 +22,12 @@ Before you can successfully integrate the White Label solution into your site, y
 - **BearerToken**
 
 	Each time you call the White Label URL, you will need to pass a valid `bearerToken` parameter. 
-	The `bearerToken` is a secure token representing the requirements of the transaction (ie. `amount`, `currency`, `payment scheme`, etc). Please refer to the Payments API documentation for details of how to create this.
+	
+    The `bearerToken` is a secure token representing the payment instruction (ie. `amount`, `currency`, `payment scheme`, etc). 
+    
+    See the [Create Payment Token(https://api-docs.imbursepayments.com/#d306ef84-da1b-4970-91b1-403f178c0af7)] API method for details of how to create this.
 
-## API Endpoints
+## Whitelabel Endpoints
 
 The Imburse White Label interface can be reached via the following URL:
 
@@ -33,27 +36,6 @@ The Imburse White Label interface can be reached via the following URL:
 To test the interface, a sandbox test environment with the following endpoint is available. 
 
 `https://sandbox-whitelabel.imbursepayments.com/`
-
-<aside class="notice">
-The sandbox will not trigger any postings to any PSPs.
-</aside>
-
-
-### Transport Layer Security
-
-Imburse can only be accessed via encrypted endpoints (HTTPS). The Payment Card Industry Security Standards Council already recommends the use of TLS 1.2 for API connections. The following cipher suites are recommended for TLS 1.2: ECDHE-RSA-AES256-GCM-SHA384
-
-Statement:
-
-- This cipher suite is recommended by the BSI and can still be used until at least 2021 and beyond.
-- ECDHE offers Perfect Forward Secrecy.
-- ECDHE needs fewer resources than DHE.
-- AES256 is a strong encryption.
-- RSA is the underlying process for the private / public-key material.
-- SHA384 is a secure fast hash function for signatures.
-- SHA384 also provides protection against length extension attacks (as opposed to SHA256).
-- GCM is a modern cipher block mode for AES that prevents certain attack vectors that are possible with the alternative CBC.
-- GCM establishes Authenticated Encryption.
 
 ## Localization
 
@@ -79,46 +61,47 @@ The example below shows an `IFrame` hosting the sandbox whitelabel site.
  <iframe src='https://sandbox-whitelabel.imbursepayments.com?bearerToken={bearerToken}&language=en-GB' />
 ```
 
-## Workflows
+## Endpoint Usage
 
-Imburse currently supports the following workflows:
+`https://whitelabel.imbursepayments.com/bearerToken={bearerToken}&language={language}`
 
-1. **Collect** - for the Collection of money
-
-### The Collect Workflow
-
-The Collect workflow is used to initiate the collection of money. The Collect workflow follows these steps:
-
-1.  **Collect Billing Details** - Billing name, address, etc.
-2.	**Select Payment Method** -  If existing pre-authorised payment methods are available then the user can select one OR they may select a new payment method
-
-#### Parameters
+### Parameters
 
 Parameter | Description
 -|-
 bearerToken  | The `bearerToken` parameter value is obtained by calling the Transaction API. Refer to the [Transaction API](Transaction-API) for further details.
 language       | The `language` parameter can be used to localize the site to the language of your choice. If the `language` parameter is not specified, localization will default to **English**. Refer to the [Localization](#localization) section for valid language parameter values.
 
-#### Usage
+## Callbacks
 
-`https://whitelabel.imbursepayments.com/bearerToken={bearerToken}&language={language}`
+The White Label solution will redirect back to your specified callback urls during a workflows' lifecycle. 
 
-## Webhook Callbacks
+You configure the callback addresses within in the payment instruction request. See [Create Payment Token(https://api-docs.imbursepayments.com/#d306ef84-da1b-4970-91b1-403f178c0af7)] for details.
 
-The White Label solution will send a webhook callback during a workflows' lifecycle. 
+The table below shows the callback urls that would need to be configued in your payment instruction.
 
-You can configure webhook callback addresses from the Imburse Portal.
+Type | Description
+-|-
+Success | If the payment is sucessfull then we will redirect to this endpoint.
+Failed | If the payment has failed then we will redirect to this endpoint.
+Cancelled | If the payment is cancelled then we will redirect to this endpoint.
 
-The body of the webhook will contain a JSON payload with details of the event.
+### Failed Events
 
+When a payment fails, we will redirect to your given `Failed` endpoint and additionally attach a base64 encoded json object to the querystring giving you the reason why the payment failed. 
 
-### Webhook Events
+The querystring parameter will look like this:
 
-The table below shows the events that you can respond to from your webhook.
+`{your failed endpoint url}?payload=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
+
+Example:
+
+`www.mycompany.com/callbacks/failed?payload=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
+
+The table below shows the failure reasons that we will send in the querystring.
 
 Event name | Trigger |  Description
 -|-|-
-**imburse_payment_succeeded** | Successful payment submission. | Raised to indicate successful payment submission.<br/><br/>See [imburse_payment_succeeded](#imburse_payment_succeeded).
 **imburse_payment_failed** | Failed payment submission. | Raised to indicate an unsuccessful payment submission. The `messageDescription` property contains the failure reason or reasons.<br/><br/>See [imburse_payment_failed](#imburse_payment_failed).
 **imburse_invalid_token** | Bearer Token Invalid | The bearer token had expired, was invalid, or had already been submitted.<br/><br/>See [imburse_invalid_token](#imburse_invalid_token).
 **imburse_internal_server_error** | Unexpected Error | An error occurred internally when submitting the payment.<br/><br/>See [imburse_internal_server_error](#imburse_internal_server_error).
@@ -126,24 +109,6 @@ Event name | Trigger |  Description
 **imburse_gateway_error** | Gateway error on PSPs' server | Occurs when the PSP gateway cannot be contacted.<br/><br/>See [imburse_gateway_error](#imburse_gateway_error).
 **imburse_unexpected_error** | Unexpected error on the PSPs server | Occurs when there is an unexpected failure on PSP server.<br/><br/>See [imburse_unexpected_error](#imburse_unexpected_error).
 
-
-##### imburse_payment_succeeded
-
-Property | Description
----------|------------
-bearerToken | The `bearerToken` that was passed into the White Label url. Use this to correlate events to specific transactions in your host system.
-providerName | The `providerName` will be the name of the PSP connected to the selected payment method.
-messageType | Value will be `imburse_payment_succeeded`.
-
-##### Example Payment Succeeded Message
-
-```json
-{ 
-	"bearerToken": "{bearerToken}", 
-    "providerName": "{providerName}",
-	"messageType": "imburse_payment_succeeded" 
-}
-```
 
 #### imburse_payment_failed
 
