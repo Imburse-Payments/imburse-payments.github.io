@@ -25,7 +25,7 @@ Before you can successfully integrate the White Label solution into your site, y
 	
     The `bearerToken` is a secure token representing the payment instruction (ie. `amount`, `currency`, `payment scheme`, etc). 
     
-    See the [Create Payment Token(https://api-docs.imbursepayments.com/#d306ef84-da1b-4970-91b1-403f178c0af7)] API method for details of how to create this.
+    See the [Create Payment Token](https://api-docs.imbursepayments.com/#d306ef84-da1b-4970-91b1-403f178c0af7) API method for details of how to create this.
 
 ## Whitelabel Endpoints
 
@@ -76,7 +76,7 @@ language       | The `language` parameter can be used to localize the site to th
 
 The White Label solution will redirect back to your specified callback urls during a workflows' lifecycle. 
 
-You configure the callback addresses within in the payment instruction request. See [Create Payment Token(https://api-docs.imbursepayments.com/#d306ef84-da1b-4970-91b1-403f178c0af7)] for details.
+You configure the callback addresses within in the payment instruction request. See [Create Payment Token](https://api-docs.imbursepayments.com/#d306ef84-da1b-4970-91b1-403f178c0af7)] for details.
 
 The table below shows the callback urls that would need to be configued in your payment instruction.
 
