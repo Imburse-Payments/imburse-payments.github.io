@@ -1,27 +1,40 @@
 <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
     <div id="doc-nav" class="doc-nav">
-        <nav id="doc-menu" class="nav doc-menu flex-column sticky">                                 
-            
+        <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+
             {% case include.toc %}
 
-                {% when 'guide_list' %}
+            {% when 'guide_list' %}
 
-                    <a class="nav-link scrollto" href="#whitelabel">Whitelabel</a>                        
+                <a class="nav-link scrollto" href="#getting-started">Getting Started</a>
+                <!--<a class="nav-link scrollto" href="#whitelabel">Whitelabel</a>-->
 
-                {% when 'wl_integration' %}
+            <!--{% when 'wl_integration' %}
 
-                    <a class="nav-link scrollto" href="#getting-started">Getting Started</a>                             
-                    <a class="nav-link scrollto" href="#api-endpoints">API Endpoints</a>                             
-                    <a class="nav-link scrollto" href="#localization">Localization</a>                             
-                    <a class="nav-link scrollto" href="#hosting-options">Hosting Options</a>                             
-                    <a class="nav-link scrollto" href="#workflows">Workflows</a>                             
-                    <a class="nav-link scrollto" href="#webhook-callbacks">Webhook Callbacks</a>                             
-                    <a class="nav-link scrollto" href="#customization">Customization</a>                             
-                    <a class="nav-link scrollto" href="#white-label-document">White Label document</a>                             
-                    <a class="nav-link scrollto" href="#stylesheet-classes">Stylesheet Classes</a>                     
-                
+                <a class="nav-link scrollto" href="#getting-started">Getting Started</a>
+                <a class="nav-link scrollto" href="#api-endpoints">API Endpoints</a>
+                <a class="nav-link scrollto" href="#localization">Localization</a>
+                <a class="nav-link scrollto" href="#hosting-options">Hosting Options</a>
+                <a class="nav-link scrollto" href="#workflows">Workflows</a>
+                <a class="nav-link scrollto" href="#webhook-callbacks">Webhook Callbacks</a>
+                <a class="nav-link scrollto" href="#customization">Customization</a>
+                <a class="nav-link scrollto" href="#white-label-document">White Label document</a>
+                <a class="nav-link scrollto" href="#stylesheet-classes">Stylesheet Classes</a>-->
+
+            {% when 'getting_started' %}
+
+                <a class="nav-link" href="/pages/guides/getting-started-before-you-start">Before you Start</a>
+                <a class="nav-link" href="/pages/guides/getting-started-overview">Overview</a>
+                <a class="nav-link" href="/pages/guides/getting-started-authentication">Authentication</a>
+                <a class="nav-link" href="/pages/guides/getting-started-creating-a-tenant">Creating a Tenant</a>
+                <a class="nav-link" href="/pages/guides/getting-started-creating-a-management-token">Creating a Management Token</a>
+                <a class="nav-link" href="/pages/guides/getting-started-setting-up-provider-configurations">Setting up Provider Configurations</a>
+                <a class="nav-link" href="/pages/guides/getting-started-setting-up-schemes">Setting up Schemes</a>
+                <a class="nav-link" href="/pages/guides/getting-started-configuring-webhooks">Configuring Webhooks</a>
+                <a class="nav-link" href="/pages/guides/getting-started-collecting-payments">Collecting Payments</a>
+
             {% endcase %}
 
-        </nav>                        
+        </nav>
     </div>
 </div>

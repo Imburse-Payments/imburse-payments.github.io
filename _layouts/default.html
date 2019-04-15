@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-{% include head.html %}     
+{% include head.html %}
 
 <body class="{{ page.body_color }}">
 
     <div class="page-wrapper">
-     
-        {% include header.html %}     
+
+        {% include header.html %}
 
         <div class="doc-wrapper">
             <div class="container">
@@ -18,25 +18,30 @@
                 <div class="doc-body row">
                     <div class="doc-content col-md-9 col-12 order-1">
                         <div class="content-inner">
-                            {{content}}           
+                            {{content}}
+
+                            {% if page.nextsection_url %}
+                                {% capture nextsection_url %}{{ site.baseurl }}{{page.nextsection_url}}{% endcapture %}
+                                {% include whatnext.html nextsection_url=nextsection_url nextsection_label=page.nextsection_label %}
+                            {% endif %}
+
                         </div>
                     </div>
-                                 
-                    {% if page.toc %}
-                        {% include tocs.html toc=page.toc %}
-                    {% endif %}    
 
-                </div>           
+                    {% if page.toc %}
+                    {% include tocs.html toc=page.toc %}
+                    {% endif %}
+
+                </div>
             </div>
+
         </div>
-        
-        <!-- {% include promo.html %} -->
-        
+
     </div>
 
     {% include footer.html %}
- 
-    {% include main_javascript.html %}    
-    
+
+    {% include main_javascript.html %}
+
 </body>
 </html> 

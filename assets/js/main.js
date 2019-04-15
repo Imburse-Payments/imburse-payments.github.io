@@ -13,7 +13,8 @@ $(document).ready(function() {
     });
 
     /* Activate scrollspy menu */
-    $('body').scrollspy({target: '#doc-menu', offset: 100});
+    /* Disabled as not currently using. Our guides are broken down into separate pages */
+    //$('body').scrollspy({target: '#doc-menu', offset: 100});
     
     /* Smooth scrolling */
 	$('a.scrollto').on('click', function(e){
@@ -21,9 +22,8 @@ $(document).ready(function() {
         var target = this.hash;    
         e.preventDefault();
 		$('body').scrollTo(target, 800, {offset: 0, 'axis':'y'});
-		
-	});
-	
+    });
+    
     
     /* ======= jQuery Responsive equal heights plugin ======= */
     /* Ref: https://github.com/liabru/jquery-match-height */
@@ -37,5 +37,12 @@ $(document).ready(function() {
     $(document).delegate('*[data-toggle="lightbox"]', 'click', function(e) {
         e.preventDefault();
         $(this).ekkoLightbox();
+    });
+
+    /* Make doc-menu links active when page location matches */
+    $(function () {
+        var strippedTrailingSlash = location.pathname.replace(/\/$/, "");
+
+        $('a[href^="' + strippedTrailingSlash  + '"]').addClass('active');
     });
 });
