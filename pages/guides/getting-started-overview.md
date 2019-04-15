@@ -6,8 +6,8 @@ body_color: body-green
 section_name: Guides
 last_updated: April 12, 2019
 icon_class: icon_documents_alt icon
-nextsection_url: /pages/guides/getting-started-before-you-start
-nextsection_label: Before You Start
+nextsection_url: /pages/guides/getting-started-authentication
+nextsection_label: Authentication
 ---
 # Overview
 As a user of the Imburse platform, you will have access to our three API's:

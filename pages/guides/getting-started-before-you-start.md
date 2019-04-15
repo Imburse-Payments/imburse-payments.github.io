@@ -6,21 +6,21 @@ body_color: body-green
 section_name: Guides
 last_updated: April 12, 2019
 icon_class: icon_documents_alt icon
-nextsection_url: /pages/guides/getting-started-authentication
-nextsection_label: Authentication
+nextsection_url: /pages/guides/getting-started-overview
+nextsection_label: Overview
 ---
 # Before You Start
 
-In order to start using Imburse you will require an account. Once an account has been created we will supply you with a **Developer Starter Pack**.
+In order to start using Imburse you will require an Account. Once an Account has been created we will supply you with a **Developer Starter Pack**.
 
 **<mark>Note: If you have not been given your Developer Starter Pack then please contact your account holder.</mark>**
 
-The **Developer Starter Pack** will contain a **public** and **private** key to use the APIs.
+The **Developer Starter Pack** will contain an `Account Security Key` - a **public** / **private** key combination that you will use to authenticate to the API's.
 
-Your public and private key will give you API access to perform the following actions:
+The `Account Security Key` has the following capabilities:
 
-- Account Security Key management
-- Tenant management
-- Tenant Security Key management
+- Manage other Account Security Keys. ie. create, get, delete
+- Manage Tenants. ie. create, get, update
+- Manage Tenant Security Keys. ie. create, get, delete
 
-**<mark>Important: Your Account keys are very powerful and as such should be kept safe and protected and should never be shared</mark>**
+**<mark>Important: An Account Security Key is very powerful as it allows the creation of new Tenants and their Security keys. As such they should be kept safe and protected and should never be shared.</mark>**
