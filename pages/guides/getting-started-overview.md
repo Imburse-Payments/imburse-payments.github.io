@@ -41,6 +41,7 @@ You will require a `Management bearer token` for accessing this API.
 
 For more information on creating a `Management bearer token`, see our [Identity API Reference](https://api-docs.imbursepayments.com/#f6bf99b9-ca03-47b5-a667-8e1a5a625b0e)
 
+### Primary Functions
 
 ##### Accounts &amp; Tenants
 Calls that allow you to create and admister Tenants and their Security Keys. Calls are also available for creating Account level Security keys too.
@@ -69,8 +70,10 @@ Calls that allow you to create and view Orders, and Order Instructions for colle
 ##### Payment Payouts
 Calls that allow you to create and view Orders, and Order Instructions for paying out money.
 
+### Additional Functions
+
 ##### Reference Data
-Calls that allow you get miscellanous data such as lists of countries, currencies, etc.
+Calls that allow you get miscellanous data such as lists of countries, currencies, providers, etc.
 
 
 

@@ -32,6 +32,8 @@ For configuring a Tenants' configuration ie `Schemes`, `Provider Configurations`
 
 **<mark>Important: An Account Security Key is very powerful as it allows the creation of new Tenants and their Security keys. As such they should be kept safe and protected and should never be shared.</mark>**
 
+For more information on managing `Account Security Keys`, see our [Security Key API Reference](https://api-docs.imbursepayments.com/#09e70593-2a88-4c91-a7cb-1b6d3934b979)
+
 
 ### Tenant Security Keys
 
@@ -42,3 +44,5 @@ A `Tenant Security Key` has the following capabilities, depending on the `Roles`
 - Manage Schemes for Collecting and Payout out
 - Manage Whitelabel Settings
 - Manage Payment Instructions for Collecting and Paying out
+
+For more information on managing `Tenant Security Keys`, see our [Security Key API Reference](https://api-docs.imbursepayments.com/#b195ab08-dd5a-4639-b975-f9842b87e7b5)

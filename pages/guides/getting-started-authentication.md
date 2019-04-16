@@ -25,7 +25,7 @@ The table below shows the three `Identity API` use cases and their corresponding
 
 Use Case | Endpoint
 -|-
-For [Management API](#management-api) functions ie. Accounts, Tenannts, Schemes, Providers, Security Keys, etc. | `POST /identity/v1/hmac/management`
+For [Management API](#management-api) functions ie. Accounts, Schemes, Providers, Security Keys, etc. | `POST /identity/v1/hmac/management`
 For [Transactions API](#transactions-api) functions for `collecting` | `POST /identity/v1/hmac/collect`
 For [Transactions API](#transactions-api) functions for `paying out` | `POST /identity/v1/hmac/payout`
 
@@ -35,5 +35,5 @@ For more information on creating `bearer` tokens, see our [Identity API Referenc
 
 ## Accessing the Management API and Transactions API
 
-Once you have create your `bearer` token by using an `Identity API` endpoint, you can then start making API calls to the `Management API` or `Transactions API`.
+Once you have created your `bearer` token by using an `Identity API` endpoint, you can start making API calls to the `Management API` or `Transactions API`.
 
