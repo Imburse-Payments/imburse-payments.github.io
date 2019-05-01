@@ -13,18 +13,15 @@
             <div class="container">
                 <div id="doc-header" class="doc-header text-center">
                     <h1 class="doc-title"><i class="{{ page.icon_class}}"></i> {{ page.title }}</h1>
-                    <div class="meta"><i class="far fa-clock"></i> Last updated: {{ page.last_updated }}</div>
+                    <div class="meta">
+                        <i class="far fa-clock"></i> Last updated: {{ page.last_updated }}
+                    </div>
                 </div>
                 <div class="doc-body row">
+
                     <div class="doc-content col-md-9 col-12 order-1">
                         <div class="content-inner">
                             {{content}}
-
-                            {% if page.nextsection_url %}
-                                {% capture nextsection_url %}{{ site.baseurl }}{{page.nextsection_url}}{% endcapture %}
-                                {% include whatnext.html nextsection_url=nextsection_url nextsection_label=page.nextsection_label %}
-                            {% endif %}
-
                         </div>
                     </div>
 
@@ -34,9 +31,7 @@
 
                 </div>
             </div>
-
         </div>
-
     </div>
 
     {% include footer.html %}
@@ -44,4 +39,4 @@
     {% include main_javascript.html %}
 
 </body>
-</html> 
+</html>

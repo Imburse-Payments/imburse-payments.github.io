@@ -10,7 +10,8 @@
 /* ======= Base ======= */
 body {
   font-family: 'Open Sans', arial, sans-serif;
-  color: #494d55;
+  color: #494d55; 
+  background-color: #f9f9fb;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -22,8 +23,9 @@ html, body {
 
 .page-wrapper {
   min-height: 100%;
+  background-color: #f9f9fb;
   /* equal to footer height */
-  margin-bottom: -50px;
+  /* margin-bottom: -50px; */  
 }
 
 .page-wrapper:after {
@@ -32,7 +34,9 @@ html, body {
   height: 50px;
 }
 
-.footer {
+.footer {  
+  margin-top: 30px;
+  padding: 100px 0;
   height: 50px;
 }
 
