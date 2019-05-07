@@ -25,9 +25,12 @@ The capabilies of an Account Security Key are dependent on the **Account Roles**
 
 Account Role Name | Description
 -|-
-x | xxxxx xxxx xxxxxxxx
-x | xxxxx xxxx xxxxxxxx
-x | xxxxx xxxx xxxxxxxx
+`acc.r` | Account Management read access
+`acc.a` | Account Management read + write access
+`acc.key.r` | Security Key Management read access
+`acc.key.a` | Security Key Management read + write access
+`acc.t.r` | Tenant Management read access
+`acc.t.a` | Tenant Management read + write access
 
 An Account Security Key can have multiple roles assigned to it as are deemed necessary for the capabilities your require.
 
@@ -35,9 +38,9 @@ Some example scenarios are shown below but you can add which ever role combinati
 
 Scenario | Roles required
 -|-
-Administer new Tenants | x and y
-Administer new Tenant Security Keys | x
-Read Tenant and Tenant Security Keys only | x and y
+Administer new Tenants | `acc.t.a`
+Administer new Tenants and Security Keys | `acc.t.a` and `acc.key.a`
+Read Tenant and Tenant Security Keys only | `acc.t.r` and `acc.key.r`
 
 **<mark>When your Account was initially setup you would have been provided with an Account Security Key</mark>**
 
@@ -50,9 +53,22 @@ The following **Tenant Roles** are available:
 
 Tenant Role Name | Description
 -|-
-x | xxxxx xxxx xxxxxxxx
-x | xxxxx xxxx xxxxxxxx
-x | xxxxx xxxx xxxxxxxx
+`t.comp.a` | Tenant Information Management read + write access
+`t.comp.r` | Tenant Information Management read access
+`t.psp.r` | Provider Management read access
+`t.psp.a` | Provider Management read + write access
+`t.sch.r` | Scheme Management read access
+`t.sch.a` | Scheme Management read + write access
+`t.key.r` | Security Key Management read access
+`t.key.a` | Security Key read + write access
+`t.whk.r` | Webhook Management read access
+`t.whk.a` | Webhook read + write access
+`t.cat.r` | Catalog Management read access
+`t.col.a` | Collection Management read + write access
+`t.col.r` | Collection Management read access
+`t.po.a` | Payout Management read + write access
+`t.po.r` | Payout Management read access
+
 
 A Tenant Security Key can have multiple roles assigned to it as are deemed necessary for the capabilities your require.
 
@@ -60,9 +76,9 @@ Some example scenarios are shown below but you can add which ever role combinati
 
 Scenario | Roles required 
 -|-
-Manage Schemes | x and y
-Manage Provider Configurations | x and y
-Read only access to Schemes | x
+Manage Schemes | `t.sch.a`
+Manage Provider Configurations | `t.psp.a`
+Read only access to Schemes | `t.sch.r`
 
 
 #### Adding a Security Key
@@ -95,7 +111,7 @@ For example one application my need to **create** Tenants whilst another may onl
 #### Using a Security Key to Authenticate
 
 **Diagram of authentication process**
-
+Todo
 
 
 #### What is an HMAC token?
@@ -107,4 +123,5 @@ With HMAC authentication it signs the entire request, if the content-md5 is incl
 
 
 #### What is a Bearer token?
+Todo
 
