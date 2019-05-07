@@ -34,9 +34,3 @@ The exact information required will vary from Provider to Provider. For example,
 
 
 <img src="/assets/images/guides/getting-started/provider-configuration.png" style="width:600px;" title="Provider Configurations" alt="Provider Configurations"/>
-
-
-
-
-#### How safe are my credentials
-The credentials you supply in the Provider Configurations are stored in a secure storage...... **TBA**
