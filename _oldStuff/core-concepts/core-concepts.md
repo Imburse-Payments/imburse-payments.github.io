@@ -10,4 +10,7 @@ nextsection_url: /pages/guides/getting-started/authentication
 nextsection_label: Authentication
 ---
 # General Concepts
-This section will explain each of the concepts in the Imburse Platform.
+This document will explain each of the concepts in the Imburse Platform. 
+
+Read this first to familiarize yourself with the terms and concepts on the platform.
+

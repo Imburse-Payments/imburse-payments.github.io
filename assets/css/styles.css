@@ -25,7 +25,7 @@ html, body {
   min-height: 100%;
   background-color: #f9f9fb;
   /* equal to footer height */
-  /* margin-bottom: -50px; */  
+  margin-bottom: -50px;
 }
 
 .page-wrapper:after {
@@ -34,8 +34,7 @@ html, body {
   height: 50px;
 }
 
-.footer {  
-  margin-top: 30px;
+.footer {
   padding: 100px 0;
   height: 50px;
 }
@@ -444,8 +443,7 @@ select {
 
 .doc-body h1 {
   font-weight: bold;
-  
-  font-size: 26px;
+  font-size: 32px;
   margin-top: 0;
   margin-bottom: 15px;
   font-weight: bold;

@@ -4,61 +4,66 @@
 
             {% case include.toc %}
 
-            {% when 'guide_list' %}
+                {% when 'imburse-platform' %}
 
-                <a class="nav-link scrollto" href="#getting-started">Getting Started</a>
+                    <a class="nav-link scrollto" href="#what-is-the-imburse-platform">What is the Imburse Platform?</a>
+                    <a class="nav-link scrollto" href="what-problems-does-the-imburse-platform-solve">What problems does the Imburse Platform solve?</a>
 
-            <!--{% when 'wl_integration' %}
+                {% when 'core-concepts' %}
 
-                <a class="nav-link scrollto" href="#getting-started">Getting Started</a>
-                <a class="nav-link scrollto" href="#api-endpoints">API Endpoints</a>
-                <a class="nav-link scrollto" href="#localization">Localization</a>
-                <a class="nav-link scrollto" href="#hosting-options">Hosting Options</a>
-                <a class="nav-link scrollto" href="#workflows">Workflows</a>
-                <a class="nav-link scrollto" href="#webhook-callbacks">Webhook Callbacks</a>
-                <a class="nav-link scrollto" href="#customization">Customization</a>
-                <a class="nav-link scrollto" href="#white-label-document">White Label document</a>
-                <a class="nav-link scrollto" href="#stylesheet-classes">Stylesheet Classes</a>-->
+                    <a class="nav-link scrollto" href="#overview">Overview</a>
+                    <a class="nav-link scrollto" href="#accounts">Accounts</a>
+                    <a class="nav-link scrollto" href="#tenants">Tenants</a>
+                    <a class="nav-link scrollto" href="#security-keys">Security Keys</a>
+                    <a class="nav-link scrollto" href="#providers-and-products">Providers and Products</a>
+                    <a class="nav-link scrollto" href="#provider-configurations">Provider Configuration</a>
+                    <a class="nav-link scrollto" href="#rewards-catalog">Rewards Catalog</a>
+                    <a class="nav-link scrollto" href="#collection-schemes">Collection Schemes</a>
+                    <a class="nav-link scrollto" href="#payout-schemes">Payout Schemes</a>
+                    <a class="nav-link scrollto" href="#webhooks">Webhooks</a>
 
-            {% when 'getting_started' %}
+                {% when 'getting-started' %}
 
-                <!--<a class="nav-link" href="/pages/guides/getting-started/what-is-the-imburse-platform">What is the Imburse Platform?</a>-->
-                <!--<a class="nav-link" href="/pages/guides/getting-started/what-problems-does-the-imburse-platform-solve">What problems does the Imburse Platform solve?</a>-->
-                <a class="nav-link">General Concepts</a>
+                    <a class="nav-link scrollto" href="#account-management">Account Management</a>
+                    <a class="nav-link scrollto" href="#tenant-management">Tenant Management</a>
+                    <a class="nav-link scrollto" href="#provider-configuration-management">Provider Configuration Management</a>
+                    <a class="nav-link scrollto" href="#collection-scheme-management">Collection Scheme Management</a>
+                    <a class="nav-link scrollto" href="#payout-scheme-management">Payout Scheme Management</a>
 
-                <nav class="doc-sub-menu nav flex-column">
-                    <a class="nav-link" href="/pages/guides/getting-started/concept-overview">Overview</a>
-                    <a class="nav-link" href="/pages/guides/getting-started/what-is-an-account">What is an Account?</a>
-                    <a class="nav-link" href="/pages/guides/getting-started/what-is-a-tenant">What is a Tenant?</a>
-                    <a class="nav-link" href="/pages/guides/getting-started/what-are-security-keys">What are Security Keys?</a>
-                    <!--<a class="nav-link" href="/pages/guides/getting-started/what-are-providers-and-products">What are Providers and Products?</a>-->
-                    <a class="nav-link" href="/pages/guides/getting-started/what-is-a-provider-configuration">What is a Provider Configuration?</a>
-                    <a class="nav-link" href="/pages/guides/getting-started/what-is-the-rewards-catalog">What is the Rewards Catalog?</a>
-                    <a class="nav-link" href="/pages/guides/getting-started/what-is-a-collection-scheme">What is a Collection Scheme?</a>
-                    <a class="nav-link" href="/pages/guides/getting-started/what-is-a-payout-scheme">What is a Payout Scheme?</a>
-                    <a class="nav-link" href="/pages/guides/getting-started/what-is-a-webhook">What is a Webhook?</a>
-                </nav>
+                {% when 'how-collections-and-payouts-work' %}
 
-                <a class="nav-link" href="/pages/guides/getting-started/account-management">Account Management</a>
-                <a class="nav-link" href="/pages/guides/getting-started/tenant-management">Tenant Management</a>
-                <a class="nav-link" href="/pages/guides/getting-started/provider-configuration-management">Provider Configuration Management</a>
-                <a class="nav-link" href="/pages/guides/getting-started/collection-scheme-management">Collection Scheme Management</a>
-                <a class="nav-link" href="/pages/guides/getting-started/payout-scheme-management">Payout Scheme Management</a>
+                    <a class="nav-link scrollto" href="#overview">Overview</a>
 
-                <!--<a class="nav-link" href="/pages/guides/getting-started/how-collections-work">How Collections work</a>
-                <a class="nav-link" href="/pages/guides/getting-started/how-payouts-work">How Payouts work</a>
-                <a class="nav-link" href="/pages/guides/getting-started/how-notifications-work">How Notifications work</a>-->
+                {% when 'white-label-sdk-integration' %}
 
-                <!-- <a class="nav-link" href="/pages/guides/getting-started-before-you-start">Before you Start</a>
-                <a class="nav-link" href="/pages/guides/getting-started-overview">Overview</a>
-                <a class="nav-link" href="/pages/guides/getting-started-authentication">Authentication</a>
-                <a class="nav-link" href="/pages/guides/getting-started-security-keys">Security Keys</a>
-                <a class="nav-link" href="/pages/guides/getting-started-creating-a-tenant">Creating a Tenant</a>
-                <a class="nav-link" href="/pages/guides/getting-started-creating-a-management-token">Creating a Tenant Security Key</a>
-                <a class="nav-link" href="/pages/guides/getting-started-setting-up-provider-configurations">Setting up Provider Configurations</a>
-                <a class="nav-link" href="/pages/guides/getting-started-setting-up-schemes">Setting up Schemes</a>
-                <a class="nav-link" href="/pages/guides/getting-started-configuring-webhooks">Configuring Webhooks</a>
-                <a class="nav-link" href="/pages/guides/getting-started-collecting-payments">Collecting Payments</a> -->
+                    <a class="nav-link scrollto" href="#overview">Overview</a>
+
+                {% when 'client-portal' %}
+
+                    <a class="nav-link scrollto" href="#overview">Overview</a>
+
+                {% when 'tutorial-creating-a-tenant' %}
+
+                    <a class="nav-link scrollto" href="#creating-a-tenant">Creating a Tenant</a>
+                    <a class="nav-link scrollto" href="#prerequisites">Prerequisites</a>
+                    <a class="nav-link scrollto" href="#steps">Steps</a>
+                    <nav class="nav doc-sub-menu flex-column sticky">
+                        <a class="nav-link scrollto" href="#1---aquire-a-management-bearer-token">1 - Aquire a Management Bearer Token</a>
+                        <a class="nav-link scrollto" href="#2---create-a-new-tenant">2 - Create a new Tenant</a>
+                    </nav>
+                    <a class="nav-link scrollto" href="#whats-next">What's Next?</a>
+
+                {% when 'tutorial-creating-a-tenant-security-key' %}
+
+                    <a class="nav-link scrollto" href="#creating-a-tenant-security-key">Creating a Tenant Security Key</a>
+                    <a class="nav-link scrollto" href="#prerequisites">Prerequisites</a>
+                    <a class="nav-link scrollto" href="#steps">Steps</a>
+                    <nav class="nav doc-sub-menu flex-column sticky">
+                        <a class="nav-link scrollto" href="#1---aquire-a-management-bearer-token">1 - Aquire a Management Bearer Token</a>
+                        <a class="nav-link scrollto" href="#2---create-a-new-tenant-security-key">2 - Create a new Tenant Security Key</a>
+                    </nav>
+                    <a class="nav-link scrollto" href="#whats-next">What's Next?</a>
+
 
             {% endcase %}
 
