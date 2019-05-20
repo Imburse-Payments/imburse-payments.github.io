@@ -15,8 +15,8 @@
                     <a class="nav-link scrollto" href="#accounts">Accounts</a>
                     <a class="nav-link scrollto" href="#tenants">Tenants</a>
                     <a class="nav-link scrollto" href="#security-keys">Security Keys</a>
-                    <a class="nav-link scrollto" href="#providers-and-products">Providers and Products</a>
-                    <a class="nav-link scrollto" href="#provider-configurations">Provider Configuration</a>
+                    <a class="nav-link scrollto" href="#marketplace">Marketplace</a>
+                    <a class="nav-link scrollto" href="#apps">Apps</a>
                     <a class="nav-link scrollto" href="#rewards-catalog">Rewards Catalog</a>
                     <a class="nav-link scrollto" href="#collection-schemes">Collection Schemes</a>
                     <a class="nav-link scrollto" href="#payout-schemes">Payout Schemes</a>
@@ -26,7 +26,7 @@
 
                     <a class="nav-link scrollto" href="#account-management">Account Management</a>
                     <a class="nav-link scrollto" href="#tenant-management">Tenant Management</a>
-                    <a class="nav-link scrollto" href="#provider-configuration-management">Provider Configuration Management</a>
+                    <a class="nav-link scrollto" href="#app-management">App Management</a>
                     <a class="nav-link scrollto" href="#collection-scheme-management">Collection Scheme Management</a>
                     <a class="nav-link scrollto" href="#payout-scheme-management">Payout Scheme Management</a>
 
@@ -64,6 +64,94 @@
                     </nav>
                     <a class="nav-link scrollto" href="#whats-next">What's Next?</a>
 
+                {% when 'tutorial-installing-and-configuring-an-app' %}
+
+                    <a class="nav-link scrollto" href="#installing-and-configuring-an-app">Installing and Configuring an App</a>
+                    <a class="nav-link scrollto" href="#prerequisites">Prerequisites</a>
+                    <a class="nav-link scrollto" href="#steps">Steps</a>
+                    <nav class="nav doc-sub-menu flex-column sticky">
+                        <a class="nav-link scrollto" href="#1---aquire-a-management-bearer-token">1 - Aquire a Management Bearer Token</a>
+                        <a class="nav-link scrollto" href="#2---install-the-app">2 - Install the App</a>
+                        <a class="nav-link scrollto" href="#3---configure-the-app">3 - Configure the App</a>
+                    </nav>
+                    <a class="nav-link scrollto" href="#whats-next">What's Next?</a>
+
+                {% when 'tutorial-installing-and-configuring-braintree' %}
+
+                    <a class="nav-link scrollto" href="#installing-and-configuring-braintree">Installing and Configuring Braintree</a>
+                    <a class="nav-link scrollto" href="#prerequisites">Prerequisites</a>
+                    <a class="nav-link scrollto" href="#steps">Steps</a>
+                    <nav class="nav doc-sub-menu flex-column sticky">
+                        <a class="nav-link scrollto" href="#1---aquire-a-management-bearer-token">1 - Aquire a Management Bearer Token</a>
+                        <a class="nav-link scrollto" href="#2---install-the-app">2 - Install</a>
+                        <a class="nav-link scrollto" href="#3---configure-the-app">3 - Configure</a>
+                    </nav>
+
+                {% when 'tutorial-installing-and-configuring-tangocard' %}
+
+                    <a class="nav-link scrollto" href="#installing-and-configuring-tango-card">Installing and Configuring Tango Card</a>
+                    <a class="nav-link scrollto" href="#prerequisites">Prerequisites</a>
+                    <a class="nav-link scrollto" href="#steps">Steps</a>
+                    <nav class="nav doc-sub-menu flex-column sticky">
+                        <a class="nav-link scrollto" href="#1---aquire-a-management-bearer-token">1 - Aquire a Management Bearer Token</a>
+                        <a class="nav-link scrollto" href="#2---install-the-app">2 - Install</a>
+                        <a class="nav-link scrollto" href="#3---configure-the-app">3 - Configure</a>
+                    </nav>
+
+
+                <!-- {% when 'tutorial-creating-a-braintree-provider-configuration' %}
+
+                    <a class="nav-link scrollto" href="#creating-a-braintree-provider-configuration">Creating a Braintree Provider Configuration</a>
+                    <a class="nav-link scrollto" href="#prerequisites">Prerequisites</a>
+                    <a class="nav-link scrollto" href="#steps">Steps</a>
+                    <nav class="nav doc-sub-menu flex-column sticky">
+                        <a class="nav-link scrollto" href="#1---aquire-a-management-bearer-token">1 - Aquire a Management Bearer Token</a>
+                        <a class="nav-link scrollto" href="#2---create-a-new-braintree-provider-configuration">2 - Create a new Braintree Provider Configuration</a>
+                    </nav>
+                    <a class="nav-link scrollto" href="#whats-next">What's Next?</a>
+
+                {% when 'tutorial-creating-a-tangocard-provider-configuration' %}
+
+                    <a class="nav-link scrollto" href="#creating-a-tangocard-provider-configuration">Creating a Tango Card Provider Configuration</a>
+                    <a class="nav-link scrollto" href="#prerequisites">Prerequisites</a>
+                    <a class="nav-link scrollto" href="#steps">Steps</a>
+                    <nav class="nav doc-sub-menu flex-column sticky">
+                        <a class="nav-link scrollto" href="#1---aquire-a-management-bearer-token">1 - Aquire a Management Bearer Token</a>
+                        <a class="nav-link scrollto" href="#2---create-a-new-tangocard-provider-configuration">2 - Create a new Tango Card Provider Configuration</a>
+                    </nav>
+                    <a class="nav-link scrollto" href="#whats-next">What's Next?</a> -->
+
+                {% when 'tutorial-creating-a-collection-scheme' %}
+
+                    <a class="nav-link scrollto" href="#creating-a-collection-scheme">Creating a Collection Scheme</a>
+                    <a class="nav-link scrollto" href="#prerequisites">Prerequisites</a>
+                    <a class="nav-link scrollto" href="#steps">Steps</a>
+                    <nav class="nav doc-sub-menu flex-column sticky">
+                        <a class="nav-link scrollto" href="#1---aquire-a-management-bearer-token">1 - Aquire a Management Bearer Token</a>
+                        <a class="nav-link scrollto" href="#2---create-a-new-collection-scheme">2 - Create a new Collection Scheme</a>
+                    </nav>
+                    <a class="nav-link scrollto" href="#whats-next">What's Next?</a>
+
+                {% when 'tutorial-searching-the-rewards-catalog' %}
+
+                    <a class="nav-link scrollto" href="#searching-the-rewards-catalog">Searching the Rewards Catalog</a>
+                    <a class="nav-link scrollto" href="#prerequisites">Prerequisites</a>
+                    <a class="nav-link scrollto" href="#steps">Steps</a>
+                    <nav class="nav doc-sub-menu flex-column sticky">
+                        <a class="nav-link scrollto" href="#1---aquire-a-management-bearer-token">1 - Aquire a Management Bearer Token</a>
+                        <a class="nav-link scrollto" href="#2---search-the-rewards-catalog">2 - Search the Rewards Catalog</a>
+                    </nav>
+                    <a class="nav-link scrollto" href="#whats-next">What's Next?</a>
+
+                {% when 'tutorial-creating-a-payout-scheme' %}
+
+                    <a class="nav-link scrollto" href="#creating-a-payout-scheme">Creating a Payout Scheme</a>
+                    <a class="nav-link scrollto" href="#prerequisites">Prerequisites</a>
+                    <a class="nav-link scrollto" href="#steps">Steps</a>
+                    <nav class="nav doc-sub-menu flex-column sticky">
+                        <a class="nav-link scrollto" href="#1---aquire-a-management-bearer-token">1 - Aquire a Management Bearer Token</a>
+                        <a class="nav-link scrollto" href="#2---create-a-new-payout-scheme">2 - Create a new Payout Scheme</a>
+                    </nav>
 
             {% endcase %}
 

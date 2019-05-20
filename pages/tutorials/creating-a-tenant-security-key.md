@@ -3,7 +3,7 @@ layout: default
 title: Creating a Tenant Security Key
 toc: tutorial-creating-a-tenant-security-key
 body_color: body-pink
-section_name: API Tutorials
+section_name: Tutorials
 last_updated: May 9th, 2019
 icon_class: icon_documents_alt icon
 ---
@@ -18,7 +18,7 @@ You'll need the following:
 
 - Your Account Security Key - This will consist of a Public Key and Private Key and would have been given to your upon registration. If you haven't received it then please contact your adminstrator.
 - Familiarity with the [Core Concepts](/pages/guides/core-concepts).
-- Familiar with creating an HMAC token with using a Security Key.
+- Familiar with creating an HMAC token using a Security Key.
 
 In addition, you should also have:
 - The `Tenant Id` for a Tenant you have previously created - If you don't have one, see the tutorial [Creating a Tenant](/pages/tutorials/creating-a-tenant) first.
@@ -28,9 +28,9 @@ In addition, you should also have:
 Follow these steps to create a new Tenant Security Key for one of your Tenants.
 
 ### 1 - Aquire a Management Bearer Token
-You will need to generate an HMAC token for the following following request.
+You will need to generate an HMAC token for the following following request using your `Account Security Key`.
 
-**Note: If you already have a a valid `Management Bearer Token` then you can use that rather than creating a new one. Skip to Step 2 if you have one.**
+**Note: If you already have a valid `Tenant Security Key` derived `Management Bearer Token` then you can use that rather than creating a new one. Skip to Step 2 if you have one.**
 
 
 #### Request
@@ -65,7 +65,7 @@ Replace the `{tenantId}` placeholder value with the Tenant `id` for the Tenant y
 ###### Roles
 The `roles` value in the request is important as it sets the permissions this Security Key can have. 
 
-In the example request below, we are setting the roles to `t.sup.a` which will give the Tenant Security Key administration access to everything for the Tenant.
+In the example request below, we are setting the roles to `t.g.super` which will give the Tenant Security Key administration access to everything for the Tenant.
 
 **Note: In reality you would only grant the minimum necessary permissions for your Tenant Security Keys.**
 
@@ -73,7 +73,7 @@ For more information on the `roles` values, see [What is a Tenant Security Key](
 
 ```curl
 curl --location --request POST "https://sandbox-api.imbursepayments.com/management/v1/tenant/{tenantId}/keys" \
-  --header "Authorization: Bearer {management-token}" \
+  --header "Authorization: Bearer {management-bearer-token}" \
   --header "Content-Type: application/json" \
   --data "{
 	\"roles\": ["t.sup.a]
@@ -81,29 +81,27 @@ curl --location --request POST "https://sandbox-api.imbursepayments.com/manageme
 ```
 
 #### Response
-The `id` property will be the id of your newly created Tenant.
+The `publicKey` and `privateKey` values are generated for you for this new key. 
 
-You will need this Id in any future operations relating to this Tenant.
+**Note: You will need to store the public and private key values safely as the private key will not be presented again.**
+
+The newly created `publicKey` and `privateKey` values will be required when you need to aquire a Tenant derived Management Bearer Token.
 
 ```json
 {
-  "id": "",
-  "accountId": "",
-  "name": "",
-  "address": {
-    "streetAddress": "",
-    "extendedStreetAddress": "",
-    "locality": "",
-    "region": "",
-    "postCode": "",
-    "country": ""
-  }
+  "tenantId": "88fdb12a-14dc-419c-b74c-422e2c25cfe7",
+  "accountId": "53ca62f5-b124-447d-b593-2f7ea4fecdcc",
+	"publicKey": "a123456b-c12c-123d-1ab4-18bd8c8e88a3",
+	"privateKey": "AGHYR1aWYgHgyjhJLkVCd7b8XfAVeA4tuFwCQl3X64Y=",
+    "roles": [
+        "t.g.super"
+    ]
 }
 ```
 
 ## What's Next?
 
-- Create Provider Configurations
+- [Create a Provider Configuration](/pages/tutorials/creating-a-provider-configuration)
 
 
 

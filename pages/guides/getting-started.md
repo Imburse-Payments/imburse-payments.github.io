@@ -260,37 +260,36 @@ Deleting a Key will immediately prohibit that keys access to ALL APIS.
 
 
 
-# Provider Configuration Management
-The Provider Configuration Management API functions allows you to specify the connection details and settings for a given provider ie. Braintree, Paydirekt, Tangocard, etc.
+# App Management
+The App Management API functions allow you to install and configure Apps for various integrations.
 
-Provider Configurations permit Imburse to transact with a Provider on your behalf.
+App integrations permit Imburse to transact with the Apps provider on your behalf.
 
 ## Access Requirements
 You will need a Tenant Security Key to perform Provider Configuration Management functions.
 
-## Provider Configuration functions
-Each Provider supported by Imburse has its own API endpoints. The Provider Configuration available functions are:
+## App integration functions
+Each App supported by Imburse has its own unique API endpoints. Some Apps have additional App specific functionality.
+The App functions are:
 
 ### Braintree
-- Create a Configuration
-- Get a Configuration by Id
-- Get a Configuration by Public Key
-- Update a Configuration
-
-### Paydirekt
-- Create a Configuration
-- Get a Configuration by Id
-- Get a Configuration by Private Key
-- Update a Configuration
+- Install app
+- Configure app
+- Get an installed app
+- Update an installed app
 
 ### Tango Card
-- Create a Configuration
-- Get a Configuration by Id
-- Get the Account Details
-- Update a Configuration
+- Install app
+- Configure app
+- Get an installed app
+- Update an installed app
+
+Additionally functions available for this App:
+
+- Get the Tango Card account details inc. account balance
 
 ### General
-- Get a List of Provider Configurations
+- Get a List of Installed Apps
 
 
 ## Provider Configuration Setup

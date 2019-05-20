@@ -3,7 +3,7 @@ layout: default
 title: Creating a Tenant
 toc: tutorial-creating-a-tenant
 body_color: body-pink
-section_name: API Tutorials
+section_name: Tutorials
 last_updated: May 9th, 2019
 icon_class: icon_documents_alt icon
 ---
@@ -18,14 +18,14 @@ You'll need the following:
 
 - Your Account Security Key - This will consist of a Public Key and Private Key and would have been given to your upon registration. If you haven't received it then please contact your adminstrator.
 - Familiarity with the [Core Concepts](/pages/guides/core-concepts).
-- Familiar with creating an HMAC token with using a Security Key.
+- Familiar with creating an HMAC token using a Security Key.
 
 
 ## Steps
 Follow these steps to create a Tenant in your Account.
 
 ### 1 - Aquire a Management Bearer Token
-You will need to generate an HMAC token for the following following request.
+You will need to generate an HMAC token for the following following request using your `Account Security Key`.
 
 
 #### Request
@@ -58,33 +58,31 @@ curl --location --request POST "https://sandbox-api.imbursepayments.com/manageme
   --header "Authorization: Bearer {management-bearer-token}" \
   --header "Content-Type: application/json" \
   --data "{
-    \"name\": \"\",
-    \"streetAddress\": \"\",
+    \"name\": \"Test tenant\",
+    \"streetAddress\": \"8 Thames Street\",
     \"extendedStreetAddress\": \"\",
-    \"locality\": \"\",
-    \"region\": \"\",
-    \"postCode\": \"\",
-    \"country\": \"\"
+    \"locality\": \"London\",
+    \"region\": \"Sussex\",
+    \"postCode\": \"SW1 1LA\",
+    \"country\": \"UK\"
 }"
 ```
 
 #### Response
-The `id` property will be the id of your newly created Tenant. 
-
-You will need this Id in any future operations relating to this Tenant.
+The `tenantId` property will be the id of your newly created Tenant.
 
 ```json
 {
-  "id": "",
-  "accountId": "",
-  "name": "",
+  "tenantId": "88fdb12a-14dc-419c-b74c-422e2c25cfe7",
+  "accountId": "53ca62f5-b124-447d-b593-2f7ea4fecdcc",
+  "name": "Test tenant",
   "address": {
-    "streetAddress": "",
+    "streetAddress": "8 Thames Street",
     "extendedStreetAddress": "",
-    "locality": "",
-    "region": "",
-    "postCode": "",
-    "country": ""
+    "locality": "London",
+    "region": "Sussex",
+    "postCode": "SW1 1LA",
+    "country": "UK"
   }
 }
 ```

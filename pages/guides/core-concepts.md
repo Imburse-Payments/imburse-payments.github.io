@@ -15,7 +15,8 @@ The components are:
 - [Accounts](#accounts)
 - [Security Keys](#security-keys)
 - [Tenants](#tenants)
-- [Provider Configurations](#provider-configurations)
+- [Marketplace](#marketplace)
+- [Apps](#apps)
 - [Collecion Schemes](#collection-schemes)
 - [Payout Schemes](#payout-schemes)
 - [Notifications](#webhooks)
@@ -77,6 +78,7 @@ The capabilies of an Account Security Key are dependent on the **Account Roles**
 
 Account Role Name | Description
 -|-
+`acc.g.super` | Account Gobal Admin - Global read + write access to all aspects of Accounts
 `acc.r` | Account Management read access
 `acc.a` | Account Management read + write access
 `acc.key.r` | Security Key Management read access
@@ -105,6 +107,7 @@ The following **Tenant Roles** are available:
 
 Tenant Role Name | Description
 -|-
+`t.g.super` | Tenant Gobal Admin - Global read + write access to all aspects of Tenant
 `t.comp.a` | Tenant Information Management read + write access
 `t.comp.r` | Tenant Information Management read access
 `t.psp.r` | Provider Management read access
@@ -159,39 +162,28 @@ Multiple Security Keys will give you granular control over the capabilities the 
 For example one application my need to **create** Tenants whilst another may only need to **read** the Tenants.
 
 
-# Providers and Products
+# Marketplace
+The Marketplace is the place to go to find, add, and configure the various App integrations your Tenant needs.
+
+Current App integrations include:
+
+##### Collections
+
+- **Braintree Payments** - Credit card and PayPal
+- **Paydirekt** - Germany only payment method
+
+##### Payouts
+- **Tango Card** - Worldwide gift card rewards
 
 
+# Apps
+The [Marketplace](#marketplace) contains many Apps integrations and you will need to add at least one App integration into your Tenant to start collecting or paying out money.
 
+Only one instance of an App integration can be configured per Tenant.
 
+An App configuration, in most cases, will hold a set of credentials that grant Imburse the permission to connect to the provider and transact on your behalf.
 
-# Provider Configurations
-A Payment Service Provider (PSP) is whom you would traditionally integrate with to provide a payment service such as processing credit card payments or gift card rewards.
-
-Imburse integrate with many Payment Service Providers:
-
-- Braintree Payments
-- Paydirekt
-- Tango Card
-- PayPal
-
-We act as middleware between your internal systems and the providers you want to use. 
-
-As such, you would need to create a **Provider Configuration** for each Payment Service Provider you want Imburse to connect and transact with on your behalf.
-
-
-
-#### What does a Provider Configuration contain?
-A Provider Configuration, in most cases, will hold a set of credentials that grant Imburse the permission to connect to the provider and transact on your behalf.
-
-The exact information required will vary from Provider to Provider. For example, some may require a public and private key pair where as others may just need an account identifier and password. 
-
-**The diagram below shows example Provider Configurations and how we connect to your providers:**
-
-
-<img src="/assets/images/guides/getting-started/provider-configuration.png" style="width:600px;" title="Provider Configurations" alt="Provider Configurations"/>
-
-
+The exact requirements for each App will vary from App to App. See the [Marketplace API](/pages/guides/marketplace) for more details.
 
 
 # Rewards Catalog
@@ -250,35 +242,35 @@ The table below shows some examples and the results when searching for rewards t
 
 
 
+
 # Collection Schemes
-A Collection Scheme is an arrangement of [Provider Configurations](/pages/guides/getting-started/what-is-a-provider-configuration) and associated settings that dictate the available collection options available to your customers.
+A Collection Scheme is an arrangement of Rules that dictate the collection options available to your customers.
 
-A scheme can be configured to concurrently use multiple [Provider Configurations](/pages/guides/getting-started/what-is-a-provider-configuration) such as Braintree and PayDirekt, as well as supporting multiple countries and multiple currencies.
+#### Structure of a Collection Scheme
 
-When you create a Collection Scheme, you specify the Provider Configurations you want the scheme to use. 
-The implication of adding Provider Configurations to your scheme is that you want **ALL** the payment options that the providers offer to be available to your customers in any country that the providers operate in. 
+<img src="/assets/images/guides/getting-started/collection-scheme-hierarchy.png" style="width:450px;" title="Collection Scheme heirarchy" alt="Collection Scheme heirarchy"/>
 
-For granular control over available payment options, either globally or country specific, you can configure one or more Scheme Overrides.
+A Collection Scheme is made up of one or more **Rules**. A Rule describes the **countries**, **currencies**, and **value** range the configured Apps will be valid for.
 
-#### Collection Scheme Overrides
-Scheme Overrides give you fine grained, flexible control to tune the payment options for specific countries.
+Within each Rule are **Configurations** that further describe which Apps to use in the Rule and any optional payment methods that should be excluded from the results.
 
-A Scheme Override can be configured to turn **on** or **off** a particuar payment option for a specific country or even globally.
+Rules give you fine grained, flexible control to tune the available payment methods to your customers.
 
-Using Braintree as an example, we've outlined some sample scenarios below where Scheme Overrides could be used. Braintree are a provider that offer the `American Express`,`Discover`,`Maestro`,`Mastercard`,and `Visa`. They operate globally.
+A Collection Scheme can be configured to have many Rules.
 
-#### Scenarios
-- I want to offer to my customers **all** the Braintree payment options **except** `Discover` cards 
-- I want to offer to my customers **all** the Braintree payment options **except** `Discover` cards, which I want to offer in **Germany only**
+We've outlined some sample rules below that could be configured. Our scenarios assume the Braintree App has been added to a Tenant.
 
-You can add as many Scheme Overrides to your Scheme as necessary to refine the available payment options.
-
+#### Sample Rules
+- I want to offer all Braintree payment options to customers in any country, any currency, and any value
+- I want to offer all Braintree payment options, **except** `Amex` card, to customers in any country, any currency, and values from 1 to 999
+- I want to offer only `Amex` card to customers in any country, any currency, and values from 1000 upwards
+- I want to offer only `PayPal` card to customers in any country, only `EUR` currency, and any value
 
 
 
 
 # Payout Schemes
-A Payout Scheme is an arrangement of [Provider Configurations](/pages/guides/getting-started/what-is-a-provider-configuration) and associated settings that dictate the available r payout options available to your customers.
+A Payout Scheme is an arrangement of [Provider Configurations](/pages/guides/getting-started/what-is-a-provider-configuration) and associated settings that dictate the payout options available to your customers.
 
 A Payout Scheme can be configured to concurrently use multiple [Provider Configurations](/pages/guides/getting-started/what-is-a-provider-configuration) such as Tangocard as well as supporting multiple countries and multiple currencies.
 
