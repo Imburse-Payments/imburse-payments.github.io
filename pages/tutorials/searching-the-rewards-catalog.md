@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Searching the Rewards Catalog
+title: Quickstart Developer Tutorial
 toc: tutorial-searching-the-rewards-catalog
 body_color: body-pink
 section_name: Tutorials
@@ -15,46 +15,12 @@ For this tutorial we will search the Rewards Catalog using the REST API's.
 For more information on the Rewards Catalog, see the [Rewards Catalog in Core Concepts](/pages/guides/core-concepts/#rewards-catalog).
 
 ## Prerequisites
+Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
-You'll need the following:
+- A valid `Management Bearer Token` derived from a `Tenant Security Key`. If you don't have one, see the tutorial [Aquiring a Management Bearer Token](#aquire-management-bearer-token).
 
-- Familiarity with the [Core Concepts](/pages/guides/core-concepts).
-- Familiar with creating an HMAC token using a Security Key.
-
-In addition, you should also have:
-- The Tenant Security Key created from the previous step. If you don't have one, see the tutorial [Creating a Tenant Security Key](/pages/tutorials/creating-a-tenant-security-key) first.
-
-## Steps
-Follow these steps to search Rewards Catalog.
-
-### 1 - Aquire a Management Bearer Token
-You will need to generate an HMAC token for the following following request using a `Tenant Security Key`; not an `Account Security Key`.
-
-**Note: If you already have a valid `Tenant Security Key` derived `Management Bearer Token` then you can use this rather than creating a new one. Skip to Step 2 if you have one.**
-
-
-#### Request
-Replace the `{hmac-token}` placeholder value with your actual HMAC token.
-
-```curl
-curl --location --request POST "https://sandbox-api.imbursepayments.com/identity/v1/hmac/management" \
-  --header "Authorization: Hmac {hmac-token}"
-```
-
-#### Response
-The `Management Bearer Token` will be contained in the `accessToken` property of the response body:
-
-```json
-{
-    "accessToken": "",
-    "expires": ""
-}
-```
-
-
-### 2 - Search the Rewards Catalog
+## Search the Rewards Catalog
 Using the `Management Bearer Token` aquired in Step 1, we can now search the Rewards Catalog.
-
 
 #### Request
 Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.

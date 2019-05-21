@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Creating a Tenant
+title: Quickstart Developer Tutorial
 toc: tutorial-creating-a-tenant
 body_color: body-pink
 section_name: Tutorials
@@ -20,11 +20,7 @@ You'll need the following:
 - Familiarity with the [Core Concepts](/pages/guides/core-concepts).
 - Familiar with creating an HMAC token using a Security Key.
 
-
-## Steps
-Follow these steps to create a Tenant in your Account.
-
-### 1 - Aquire a Management Bearer Token
+## Step 1 - Aquire a Management Bearer Token
 You will need to generate an HMAC token for the following following request using your `Account Security Key`.
 
 
@@ -47,7 +43,7 @@ The `Management Bearer Token` will be contained in the `accessToken` property of
 ```
 
 
-### 2 - Create a new Tenant
+## Step 2 - Create a new Tenant
 Using the `Management Bearer Token` aquired in Step 1, we can now create a new Tenant.
 
 #### Request

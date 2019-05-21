@@ -23,7 +23,6 @@
                 <div class="branding">
                     <h1 class="logo">
                         <a href="/index.html">
-
                             <!-- <span aria-hidden="true" class="icon_documents_alt icon"></span> -->
                             <span class="text-highlight"><img src="/assets/images/logo-white-small.png">IMBURSE</span><span class="text-bold">DOCS</span>
                         </a>
@@ -38,10 +37,32 @@
         </header>
 
         <section class="cards-section text-center">
+
             <div class="container">
-                <h2 class="title">Management API Tutorials</h2>
+                <h2 class="title">Authentication Tutorials</h2>
                 <div class="intro">
-                    <p>Browse tutorials for managing a Tenants' configuration.</p>
+                    <p>Browse tutorials for authenticating to the API.</p>
+                </div>
+
+                <div id="cards-wrapper" class="cards-wrapper row">
+
+                    <div class="item item-primary item-2 col-lg-4 col-6">
+                        <div class="item-inner">
+                            <div class="icon-holder">
+                                <span aria-hidden="true" class="icon icon_documents_alt"></span>
+                            </div>
+                            <h3 class="title">Authentication</h3>
+                            <p class="intro">Step-by-step guide to authentication.</p>
+                            <a class="link" href="/pages/tutorials/authentication"><span></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <h2 class="title">Quickstart Developer Tutorial</h2>
+                <div class="intro">
+                    <p>A 7 step tutorial for setting up a Tenant to accept collections and payouts.</p>
                 </div>
 
                 <div id="cards-wrapper" class="cards-wrapper row">
@@ -51,7 +72,18 @@
                             <div class="icon-holder">
                                 <span aria-hidden="true" class="icon icon_documents_alt"></span>
                             </div>
-                            <h3 class="title">Creating a Tenant</h3>
+                            <h3 class="title">0. Before you begin...</h3>
+                            <p class="intro">Read this first before starting this tutorial.</p>
+                            <a class="link" href="/pages/tutorials/read-this-first"><span></span></a>
+                        </div>
+                    </div>
+
+                    <div class="item item-pink item-2 col-lg-4 col-6">
+                        <div class="item-inner">
+                            <div class="icon-holder">
+                                <span aria-hidden="true" class="icon icon_documents_alt"></span>
+                            </div>
+                            <h3 class="title">1. Creating a Tenant</h3>
                             <p class="intro">Step-by-step guide for creating a Tenant.</p>
                             <a class="link" href="/pages/tutorials/creating-a-tenant"><span></span></a>
                         </div>
@@ -62,7 +94,7 @@
                             <div class="icon-holder">
                                 <span aria-hidden="true" class="icon icon_documents_alt"></span>
                             </div>
-                            <h3 class="title">Creating a Tenant Security Key</h3>
+                            <h3 class="title">2. Creating a Tenant Security Key</h3>
                             <p class="intro">Step-by-step guide for creating a Tenant Security Key.</p>
                             <a class="link" href="/pages/tutorials/creating-a-tenant-security-key"><span></span></a>
                         </div>
@@ -73,20 +105,9 @@
                             <div class="icon-holder">
                                 <span aria-hidden="true" class="icon icon_documents_alt"></span>
                             </div>
-                            <h3 class="title">Installing and Configuring Apps</h3>
-                            <p class="intro">Step-by-step guide for installing and configuring apps.</p>
-                            <a class="link" href="/pages/tutorials/installing-and-configuring-an-app"><span></span></a>
-                        </div>
-                    </div>                 
-
-                    <div class="item item-pink item-2 col-lg-4 col-6">
-                        <div class="item-inner">
-                            <div class="icon-holder">
-                                <span aria-hidden="true" class="icon icon_documents_alt"></span>
-                            </div>
-                            <h3 class="title">Creating a Collection Scheme</h3>
-                            <p class="intro">Step-by-step guide for creating a Collection Scheme.</p>
-                            <a class="link" href="/pages/tutorials/creating-a-collection-scheme"><span></span></a>
+                            <h3 class="title">3. Aquiring a Management Bearer Token</h3>
+                            <p class="intro">Step-by-step guide for getting a Management Bearer Token.</p>
+                            <a class="link" href="/pages/tutorials/aquire-management-bearer-token"><span></span></a>
                         </div>
                     </div>
 
@@ -95,7 +116,29 @@
                             <div class="icon-holder">
                                 <span aria-hidden="true" class="icon icon_documents_alt"></span>
                             </div>
-                            <h3 class="title">Searching the Rewards Catalog</h3>
+                            <h3 class="title">4. Installing and Configuring Apps</h3>
+                            <p class="intro">Step-by-step guide for installing and configuring apps.</p>
+                            <a class="link" href="/pages/tutorials/installing-and-configuring-an-app"><span></span></a>
+                        </div>
+                    </div>
+
+                    <div class="item item-pink item-2 col-lg-4 col-6">
+                        <div class="item-inner">
+                            <div class="icon-holder">
+                                <span aria-hidden="true" class="icon icon_documents_alt"></span>
+                            </div>
+                            <h3 class="title">5. Creating a Collection Scheme</h3>
+                            <p class="intro">Step-by-step guide for creating a Collection Scheme.</p>
+                            <a class="link" href="/pages/tutorials/creating-a-collection-scheme-v2"><span></span></a>
+                        </div>
+                    </div>
+
+                    <div class="item item-pink item-2 col-lg-4 col-6">
+                        <div class="item-inner">
+                            <div class="icon-holder">
+                                <span aria-hidden="true" class="icon icon_documents_alt"></span>
+                            </div>
+                            <h3 class="title">6. Searching the Rewards Catalog</h3>
                             <p class="intro">Step-by-step guide for searching the Rewards Catalog.</p>
                             <a class="link" href="/pages/tutorials/searching-the-rewards-catalog"><span></span></a>
                         </div>
@@ -106,7 +149,7 @@
                             <div class="icon-holder">
                                 <span aria-hidden="true" class="icon icon_documents_alt"></span>
                             </div>
-                            <h3 class="title">Creating a Payout Scheme</h3>
+                            <h3 class="title">7. Creating a Payout Scheme</h3>
                             <p class="intro">Step-by-step guide for creating a Payout Scheme.</p>
                             <a class="link" href="/pages/tutorials/creating-a-payout-scheme"><span></span></a>
                         </div>
@@ -117,7 +160,7 @@
                 <div class="container">
                     <h2 class="title">App Installation and Configuration Tutorials</h2>
                     <div class="intro">
-                        <p>Browse tutorials for installing and configuring Apps.</p>
+                        <p>Browse tutorials for installing, configuring, and working with Apps.</p>
                     </div>
 
                     <div id="cards-wrapper" class="cards-wrapper row">
@@ -127,7 +170,18 @@
                                 <div class="icon-holder">
                                     <span aria-hidden="true" class="icon icon_documents_alt"></span>
                                 </div>
-                                <h3 class="title">Install and configure Braintree</h3>
+                                <h3 class="title">Working with Apps</h3>
+                                <p class="intro">Overview of the Marketplace and App management.</p>
+                                <a class="link" href="/pages/tutorials/working-with-apps"><span></span></a>
+                            </div>
+                        </div>
+
+                        <div class="item item-primary item-2 col-lg-4 col-6">
+                            <div class="item-inner">
+                                <div class="icon-holder">
+                                    <span aria-hidden="true" class="icon icon_documents_alt"></span>
+                                </div>
+                                <h3 class="title">Braintree</h3>
                                 <p class="intro">Step-by-step guide for installing and configuring the Braintree App.</p>
                                 <a class="link" href="/pages/tutorials/installing-and-configuring-braintree"><span></span></a>
                             </div>
@@ -138,7 +192,7 @@
                                 <div class="icon-holder">
                                     <span aria-hidden="true" class="icon icon_documents_alt"></span>
                                 </div>
-                                <h3 class="title">Install and configure Tango Card</h3>
+                                <h3 class="title">Tango Card</h3>
                                 <p class="intro">Step-by-step guide for installing and configuring the Tango Card App.</p>
                                 <a class="link" href="/pages/tutorials/installing-and-configuring-tangocard"><span></span></a>
                             </div>

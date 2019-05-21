@@ -26,10 +26,7 @@ You'll need the following:
 In addition, you should also have:
 - The Tenant Security Key created from the previous step. If you don't have one, see the tutorial [Creating a Tenant Security Key](/pages/tutorials/creating-a-tenant-security-key) first.
 
-## Steps
-Follow these steps to create a new Tangocard Provider Configuration for one of your Tenants.
-
-### 1 - Aquire a Management Bearer Token
+## Step 1 - Aquire a Management Bearer Token
 You will need to generate an HMAC token for the following following request using a `Tenant Security Key`; not an `Account Security Key`.
 
 **Note: If you already have a valid `Tenant Security Key` derived `Management Bearer Token` then you can use this rather than creating a new one. Skip to Step 2 if you have one.**
@@ -54,7 +51,7 @@ The `Management Bearer Token` will be contained in the `accessToken` property of
 ```
 
 
-### 2 - Create a new Tango Card Provider Configuration
+## Step 2 - Create a new Tango Card Provider Configuration
 Using the `Management Bearer Token` aquired in Step 1, we can now create a new Tango Card Provider Configuration.
 
 

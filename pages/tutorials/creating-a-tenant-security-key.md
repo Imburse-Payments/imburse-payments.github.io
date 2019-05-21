@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Creating a Tenant Security Key
+title: Quickstart Developer Tutorial
 toc: tutorial-creating-a-tenant-security-key
 body_color: body-pink
 section_name: Tutorials
@@ -13,7 +13,6 @@ Each Tenant you create will need at least one Tenant Security Key adding in orde
 This tutorial offers step-by-step instructions for creating a new Tenant Security Key for a specific Tenant using the REST API's.
 
 ## Prerequisites
-
 You'll need the following:
 
 - Your Account Security Key - This will consist of a Public Key and Private Key and would have been given to your upon registration. If you haven't received it then please contact your adminstrator.
@@ -24,10 +23,8 @@ In addition, you should also have:
 - The `Tenant Id` for a Tenant you have previously created - If you don't have one, see the tutorial [Creating a Tenant](/pages/tutorials/creating-a-tenant) first.
 
 
-## Steps
-Follow these steps to create a new Tenant Security Key for one of your Tenants.
 
-### 1 - Aquire a Management Bearer Token
+## Step 1 - Aquire a Management Bearer Token
 You will need to generate an HMAC token for the following following request using your `Account Security Key`.
 
 **Note: If you already have a valid `Tenant Security Key` derived `Management Bearer Token` then you can use that rather than creating a new one. Skip to Step 2 if you have one.**
@@ -52,7 +49,7 @@ The `Management Bearer Token` will be contained in the `accessToken` property of
 ```
 
 
-### 2 - Create a new Tenant Security Key
+## Step 2 - Create a new Tenant Security Key
 Using the `Management Bearer Token` aquired in Step 1, we can now create a new Tenant Security Key.
 
 
