@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Authentication
-toc: authentication
+title: Getting Started
+toc: getting-started-authentication
 body_color: body-primary
 section_name: Authentication
 last_updated: May 9th, 2019
 icon_class: icon_documents_alt icon
 ---
-# Overview
+# Authentication
 Imburse authenticates your API requests using your Account’s or Tenant's API keys. If you do not include your key when making an API request, or use one that is incorrect or outdated, Imburse returns an error.
 
 Every account is provided with one Account Security Key at registration time. All API requests exist in either sandbox or live modes and your accounts, tenants, apps, schemes, and so forth in one mode cannot be manipulated in the other.

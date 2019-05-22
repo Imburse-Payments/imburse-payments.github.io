@@ -6,16 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="">    
-    <link rel="shortcut icon" href="favicon.png">  
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.png">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
-    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">    
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
-</head> 
+</head>
 
-<body class="body-pink">
+<body class="body-primary">
     <div class="page-wrapper">
 
         <header id="header" class="header">
@@ -23,7 +23,6 @@
                 <div class="branding">
                     <h1 class="logo">
                         <a href="/index.html">
-
                             <!-- <span aria-hidden="true" class="icon_documents_alt icon"></span> -->
                             <span class="text-highlight"><img src="/assets/images/logo-white-small.png">IMBURSE</span><span class="text-bold">DOCS</span>
                         </a>
@@ -31,28 +30,30 @@
                 </div>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
-                    <li class="breadcrumb-item active">Documentation</li>
+                    <li class="breadcrumb-item"><a href="/documentation.html">Documentation</a></li>
+                    <li class="breadcrumb-item active">Getting Started</li>
                 </ol>
             </div>
         </header>
 
         <section class="cards-section text-center">
+
             <div class="container">
-                <h2 class="title">Documentation</h2>
+                <h2 class="title">Getting Started</h2>
                 <div class="intro">
-                    <p>Our documentation covers everything from Core Concepts, Getting Started Guides, and Tutorials!</p>
+                    <p>A suite of documents explaining how the various objects in the Imburse API work together.</p>
                 </div>
 
                 <div id="cards-wrapper" class="cards-wrapper row">
 
-                    <div class="item item-pink item-2 col-lg-4 col-6">
+                    <div class="item item-green item-2 col-lg-4 col-6">
                         <div class="item-inner">
                             <div class="icon-holder">
                                 <span aria-hidden="true" class="icon icon_documents_alt"></span>
                             </div>
-                            <h3 class="title">The Imburse Platform</h3>
-                            <p class="intro">An overview of the Imburse Platform.</p>
-                            <a class="link" href="/pages/guides/imburse-platform/"><span></span></a>
+                            <h3 class="title">Authentication</h3>
+                            <p class="intro">How authentication works.</p>
+                            <a class="link" href="/pages/getting-started/authentication"><span></span></a>
                         </div>
                     </div>
 
@@ -61,86 +62,64 @@
                             <div class="icon-holder">
                                 <span aria-hidden="true" class="icon icon_documents_alt"></span>
                             </div>
-                            <h3 class="title">Core Concepts</h3>
-                            <p class="intro">Understand the fundermentals of the platform.</p>
-                            <a class="link" href="/pages/guides/core-concepts"><span></span></a>
+                            <h3 class="title">Account Management</h3>
+                            <p class="intro">Managing Account Security Keys, setting up NEW Tenants, and managing Tenant Security Keys.</p>
+                            <a class="link" href="/pages/getting-started/account-management"><span></span></a>
                         </div>
                     </div>
 
-                    <div class="item item-blue col-lg-4 col-6">
+                    <div class="item item-green item-2 col-lg-4 col-6">
                         <div class="item-inner">
                             <div class="icon-holder">
                                 <span aria-hidden="true" class="icon icon_documents_alt"></span>
                             </div>
-                            <h3 class="title">Authentication</h3>
-                            <p class="intro">Under how authentication works with the Imburse APIs.</p>
-                            <a class="link" href="/pages/guides/authentication"><span></span></a>
+                            <h3 class="title">Tenant Management</h3>
+                            <p class="intro">Managing Tenant Security Keys.</p>
+                            <a class="link" href="/pages/getting-started/tenant-management"><span></span></a>
                         </div>
                     </div>
 
-                    <div class="item item-primary col-lg-4 col-6">
+                    <div class="item item-green item-2 col-lg-4 col-6">
                         <div class="item-inner">
                             <div class="icon-holder">
                                 <span aria-hidden="true" class="icon icon_documents_alt"></span>
                             </div>
-                            <h3 class="title">Getting Started v2</h3>
-                            <p class="intro">Authentication, managing your account, tenants, schemes, apps etc.</p>
-                            <a class="link" href="/getting-started.html"><span></span></a>
+                            <h3 class="title">Apps and the Marketplace</h3>
+                            <p class="intro">Installing and configuring Apps from the Marketplace.</p>
+                            <a class="link" href="/pages/getting-started/apps"><span></span></a>
                         </div>
                     </div>
 
-                    <div class="item item-orange col-lg-4 col-6">
-                            <div class="item-inner">
-                                <div class="icon-holder">
-                                    <span aria-hidden="true" class="icon icon_documents_alt"></span>
-                                </div>
-                                <h3 class="title">Getting Started</h3>
-                                <p class="intro">Get started with managing your account, tenants, schemes, apps etc.</p>
-                                <a class="link" href="/pages/guides/getting-started"><span></span></a>
-                            </div>
-                        </div>
-
-                    <div class="item item-purple col-lg-4 col-6">
+                    <div class="item item-green item-2 col-lg-4 col-6">
                         <div class="item-inner">
                             <div class="icon-holder">
-                                <i class="icon icon_documents_alt"></i>
+                                <span aria-hidden="true" class="icon icon_documents_alt"></span>
                             </div>
-                            <h3 class="title">Tutorials</h3>
-                            <p class="intro">Browse the tutorials for working with the Imburse APIs.</p>
-                            <a class="link" href="/tutorials.html"><span></span></a>
+                            <h3 class="title">Collection Schemes</h3>
+                            <p class="intro">Settting up and configuring Collection Schemes.</p>
+                            <a class="link" href="/pages/getting-started/collection-schemes"><span></span></a>
                         </div>
                     </div>
 
-                    <div class="item item-primary col-lg-4 col-6">
+                    <div class="item item-green item-2 col-lg-4 col-6">
                         <div class="item-inner">
                             <div class="icon-holder">
-                                <i class="icon icon_documents_alt"></i>
+                                <span aria-hidden="true" class="icon icon_documents_alt"></span>
                             </div>
-                            <h3 class="title">How Collections and Payouts Work</h3>
-                            <p class="intro">Details how cash collections and gift payouts work for your customers.</p>
-                            <a class="link" href="/pages/guides/how-collections-and-payouts-work"><span></span></a>
+                            <h3 class="title">Payout Schemes</h3>
+                            <p class="intro">Setting up and configuring Payout Schemes.</p>
+                            <a class="link" href="/pages/getting-started/payout-schemes"><span></span></a>
                         </div>
                     </div>
 
-                    <div class="item item-green col-lg-4 col-6">
+                    <div class="item item-green item-2 col-lg-4 col-6">
                         <div class="item-inner">
                             <div class="icon-holder">
-                                <i class="icon icon_documents_alt"></i>
+                                <span aria-hidden="true" class="icon icon_documents_alt"></span>
                             </div>
-                            <h3 class="title">White label SDK Integration</h3>
-                            <p class="intro">How to integrate our White Label SDK into your site.</p>
-                            <a class="link" href="/pages/guides/white-label-sdk-integration"><span></span></a>
-                        </div>
-                    </div>
-
-                    <div class="item item-blue col-lg-4 col-6">
-                        <div class="item-inner">
-                            <div class="icon-holder">
-                                <i class="icon icon_documents_alt"></i>
-                            </div>
-                            <h3 class="title">Client Portal</h3>
-                            <p class="intro">Using the Client Portal to administer your tenants.</p>
-                            <a class="link" href="/pages/guides/client-portal"><span></span></a>
+                            <h3 class="title">Rewards Catalog</h3>
+                            <p class="intro">Using the Reward Catalog.</p>
+                            <a class="link" href="/pages/getting-started/rewards-catalog"><span></span></a>
                         </div>
                     </div>
 
@@ -150,20 +129,19 @@
         </section>
     </div>
 
-
     <footer class="footer text-center">
             <div class="container">
                 <!-- <small class="copyright">Designed by <img src="assets/images/logo-white-tiny.png"> for developers</small> -->
                 <small class="copyright">Designed with <i class="fa fa-heart"></i> by <a href="https://themes.3rdwavemedia.com/" target="_blank">Xiaoying Riley</a> for developers</small>
             </div>
         </footer>
-    
+
         <!-- Main Javascript -->
         <script type="text/javascript" src="assets/plugins/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>
         <script type="text/javascript" src="assets/js/main.js"></script>
-    
+
     </body>
     </html>
-    
+
