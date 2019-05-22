@@ -19,14 +19,14 @@ You will need a Tenant Security Key to perform Collection Scheme Management func
 The available Collection Scheme functions are:
 
 - Get Scheme
-- **Get list of Schemes**
+- Get list of Schemes
 - Get published draft
 - Create a Scheme
 - Add Draft 
 - Get a Draft
 - Update Draft
 - Publish a Draft
-- **Delete a Scheme**
+- Delete a Scheme
 
 ## API Documentation
 All the Collection Scheme API functions are fully documented in the [Collection Scheme API documentation](https://api-docs.imbursepayments.com/#8ad29eec-f6ef-4c78-ad91-d57dba5f3843).
@@ -77,7 +77,7 @@ The following models are used to define a Collection Scheme.
 Property | Type | Mandatory | Description
 -|-
 `schemeId` | guid | Yes | Auto generated upon creation.
-`publishedDraftId` | Guid | No | When a draft is published, the `publishedDraftId` will be the id of the draft. It will be empty until a draft is published.
+`publishedDraftId` | Guid | No | When a draft is published, the `publishedDraftId` will<br/>be the id of the draft. It will be empty until a draft is published.
 `drafts` | Array of [Draft models](#rule-model) | Yes | Drafts for this scheme.
 
 
@@ -125,7 +125,7 @@ Property | Type | Mandatory | Description
 
 ### Rule Model
 ```json
-{	
+{
 	"priority": 0,
 	"currencies": [
 	"string"
@@ -148,11 +148,11 @@ Property | Type | Mandatory | Description
 
 Property | Type | Mandatory | Description
 -|-
-`priority` | integer | Yes | The priority order in which the rules are evaluated. **Note: Priority 0 is a default that will take affect when no other rule is matched.**
-`currencies` | string | No | An array of `Currency Codes`. Leave blank to apply this rule to any currency.
-`countries` | string | No | An array of `Country Codes`. Leave blank to apply this rule to any country.
-`highValueInclusive` | decimal | Yes | The upper value limit this rule would apply to. Leave empty for any value.
-`lowValueInclusive` | decimal | Yes | The lower value limit this rule would apply to. Leave empty for any value.
+`priority` | integer | Yes | The priority order in which the rules are evaluated.<br/>**Note: Priority 0 is a default that will take<br/>affect when no other rule is matched.**
+`currencies` | string | No | An array of `Currency Codes`.<br/>Leave blank to apply this rule to any currency.
+`countries` | string | No | An array of `Country Codes`.<br/>Leave blank to apply this rule to any country.
+`highValueInclusive` | decimal | Yes | The upper value limit this rule would apply to.<br/>Leave empty for any value.
+`lowValueInclusive` | decimal | Yes | The lower value limit this rule would apply to.<br/>Leave empty for any value.
 `configurations` | Array of [Configuration models](#configuration-models) | Yes | The configurations for this rule.
 
 ### Configuration Model
@@ -167,8 +167,8 @@ Property | Type | Mandatory | Description
 
 Property | Type | Mandatory | Description
 -|-
-`appId` | string | Yes | The `AppId` of one of you installed Apps that you want to include in this rule.
-`paymentMethodExclusions` | Array of strings | No | An array of `paymentMethods` that you want to exclude from the rule. Leave blank to allow all payment methods offered by the matching `appId` (above).
+`appId` | string | Yes | The `AppId` of one of you installed Apps that you<br/>want to include in this rule.
+`paymentMethodExclusions` | Array of strings | No | An array of `paymentMethods` that<br/>you want to exclude from the rule.<br/>Leave blank to allow all payment methods offered by the matching `appId` (above).
 
 ## Scheme Setup
 A Scheme consists of a three main components:
@@ -177,7 +177,7 @@ A Scheme consists of a three main components:
 - Rules
 - Configurations
 
-The diagram below shows these three components that make up a Collection Scheme.
+The diagram below shows the three components that make up a Collection Scheme.
 
 <img src="/assets/images/guides/getting-started/collection-scheme-breakdown.png" style="width:800px;" title="Collection Scheme" alt="Collection Scheme"/>
 
@@ -212,7 +212,7 @@ You can add as many Rules to your draft scheme as necessary in order to refine t
 ### Configurations
 The Configuration components in a Rule describes the Apps, and by extension the payment methods from those Apps, that will be available when the Rule is matched - see [How and when are Rules matched?](#how-and-when-are-rules-matched) below.
 
-The `appId` property should be set to the App Id of an *installed* App in your Tenant - for example `BRAINTREE_SDK`. 
+The `appId` property should be set to the App Id of an *installed* App in your Tenant - for example `BRAINTREE_SDK`.
 
 All the payment methods from the specified App will be available to your customers if the Rule is matched. If you want to exclude some payment method from your App, then set the `paymentMethodExclusions` property accordingly. For example, to exclude PayPal and Visa, set `paymentMethodExclusions` property to `PAYPAL, VISA`.
 
@@ -240,7 +240,7 @@ Priority # | Currencies | Countries | Low Value | High Value | Configured Apps
 2 | **EUR** | **DE, FR** | **101** | (any) | Braintree - Credits Cards + PayPal
 3 | **EUR** | (any) | (any) | (any) | Braintree - Paypal only
 
-When the API request to get the available collection options is executed for the payment instruction, the rules will be evaluated in **Priority** order. 
+When the API request to get the available collection options is executed for the payment instruction, the rules will be evaluated in **Priority** order.
 
 Priority **1** rule is **ignored** as the value filter is outside the range of collection value.
 

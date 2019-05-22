@@ -14,6 +14,16 @@ Every account is provided with one Account Security Key at registration time. Al
 
 Your API keys are available in the Imburse Portal, however, you cannot get the private key value after it has been created; either via the API or the Imburse Portal. You must safely store the private key values once they have been created.
 
+## Functions
+The available authentication functions are:
+
+- Create a Management Bearer Token
+- Create a Collect API Bearer Token
+- Create a Payout API Bearer Token
+
+## API Documentation
+All the Authentication API functions are fully documented in the [Identity API documentation](https://api-docs.imbursepayments.com/?version=latest#f6bf99b9-ca03-47b5-a667-8e1a5a625b0e).
+
 ## HMAC and Bearer Tokens
 HMAC (Hashed Message Authentication Code), is a specific type of MAC involving a cryptographic hash function and a secret cryptographic key. It is used to simultaneously verify both the data integrity and the authentication of a message. We use the HMAC authentication process for your initial authentication into the Imburse platform.
 
