@@ -9,22 +9,33 @@ icon_class: icon_documents_alt icon
 ---
 # Installing and configuring Tango Card
 
-## Prerequisites
+# Prerequisites
 Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
 - A valid `Management Bearer Token` derived from a `Tenant Security Key`. If you don't have one, see the tutorial [Aquiring a Management Bearer Token](#aquire-management-bearer-token).
 - If you already have an account with Tango Card you can use your existing `customerIdentifier` and `accountIdentifier` details. Have these handy if you want to use them.
 
-# Installation
-Using the `Management Bearer Token` we can now install a new Braintree App.
+# Step 1 - Installation
+Using the `Management Bearer Token` we can now install a new Tango Card App.
 
 #### Request
-Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
+```curl
+curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/marketplace/apps/tangocard-raas/install" \
+  --header "Authorization: Bearer {management-bearer-token}" \
+  --header "Content-Type: application/json"
+```
 
+#### Response
+The response will be response code `200 - OK`.
+
+# Step 2 - Configuration
+After installing, we can now configure the Tango Card App.
+
+#### Request
 The `customerIdentifier` and `accountIdentifier` properties are specific to the Tango Card. Leave these blank for Imburse to generate these ids for you or, if you already have a Tango Card account, you can put your current `customerIdentifier` and `accountIdentifier` values here instead.
 
 ```curl
-curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/marketplace/tangocard-raas" \
+curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/marketplace/installed/tangocard-raas/configure" \
   --header "Authorization: Bearer {management-bearer-token}" \
   --header "Content-Type: application/json" \
   --data "{
@@ -34,6 +45,8 @@ curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/marke
 ```
 
 #### Response
+Response code `200 - OK`
+
 ```json
 {
     "customerIdentifier": "tangocard-customer-id",

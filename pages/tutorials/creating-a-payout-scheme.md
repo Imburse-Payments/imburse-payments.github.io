@@ -14,15 +14,14 @@ For this tutorial we will create a Payout Scheme for a Tenant using the REST API
 
 For more information on Payout Schemes, see the [Payout Schemes in Core Concepts](/pages/guides/core-concepts/#payout-schemes).
 
-## Prerequisites
+# Prerequisites
 Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
 - A valid `Management Bearer Token` derived from a `Tenant Security Key`. If you don't have one, see the tutorial [Aquiring a Management Bearer Token](#aquire-management-bearer-token).
 - The `rewardId` of one or more Rewards from the Rewards Catalog. If you don't have any, see the tutorial [Searching the Rewards Catalog](/pages/tutorials/searching-the-rewards-catalog) first.
 
-## Create a new Payout Scheme
-Using the `Management Bearer Token` aquired in Step 1, we can now create a new Payout Scheme.
-
+# Create a new Payout Scheme
+Using the `Management Bearer Token` we can create a new Payout Scheme.
 
 #### Request
 Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
@@ -36,7 +35,7 @@ The `rewardProviders` property is an array of Id of your Provider Configurations
 curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/schemes/payout" \
   --header "Authorization: Bearer {management-token}" \
   --header "Content-Type: application/json" \
-  --data "{ 
+  --data "{
 	\"name\": \"\",
 	\"currencies\": [""],
 	\"rewardProviders\": [],
@@ -77,6 +76,6 @@ You will need this `id` value in any future operations relating to this Payout S
 }
 ```
 
+# What's Next?
 
-
-
+- [Creating a Payout Instruction](/pages/tutorials/creating-a-payout-instruction)

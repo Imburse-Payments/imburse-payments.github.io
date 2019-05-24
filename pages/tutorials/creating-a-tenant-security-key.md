@@ -12,7 +12,7 @@ Each Tenant you create will need at least one Tenant Security Key adding in orde
 
 This tutorial offers step-by-step instructions for creating a new Tenant Security Key for a specific Tenant using the REST API's.
 
-## Prerequisites
+# Prerequisites
 You'll need the following:
 
 - Your Account Security Key - This will consist of a Public Key and Private Key and would have been given to your upon registration. If you haven't received it then please contact your adminstrator.
@@ -22,39 +22,10 @@ You'll need the following:
 In addition, you should also have:
 - The `Tenant Id` for a Tenant you have previously created - If you don't have one, see the tutorial [Creating a Tenant](/pages/tutorials/creating-a-tenant) first.
 
-
-
-## Step 1 - Aquire a Management Bearer Token
-You will need to generate an HMAC token for the following following request using your `Account Security Key`.
-
-**Note: If you already have a valid `Tenant Security Key` derived `Management Bearer Token` then you can use that rather than creating a new one. Skip to Step 2 if you have one.**
-
+# Create a new Tenant Security Key
+Using the `Management Bearer Token` we can create a new Tenant Security Key.
 
 #### Request
-Replace the `{hmac-token}` placeholder value with your actual HMAC token.
-
-```curl
-curl --location --request POST "https://sandbox-api.imbursepayments.com/identity/v1/hmac/management" \
-  --header "Authorization: Hmac {hmac-token}"
-```
-
-#### Response
-The `Management Bearer Token` will be contained in the `accessToken` property of the response body:
-
-```json
-{
-    "accessToken": "",
-    "expires": ""
-}
-```
-
-
-## Step 2 - Create a new Tenant Security Key
-Using the `Management Bearer Token` aquired in Step 1, we can now create a new Tenant Security Key.
-
-
-#### Request
-
 Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
 
 Replace the `{tenantId}` placeholder value with the Tenant `id` for the Tenant you want to create the Security Key for.
@@ -96,11 +67,5 @@ The newly created `publicKey` and `privateKey` values will be required when you 
 }
 ```
 
-## What's Next?
-
-- [Create a Provider Configuration](/pages/tutorials/creating-a-provider-configuration)
-
-
-
-
-
+# What's Next?
+- [Get a Management Bearer Token](/pages/tutorials/get-management-bearer-token)

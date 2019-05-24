@@ -23,6 +23,8 @@
                     <a class="nav-link scrollto" href="#collection-schemes">Collection Schemes</a>
                     <a class="nav-link scrollto" href="#payout-schemes">Payout Schemes</a>
                     <a class="nav-link scrollto" href="#webhooks">Webhooks</a>
+                    <a class="nav-link scrollto" href="#payment-orders">Payment Orders</a>
+                    <a class="nav-link scrollto" href="#payment-instructions">Payment Instructions</a>
 
                 {% when 'how-collections-and-payouts-work' %}
 
@@ -35,6 +37,10 @@
                 {% when 'client-portal' %}
 
                     <a class="nav-link scrollto" href="#overview">Overview</a>
+
+
+
+
 
                 {% when 'getting-started-authentication' %}
 
@@ -103,65 +109,49 @@
                     <a class="nav-link scrollto" href="#models">Models</a>
 
 
+
+
+
+
                 {% when 'tutorial-creating-a-tenant' %}
 
                     <a class="nav-link scrollto" href="#creating-a-tenant">Creating a Tenant</a>
                     <a class="nav-link scrollto" href="#prerequisites">Prerequisites</a>
-                    <a class="nav-link scrollto" href="#step-1---aquire-a-management-bearer-token">Step 1 - Aquire a Management Bearer Token</a>
-                    <a class="nav-link scrollto" href="#step-2---create-a-new-tenant">Step 2 - Create a new Tenant</a>
+                    <a class="nav-link scrollto" href="#create-a-new-tenant">Create a new Tenant</a>
                     <a class="nav-link scrollto" href="#whats-next">What's Next?</a>
 
                 {% when 'tutorial-creating-a-tenant-security-key' %}
 
                     <a class="nav-link scrollto" href="#creating-a-tenant-security-key">Creating a Tenant Security Key</a>
                     <a class="nav-link scrollto" href="#prerequisites">Prerequisites</a>
-                    <a class="nav-link scrollto" href="#step-1---aquire-a-management-bearer-token">Step 1 - Aquire a Management Bearer Token</a>
-                    <a class="nav-link scrollto" href="#step-2---create-a-new-tenant-security-key">Step 2 - Create a new Tenant Security Key</a>
+                    <a class="nav-link scrollto" href="#create-a-new-tenant-security-key">Create a new Tenant Security Key</a>
                     <a class="nav-link scrollto" href="#whats-next">What's Next?</a>
 
-                {% when 'aquire-management-bearer-token' %}
+                {% when 'get-management-bearer-token' %}
 
-                    <a class="nav-link scrollto" href="#aquire-a-management-bearer-token">Aquire a Management Bearer Token</a>
+                    <a class="nav-link scrollto" href="#get-a-management-bearer-token">Get a Management Bearer Token</a>
                     <a class="nav-link scrollto" href="#prerequisites">Prerequisites</a>
                     <a class="nav-link scrollto" href="#get-management-bearer-token">Get Management Bearer Token</a>
                     <a class="nav-link scrollto" href="#whats-next">What's Next?</a>
 
-                {% when 'working-with-apps' %}
+                {% when 'get-payout-bearer-token' %}
 
-                    <a class="nav-link scrollto" href="#the-app-marketplace">The App Marketplace</a>
-                    <a class="nav-link scrollto" href="#marketplace-functions">Marketplace Functions</a>
+                    <a class="nav-link scrollto" href="#get-a-payout-bearer-token">Get a Payout Bearer Token</a>
                     <a class="nav-link scrollto" href="#prerequisites">Prerequisites</a>
-                    <a class="nav-link scrollto" href="#get-list-of-apps">Get list of Apps</a>
-                    <a class="nav-link scrollto" href="#get-an-app">Get an App</a>
-                    <a class="nav-link scrollto" href="#installing-an-app">Installing an App</a>
-                    <a class="nav-link scrollto" href="#updating-an-app">Updating an App</a>
-                    <a class="nav-link scrollto" href="#uninstalling-an-app">Uninstalling an App</a>
+                    <a class="nav-link scrollto" href="#get-payout-bearer-token">Get Payout Bearer Token</a>
+                    <a class="nav-link scrollto" href="#whats-next">What's Next?</a>
 
                 {% when 'tutorial-installing-and-configuring-an-app' %}
 
                     <a class="nav-link scrollto" href="#installing-and-configuring-an-app">Installing and Configuring an App</a>
                     <a class="nav-link scrollto" href="#whats-next">What's Next?</a>
 
-                {% when 'tutorial-installing-and-configuring-braintree' %}
-
-                    <a class="nav-link scrollto" href="#installing-braintree">Installing and Configuring Braintree</a>
-                    <a class="nav-link scrollto" href="#prerequisites">Prerequisites</a>
-                    <a class="nav-link scrollto" href="#step-1---aquire-a-management-bearer-token">Step 1 - Aquire a Management Bearer Token</a>
-                    <a class="nav-link scrollto" href="#step-2---install-and-configure">Step 2 - Install and configure</a>
-                    <a class="nav-link scrollto" href="#uninstalling">Uninstalling</a>
-
-                {% when 'tutorial-installing-and-configuring-tangocard' %}
-
-                    <a class="nav-link scrollto" href="#installing-and-configuring-tango-card">Installing and Configuring Tango Card</a>
-                    <a class="nav-link scrollto" href="#prerequisites">Prerequisites</a>
-                    <a class="nav-link scrollto" href="#step-1---aquire-a-management-bearer-token">Step 1 - Aquire a Management Bearer Token</a>
-                    <a class="nav-link scrollto" href="#step-2---install-and-configure">Step 2 - Install and configure</a>
-
                 {% when 'tutorial-creating-a-collection-scheme' %}
 
                     <a class="nav-link scrollto" href="#creating-a-collection-scheme">Creating a Collection Scheme</a>
                     <a class="nav-link scrollto" href="#prerequisites">Prerequisites</a>
-                    <a class="nav-link scrollto" href="#create-a-new-collection-scheme">Create a new Collection Scheme</a>
+                    <a class="nav-link scrollto" href="#create-the-collection-scheme">Create the Collection Scheme</a>
+                    <a class="nav-link scrollto" href="#publishing-the-draft">Publishing the Draft</a>
                     <a class="nav-link scrollto" href="#whats-next">What's Next?</a>
 
                 {% when 'tutorial-searching-the-rewards-catalog' %}
@@ -176,6 +166,58 @@
                     <a class="nav-link scrollto" href="#creating-a-payout-scheme">Creating a Payout Scheme</a>
                     <a class="nav-link scrollto" href="#prerequisites">Prerequisites</a>
                     <a class="nav-link scrollto" href="#create-a-new-payout-scheme">Create a new Payout Scheme</a>
+                    <a class="nav-link scrollto" href="#whats-next">What's Next?</a>
+
+                {% when 'tutorial-creating-a-payout-instruction' %}
+
+                    <a class="nav-link scrollto" href="#creating-a-payout-instruction">Creating a Payout Instruction</a>
+                    <a class="nav-link scrollto" href="#prerequisites">Prerequisites</a>
+                    <a class="nav-link scrollto" href="#steps">Steps</a>
+                    <a class="nav-link scrollto" href="#step-1---create-the-order">Step 1 - Create the Order</a>
+                    <a class="nav-link scrollto" href="#step-2---create the-instruction">Step 2 - Create the Instruction</a>
+                    <a class="nav-link scrollto" href="#whats-next">What's Next?</a>
+
+                {% when 'tutorial-get-payout-options' %}
+
+                    <a class="nav-link scrollto" href="#get-payout-options">Get Payout Options</a>
+                    <a class="nav-link scrollto" href="#prerequisites">Prerequisites</a>
+                    <a class="nav-link scrollto" href="#how-are-payout-options-determined">How are Payout Options determined?</a>
+                    <a class="nav-link scrollto" href="#get-the-payout-options">Get the Payout Options</a>
+                    <a class="nav-link scrollto" href="#whats-next">What's Next?</a>
+
+                {% when 'tutorial-processing-a-reward' %}
+
+                    <a class="nav-link scrollto" href="#processing-a-reward">Processing a Reward</a>
+                    <a class="nav-link scrollto" href="#prerequisites">Prerequisites</a>
+                    <a class="nav-link scrollto" href="#process-the-reward">Process the Reward</a>
+
+
+
+
+                {% when 'working-with-apps' %}
+
+                    <a class="nav-link scrollto" href="#the-app-marketplace">The App Marketplace</a>
+                    <a class="nav-link scrollto" href="#marketplace-functions">Marketplace Functions</a>
+                    <a class="nav-link scrollto" href="#prerequisites">Prerequisites</a>
+                    <a class="nav-link scrollto" href="#get-list-of-apps">Get list of Apps</a>
+                    <a class="nav-link scrollto" href="#get-an-app">Get an App</a>
+                    <a class="nav-link scrollto" href="#installing-an-app">Installing an App</a>
+                    <a class="nav-link scrollto" href="#updating-an-app">Updating an App</a>
+                    <a class="nav-link scrollto" href="#uninstalling-an-app">Uninstalling an App</a>
+
+                {% when 'tutorial-installing-and-configuring-braintree' %}
+
+                    <a class="nav-link scrollto" href="#installing-braintree">Installing and Configuring Braintree</a>
+                    <a class="nav-link scrollto" href="#prerequisites">Prerequisites</a>
+                    <a class="nav-link scrollto" href="#step-1---installation">Step 1 - Installation</a>
+                    <a class="nav-link scrollto" href="#step-2---configuration">Step 2 - Configuration</a>
+
+                {% when 'tutorial-installing-and-configuring-tangocard' %}
+
+                    <a class="nav-link scrollto" href="#installing-and-configuring-tango-card">Installing and Configuring Tango Card</a>
+                    <a class="nav-link scrollto" href="#prerequisites">Prerequisites</a>
+                    <a class="nav-link scrollto" href="#step-1---installation">Step 1 - Installation</a>
+                    <a class="nav-link scrollto" href="#step-2---configuration">Step 2 - Configuration</a>
 
             {% endcase %}
 

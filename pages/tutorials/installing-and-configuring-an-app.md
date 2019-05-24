@@ -14,7 +14,7 @@ See the [App tutorials](#/pages/tutorials) for more information on the particula
 
 For more information on Apps and Marketplace, see the [Apps in Core Concepts](/pages/guides/core-concepts/#apps).
 
-## What's Next?
+# What's Next?
 
 - [Create a Collection Scheme](/pages/tutorials/creating-a-collection-scheme)
 

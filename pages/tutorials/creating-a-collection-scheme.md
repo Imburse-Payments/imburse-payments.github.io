@@ -14,28 +14,23 @@ For this tutorial we will create a Colection Scheme for a Tenant using the REST 
 
 For more information on Collection Schemes, see the [Collection Schemes in Core Concepts](/pages/guides/core-concepts/#collection-schemes).
 
-## Prerequisites
+# Prerequisites
 Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
 - A valid `Management Bearer Token` derived from a `Tenant Security Key`. If you don't have one, see the tutorial [Aquiring a Management Bearer Token](#aquire-management-bearer-token).
-- The `appId` of an App you have previously installed that you want to add to this Collection Scheme. If you don't have one, see the tutorial [Installing an Configuring an App](/pages/tutorials/installing-and-configuring-an-app).
+- The `appId` of an App you have previously installed that you want to add to this Collection Scheme. If you don't have one, see the tutorial [Installing and Configuring an App](/pages/tutorials/installing-and-configuring-an-app).
 
-# Create a new Collection Scheme
-Using the `Management Bearer Token` we can now create a new Collection Scheme.
+# Create the Collection Scheme
+Using your `Management Bearer Token` we can create a new Collection Scheme.
+
+By default your new Collection Scheme will be in draft only. It will need to be Published before it can be used for collecting money.
 
 #### Request
+Use the following request to create a new Collection Scheme.
 
-The `name` property can be anything you like in order to help you identify this Collection Scheme later.
-
-The `rules` property is an array of `rule` objects. A Collection Scheme is made up of one or more **Rules**. A Rule describes the **countries**, **currencies**, and **value** range the configured Apps will be valid for.
-
-Within each Rule are **Configurations**. A **Configuration** describes which App is to be used and, optionally, the payment methods that should be excluded from the App.
-
-Rules give you fine grained, flexible control to tune the available payment methods to your customers.
-
-A Collection Scheme can be configured to have many Rules.
-
-You created a Braintree Provider Configuration in the [Creating a Provider Configuration](/pages/tutorials/creating-a-provider-configuration) tutorial.
+Note: The scheme we are creating has the following properties:
+- The Rules are filtering for **EUR**, *any* country, and a value between **1** and **1000**.
+- The available payments methods will be from the **BRAINTREE_SDK** App.
 
 
 ```curl
@@ -43,31 +38,123 @@ curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/schem
   --header "Authorization: Bearer {management-bearer-token}" \
   --header "Content-Type: application/json" \
   --data "{
-	\"name\": \"Motor Insurance - EUROPE\",
-  "rules": [
-    {
-
-    }
+	    \"name\": \"Motor Insurance - EUROPE\",
+      \"code\": "",
+      \"rules\": [
+        {
+          \"priority\": 0,
+          \"currencies\": [
+            \"EUR\"
+          ],
+          \"countries\": [],
+          \"highValueInclusive\": 1000,
+          \"lowValueInclusive\": 1,
+          \"configurations\": [
+            {
+              \"priority\": 0,
+              \"appId\": \"BRAINTREE_SDK\",
+              \"excludedPaymentMethods\": [ "" ]
+            }
+          ]
+        }
+      ]
   ]
 ```
 
 #### Response
-The `id` property will be the id of your newly created Collection Scheme.
-
-You will need this `id` value in any future operations relating to this Collection Scheme.
+The `schemeId` property will be the id of your newly created Collection Scheme.
 
 ```json
 {
-    "id": "a5b71fa8-3898-4b7e-a19f-9f3d824fabbc",
-    "name": "Motor Insurance - EUROPE",
-    "paymentProviderConfigurations": ["49800e36-c233-4f18-bebe-1abe535df8b2"],
-    "overrides": []
+  "schemeId": "8a7f806f-782a-498d-9627-b742f0a89c40",
+  "publishedDraftId": "",
+  "drafts": [
+    {
+      "draftId": "5a8b5f84-a799-44ba-96c2-8006daa7088b",
+      "name": "Motor Insurance - EUROPE",
+      "code": "",
+      "rules": [
+        {
+          "priority": 0,
+          "currencies": [
+            "EUR"
+          ],
+          "countries": [],
+          "highValueInclusive": 1000,
+          "lowValueInclusive": 1,
+          "configurations": [
+            {
+              "priority": 0,
+              "appId": "BRAINTREE_SDK",
+              "availablePaymentMethods": [
+                "VISA", "MASTERCARD", "DISCOVER", "MAESTRO", "AMERICAN-EXPRESS", "PAYPAL"
+              ],
+              "excludedPaymentMethods": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+
+# Publishing the Draft
+After creating a new Scheme we need to Publish the draft that was added.
+
+In the previous step, the response included a `drafts` collection. We'll use the `draftId` from the first item in the collection when we call the Publish function.
+
+#### Request
+Call the endpoint below, replacing **`YOUR_SCHEME_ID`** and **`YOUR_DRAFT_ID`** with your actual values.
+
+`POST https://sandbox-api.imburse.net/schemes/YOUR_SCHEME_ID/drafts/YOUR_DRAFT_ID/publish`
+
+Using the example response from the previous step we will call the Publish endpoint with our values:
+
+`POST https://sandbox-api.imburse.net/schemes/8a7f806f-782a-498d-9627-b742f0a89c40/drafts/5a8b5f84-a799-44ba-96c2-8006daa7088b/publish`
+
+
+#### Response
+You will see that the `publishedDraftId` property is now referencing the draft we created earlier.
+
+```json
+{
+  "schemeId": "8a7f806f-782a-498d-9627-b742f0a89c40",
+  "publishedDraftId": "5a8b5f84-a799-44ba-96c2-8006daa7088b",
+  "drafts": [
+    {
+      "draftId": "5a8b5f84-a799-44ba-96c2-8006daa7088b",
+      "name": "Motor Insurance - EUROPE",
+      "code": "",
+      "rules": [
+        {
+          "priority": 0,
+          "currencies": [
+            "EUR"
+          ],
+          "countries": [],
+          "highValueInclusive": 1000,
+          "lowValueInclusive": 1,
+          "configurations": [
+            {
+              "priority": 0,
+              "appId": "BRAINTREE_SDK",
+              "availablePaymentMethods": [
+                "VISA", "MASTERCARD", "DISCOVER", "MAESTRO", "AMERICAN-EXPRESS", "PAYPAL"
+              ],
+              "excludedPaymentMethods": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
 ```
 
 # What's Next?
 
-- [Create a Collection Scheme](/pages/tutorials/creating-a-collection-scheme)
+- [Searching the Rewards Catalog](/pages/tutorials/searching-the-rewards-catalog)
 
 
 

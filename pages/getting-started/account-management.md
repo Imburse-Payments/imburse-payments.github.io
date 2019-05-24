@@ -8,7 +8,7 @@ last_updated: May 9th, 2019
 icon_class: icon_documents_alt icon
 ---
 # Account Management
-The Account Management API functions allow a user to perform both Account level and Tenant level administration tasks.
+The Account Management API functions allow a user to perform both Account level and *limited* Tenant level administration tasks.
 
 ## Access Requirements
 You will need an Account Security Key to perform Account Management functions.
@@ -39,7 +39,7 @@ The Account functions can be broken down into to levels:
 - Delete a Tenant Security Key
 
 **Note:** - The Tenant functions available to an Account are limited to Tenant creation and Tenant Security Keys only.
-For Collection and Payout Schemes, Provider Configurations, and other Tenant configuration management you must use a Tenant Security Key.
+For Collection and Payout Schemes, Apps, and other Tenant configuration management you must use a Tenant Security Key.
 
 
 ## API Documentation
@@ -116,7 +116,7 @@ Property | Type | Mandatory | Description
 `tenantId` | string | No | The Tenant Id this Key belongs to.<br/><br/>**<mark>Only applicable to Tenant Security Keys.</mark>**
 `publicKey` | string | Yes | The Public Key portion of the Security Key.
 `privateKey` | string | Yes | The Private Key portion of the Security Key.<br/><br/>**<mark>The Private Key value cannot be retrived once created<br/>so it's importantthis stored somewhere safe.</mark>**
-`roles` | Array of strings | Yes | The roles given to this Key.
+`roles` | Array of [Account Roles](#account-roles) or [Tenant Roles](#tenant-roles) | Yes | The roles given to this Key.
 
 ### Tenant Model
 ```json
@@ -160,11 +160,32 @@ The Account is the root of the system. The Account Security Keys and Tenants are
 Your Account is setup by Imburse upon registration.
 
 ### Account Security Keys
-When your Account was initially setup by Imburse you would have been issued with an Account Security Keys to allow you to access the APIs.
+When your Account was initially setup you would have been issued with an Account Security Key to allow you to access the APIs.
 
-You can setup as many additional Account Security Keys as you require.
+You can setup additional Account Security Keys as you require.
 
-**<mark>Important - Creating an Account Security Key will generate you Public Key and Private Key values. The Private Key value cannot be retrived after creation<br/>so it's important this is stored somewhere safe.</mark>**
+**<mark>Important - Creating an Account Security Key will generate your Public Key and Private Key values. The Private Key value cannot be retrived after creation<br/>so it's important this is safely stored.</mark>**
+
+##### Account Roles
+The capabilies of an Account Security Key are dependent on the **Account Roles** that are assigned to it. The following table shows the **Account Roles** that are available:
+
+Account Role Name | Description
+-|-
+`acc.g.super` | Account Gobal Admin - Global read + write access to all aspects of Accounts
+`acc.r` | Account Management read access
+`acc.a` | Account Management read + write access
+`acc.key.r` | Security Key Management read access
+`acc.key.a` | Security Key Management read + write access
+`acc.t.r` | Tenant Management read access
+`acc.t.a` | Tenant Management read + write access
+
+An Account Security Key can have multiple roles assigned to provide the access needed.
+
+##### Adding an Account Security Key
+When adding a Security Key, the response from the API will contain the new Private Key value. This Private Key will only be issued once and should be stored securely.
+
+When choosing the roles to apply to a Security Key, only select the minimum to satisfy the requirements of the intended purpose.
+
 
 ##### Deleting an Account Security Key
 Deleting a Key will immediately revoke access to ALL APIS.
@@ -178,16 +199,44 @@ You can add as many Tenants to your Account as you require.
 
 A Tenant cannot be deleted once created.
 
-### Tenant Security Keys
+##### Tenant Security Keys
 A Tenant can have as many Tenant Security Keys as you require.
 
 **<mark>Important - Creating a Tenant Security Key will generate you Public Key and Private Key values. The Private Key value cannot be retrived after creation<br/>so it's important this is stored somewhere safe.</mark>**
+
+##### Tenant Roles
+The following **Tenant Roles** are available:
+
+Tenant Role Name | Description
+-|-
+`t.g.super` | Tenant Gobal Admin - Global read + write access to all aspects of Tenant
+`t.comp.a` | Tenant Information Management read + write access
+`t.comp.r` | Tenant Information Management read access
+`t.psp.r` | Provider Management read access
+`t.psp.a` | Provider Management read + write access
+`t.sch.r` | Scheme Management read access
+`t.sch.a` | Scheme Management read + write access
+`t.key.r` | Security Key Management read access
+`t.key.a` | Security Key read + write access
+`t.whk.r` | Webhook Management read access
+`t.whk.a` | Webhook read + write access
+`t.cat.r` | Catalog Management read access
+`t.col.a` | Collection Management read + write access
+`t.col.r` | Collection Management read access
+`t.po.a` | Payout Management read + write access
+`t.po.r` | Payout Management read access
+
+A Tenant Security Key can have multiple roles assigned to it as are deemed necessary for the capabilities your require.
+
+##### Adding a Tenant Security Key
+When adding a Security Key, the response from the API will contain the new Private Key value. This Private Key will only be issued once and should be stored securely.
+
+When choosing the roles to apply to a Security Key, only select the minimum to satisfy the requirements of the Security Keys intended purpose.
 
 ##### Deleting a Tenant Security Key
 Deleting a Key will immediately revoke access to ALL APIS.
 
 **<mark>This action cannot be undone.</mark>**
-
 
 ## Key Management Strategy
 As the Account holder, you can control the creation of Tenant Security Keys and the permissions they have.
@@ -195,3 +244,4 @@ As the Account holder, you can control the creation of Tenant Security Keys and 
 Depending upon the nature of your business, you may want to restrict what your Tenants can do by only creating Tenant Security Keys with limited functionality; including restricting a Tenant from creating their own keys.
 
 Conversly, you could also create just one Tenant Security Key that has permissions to create further Tenant Security Keys; in effect making the Tenant fully independent from the Account holder and able to self provision within the Tenant.
+

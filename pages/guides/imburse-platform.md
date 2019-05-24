@@ -12,25 +12,20 @@ icon_class: icon_documents_alt icon
 The Imburse Platform is structured as a modern, decoupled web application with a sensible service-based architecture.
 
 ##### Key platform highlights
-
 - Redundency - Geo redundent platform deployments in multiple regions
 - Secure
-- Ease of use - REST APIs via HMAC / Bearer token authentication
-- Performant - Payout and Collection processing > 30 transactions per second
-- Flexible access - Configure your tenants via API or the Client Portal UI
-- ...
+- Ease of use 
+- Performance
+- REST APIs
+- Client Portal UI
+- Support for multi-tenancy and individual organization deployments
 
 ## How things fit together
-
 <img src="/assets/images/guides/getting-started/imburse-platform.png" style="width:600px;" title="Imburse Platform" alt="Imburse Platform"/>
 
 
-# What problems does the Imburse Platform solve?
-Coming soon...
-
-
 # Supported Countries
-Imburse support the following countries. All API functions that reference a country will use the **ISO 3166-1 alpha-2** country code format. Use the list below to identify the country.
+Imburse support the following countries. All API functions that reference a country will use the **ISO 3166-1 alpha-2** country code format.
 
 Alpha 2 Code | Name
 -|-
@@ -76,7 +71,7 @@ GB|United Kingdom
 US|United States of America
 
 # Supported Currencies
-Imburse support the following currencies. All API functions that reference a Currency Code will use the **ISO 4217 alphabetic code** format. Use the list below to identify the currency.
+Imburse support the following currencies. All API functions that reference a Currency Code will use the **ISO 4217 alphabetic code** format.
 
 Alphabetic Code | Name
 -|-

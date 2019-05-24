@@ -49,7 +49,7 @@ As the account owner, you can setup your Tenants in two ways:
 
 **Note: All of your Tenant's do not need to be configured the same.**
 
-# Using a Security Key to Authenticate
+## Using a Security Key to Authenticate
 To start the authentication process, you will need an Account or Tenant Security Key.
 
 The diagram below shows the 4 steps of the authentication flow.
@@ -66,7 +66,7 @@ Management tasks in your account<br/>or tenants, including creating customer ord
 Processing a payout instruction<br/>or requesting payout options | Choose `Create Payout API Bearer Token`
 Processing a collection instruction<br/>or requesting collection options | Choose `Create Collect API Bearer Token`
 
-Using your the `publicKey` and `privateKey` of your Security Key you must now create an HMAC token from your request. See instuctions here.
+Using your the `publicKey` and `privateKey` of your Security Key you must now create an HMAC token from your request. See the example in our [Github Repository](https://github.com/Imburse-Payments/hmac-examples).
 
 Add the `Authorization` header to your request.
 

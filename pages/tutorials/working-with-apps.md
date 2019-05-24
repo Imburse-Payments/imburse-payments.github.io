@@ -12,7 +12,7 @@ The Imburse Marketplace is where you will find all the Apps Imburse can integrat
 
 An App is an integration component that you configure that permits Imburse to communicate with the Apps' provider to carry out some task on your behalf.
 
-The following table illustrates the some of the Apps, with their Provider and purpose.
+The following table illustrates some of the Apps, with their Provider and purpose.
 
 App Name | App Id | Provider | Purpose
 -|-|-|-

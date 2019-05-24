@@ -14,12 +14,12 @@ For this tutorial we will search the Rewards Catalog using the REST API's.
 
 For more information on the Rewards Catalog, see the [Rewards Catalog in Core Concepts](/pages/guides/core-concepts/#rewards-catalog).
 
-## Prerequisites
+# Prerequisites
 Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
 - A valid `Management Bearer Token` derived from a `Tenant Security Key`. If you don't have one, see the tutorial [Aquiring a Management Bearer Token](#aquire-management-bearer-token).
 
-## Search the Rewards Catalog
+# Search the Rewards Catalog
 Using the `Management Bearer Token` aquired in Step 1, we can now search the Rewards Catalog.
 
 #### Request
@@ -264,7 +264,7 @@ Each Reward in the response array returns everything you would need to present *
 ]
 ```
 
-## What's Next?
+# What's Next?
 
 - [Create a Payout Scheme](/pages/tutorials/creating-a-payout-scheme)
 

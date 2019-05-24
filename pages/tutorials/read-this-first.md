@@ -17,5 +17,5 @@ You'll need the following:
 - Familiarity with the [Core Concepts](/pages/guides/core-concepts).
 - Familiar with creating an HMAC token using a Security Key.
 
-## What's Next?
+# What's Next?
 - [Creating a Tenant](/pages/tutorials/creating-a-tenant)
