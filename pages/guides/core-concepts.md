@@ -17,6 +17,7 @@ The components are:
 - [Security Keys](#security-keys)
 - [Marketplace](#marketplace)
 - [Apps](#apps)
+- [Voucher Groups](#voucher-groups)
 - [Collecion Schemes](#collection-schemes)
 - [Payout Schemes](#payout-schemes)
 - [Notifications](#webhooks)
@@ -59,6 +60,9 @@ The Marketplace is the place to go to find, add, and configure the [Apps](#apps)
 
 ## Apps
 Apps are components that you can install and configure into your Tenant that provide capabilities for you customers such as collecting credit card or PayPal payments, or paying out reward vouchers.
+
+## Voucher Groups
+Voucher Groups allow you to create named groups of vouchers. These can then be referenced in your Payout Schemes.
 
 ## Rewards Catalog
 The Rewards Catalog is a searchable catalog of the rewards and vouchers offered by Imburse partners.
