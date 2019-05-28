@@ -12,6 +12,17 @@ The Imburse API is organized around REST. Our API has predictable resource-orien
 
 You can use the Imburse API in sandbox mode, which does not affect your live data.
 
+## Production and Sandbox Endpoints
+Our sandbox environment accesses a shared platform - that is, a platform that is shared with other organizations. Organizations do not share information with each other and are a completely self contained, isolated, entity within the platform system.
+
+Sandbox API endpoint: **https://api-sandbox.imbursepayments.com**
+
+The production environment you have access to is either a shared environment, similar to sandbox, or a dedicated environment just for your account.
+
+Shared Production API endpoint: **https://api.imbursepayments.com**
+
+If you have a dedicated environment, then the specific endpoint would have been communicated via your account manager.
+
 ## Error Codes
 Imburse uses conventional HTTP response codes to indicate the success or failure of an API request. In general, codes in the **2xx** range indicate success, codes in the **4xx** range indicate an error that failed given the information provided (e.g., a required parameter was omitted, etc.), and codes in the **5xx** range indicate an error with Imburse's servers,
 
