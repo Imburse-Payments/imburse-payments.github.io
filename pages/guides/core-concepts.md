@@ -59,21 +59,21 @@ The Security Key has one or more roles attributed to it and these roles govern t
 The Marketplace is the place to go to find, add, and configure the [Apps](#apps) for your Tenant.
 
 ## Apps
-Apps are components that you can install and configure into your Tenant that provide capabilities for you customers such as collecting credit card or PayPal payments, or paying out reward vouchers.
+Apps are components that you can install and configure into your Tenant that provide capabilities for you customers such as collecting credit card or PayPal payments, or paying out vouchers.
+
+## Vouchers Catalog
+The Vouchers Catalog is a searchable catalog of the vouchers offered by Imburse partners.
+
+The API has calls that allow you to view the items in the catalog, along with the details you will need for ordering and redeeming with the provider.
 
 ## Voucher Groups
 Voucher Groups allow you to create named groups of vouchers. These can then be referenced in your Payout Schemes.
-
-## Rewards Catalog
-The Rewards Catalog is a searchable catalog of the rewards and vouchers offered by Imburse partners.
-
-The API has calls that allow you to view the items in the catalog, along with the details you will need for ordering and redeeming with the provider.
 
 ## Collection Schemes
 A Collection Scheme is an arrangement of Rules that dictate the collection payment options, credit cards, PayPal, etc., available to your customers.
 
 ## Payout Schemes
-A Collection Scheme is an arrangement of Rules that dictate the payout options such as rewards and vouchers that are should be available to your customers.
+A Collection Scheme is an arrangement of Rules that dictate the payout options, such as vouchers, that will be available to your customers.
 
 ## Webhooks
 Webhooks, also known as Web Callbacks or an HTTP push API, is a way for an application to provide other applications with near real-time information.

@@ -23,59 +23,132 @@ Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you
 # Create a new Payout Scheme
 Using the `Management Bearer Token` we can create a new Payout Scheme.
 
+By default your new Payout Scheme will be in draft only. It will need to be Published before it can be used for paying out.
+
 #### Request
-Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
+Use the following request to create a new Payout Scheme.
 
-The `name` property can be anything you like in order for you to identify this Collection Scheme later.
-
-The `rewardProviders` property is an array of Id of your Provider Configurations. You created a Tangocard Provider Configuration in the [Creating a Provider Configuration](/pages/tutorials/creating-a-provider-configuration) tutorial.
-
+Note: The scheme we are creating has the following properties:
+- The Rules are filtering for **EUR**, *any* country, and a value between **1** and **1000**.
+- The available Voucher Groups will be from the previously created **Amazon** Voucher Group.
 
 ```curl
-curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/schemes/payout" \
-  --header "Authorization: Bearer {management-token}" \
+curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/schemes/collect" \
+  --header "Authorization: Bearer {management-bearer-token}" \
   --header "Content-Type: application/json" \
   --data "{
-	\"name\": \"\",
-	\"currencies\": [""],
-	\"rewardProviders\": [],
-	\"rewards\": [
-		{
-			\"currency\": \"\",
-			\"generalRewards\": [],
-			\"countryRewards\": [
-				{
-					\"country\": \"\",
-					\"rewards\": []
-				}
-			]
-		}
-	]
-}"
+	    \"name\": \"Motor Insurance - EUROPE - Payout\",
+      \"code\": "",
+      \"rules\": [
+        {
+          \"priority\": 0,
+          \"currencies\": [
+            \"EUR\"
+          ],
+          \"countries\": [],
+          \"highValueInclusive\": 1000,
+          \"lowValueInclusive\": 1,
+          \"configurations\": [
+            {
+              \"priority\": 0,
+              \"appId\": \"BRAINTREE_SDK\",
+              \"excludedPaymentMethods\": [ "" ]
+            }
+          ]
+        }
+      ]
+  ]
 ```
 
 #### Response
-The `id` property will be the id of your newly created Payout Scheme.
-
-You will need this `id` value in any future operations relating to this Payout Scheme.
+The `schemeId` property will be the id of your newly created Collection Scheme.
 
 ```json
 {
-  "id": "",
-  "name": "",
-  "providers": [],
-  "countrySettings": [
+  "schemeId": "8a7f806f-782a-498d-9627-b742f0a89c40",
+  "publishedDraftId": "",
+  "drafts": [
     {
-      "country": "",
-      "defaultCurrency": "",
-      "rewardSettings": {
-        "rewardIds": []
-      }
+      "draftId": "5a8b5f84-a799-44ba-96c2-8006daa7088b",
+      "name": "Motor Insurance - EUROPE",
+      "code": "",
+      "rules": [
+        {
+          "priority": 0,
+          "currencies": [
+            "EUR"
+          ],
+          "countries": [],
+          "highValueInclusive": 1000,
+          "lowValueInclusive": 1,
+          "configurations": [
+            {
+              "priority": 0,
+              "appId": "BRAINTREE_SDK",
+              "availablePaymentMethods": [
+                "VISA", "MASTERCARD", "DISCOVER", "MAESTRO", "AMERICAN-EXPRESS", "PAYPAL"
+              ],
+              "excludedPaymentMethods": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+
+# Publishing the Draft
+After creating a new Scheme we need to Publish the draft that was added.
+
+In the previous step, the response included a `drafts` collection. We'll use the `draftId` from the first item in the collection when we call the Publish function.
+
+#### Request
+Call the endpoint below, replacing **`YOUR_SCHEME_ID`** and **`YOUR_DRAFT_ID`** with your actual values.
+
+`POST https://sandbox-api.imburse.net/schemes/YOUR_SCHEME_ID/drafts/YOUR_DRAFT_ID/publish`
+
+Using the example response from the previous step we will call the Publish endpoint with our values:
+
+`POST https://sandbox-api.imburse.net/schemes/8a7f806f-782a-498d-9627-b742f0a89c40/drafts/5a8b5f84-a799-44ba-96c2-8006daa7088b/publish`
+
+#### Response
+You will see that the `publishedDraftId` property is now referencing the draft we created earlier.
+
+```json
+{
+  "schemeId": "8a7f806f-782a-498d-9627-b742f0a89c40",
+  "publishedDraftId": "5a8b5f84-a799-44ba-96c2-8006daa7088b",
+  "drafts": [
+    {
+      "draftId": "5a8b5f84-a799-44ba-96c2-8006daa7088b",
+      "name": "Motor Insurance - EUROPE",
+      "code": "",
+      "rules": [
+        {
+          "priority": 0,
+          "currencies": [
+            "EUR"
+          ],
+          "countries": [],
+          "highValueInclusive": 1000,
+          "lowValueInclusive": 1,
+          "configurations": [
+            {
+              "priority": 0,
+              "appId": "BRAINTREE_SDK",
+              "availablePaymentMethods": [
+                "VISA", "MASTERCARD", "DISCOVER", "MAESTRO", "AMERICAN-EXPRESS", "PAYPAL"
+              ],
+              "excludedPaymentMethods": []
+            }
+          ]
+        }
+      ]
     }
   ]
 }
 ```
 
 # What's Next?
-
 - [Creating a Payout Instruction](/pages/tutorials/creating-a-payout-instruction)

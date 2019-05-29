@@ -154,7 +154,7 @@ You will see that the `publishedDraftId` property is now referencing the draft w
 
 # What's Next?
 
-- [Searching the Rewards Catalog](/pages/tutorials/searching-the-rewards-catalog)
+- [Creating a Payout Scheme](/pages/tutorials/creating-a-payout-scheme)
 
 
 

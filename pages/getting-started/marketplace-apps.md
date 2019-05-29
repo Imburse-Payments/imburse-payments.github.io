@@ -47,7 +47,7 @@ Imburse currently has App integrations with the following providers:
 Provider | App Id | Description
 -|-
 Braintree | BRAINTREE_SDK | Provides credit card and PayPal collection payment options. Operates worldwide.
-Tango Card | TANGOCARD_RAAS | Provider rewards / gift card payout options. Operates worldwide.
+Tango Card | TANGOCARD_RAAS | Provides vouchers payout options. Operates worldwide.
 
 ## Installing an App
 Call the **install** endpoint below, replacing **`YOUR_APP_ID`** with your actual App Id.

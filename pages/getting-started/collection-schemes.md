@@ -22,7 +22,7 @@ The available Collection Scheme functions are:
 - Get list of Schemes
 - Get published draft
 - Create a Scheme
-- Add Draft 
+- Add Draft
 - Get a Draft
 - Update Draft
 - Publish a Draft
@@ -168,7 +168,7 @@ Property | Type | Mandatory | Description
 Property | Type | Mandatory | Description
 -|-
 `appId` | string | Yes | The `AppId` of one of you installed Apps that you<br/>want to include in this rule.
-`paymentMethodExclusions` | Array of strings | No | An array of `paymentMethods` that<br/>you want to exclude from the rule.<br/>Leave blank to allow all payment methods offered by the matching `appId` (above).
+`paymentMethodExclusions` | Array of strings | No | An array of `paymentMethods` that<br/>you want to exclude from the rule.<br/><br/>Leave blank to allow all payment methods<br/>offered by the matching `appId` above.
 
 ## Scheme Setup
 A Scheme consists of a three main components:
@@ -205,7 +205,7 @@ You can add delete any Draft except the published draft.
 ### Rules
 Add Rules to your draft scheme to explicitly control the collection options available in your scheme.
 
-A Rule defines filters for currencies, countries, and a value range, and then explicitly defines (using the [configuration model](#configuratio-model) which App to use when this Rule is matched.
+A Rule defines filters for currencies, countries, and a value range, and then explicitly defines (using the [configuration model](#configuration-model)) which App to use when this Rule is matched.
 
 You can add as many Rules to your draft scheme as necessary in order to refine the available collection options to meet your requirements.
 
@@ -223,7 +223,7 @@ Each Rule has a `priority` property. The `priority` should be set according to t
 
 The Rules should go from having the narrowest set of filters to the broadest, with 1 being the lowest priority and evaluated first.
 
-Rules are only evaluated when requesting the Payment Options for a payment pnstruction.
+Rules are only evaluated when requesting the Payment Options for a Payment Instruction.
 
 **Example 1**
 

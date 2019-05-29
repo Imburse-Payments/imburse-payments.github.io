@@ -1,38 +1,38 @@
 ---
 layout: default
 title: Quickstart Developer Tutorial
-toc: tutorial-searching-the-rewards-catalog
+toc: tutorial-searching-the-vouchers-catalog
 body_color: body-pink
 section_name: Tutorials
 last_updated: May 9th, 2019
 icon_class: icon_documents_alt icon
 ---
-# Searching the Rewards Catalog
-If you are looking to create a Payout Scheme that offers Rewards, Gift cards, etc. to your customers, you will need to search the Rewards Catalog to store the resultant `rewardIds` against your Payout Scheme.
+# Searching the Vouchers Catalog
+If you are looking to create a Payout Scheme that offers Rewards, Gift cards, etc. to your customers, you will need to search the Vouchers Catalog to store the resultant `voucherId` against your Voucher Group.
 
-For this tutorial we will search the Rewards Catalog using the REST API's. 
+For this tutorial we will search the Vouchers Catalog using the REST API's. 
 
-For more information on the Rewards Catalog, see the [Rewards Catalog in Core Concepts](/pages/guides/core-concepts/#rewards-catalog).
+For more information on the Vouchers Catalog, see the [Vouchers Catalog in Core Concepts](/pages/guides/core-concepts/#vouchers-catalog).
 
 # Prerequisites
 Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
 - A valid `Management Bearer Token` derived from a `Tenant Security Key`. If you don't have one, see the tutorial [Aquiring a Management Bearer Token](#aquire-management-bearer-token).
 
-# Search the Rewards Catalog
-Using the `Management Bearer Token` aquired in Step 1, we can now search the Rewards Catalog.
+# Search the Vouchers Catalog
+Using the `Management Bearer Token` aquired in Step 1, we can now search the Vouchers Catalog.
 
 #### Request
 Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
 
 You can filter the results by supplying parameters in the request.
 
-**If you do not specify any parameters the Rewards Catalog will return all results.**
+**If you do not specify any parameters the Vouchers Catalog will return all results.**
 
 - `providerId` - Filter by a particular Provider. ie. `TANGOCARD`
 - `brandName` - Filter by a brand, ie. Amazon, Mastercard, etc.
-- `countries` - Filter by country where the reward can be redeemded. You can specify multiple countries by separating with a comma. ie. `GB` or `GB,DE,FR` etc.
-- `currencies` - Filter by the currency the reward can by redeemed in. You can specify multiple currencies by separating with a comma. ie. `EUR` or `GBP,EUR` etc.
+- `countries` - Filter by country where the voucher can be redeemded. You can specify multiple countries by separating with a comma. ie. `GB` or `GB,DE,FR` etc.
+- `currencies` - Filter by the currency the voucher can by redeemed in. You can specify multiple currencies by separating with a comma. ie. `EUR` or `GBP,EUR` etc.
 - `tags` - Not currently used.
 - `amount` - Filter by the amount the reward is for. Some rewards are fixed value, ie. `5.00`; others are valid for any amount within a range. Specify the amount the you want to payout to filter the rewards accordingly.
 
@@ -44,15 +44,12 @@ curl --location --request GET "https://sandbox-api.imbursepayments.com/v1/catalo
   --header "Authorization: Bearer {management-token}"
 ```
 
-
-
-
 #### Response
-The response will contain all the rewards that match our filter parameters. Please note that for brevity in this tutorial we are only showing 2 of the 10+ results that would otherwise return for this request.
+The response will contain all the vouchers that match our filter parameters. Please note that for brevity in this tutorial we are only showing 2 of the 10+ results that would otherwise return for this request.
 
-The `rewardId` property value is what you will need to save for referencing this reward later in a Payout Scheme.
+The `voucherId` property value is what you will need to save for referencing this vouchers later in a Voucher Group.
 
-Each Reward in the response array returns everything you would need to present *and* redeem the reward to your customers:
+Each Voucher in the response array returns everything you would need to present *and* redeem the voucher for your customers:
 
 - Reward Id
 - Brand name
@@ -265,8 +262,7 @@ Each Reward in the response array returns everything you would need to present *
 ```
 
 # What's Next?
-
-- [Create a Payout Scheme](/pages/tutorials/creating-a-payout-scheme)
+- [Create a Voucher Group](/pages/tutorials/creating-a-voucher-group)
 
 
 

@@ -19,7 +19,7 @@
                     <a class="nav-link scrollto" href="#security-keys">Security Keys</a>
                     <a class="nav-link scrollto" href="#marketplace">Marketplace</a>
                     <a class="nav-link scrollto" href="#apps">Apps</a>
-                    <a class="nav-link scrollto" href="#rewards-catalog">Rewards Catalog</a>
+                    <a class="nav-link scrollto" href="#vouchers-catalog">Vouchers Catalog</a>
                     <a class="nav-link scrollto" href="#voucher-groups">Voucher Groups</a>
                     <a class="nav-link scrollto" href="#collection-schemes">Collection Schemes</a>
                     <a class="nav-link scrollto" href="#payout-schemes">Payout Schemes</a>
@@ -88,6 +88,22 @@
                     <a class="nav-link scrollto" href="#configuring-an-app">Configuring an App</a>
                     <a class="nav-link scrollto" href="#installing-an-app">Uninstalling an App</a>
 
+                {% when 'getting-started-voucher-groups' %}
+
+                    <a class="nav-link scrollto" href="#voucher-groups">Voucher Groups</a>
+                    <a class="nav-link scrollto" href="#access-requirements">Access Requirements</a>
+                    <a class="nav-link scrollto" href="#functions">Functions</a>
+                    <a class="nav-link scrollto" href="#api-documentation">API Documentation</a>
+                    <a class="nav-link scrollto" href="#models">Models</a>
+
+                {% when 'getting-started-vouchers-catalog' %}
+
+                    <a class="nav-link scrollto" href="#vouchers-catalog">vouchers Catalog</a>
+                    <a class="nav-link scrollto" href="#access-requirements">Access Requirements</a>
+                    <a class="nav-link scrollto" href="#functions">Functions</a>
+                    <a class="nav-link scrollto" href="#api-documentation">API Documentation</a>
+                    <a class="nav-link scrollto" href="#models">Models</a>
+
                 {% when 'getting-started-collection-schemes' %}
 
                     <a class="nav-link scrollto" href="#collection-schemes">Collection Schemes</a>
@@ -106,15 +122,34 @@
                     <a class="nav-link scrollto" href="#api-documentation">API Documentation</a>
                     <a class="nav-link scrollto" href="#models">Models</a>
                     <a class="nav-link scrollto" href="#scheme-setup">Scheme Setup</a>
+                    <a class="nav-link scrollto" href="#how-and-when-are-rules-matched">How and when are Rules matched?</a>
 
-                {% when 'getting-started-rewards-catalog' %}
+                {% when 'getting-started-payment-orders' %}
 
-                    <a class="nav-link scrollto" href="#rewards-catalog">Rewards Catalog</a>
+                    <a class="nav-link scrollto" href="#payment-orders">Payment Orders</a>
                     <a class="nav-link scrollto" href="#access-requirements">Access Requirements</a>
                     <a class="nav-link scrollto" href="#functions">Functions</a>
                     <a class="nav-link scrollto" href="#api-documentation">API Documentation</a>
                     <a class="nav-link scrollto" href="#models">Models</a>
+                    <a class="nav-link scrollto" href="#payment-instruction-setup">Payment Order Setup</a>
 
+                {% when 'getting-started-payout-payment-options' %}
+
+                    <a class="nav-link scrollto" href="#payout-payment-options">Payout Payment Options</a>
+                    <a class="nav-link scrollto" href="#access-requirements">Access Requirements</a>
+                    <a class="nav-link scrollto" href="#functions">Functions</a>
+                    <a class="nav-link scrollto" href="#api-documentation">API Documentation</a>
+                    <a class="nav-link scrollto" href="#models">Models</a>
+                    <a class="nav-link scrollto" href="#payment-options">Payment Options</a>
+
+                {% when 'getting-started-processing-voucher-payouts' %}
+
+                    <a class="nav-link scrollto" href="#processing-voucher-payouts">Processing Voucher Payouts</a>
+                    <a class="nav-link scrollto" href="#access-requirements">Access Requirements</a>
+                    <a class="nav-link scrollto" href="#functions">Functions</a>
+                    <a class="nav-link scrollto" href="#api-documentation">API Documentation</a>
+                    <a class="nav-link scrollto" href="#models">Models</a>
+                    <a class="nav-link scrollto" href="#voucher-redemption">Voucher Redemption</a>
 
 
 
@@ -153,6 +188,13 @@
                     <a class="nav-link scrollto" href="#installing-and-configuring-an-app">Installing and Configuring an App</a>
                     <a class="nav-link scrollto" href="#whats-next">What's Next?</a>
 
+                {% when 'tutorial-creating-a-voucher-group' %}
+
+                    <a class="nav-link scrollto" href="#creating-a-voucher-group">Creating a Voucher Group</a>
+                    <a class="nav-link scrollto" href="#prerequisites">Prerequisites</a>
+                    <a class="nav-link scrollto" href="#create-the-voucher-group">Create the Voucher Group</a>
+                    <a class="nav-link scrollto" href="#whats-next">What's Next?</a>
+
                 {% when 'tutorial-creating-a-collection-scheme' %}
 
                     <a class="nav-link scrollto" href="#creating-a-collection-scheme">Creating a Collection Scheme</a>
@@ -161,11 +203,11 @@
                     <a class="nav-link scrollto" href="#publishing-the-draft">Publishing the Draft</a>
                     <a class="nav-link scrollto" href="#whats-next">What's Next?</a>
 
-                {% when 'tutorial-searching-the-rewards-catalog' %}
+                {% when 'tutorial-searching-the-vouchers-catalog' %}
 
-                    <a class="nav-link scrollto" href="#searching-the-rewards-catalog">Searching the Rewards Catalog</a>
+                    <a class="nav-link scrollto" href="#searching-the-vouchers-catalog">Searching the Vouchers Catalog</a>
                     <a class="nav-link scrollto" href="#prerequisites">Prerequisites</a>
-                    <a class="nav-link scrollto" href="#search-the-rewards-catalog">Search the Rewards Catalog</a>
+                    <a class="nav-link scrollto" href="#search-the-vouchers-catalog">Search the Vouchers Catalog</a>
                     <a class="nav-link scrollto" href="#whats-next">What's Next?</a>
 
                 {% when 'tutorial-creating-a-payout-scheme' %}
@@ -192,11 +234,11 @@
                     <a class="nav-link scrollto" href="#get-the-payout-options">Get the Payout Options</a>
                     <a class="nav-link scrollto" href="#whats-next">What's Next?</a>
 
-                {% when 'tutorial-processing-a-reward' %}
+                {% when 'tutorial-processing-a-voucher' %}
 
-                    <a class="nav-link scrollto" href="#processing-a-reward">Processing a Reward</a>
+                    <a class="nav-link scrollto" href="#processing-a-voucher">Processing a Voucher</a>
                     <a class="nav-link scrollto" href="#prerequisites">Prerequisites</a>
-                    <a class="nav-link scrollto" href="#process-the-reward">Process the Reward</a>
+                    <a class="nav-link scrollto" href="#process-the-voucher">Process the Voucher</a>
 
 
 

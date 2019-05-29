@@ -173,7 +173,7 @@ Current App integrations include:
 - **Paydirekt** - Germany only payment method
 
 ##### Payouts
-- **Tango Card** - Worldwide gift card rewards
+- **Tango Card** - Worldwide vouchers, gift card, and rewards
 
 
 # Apps
@@ -186,8 +186,8 @@ An App configuration, in most cases, will hold a set of credentials that grant I
 The exact requirements for each App will vary from App to App. See the [Marketplace API](/pages/guides/marketplace) for more details.
 
 
-# Rewards Catalog
-The Rewards Catalog is a searchable catalog of the gift cards and rewards offered by all Imburses' reward partners - in one place. 
+# Vouchers Catalog
+The Vouchers Catalog is a searchable catalog of the vouchers, gift cards, and rewards offered by all Imburses' voucher partners - in one place. 
 
 The API has calls that allow you to view the items in the rewards catalog, along with the details you will need for ordering items and displaying item information.
 

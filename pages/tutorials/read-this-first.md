@@ -8,7 +8,7 @@ last_updated: May 9th, 2019
 icon_class: icon_documents_alt icon
 ---
 # Before you begin
-This tutorial series will take you through the process of creating a new Tenant and configuring Apps and Schemes to enable the Tenant to collect money or payout rewards.
+This tutorial series will take you through the process of creating a new Tenant and configuring Apps and Schemes to enable the Tenant to collect money or payout vouchers.
 
 # Prerequisites
 You'll need the following:

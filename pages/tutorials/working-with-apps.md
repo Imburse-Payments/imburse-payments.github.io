@@ -17,7 +17,7 @@ The following table illustrates some of the Apps, with their Provider and purpos
 App Name | App Id | Provider | Purpose
 -|-|-|-
 Braintree | BRAINTREE_SDK | Braintree Payments | Collect payments using credit cards + PayPal
-Tango Card | TANGOCARD_RAAS | Tango Card | Payout rewards
+Tango Card | TANGOCARD_RAAS | Tango Card | Payout vouchers
 
 Where the Provider is not Imburse, you may need an existing Account with that Provider. For some Providers, such as Tango Card, Imburse can create new accounts for you.
 
@@ -41,7 +41,7 @@ Returns a list of all Apps available in the Marketplace.
 ```curl
 curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/marketplace/apps" \
   --header "Authorization: Bearer {management-bearer-token}" \
-  --header "Content-Type: application/json" 
+  --header "Content-Type: application/json"
 }"
 ```
 
