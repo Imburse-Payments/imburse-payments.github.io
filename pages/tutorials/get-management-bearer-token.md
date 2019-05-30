@@ -13,8 +13,8 @@ This tutorial will take you through getting a Mangement Bearer Token using a Ten
 # Prerequisites
 Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
-- Familiar with creating an HMAC token using a Security Key.
 - A `Tenant Security Key`. See the tutorial [Creating a Tenant Security Key](/pages/tutorials/creating-a-tenant-security-key) here if you need to create one.
+- Familiar with creating an HMAC token using a Security Key.
 
 # Get Management Bearer Token
 You will need to generate an HMAC token for the following following request using a `Tenant Security Key`.

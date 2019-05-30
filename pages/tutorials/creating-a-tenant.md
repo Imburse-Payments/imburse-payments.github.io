@@ -13,10 +13,9 @@ You will need to create and configure at least one Tenant in your account in ord
 This tutorial offers step-by-step instructions for create a new Tenant in your Account using the REST API's.
 
 # Prerequisites
-You'll need the following:
+Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
 - Your Account Security Key - This will consist of a Public Key and Private Key and would have been given to your upon registration. If you haven't received it then please contact your adminstrator.
-- Familiarity with the [Core Concepts](/pages/guides/core-concepts).
 - Familiar with creating an HMAC token using a Security Key.
 
 # Create a new Tenant
