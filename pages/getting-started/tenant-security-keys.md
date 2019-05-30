@@ -1,18 +1,14 @@
 ---
 layout: default
 title: Getting Started
-toc: getting-started-tenant-management
+toc: getting-started-tenant-security-keys
 body_color: body-primary
 section_name: Getting Started
 last_updated: May 9th, 2019
 icon_class: icon_documents_alt icon
-nextsection_url: /pages/guides/getting-started/authentication
-nextsection_label: Authentication
 ---
-# Tenant Management
-The Tenant Management API functions allow a user to perform Tenant Security Key administration tasks only.
-
-For Collection and Payout Schemes, Provider Configurations, and other Tenant configuration management, see the appropriate Management documentation on the right.
+# Tenant Security Keys
+The Tenant Security Key API functions allow a user to perform Tenant Security Key administration tasks.
 
 ## Access Requirements
 You will need a Tenant Security Key to perform Tenant Management functions.

@@ -44,7 +44,7 @@ Response Code | Meaning
 ## Access Control
 Each API method in the REST API documentation is decorated with a *Role Required* attribute. To execute any API methods successfully, your Security Key would need to have the role name specified added to the `roles` property. 
 
-See the [Account Management - Account Roles](/pages/getting-started/account-management/#account-roles) and [Account Management - Tenant Roles](/page/getting-started/account-managament/#tenant-roles) for lists of the available roles.
+See the [Account Management - Account Roles](/pages/getting-started/account-management/#account-roles) and [Account Management - Tenant Roles](/pages/getting-started/account-managament/#tenant-roles) for lists of the available roles.
 
 ## Correlation IDs
 Each API request has an associated correlation identifier. You can find this value in the response object under `correlation-id` when errors in the range 500 are returned.

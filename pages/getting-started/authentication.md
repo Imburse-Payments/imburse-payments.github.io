@@ -10,9 +10,9 @@ icon_class: icon_documents_alt icon
 # Authentication
 Imburse authenticates your API requests using your Account’s or Tenant's API keys. If you do not include your key when making an API request, or use one that is incorrect or outdated, Imburse returns an error.
 
-Every account is provided with one Account Security Key at registration time. All API requests exist in either sandbox or live modes and your accounts, tenants, apps, schemes, and so forth in one mode cannot be manipulated in the other.
+Every account is provided with one Account Security Key at registration time. All API requests exist in either sandbox or production modes and your accounts, tenants, apps, schemes, and so forth in one mode cannot be manipulated in the other.
 
-Your API keys are available in the Imburse Portal, however, you cannot get the private key value after it has been created; either via the API or the Imburse Portal. You must safely store the private key values once they have been created.
+Your API keys are available in the Client Portal, however, you cannot get the private key value after it has been created; either via the API or the Client Portal. You must safely store the private key values once they have been created.
 
 ## Functions
 The available authentication functions are:
@@ -25,21 +25,21 @@ The available authentication functions are:
 All the Authentication API functions are fully documented in the [Identity API documentation](https://api-docs.imbursepayments.com/?version=latest#f6bf99b9-ca03-47b5-a667-8e1a5a625b0e).
 
 ## HMAC and Bearer Tokens
-HMAC (Hashed Message Authentication Code), is a specific type of MAC involving a cryptographic hash function and a secret cryptographic key. It is used to simultaneously verify both the data integrity and the authentication of a message. We use the HMAC authentication process for your initial authentication into the Imburse platform.
+HMAC (Hashed Message Authentication Code), is a specific type of MAC involving a cryptographic hash function and a secret cryptographic key. It is used to simultaneously verify both the **data integrity** and the **authentication** of a message. We use the HMAC authentication process for your initial authentication into the Imburse platform.
 
-Once authenticated via the HMAC authentication scheme, we return you a Bearer token to use in subsequence requests.
+Once authenticated via the HMAC authentication scheme, we return you a Bearer token to use in subsequent requests.
 
 The HMAC scheme is extremely secure but is computationally quite expensive, both on the client and the server; hence why we respond with a Bearer token once authenticated.
 
 The Bearer token we respond with is a crpytic string signed on the Imburse platform and validated on the server for each API request.
 
 ## Account Security Keys vs Tenant Security Keys
-Your account is the top level in a 2-teir heiarachy. Your account can have many Tenants. As such, we have separate Security Keys for Accounts and Tenants.
+Your account is the top level in a 2-teir heiarachy. Your account can have many Tenants. We have separate Security Keys for Accounts and Tenants:
 
-- **Account Security Key** - access to create new Account Security Keys, create new Tenants, and create new Tenant Security Keys for said Tenants.
-- **Tenant Security Key** - access to configuring the Tenant's Apps, Schemes, and so forth.
+- **Account Security Key** - access to create new Account Security Keys, create new Tenants, and create new Tenant Security Keys for your Tenants.
+- **Tenant Security Key** - access to configuring the Tenants Apps, Schemes, Payment Orders, and so forth.
 
-Which one you use when authenticating determines the context you are in - either Account or Tenant.
+Which securiry key you use when authenticating determines the context you are in - either Account or Tenant.
 
 ## Tenant Self Service vs Account Controlled
 As the account owner, you can setup your Tenants in two ways:
@@ -58,9 +58,9 @@ The diagram below shows the 4 steps of the authentication flow.
 
 
 #### Step 1 - Create a HMAC Authorization request to the Identity API
-The Identity API can create 3 different types of Bearer Token for you. The one you need will depend on what you are trying to do. The table below shows the 3 types of task and the corresponding Identity API endpoint to call to get the appropriate Bearer Token. Choose the appropriate Identity endpoint to match the task at hand.
+The Identity API can create 3 different types of Bearer Token for you. The one you need will depend on what you are trying to do. The table below shows the 3 types of task and the corresponding Identity API endpoint to call to get the appropriate Bearer Token.
 
-Task | Identity Endpoint
+Task | Identity endpoint to use
 -|-
 Management tasks in your account<br/>or tenants, including creating customer orders | Choose `Create Management API Bearer Token`
 Processing a payout instruction<br/>or requesting payout options | Choose `Create Payout API Bearer Token`

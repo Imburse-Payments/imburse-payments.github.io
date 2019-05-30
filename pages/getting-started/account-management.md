@@ -39,14 +39,15 @@ The Account functions can be broken down into to levels:
 - Delete a Tenant Security Key
 
 **Note:** - The Tenant functions available to an Account are limited to Tenant creation and Tenant Security Keys only.
-For Collection and Payout Schemes, Apps, and other Tenant configuration management you must use a Tenant Security Key.
+
+For configuring Schemes, Apps, and other Tenant objects, you must use a **Tenant Security Key**.
 
 
 ## API Documentation
 All the Account Management API functions are fully documented in the [Account API documentation](https://api-docs.imbursepayments.com/#d4a8fee4-7343-464f-9b3f-bf42e81619e2).
 
 ## Models
-The following models are used to define a Accounts, Tenants, and Security Keys.
+The following models are used to define Accounts, Tenants, and Security Keys.
 
 ### Account Model
 ```json
@@ -112,11 +113,11 @@ This model applies to both Account Security Keys and Tenant Security Keys.
 
 Property | Type | Mandatory | Description
 -|-
-`accountId` | string | Yes | The Id of the Account that created the Key.
-`tenantId` | string | No | The Tenant Id this Key belongs to.<br/><br/>**<mark>Only applicable to Tenant Security Keys.</mark>**
+`accountId` | string | Yes | The Id of the Account that owns the key.<br/><br/>**<mark>Only applicable to Account Security Keys.</mark>**
+`tenantId` | string | No | The Id of the Tenant that owns the key.<br/><br/>**<mark>Only applicable to Tenant Security Keys.</mark>**
 `publicKey` | string | Yes | The Public Key portion of the Security Key.
-`privateKey` | string | Yes | The Private Key portion of the Security Key.<br/><br/>**<mark>The Private Key value cannot be retrived once created<br/>so it's importantthis stored somewhere safe.</mark>**
-`roles` | Array of [Account Roles](#account-roles) or [Tenant Roles](#tenant-roles) | Yes | The roles given to this Key.
+`privateKey` | string | Yes | The Private Key portion of the Security Key.<br/><br/>**<mark>The Private Key value cannot be retrived once created<br/>so it's important this is captured and stored somewhere safely.</mark>**
+`roles` | Array of strings | Yes | The roles given to this Key.<br/>These will be either [Account Roles](#account-roles) or [Tenant Roles](#tenant-roles).
 
 ### Tenant Model
 ```json
@@ -138,7 +139,7 @@ Property | Type | Mandatory | Description
 Property | Type | Mandatory | Description
 -|-
 `id` | Guid | Yes | The Tenant Id.
-`accountId` | Guid | Yes | The Account Id this Tenant is owned by.
+`accountId` | Guid | Yes | The Id of the Account this Tenant is owned by.
 `name` | string | Yes | The Tenant name.
 `address` | [Address](#address-model) model | Yes | The Tenants address.
 
@@ -164,7 +165,7 @@ When your Account was initially setup you would have been issued with an Account
 
 You can setup additional Account Security Keys as you require.
 
-**<mark>Important - Creating an Account Security Key will generate your Public Key and Private Key values. The Private Key value cannot be retrived after creation<br/>so it's important this is safely stored.</mark>**
+**<mark>Important - Creating an Account Security Key will generate your Public Key and Private Key values. The Private Key value cannot be retrived after creation so it's important this is safely stored.</mark>**
 
 ##### Account Roles
 The capabilies of an Account Security Key are dependent on the **Account Roles** that are assigned to it. The following table shows the **Account Roles** that are available:
@@ -188,12 +189,12 @@ When choosing the roles to apply to a Security Key, only select the minimum to s
 
 
 ##### Deleting an Account Security Key
-Deleting a Key will immediately revoke access to ALL APIS.
+Deleting a Key will immediately revoke access to ALL APIs.
 
 **<mark>This action cannot be undone.</mark>**
 
 ### Tenants
-You can consider a Tenant as either a company, department, or organisation.
+You can consider a Tenant as either a company, department, or organization.
 
 You can add as many Tenants to your Account as you require.
 
@@ -202,7 +203,7 @@ A Tenant cannot be deleted once created.
 ##### Tenant Security Keys
 A Tenant can have as many Tenant Security Keys as you require.
 
-**<mark>Important - Creating a Tenant Security Key will generate you Public Key and Private Key values. The Private Key value cannot be retrived after creation<br/>so it's important this is stored somewhere safe.</mark>**
+**<mark>Important - Creating a Tenant Security Key will generate you Public Key and Private Key values. The Private Key value cannot be retrived after creation so it's important this is stored somewhere safe.</mark>**
 
 ##### Tenant Roles
 The following **Tenant Roles** are available:
@@ -234,7 +235,7 @@ When adding a Security Key, the response from the API will contain the new Priva
 When choosing the roles to apply to a Security Key, only select the minimum to satisfy the requirements of the Security Keys intended purpose.
 
 ##### Deleting a Tenant Security Key
-Deleting a Key will immediately revoke access to ALL APIS.
+Deleting a Key will immediately revoke access to ALL APIs.
 
 **<mark>This action cannot be undone.</mark>**
 
