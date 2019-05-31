@@ -4,10 +4,8 @@ title: Getting Started
 toc: getting-started
 body_color: body-orange
 section_name: Getting Started
-last_updated: May 9th, 2019
+last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
-nextsection_url: /pages/guides/getting-started/authentication
-nextsection_label: Authentication
 ---
 # Account Management
 The Account Management API functions allow a user to perform both Account level and Tenant level administration tasks.

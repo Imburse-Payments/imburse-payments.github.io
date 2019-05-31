@@ -1,18 +1,16 @@
 ---
 layout: default
 title: Getting Started
-toc: getting_started
-body_color: body-green
-section_name: Guides
-last_updated: April 20, 2019
+toc: getting-started-rewards-catalog
+body_color: body-primary
+section_name: Getting Started
+last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
-nextsection_url: /pages/guides/getting-started/authentication
-nextsection_label: Authentication
 ---
-# What is the Rewards Catalog?
-The Rewards Catalog is a searchable catalog of the gift cards and rewards offered by all Imburses' reward partners - in one place. 
+# Rewards Catalog
+The Rewards Catalog is a searchable catalog of the rewards, gift cards, and rewards offered by all Imburses' reward partners - in one place.
 
-The API has calls that allow you to view the items in the rewards catalog, along with the details you will need for ordering items and displaying item information.
+The API has calls that allow you to view the items in the Rewards Catalog, along with the details you will need for ordering items and displaying item information.
 
 #### What information does the catalog contain?
 Below is a summary of the key data that an individual reward item from the catalog contains:
@@ -31,10 +29,9 @@ Below is a summary of the key data that an individual reward item from the catal
 
 
 #### The Reward Id
-The Reward Id is a unique identifier for each reward. 
+The Reward Id is a unique identifier for each reward.
 
-If you're searching the catalog to find rewards to add to a Payout Scheme, the Reward Id value is what you will need in the scheme to reference back to the correct reward.
-
+If you're searching the catalog to find rewards to add to a Reward Group, the Reward Id value is what you will need to reference back to the correct reward.
 
 #### The Reward value
 Every reward in the catalog has two values associated with it:
@@ -42,16 +39,16 @@ Every reward in the catalog has two values associated with it:
 - Min Value
 - Max Value
 
-A reward can be either a Range value or a Fixed value. 
+A reward can be either a Range value or a Fixed value.
 
 - **Fixed Value** - For rewards that are for a specific value only the Min Value and Max Value will be the same. For example a gift card that is only for €20.00.
 - **Range Value** - For rewards that are for range of values the Min Value will be the minimum reward value and the Max Value will the maximum reward value. For example Amazon Gift Cards can be from €5.00 to €1,000.00.
 
 
 #### Searching the Catalog
-You can search the Rewards Catalog by provider name, brand name, countries, currency, and amount. If you don't provide any filtering parameters then your will be returned all the items in the catalog.
+You can search the Rrewards Catalog by provider name, brand name, countries, currency, and amount. If you don't provide any filtering parameters then your will be returned all the items in the catalog.
 
-If you search by amount, we will search for any rewards that are of a fixed value of your amount specified or where your amount falls with a rewards' min and max values. 
+If you search by amount, we will search for any rewards that are of a fixed value of the amount specified or where the amount falls with a rewards' min and max values.
 
 The table below shows some examples and the results when searching for rewards that support a €15.00 value:
 
@@ -61,5 +58,3 @@ The table below shows some examples and the results when searching for rewards t
 2 | Range | €20.00 | €50.00 | No
 3 | Fixed | €15.00 | €15.00 | Yes
 4 | Fixed | €10.00 | €10.00 | No
-
-

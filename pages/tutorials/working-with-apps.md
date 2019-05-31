@@ -4,7 +4,7 @@ title: Working with Apps
 toc: working-with-apps
 body_color: body-pink
 section_name: Tutorials
-last_updated: May 9th, 2019
+last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
 ---
 # Working with Apps
@@ -17,7 +17,7 @@ The following table illustrates some of the Apps, with their Provider and purpos
 App Name | App Id | Provider | Purpose
 -|-|-|-
 Braintree | BRAINTREE_SDK | Braintree Payments | Collect payments using credit cards + PayPal
-Tango Card | TANGOCARD_RAAS | Tango Card | Payout vouchers
+Tango Card | TANGOCARD_RAAS | Tango Card | Payout rewards
 
 Where the Provider is not Imburse, you may need an existing Account with that Provider. For some Providers, such as Tango Card, Imburse can create new accounts for you.
 

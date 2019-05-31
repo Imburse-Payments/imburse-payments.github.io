@@ -4,10 +4,8 @@ title: Getting Started
 toc: getting-started-collection-schemes
 body_color: body-primary
 section_name: Getting Started
-last_updated: May 9th, 2019
+last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
-nextsection_url: /pages/guides/getting-started/authentication
-nextsection_label: Authentication
 ---
 # Collection Schemes
 The Collection Scheme API functions allows you to setup and configure a Collection Scheme that define the available payment options available to your customers.

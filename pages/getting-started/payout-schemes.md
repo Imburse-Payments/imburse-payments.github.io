@@ -4,7 +4,7 @@ title: Getting Started
 toc: getting-started-payout-schemes
 body_color: body-primary
 section_name: Getting Started
-last_updated: May 9th, 2019
+last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
 ---
 # Payout Schemes
@@ -231,15 +231,15 @@ Assume we have a payment instruction request with the following details:
 - Currency: **EUR**
 - Payout value: **€120.00**
 
-And we have 2 Voucher Groups configured as follows. **Note that the Vouchers we add are only applicable in certain countries:
-Voucher Group name | Vouchers
+And we have 2 Reward Groups configured as follows. **Note that the rewards we add are only applicable in certain countries:
+Reward Group name | Rewards
 -|-
 Amazon | amazon.co.uk (**UK**), amazon.de (**DE**), amazon.fr (**FR**)
 Coffee Shops | Starbucks, Nero, Costa
 
 And a scheme with the following Rules configured:
 
-Priority # | Currencies | Countries | Low Value | High Value | Configured Voucher Groups
+Priority # | Currencies | Countries | Low Value | High Value | Configured Reward Groups
 -|-|-|-|-|-
 1 | **EUR** | (any) | **1** | **20** | Amazon and Cofee Shops
 2 | **EUR** | (any) | **21** | (any) | Amazon
@@ -248,4 +248,4 @@ When the API request to get the available payout options is executed for the pay
 
 Priority **1** rule is **ignored** as the value filter is outside the range of payout value.
 
-Priority **2** rule is **matched** on currency, country, and value range. The payment options returned would be those configured in the matching rule - the Amazon voucher matching the payment instruction country which in this example is DE - Germany.
+Priority **2** rule is **matched** on currency, country, and value range. The payment options returned would be those configured in the matching rule - the Amazon reward matching the payment instruction country which in this example is DE (Germany).

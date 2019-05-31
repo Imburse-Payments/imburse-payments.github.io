@@ -4,7 +4,7 @@ title: Core Concepts
 toc: core-concepts
 body_color: body-green
 section_name: Core Concepts
-last_updated: May 9th, 2019
+last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
 ---
 # Overview
@@ -17,7 +17,7 @@ The components are:
 - [Security Keys](#security-keys)
 - [Marketplace](#marketplace)
 - [Apps](#apps)
-- [Voucher Groups](#voucher-groups)
+- [Reward Groups](#reward-groups)
 - [Collecion Schemes](#collection-schemes)
 - [Payout Schemes](#payout-schemes)
 - [Notifications](#webhooks)
@@ -39,7 +39,7 @@ An [Account](#accounts) can have **multiple** Tenants.
 A Tenant is where you will store configuration for:
 - [Security Keys](#security-keys)
 - [Apps](#apps)
-- [Voucher Groups](#voucher-groups)
+- [Reward Groups](#reward-groups)
 - [Collecion Schemes](#collection-schemes)
 - [Payout Schemes](#payout-schemes)
 - [Notifications](#webhooks)
@@ -58,21 +58,21 @@ The Security Key has one or more roles attributed to it and these roles govern t
 The Marketplace is the place to go to find, add, and configure the [Apps](#apps) for your Tenant.
 
 ## Apps
-Apps are components that you can install and configure into your Tenant that provide capabilities for you customers such as collecting credit card or PayPal payments, or paying out vouchers.
+Apps are components that you can install and configure into your Tenant that provide capabilities for you customers such as collecting credit card or PayPal payments, or paying out rewards.
 
-## Vouchers Catalog
-The Vouchers Catalog is a searchable catalog of the vouchers offered by Imburse partners.
+## Rewards Catalog
+The Rewards Catalog is a searchable catalog of the rewards offered by Imburse partners.
 
 The API has calls that allow you to view the items in the catalog, along with the details you will need for ordering and redeeming with the provider.
 
-## Voucher Groups
-Voucher Groups allow you to create named groups of [Vouchers](#vouchers). These can then be referenced in your [Payout Schemes](#payout-schemes).
+## Reward Groups
+Reward Groups allow you to create named groups of [Rewards](#rewards). These can then be referenced in your [Payout Schemes](#payout-schemes).
 
 ## Collection Schemes
 A Collection Scheme is an arrangement of rules that dictate the collection payment options such as credit cards, PayPal, etc., available to your customers.
 
 ## Payout Schemes
-A Payout Scheme is an arrangement of rules that dictate the payout options, such as vouchers, that will be available to your customers.
+A Payout Scheme is an arrangement of rules that dictate the payout options, such as rewards, that will be available to your customers.
 
 ## Webhooks
 Webhooks, also known as Web Callbacks or an HTTP push API, is a way for an application to provide other applications with near real-time information.

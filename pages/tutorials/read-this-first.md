@@ -4,11 +4,11 @@ title: Quickstart Developer Tutorial
 toc:
 body_color: body-pink
 section_name: Tutorials
-last_updated: May 9th, 2019
+last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
 ---
 # Before you begin
-This tutorial series will take you through the process of creating a new Tenant and configuring Apps and Schemes to enable the Tenant to collect money or payout vouchers.
+This tutorial series will take you through the process of creating a new Tenant and configuring Apps and Schemes to enable the Tenant to collect money or payout rewards.
 
 # Prerequisites
 You'll need the following:

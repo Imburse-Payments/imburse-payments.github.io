@@ -4,7 +4,7 @@ title: Creating a Payout Scheme
 toc: tutorial-creating-a-payout-scheme
 body_color: body-pink
 section_name: Tutorials
-last_updated: May 9th, 2019
+last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
 ---
 # Creating a Payout Scheme
@@ -30,7 +30,7 @@ Use the following request to create a new Payout Scheme.
 
 Note: The scheme we are creating has the following properties:
 - The Rules are filtering for **EUR**, *any* country, and a value between **1** and **1000**.
-- The available Voucher Groups will be from the previously created **Amazon** Voucher Group.
+- The available Reward Groups will be from the previously created **Amazon** Reward Group.
 
 ```curl
 curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/schemes/collect" \

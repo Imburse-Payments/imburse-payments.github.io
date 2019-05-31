@@ -4,7 +4,7 @@ title: Quickstart Developer Tutorial
 toc: tutorial-installing-and-configuring-an-app
 body_color: body-pink
 section_name: Tutorials
-last_updated: May 9th, 2019
+last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
 ---
 # Installing and Configuraing an App
@@ -15,7 +15,7 @@ See the [App tutorials](#/pages/tutorials) for more information on the particula
 For more information on Apps and Marketplace, see the [Apps in Core Concepts](/pages/guides/core-concepts/#apps).
 
 # What's Next?
-- [Searching the Voucher Catalog](/pages/tutorials/searching-the-vouchers-catalog)
+- [Searching the Rewards Catalog](/pages/tutorials/searching-the-rewards-catalog)
 
 
 

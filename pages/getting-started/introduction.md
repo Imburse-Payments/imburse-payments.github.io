@@ -4,7 +4,7 @@ title: Getting Started
 toc: getting-started-introduction
 body_color: body-primary
 section_name: Introduction
-last_updated: May 9th, 2019
+last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
 ---
 # Introduction

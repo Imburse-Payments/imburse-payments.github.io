@@ -4,11 +4,11 @@ title: Getting Started
 toc: getting-started-payout-payment-options
 body_color: body-primary
 section_name: Getting Started
-last_updated: May 9th, 2019
+last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
 ---
 # Payout Payment Options
-The Payout Payment Options are a list of payment options that you can present to your customers. This could be vouchers or cash payment options.
+The Payout Payment Options are a list of payment options that you can present to your customers. This could be rewards or cash payment options.
 
 ## Access Requirements
 You will need a Tenant Security Key to perform Payment Instruction and related object functions.
@@ -124,4 +124,4 @@ The [API documentation](#api-documentation) documents each of the properties fro
 ## Payment Options
 The payment options that are selected to return in the response come from processsing through the scheme rules engine. This is documented in [Payout Schemes - How and when are Rules matched?](/pages/getting-started/payout-schemes/#how-and-when-are-rules-matched).
 
-The resultant list of Voucher objects can then be displayed in your UI to your customer. Important Voucher object properties you will use would be `rewardId`, `redemptionInstructions`, `description`, `imageUrls`, `disclaimer`, `termsAndConditions`, `displayInstructions`.
+The resultant list of Reward objects can then be displayed in your UI to your customer. Important Reward object properties you will use would be `rewardId`, `redemptionInstructions`, `description`, `imageUrls`, `disclaimer`, `termsAndConditions`, `displayInstructions`.
