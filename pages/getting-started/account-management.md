@@ -172,13 +172,13 @@ The capabilies of an Account API Key are dependent on the **Account Roles** that
 
 Account Role Name | Description
 -|-
-`acc.g.super` | Account Gobal Admin - Global read + write access to all aspects of Accounts
-`acc.r` | Account Management read access
-`acc.a` | Account Management read + write access
-`acc.key.r` | API Key Management read access
-`acc.key.a` | API Key Management read + write access
-`acc.t.r` | Tenant Management read access
-`acc.t.a` | Tenant Management read + write access
+`account-admin` | Account Admin - Read + write access to **all** aspects of an Account
+`account-management-read` | Account Management read access
+`account-management-write` | Account Management read + write access
+`account-api-key-read` | API Key Management read access
+`account-api-key-write` | API Key Management read + write access
+`account-tenant-read` | Tenant Management read access
+`account-tenant-write` | Tenant Management read + write access
 
 An Account API Key can have multiple roles assigned to provide the access needed.
 
@@ -210,22 +210,24 @@ The following **Tenant Roles** are available:
 
 Tenant Role Name | Description
 -|-
-`t.g.super` | Tenant Gobal Admin - Global read + write access to all aspects of Tenant
-`t.comp.a` | Tenant Information Management read + write access
-`t.comp.r` | Tenant Information Management read access
-`t.psp.r` | Provider Management read access
-`t.psp.a` | Provider Management read + write access
-`t.sch.r` | Scheme Management read access
-`t.sch.a` | Scheme Management read + write access
-`t.key.r` | API Key Management read access
-`t.key.a` | API Key read + write access
-`t.whk.r` | Webhook Management read access
-`t.whk.a` | Webhook read + write access
-`t.cat.r` | Catalog Management read access
-`t.col.a` | Collection Management read + write access
-`t.col.r` | Collection Management read access
-`t.po.a` | Payout Management read + write access
-`t.po.r` | Payout Management read access
+`tenant-admin` | Tenant Admin - Read + write access to **all** aspects of a Tenant
+`tenant-management-read` | Tenant Information read access
+`tenant-management-write` | Tenant Information read + write access
+`tenant-app-read` | Apps read access
+`tenant-app-write` | Apps read + write access
+`tenant-collect-scheme-read` | Collect Schemes read access
+`tenant-collect-scheme-write` | Collect Schemes read + write access
+`tenant-payout-scheme-read` | Payout Schemes read access
+`tenant-payout-scheme-write` | Payout Schemes read + write access
+`tenant-api-key-read` | API Keys read access
+`tenant-api-key-write` | API Keys read + write access
+`tenant-webhook-read` | Webhooks read access
+`tenant-webhook-write` | Webhooks read + write access
+`tenant-reward-group-read` | Reward Groups read access
+`tenant-reward-group-write` | Reward Groups write access
+`tenant-catalog-read` | Catalog read access
+`tenant-transaction-read` | Transactions read access
+`tenant-transaction-write` | Transactions read + write access
 
 A Tenant API Key can have multiple roles assigned to it as are deemed necessary for the capabilities your require.
 
