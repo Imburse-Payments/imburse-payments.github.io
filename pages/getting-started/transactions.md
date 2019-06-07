@@ -78,15 +78,17 @@ A Transaction consists of a two components:
 - Order
 - Instructions
 
-The diagram below shows the two components that make up a Transction.
+The diagram below shows the two components that make up a Transaction.
 
-<img src="/assets/images/guides/getting-started/transactions.png" style="width:400px;" title="Transactions" alt="Transactions"/>
+<img src="/assets/images/guides/getting-started/transactions-hierarchy.png" style="width:400px;" title="Transactions" alt="Transactions"/>
 
 ### Orders
 The Order object specifies the currency, country, and the scheme id for the order. This information is used at execution time to filter the appropriate payment options.
 
 ##### Adding Orders
-An order must be given both a unique Customer Ref and Order Ref. Both of these values are created and owned by you. You can add as many orders for a specific customer as required.
+An order must be given both a unique Customer Ref and Order Ref. Both of these values are created and owned by you. 
+
+You can add as many orders for a customer as required.
 
 ##### Validation Errors
 One or many of the following errors may be returned if there were issues validating a new Order request.
@@ -113,6 +115,8 @@ An Order requires one or more Instructions to be set up. These Instructions act 
 An instruction must be given a unique instruction Ref - unique to the customer's order. This reference can be used in the future to look up or make amendments to an instruction.
 
 An example instruction reference could be the payment month - 01, 02, 03, and so forth.
+
+You can add as many Instructions to an Order as required.
 
 ##### Validation errors
 One or many of the following errors may be returned if there were issues validating a new Instruction request.
