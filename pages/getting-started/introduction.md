@@ -42,7 +42,7 @@ Response Code | Meaning
 500, 501, 502, 503, 504 | **Internal Server Error** - Something went wrong on Imburse's end.
 
 ## Access Control
-Each API method in the REST API documentation is decorated with a *Role Required* attribute. To execute any API methods successfully, your Security Key would need to have the role name specified added to the `roles` property. 
+Each API method in the REST API documentation is decorated with a *Role Required* attribute. To execute any API methods successfully, your API Key would need to have the role name specified added to the `roles` property. 
 
 See the [Account Management - Account Roles](/pages/getting-started/account-management/#account-roles) and [Account Management - Tenant Roles](/pages/getting-started/account-managament/#tenant-roles) for lists of the available roles.
 

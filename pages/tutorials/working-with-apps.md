@@ -31,7 +31,7 @@ The Marketplace has endpoints to perform the following functions:
 - [Uninstalling an App](#uninstalling-an-app)
 
 # Prerequisites
-- A valid `Management Bearer Token` derived from a `Tenant Security Key`. If you don't have one, see the tutorial [Aquiring a Management Bearer Token](#aquire-management-bearer-token).
+- A valid `Management Bearer Token` derived from a `Tenant API Key`. If you don't have one, see the tutorial [Aquiring a Management Bearer Token](#aquire-management-bearer-token).
 
 
 # Get list of Apps

@@ -8,19 +8,19 @@ last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
 ---
 # Get a Management Bearer Token
-This tutorial will take you through getting a Collect Bearer Token using a Tenant Security Key.
+This tutorial will take you through getting a Collect Bearer Token using a Tenant API Key.
 
 
 # Prerequisites
 Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
-- Familiar with creating an HMAC token using a Security Key.
-- A `Tenant Security Key`. See the tutorial [Creating a Tenant Security Key](/pages/tutorials/creating-a-tenant-security-key) here if you need to create one.
+- Familiar with creating an HMAC token using an API Key.
+- A `Tenant API Key`. See the tutorial [Creating a Tenant API Key](/pages/tutorials/creating-a-tenant-security-key) here if you need to create one.
 
 # Get Collect Bearer Token
-You will need to generate an HMAC token for the following following request using a `Tenant Security Key`.
+You will need to generate an HMAC token for the following following request using a `Tenant API Key`.
 
-**Note: If you already have a valid `Collect Bearer Token` derived from a `Tenant Security Key` then you can skip this tutorial. Use your existing `Collect Bearer Token` rather than creating a new one. You don't have to create a new `Collect Bearer Token` for each request.**
+**Note: If you already have a valid `Collect Bearer Token` derived from a `Tenant API Key` then you can skip this tutorial. Use your existing `Collect Bearer Token` rather than creating a new one. You don't have to create a new `Collect Bearer Token` for each request.**
 
 
 #### Request

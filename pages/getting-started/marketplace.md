@@ -11,7 +11,7 @@ icon_class: icon_documents_alt icon
 The Marketplace API functions allow you to find and install Apps into your Tenant.
 
 ## Access Requirements
-You will need a Tenant Security Key to perform  Marketplace functions.
+You will need a Tenant API Key to perform  Marketplace functions.
 
 ## Functions
 Each App provided by Imburse has a standard set of API endpoints.

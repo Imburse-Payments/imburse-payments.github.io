@@ -11,7 +11,7 @@ icon_class: icon_documents_alt icon
 Once your customer has chosen a reward you will need to call the process endpoint to complete the redemption of the reward.
 
 ## Access Requirements
-You will need a Tenant Security Key to process a reward.
+You will need a Tenant API Key to process a reward.
 
 ## Functions
 The available functions are:

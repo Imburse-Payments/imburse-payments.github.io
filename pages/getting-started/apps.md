@@ -13,7 +13,7 @@ The Apps API functions allow you to find, configure, and uninstall your tenant a
 Configuring an App permits Imburse to transact with the provider of the App on your behalf.
 
 ## Access Requirements
-You will need a Tenant Security Key to perform App functions.
+You will need a Tenant API Key to perform App functions.
 
 ## Functions
 Each App provided by Imburse has a standard set of API endpoints.

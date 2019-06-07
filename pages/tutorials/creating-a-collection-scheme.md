@@ -17,7 +17,7 @@ For more information on Collection Schemes, see the [Collection Schemes in Core 
 # Prerequisites
 Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
-- A valid `Management Bearer Token` derived from a `Tenant Security Key`. If you don't have one, see the tutorial [Aquiring a Management Bearer Token](#aquire-management-bearer-token).
+- A valid `Management Bearer Token` derived from a `Tenant API Key`. If you don't have one, see the tutorial [Aquiring a Management Bearer Token](#aquire-management-bearer-token).
 - The `appId` of an App you have previously installed that you want to add to this Collection Scheme. If you don't have one, see the tutorial [Installing and Configuring an App](/pages/tutorials/installing-and-configuring-an-app).
 
 # Create the Collection Scheme

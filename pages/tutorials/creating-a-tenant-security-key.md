@@ -7,36 +7,36 @@ section_name: Tutorials
 last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
 ---
-# Creating a Tenant Security Key
-Each Tenant you create will need at least one Tenant Security Key adding in order to further configure the Tenant.
+# Creating a Tenant API Key
+Each Tenant you create will need at least one Tenant API Key adding in order to further configure the Tenant.
 
-This tutorial offers step-by-step instructions for creating a new Tenant Security Key for a specific Tenant using the REST API's.
+This tutorial offers step-by-step instructions for creating a new Tenant API Key for a specific Tenant using the REST API's.
 
 # Prerequisites
 Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
-- Your Account Security Key - This will consist of a Public Key and Private Key and would have been given to your upon registration. If you haven't received it then please contact your adminstrator.
-- Familiar with creating an HMAC token using a Security Key.
+- Your Account API Key - This will consist of a Public Key and Private Key and would have been given to your upon registration. If you haven't received it then please contact your adminstrator.
+- Familiar with creating an HMAC token using an API Key.
 
 In addition, you should also have:
 - The `Tenant Id` for a Tenant you have previously created - If you don't have one, see the tutorial [Creating a Tenant](/pages/tutorials/creating-a-tenant) first.
 
-# Create a new Tenant Security Key
-Using the `Management Bearer Token` we can create a new Tenant Security Key.
+# Create a new Tenant API Key
+Using the `Management Bearer Token` we can create a new Tenant API Key.
 
 #### Request
 Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
 
-Replace the `{tenantId}` placeholder value with the Tenant `id` for the Tenant you want to create the Security Key for.
+Replace the `{tenantId}` placeholder value with the Tenant `id` for the Tenant you want to create the API Key for.
 
 ###### Roles
-The `roles` value in the request is important as it sets the permissions this Security Key can have. 
+The `roles` value in the request is important as it sets the permissions this API Key can have. 
 
-In the example request below, we are setting the roles to `t.g.super` which will give the Tenant Security Key administration access to everything for the Tenant.
+In the example request below, we are setting the roles to `t.g.super` which will give the Tenant API Key administration access to everything for the Tenant.
 
-**Note: In reality you would only grant the minimum necessary permissions for your Tenant Security Keys.**
+**Note: In reality you would only grant the minimum necessary permissions for your Tenant API Keys.**
 
-For more information on the `roles` values, see [What is a Tenant Security Key](/pages/guides/core-concepts/#what-is-a-tenant-security-key) in the Core Concepts documentation.
+For more information on the `roles` values, see [What is a Tenant API Key](/pages/guides/core-concepts/#what-is-a-tenant-security-key) in the Core Concepts documentation.
 
 ```curl
 curl --location --request POST "https://sandbox-api.imbursepayments.com/management/v1/tenant/{tenantId}/keys" \

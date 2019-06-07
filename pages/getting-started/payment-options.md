@@ -11,7 +11,7 @@ icon_class: icon_documents_alt icon
 The Payout Payment Options are a list of payment options that you can present to your customers. This could be rewards or cash payment options.
 
 ## Access Requirements
-You will need a Tenant Security Key to perform Payment Instruction and related object functions.
+You will need a Tenant API Key to perform Payment Instruction and related object functions.
 
 ## Functions
 The available Collection Scheme functions are:

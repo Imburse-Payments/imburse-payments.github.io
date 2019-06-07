@@ -13,7 +13,7 @@ Reward Groups are named collections of rewards that you can reference in your Pa
 An example of a Reward Group could be all the country specific Amazon Gift Card rewards - ie. Amazon.co.uk, Amazon.de, and so forth.
 
 ## Access Requirements
-You will need a Tenant Security Key to perform Reward Group functions.
+You will need a Tenant API Key to perform Reward Group functions.
 
 ## Functions
 The available authentication functions are:
@@ -35,20 +35,41 @@ The following models are used to define a Reward Group.
 {
   "rewardGroupId": "",
   "name": "",
-  "rewards": [ "" ]
+  "rewards": [
+    "",
+    true
+   ]
 }
-
 ```
 
 Property | Type | Mandatory | Description
 -|-
 `rewardGroupId` | guid | Yes | Auto generated upon creation.
 `name` | string | Yes | A unique name for this Reward Group.
-`rewards` | Array of strings | Yes | An array of Reward Ids from the Rewards Catalog.
+`rewards` | Array of [Reward Item Models](#reward-item-model) | Yes | An array of Reward Items representing<br/>the Rewards available in this Reward Group.
+
+
+### Reward Item Model
+```json
+{
+  "rewardId": "",
+  "enabled": true
+}
+```
+
+Property | Type | Mandatory | Description
+-|-
+`rewardId` | string | Yes | A Reward Id from the Rewards Catalog.
+`enabled` | boolean | Yes | Toggles if the reward is available in the reward group.
 
 ### Adding Reward Groups
 When adding a new Reward Group, the name must be unique. The name is displayed in the Client Portal UI to identify the Reward Groups added to a Payout Collection Rule.
 
+### Enabling & Disabling a Reward
+An alternative to permantly removing a Reward from the Reward Group is to `disable` it. Use this functionality when particular rewards should not be available to your customers.
+
+Set the `enabled` property of the applicable [Reward Item Model](#reward-item-model) to `false` to disable the reward. Set it back to `true` re-enable it.
+
 ### Deleting Reward Groups
-A Reward Group can only be deleted if it is first removed from any Payout Collection Rule it has been added to. The API will respond with a `400 - Bad Request` response if Reward Group is still being referenced.
+A Reward Group can only be deleted if the the Reward Group is not being referenced in any **published draft** of a Payout Scheme. If it is being referenced we will return a `400 - Bad Request` response with error code `REWARD_GROUP_IN_USE`.
 

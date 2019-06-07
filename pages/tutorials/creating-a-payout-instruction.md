@@ -16,7 +16,7 @@ For more information on the Payout Instructions, see the [Payout Instructions in
 
 # Prerequisites
 Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
-- A valid `Payout Bearer Token` derived from a `Tenant Security Key`. If you don't have one, see the tutorial [Aquiring a Payout Bearer Token](#aquire-payout-bearer-token).
+- A valid `Payout Bearer Token` derived from a `Tenant API Key`. If you don't have one, see the tutorial [Aquiring a Payout Bearer Token](#aquire-payout-bearer-token).
 
 # Steps
 The steps involved to create a payment instruction are:

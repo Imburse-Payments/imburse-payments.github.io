@@ -11,7 +11,7 @@ icon_class: icon_documents_alt icon
 The Account Management API functions allow a user to perform both Account level and *limited* Tenant level administration tasks.
 
 ## Access Requirements
-You will need an Account Security Key to perform Account Management functions.
+You will need an Account API Key to perform Account Management functions.
 
 ## Functions
 The Account functions can be broken down into to levels:
@@ -33,21 +33,21 @@ The Account functions can be broken down into to levels:
 - Get a list of all Tenants
 - Get a Tenant by its Id
 - Update a Tenant
-- Create new Tenant Security Keys
-- Get a list of all Tenant Security Keys
-- Get a Tenant Security Key by its Public Key value
-- Delete a Tenant Security Key
+- Create new Tenant API Keys
+- Get a list of all Tenant API Keys
+- Get a Tenant API Key by its Public Key value
+- Delete a Tenant API Key
 
-**Note:** - The Tenant functions available to an Account are limited to Tenant creation and Tenant Security Keys only.
+**Note:** - The Tenant functions available to an Account are limited to Tenant creation and Tenant API Keys only.
 
-For configuring Schemes, Apps, and other Tenant objects, you must use a **Tenant Security Key**.
+For configuring Schemes, Apps, and other Tenant objects, you must use a **Tenant API Key**.
 
 
 ## API Documentation
 All the Account Management API functions are fully documented in the [Account API documentation](https://api-docs.imbursepayments.com/#d4a8fee4-7343-464f-9b3f-bf42e81619e2).
 
 ## Models
-The following models are used to define Accounts, Tenants, and Security Keys.
+The following models are used to define Accounts, Tenants, and API Keys.
 
 ### Account Model
 ```json
@@ -98,8 +98,8 @@ Property | Type | Mandatory | Description
 `postCode` | string | Yes | Post Code / Zip Code of your organizations address.
 `country` | string | Yes | The country of your organizations address.
 
-### Security Key Model
-This model applies to both Account Security Keys and Tenant Security Keys.
+### API Key Model
+This model applies to both Account API Keys and Tenant API Keys.
 
 ```json
 {
@@ -113,10 +113,10 @@ This model applies to both Account Security Keys and Tenant Security Keys.
 
 Property | Type | Mandatory | Description
 -|-
-`accountId` | string | Yes | The Id of the Account that owns the key.<br/><br/>**<mark>Only applicable to Account Security Keys.</mark>**
-`tenantId` | string | No | The Id of the Tenant that owns the key.<br/><br/>**<mark>Only applicable to Tenant Security Keys.</mark>**
-`publicKey` | string | Yes | The Public Key portion of the Security Key.
-`privateKey` | string | Yes | The Private Key portion of the Security Key.<br/><br/>**<mark>The Private Key value cannot be retrived once created<br/>so it's important this is captured and stored somewhere safely.</mark>**
+`accountId` | string | Yes | The Id of the Account that owns the key.<br/><br/>**<mark>Only applicable to Account API Keys.</mark>**
+`tenantId` | string | No | The Id of the Tenant that owns the key.<br/><br/>**<mark>Only applicable to Tenant API Keys.</mark>**
+`publicKey` | string | Yes | The Public Key portion of the API Key.
+`privateKey` | string | Yes | The Private Key portion of the API Key.<br/><br/>**<mark>The Private Key value cannot be retrived once created<br/>so it's important this is captured and stored somewhere safely.</mark>**
 `roles` | Array of strings | Yes | The roles given to this Key.<br/>These will be either [Account Roles](#account-roles) or [Tenant Roles](#tenant-roles).
 
 ### Tenant Model
@@ -147,48 +147,48 @@ Property | Type | Mandatory | Description
 An Account has access to four main components:
 
 - Account
-- Account Security Keys
+- Account API Keys
 - Tenants
-- Tenant Security Keys
+- Tenant API Keys
 
 The diagram below shows the relationship between these four components.
 
 <img src="/assets/images/guides/getting-started/account-breakdown.png" style="width:600px;" title="Account" alt="Account"/>
 
 ### Account
-The Account is the root of the system. The Account Security Keys and Tenants are child objects of the Account.
+The Account is the root of the system. The Account API Keys and Tenants are child objects of the Account.
 
 Your Account is setup by Imburse upon registration.
 
-### Account Security Keys
-When your Account was initially setup you would have been issued with an Account Security Key to allow you to access the APIs.
+### Account API Keys
+When your Account was initially setup you would have been issued with an Account API Key to allow you to access the APIs.
 
-You can setup additional Account Security Keys as you require.
+You can setup additional Account API Keys as you require.
 
-**<mark>Important - Creating an Account Security Key will generate your Public Key and Private Key values. The Private Key value cannot be retrived after creation so it's important this is safely stored.</mark>**
+**<mark>Important - Creating an Account API Key will generate your Public Key and Private Key values. The Private Key value cannot be retrived after creation so it's important this is safely stored.</mark>**
 
 ##### Account Roles
-The capabilies of an Account Security Key are dependent on the **Account Roles** that are assigned to it. The following table shows the **Account Roles** that are available:
+The capabilies of an Account API Key are dependent on the **Account Roles** that are assigned to it. The following table shows the **Account Roles** that are available:
 
 Account Role Name | Description
 -|-
 `acc.g.super` | Account Gobal Admin - Global read + write access to all aspects of Accounts
 `acc.r` | Account Management read access
 `acc.a` | Account Management read + write access
-`acc.key.r` | Security Key Management read access
-`acc.key.a` | Security Key Management read + write access
+`acc.key.r` | API Key Management read access
+`acc.key.a` | API Key Management read + write access
 `acc.t.r` | Tenant Management read access
 `acc.t.a` | Tenant Management read + write access
 
-An Account Security Key can have multiple roles assigned to provide the access needed.
+An Account API Key can have multiple roles assigned to provide the access needed.
 
-##### Adding an Account Security Key
-When adding a Security Key, the response from the API will contain the new Private Key value. This Private Key will only be issued once and should be stored securely.
+##### Adding an Account API Key
+When adding an API Key, the response from the API will contain the new Private Key value. This Private Key will only be issued once and should be stored securely.
 
-When choosing the roles to apply to a Security Key, only select the minimum to satisfy the requirements of the intended purpose.
+When choosing the roles to apply to an API Key, only select the minimum to satisfy the requirements of the intended purpose.
 
 
-##### Deleting an Account Security Key
+##### Deleting an Account API Key
 Deleting a Key will immediately revoke access to ALL APIs.
 
 **<mark>This action cannot be undone.</mark>**
@@ -200,10 +200,10 @@ You can add as many Tenants to your Account as you require.
 
 A Tenant cannot be deleted once created.
 
-##### Tenant Security Keys
-A Tenant can have as many Tenant Security Keys as you require.
+##### Tenant API Keys
+A Tenant can have as many Tenant API Keys as you require.
 
-**<mark>Important - Creating a Tenant Security Key will generate you Public Key and Private Key values. The Private Key value cannot be retrived after creation so it's important this is stored somewhere safe.</mark>**
+**<mark>Important - Creating a Tenant API Key will generate you Public Key and Private Key values. The Private Key value cannot be retrived after creation so it's important this is stored somewhere safe.</mark>**
 
 ##### Tenant Roles
 The following **Tenant Roles** are available:
@@ -217,8 +217,8 @@ Tenant Role Name | Description
 `t.psp.a` | Provider Management read + write access
 `t.sch.r` | Scheme Management read access
 `t.sch.a` | Scheme Management read + write access
-`t.key.r` | Security Key Management read access
-`t.key.a` | Security Key read + write access
+`t.key.r` | API Key Management read access
+`t.key.a` | API Key read + write access
 `t.whk.r` | Webhook Management read access
 `t.whk.a` | Webhook read + write access
 `t.cat.r` | Catalog Management read access
@@ -227,22 +227,22 @@ Tenant Role Name | Description
 `t.po.a` | Payout Management read + write access
 `t.po.r` | Payout Management read access
 
-A Tenant Security Key can have multiple roles assigned to it as are deemed necessary for the capabilities your require.
+A Tenant API Key can have multiple roles assigned to it as are deemed necessary for the capabilities your require.
 
-##### Adding a Tenant Security Key
-When adding a Security Key, the response from the API will contain the new Private Key value. This Private Key will only be issued once and should be stored securely.
+##### Adding a Tenant API Key
+When adding an API Key, the response from the API will contain the new Private Key value. This Private Key will only be issued once and should be stored securely.
 
-When choosing the roles to apply to a Security Key, only select the minimum to satisfy the requirements of the Security Keys intended purpose.
+When choosing the roles to apply to an API Key, only select the minimum to satisfy the requirements of the API Keys intended purpose.
 
-##### Deleting a Tenant Security Key
+##### Deleting a Tenant API Key
 Deleting a Key will immediately revoke access to ALL APIs.
 
 **<mark>This action cannot be undone.</mark>**
 
 ## Key Management Strategy
-As the Account holder, you can control the creation of Tenant Security Keys and the permissions they have.
+As the Account holder, you can control the creation of Tenant API Keys and the permissions they have.
 
-Depending upon the nature of your business, you may want to restrict what your Tenants can do by only creating Tenant Security Keys with limited functionality; including restricting a Tenant from creating their own keys.
+Depending upon the nature of your business, you may want to restrict what your Tenants can do by only creating Tenant API Keys with limited functionality; including restricting a Tenant from creating their own keys.
 
-Conversly, you could also create just one Tenant Security Key that has permissions to create further Tenant Security Keys; in effect making the Tenant fully independent from the Account holder and able to self provision within the Tenant.
+Conversly, you could also create just one Tenant API Key that has permissions to create further Tenant API Keys; in effect making the Tenant fully independent from the Account holder and able to self provision within the Tenant.
 

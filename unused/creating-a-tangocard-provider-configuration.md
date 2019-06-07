@@ -21,15 +21,15 @@ For more information on Provider Configurations, see the [Provider Configuration
 You'll need the following:
 
 - Familiarity with the [Core Concepts](/pages/guides/core-concepts).
-- Familiar with creating an HMAC token using a Security Key.
+- Familiar with creating an HMAC token using an API Key.
 
 In addition, you should also have:
-- The Tenant Security Key created from the previous step. If you don't have one, see the tutorial [Creating a Tenant Security Key](/pages/tutorials/creating-a-tenant-security-key) first.
+- The Tenant API Key created from the previous step. If you don't have one, see the tutorial [Creating a Tenant API Key](/pages/tutorials/creating-a-tenant-security-key) first.
 
 ## Step 1 - Aquire a Management Bearer Token
-You will need to generate an HMAC token for the following following request using a `Tenant Security Key`; not an `Account Security Key`.
+You will need to generate an HMAC token for the following following request using a `Tenant API Key`; not an `Account API Key`.
 
-**Note: If you already have a valid `Tenant Security Key` derived `Management Bearer Token` then you can use this rather than creating a new one. Skip to Step 2 if you have one.**
+**Note: If you already have a valid `Tenant API Key` derived `Management Bearer Token` then you can use this rather than creating a new one. Skip to Step 2 if you have one.**
 
 
 #### Request

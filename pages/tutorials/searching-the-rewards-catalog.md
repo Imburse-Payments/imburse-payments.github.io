@@ -17,7 +17,7 @@ For more information on the Rewards Catalog, see the [Rewards Catalog in Core Co
 # Prerequisites
 Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
-- A valid `Management Bearer Token` derived from a `Tenant Security Key`. If you don't have one, see the tutorial [Aquiring a Management Bearer Token](#aquire-management-bearer-token).
+- A valid `Management Bearer Token` derived from a `Tenant API Key`. If you don't have one, see the tutorial [Aquiring a Management Bearer Token](#aquire-management-bearer-token).
 
 # Search the Rewards Catalog
 Using the `Management Bearer Token` aquired in Step 1, we can now search the Rewards Catalog.

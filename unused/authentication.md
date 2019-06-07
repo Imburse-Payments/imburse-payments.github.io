@@ -10,7 +10,7 @@ icon_class: icon_documents_alt icon
 # Overview
 Imburse authenticates your API requests using your Account’s or Tenant's API keys. If you do not include your key when making an API request, or use one that is incorrect or outdated, Imburse returns an error.
 
-Every account is provided with one Account Security Key at registration time. All API requests exist in either sandbox or live modes and your accounts, tenants, apps, schemes, and so forth in one mode cannot be manipulated in the other.
+Every account is provided with one Account API Key at registration time. All API requests exist in either sandbox or live modes and your accounts, tenants, apps, schemes, and so forth in one mode cannot be manipulated in the other.
 
 Your API keys are available in the Imburse Portal, however, you cannot get the private key value after it has been created; either via the API or the Imburse Portal. You must safely store the private key values once they have been created.
 
@@ -23,24 +23,24 @@ The HMAC scheme is extremely secure but is computationally quite expensive, both
 
 The Bearer token we respond with is a crpytic string signed on the Imburse platform and validated on the server for each API request.
 
-## Account Security Keys vs Tenant Security Keys
-Your account is the top level in a 2-teir heiarachy. Your account can have many Tenants. As such, we have separate Security Keys for Accounts and Tenants.
+## Account API Keys vs Tenant API Keys
+Your account is the top level in a 2-teir heiarachy. Your account can have many Tenants. As such, we have separate API Keys for Accounts and Tenants.
 
-- **Account Security Key** - access to create new Account Security Keys, create new Tenants, and create new Tenant Security Keys for said Tenants.
-- **Tenant Security Key** - access to configuring the Tenant's Apps, Schemes, and so forth.
+- **Account API Key** - access to create new Account API Keys, create new Tenants, and create new Tenant API Keys for said Tenants.
+- **Tenant API Key** - access to configuring the Tenant's Apps, Schemes, and so forth.
 
 Which one you use when authenticating determines the context you are in - either Account or Tenant.
 
 ## Tenant Self Service vs Account Controlled
 As the account owner, you can setup your Tenants in two ways:
 
-- **Tenant Self Service** - Set them up with a Tenant Security Key granted with full-access and **SHARE** the public and private key with the Tenant. With a full-access Tenant Security Key the Tenant can self administer themselves, including setting up more Tenant Security Keys for other team members.
-- **Account Controlled** - Setup a Tenant Security Key but **DO NOT SHARE** the public and private key with the Tenant. You can still use the Tenant Security Key to administer the Tenant but the account owner will have to perform the requests on behalf of the Tenant.
+- **Tenant Self Service** - Set them up with a Tenant API Key granted with full-access and **SHARE** the public and private key with the Tenant. With a full-access Tenant API Key the Tenant can self administer themselves, including setting up more Tenant API Keys for other team members.
+- **Account Controlled** - Setup a Tenant API Key but **DO NOT SHARE** the public and private key with the Tenant. You can still use the Tenant API Key to administer the Tenant but the account owner will have to perform the requests on behalf of the Tenant.
 
 **Note: All of your Tenant's do not need to be configured the same.**
 
-# Using a Security Key to Authenticate
-To start the authentication process, you will need an Account or Tenant Security Key.
+# Using an API Key to Authenticate
+To start the authentication process, you will need an Account or Tenant API Key.
 
 The diagram below shows the 4 steps of the authentication flow.
 
@@ -56,7 +56,7 @@ Management tasks in your account<br/>or tenants, including creating customer ord
 Processing a payout instruction<br/>or requesting payout options | Choose `Create Payout API Bearer Token`
 Processing a collection instruction<br/>or requesting collection options | Choose `Create Collect API Bearer Token`
 
-Using your the `publicKey` and `privateKey` of your Security Key you must now create an HMAC token from your request. See instuctions here.
+Using your the `publicKey` and `privateKey` of your API Key you must now create an HMAC token from your request. See instuctions here.
 
 Add the `Authorization` header to your request.
 

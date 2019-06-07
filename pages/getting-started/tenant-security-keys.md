@@ -1,17 +1,17 @@
 ---
 layout: default
 title: Getting Started
-toc: getting-started-tenant-security-keys
+toc: getting-started-tenant-api-keys
 body_color: body-primary
 section_name: Getting Started
 last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
 ---
-# Tenant Security Keys
-The Tenant Security Key API functions allow a user to perform Tenant Security Key administration tasks.
+# Tenant API Keys
+The Tenant API Key API functions allow a user to perform Tenant API Key administration tasks.
 
 ## Access Requirements
-You will need a Tenant Security Key to perform Tenant Management functions.
+You will need a Tenant API Key to perform Tenant Management functions.
 
 ## Functions
 The available functions are:
@@ -25,9 +25,9 @@ The available functions are:
 All the Account Management API functions are fully documented in the [Tenant API documentation](https://api-docs.imbursepayments.com/#2db95add-3a76-4424-ada5-fa1fc865011c).
 
 ## Models
-The following models are used to manage Tenant Security Keys.
+The following models are used to manage Tenant API Keys.
 
-### Security Key Model
+### API Key Model
 ```json
 {
 	"accountId": "",
@@ -42,8 +42,8 @@ Property | Type | Mandatory | Description
 -|-
 `accountId` | string | Yes | The Id of the Account that owns the Tenant.
 `tenantId` | string | No | The Tenant Id this Key belongs to.
-`publicKey` | string | Yes | The Public Key portion of the Security Key.
-`privateKey` | string | Yes | The Private Key portion of the Security Key.<br/><br/>**<mark>The Private Key value cannot be retrived once created<br/>so it's important this is stored somewhere safe.</mark>**
+`publicKey` | string | Yes | The Public Key portion of the API Key.
+`privateKey` | string | Yes | The Private Key portion of the API Key.<br/><br/>**<mark>The Private Key value cannot be retrived once created<br/>so it's important this is stored somewhere safe.</mark>**
 `roles` | Array of strings | Yes | The roles given to this Key.
 
 

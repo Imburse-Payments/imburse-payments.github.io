@@ -13,9 +13,9 @@ This tutorial series will take you through the process of creating a new Tenant 
 # Prerequisites
 You'll need the following:
 
-- An `Account Security Key` - This will consist of a Public Key and Private Key. You would have been given one your upon registration with Imburse.
+- An `Account API Key` - This will consist of a Public Key and Private Key. You would have been given one your upon registration with Imburse.
 - Familiarity with the [Core Concepts](/pages/guides/core-concepts).
-- Familiar with creating an HMAC token using a Security Key.
+- Familiar with creating an HMAC token using an API Key.
 
 # What's Next?
 - [Creating a Tenant](/pages/tutorials/creating-a-tenant)
