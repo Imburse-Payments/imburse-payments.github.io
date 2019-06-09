@@ -15,9 +15,7 @@ The components are:
 - [Accounts](#accounts)
 - [Tenants](#tenants)
 - [API Keys](#api-keys)
-- [Marketplace](#marketplace)
 - [Apps](#apps)
-- [Rewards Catalog](#rewards-catalog)
 - [Reward Groups](#reward-groups)
 - [Collecion Schemes](#collection-schemes)
 - [Payout Schemes](#payout-schemes)
@@ -61,13 +59,16 @@ The Marketplace is the place to go to find, add, and configure the [Apps](#apps)
 ## Apps
 Apps are components that you can install and configure into your Tenant that provide capabilities for you customers such as collecting credit card or PayPal payments, or paying out rewards.
 
+## Rewards
+A reward is something you can give to your customers in recognition of an acheivment; for example if a customer is deemed to have driven well, and makes no car insurance claims, they could be offered an Amazon Gift Card or a cash alternative. The Imburse platform offers hundreds of reward types from many different brands in most countries.
+
 ## Rewards Catalog
-The Rewards Catalog is a searchable catalog of the rewards offered by Imburse via its partners.
+The Rewards Catalog is a searchable collection of [Rewards](#rewards) offered by Imburse via its partners.
 
 The API has calls that allow you to view the items in the catalog, along with the details you will need for ordering and redeeming with the provider.
 
 ## Reward Groups
-Reward Groups allow you to create named groups of [Rewards](#rewards). These can then be referenced in your [Payout Schemes](#payout-schemes).
+A Reward Group is a collection of one or more [Rewards](#rewards), curated by you. Multiple Rewards Groups can be created that can then be shared between your [Payout Schemes](#payout-schemes).
 
 ## Collection Schemes
 A Collection Scheme is an arrangement of rules that dictate the collection payment options such as credit cards, PayPal, etc., available to your customers.

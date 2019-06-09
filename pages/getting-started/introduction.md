@@ -41,8 +41,24 @@ Response Code | Meaning
 429 | **Too Many Requests**	- Too many requests hit the API too quickly. We recommend an exponential backoff of your requests.
 500, 501, 502, 503, 504 | **Internal Server Error** - Something went wrong on Imburse's end.
 
+## Error Handling
+All `400 - Bad Request` responses will return a structured response containing one or more error codes:
+
+For example:
+
+```json
+{
+    "errorCodes": [
+        "SCHEME_ID_INVALID",
+        "SCHEME_NAME_REQUIRED"
+    ]
+}
+```
+
+Your original request will need to be fixed before resubmitting.
+
 ## Access Control
-Each API method in the REST API documentation is decorated with a *Role Required* attribute. To execute any API methods successfully, your API Key would need to have the role name specified added to the `roles` property. 
+Each API method in the REST API documentation is decorated with a *Role Required* attribute. To execute any API methods successfully, your API Key would need to have the role name specified added to the `roles` property.
 
 See the [Account Management - Account Roles](/pages/getting-started/account-management/#account-roles) and [Account Management - Tenant Roles](/pages/getting-started/account-managament/#tenant-roles) for lists of the available roles.
 
