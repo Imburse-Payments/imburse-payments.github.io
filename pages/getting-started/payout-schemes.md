@@ -163,8 +163,8 @@ Property | Type | Mandatory | Description
 -|-
 `currencies` | string | No | An array of `Currency Codes`.<br/>Leave blank to apply this rule to any currency.
 `countries` | string | No | An array of `Country Codes`.<br/>Leave blank to apply this rule to any country.
-`highValueInclusive` | decimal | Yes | The upper value limit this rule would apply to.<br/>Leave empty for any value.
-`lowValueInclusive` | decimal | Yes | The lower value limit this rule would apply to.<br/>Leave empty for any value.
+`highValueInclusive` | decimal | Yes | The upper value limit this rule would apply to.<br/>Leave empty for any value.<br/>If an expliciet value is specified it must be greater than or equal to `lowValueInclusive`.
+`lowValueInclusive` | decimal | Yes | The lower value limit this rule would apply to.<br/>Leave empty for any value.<br/>If an explicit value is specified it must be greater than 0 and less than or equal to `highValueInclusive`.
 `apps` | Array of [App models](#app-model) | Yes | The apps configured for this rule.
 `rewardGroups` | Array of [Reward Group models](#reward-group-model) | Yes | The reward groups configured for this rule.
 

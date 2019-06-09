@@ -23,7 +23,7 @@ Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you
 The payout options are determined by the following steps.
 1. The Payout Bearer Token you created in the previous tutorial holds the customer ref, order ref, and instruction ref.
 2. We lookup the payout instruction using the references from step 1 to give us the Scheme, Country, Currency, and instruction value.
-3. Using the data from step 2, we then run through the Scheme Rules, looking for a match on Country, Currency, and value. We then return the payout reward options.
+3. Using the data from step 2, we then run through the Scheme Rules, looking for a match on Country, Currency, and value. We then return the payout reward options for the matching rule.
 
 # Get the Payout Options
 Using the `Payout Bearer Token` we can get the Payout Options.
