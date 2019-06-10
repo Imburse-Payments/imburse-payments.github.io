@@ -36,9 +36,11 @@ The following models are used to define a Reward Group.
   "rewardGroupId": "",
   "name": "",
   "rewards": [
-    "",
-    true
-   ]
+    {
+      "rewardId": "string",
+      "enabled": true
+    }
+  ]
 }
 ```
 

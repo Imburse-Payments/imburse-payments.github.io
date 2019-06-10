@@ -36,7 +36,7 @@ The following models are used in the Reward Catalog.
     "rewardType": "",
     "status": "",
     "countries": [
-        ""
+      ""
     ],
     "currencyCode": "",
     "exchangeRateRule": null,
@@ -46,35 +46,35 @@ The following models are used in the Reward Catalog.
     "maxValue": 0,
     "minValue": 0,
     "credentialTypes": [
-        ""
+      ""
     ],
     "redemptionInstructions": "",
     "tags": [],
     "app": {
-        "appId": "",
-        "name": ""
+      "appId": "",
+      "name": ""
     },
     "brand": {
-        "brandKey": "",
-        "brandName": "",
-        "status": "",
-        "description": "",
-        "shortDescription": "",
-        "disclaimer": "",
-        "terms": "",
-        "imageUrls": [
-        {
-            "ppi": 0,
-            "url": "",
-            "width": 0
-        }
-        ],
-        "requirements": {
+      "brandKey": "",
+      "brandName": "",
+      "status": "",
+      "description": "",
+      "shortDescription": "",
+      "disclaimer": "",
+      "terms": "",
+      "imageUrls": [
+      {
+        "ppi": 0,
+        "url": "",
+        "width": 0
+      }
+      ],
+      "requirements": {
         "alwaysShowDisclaimer": false,
         "disclaimerInstructions": "",
         "displayInstructions": "",
         "termsAndConditionsInstructions": ""
-        }
+      }
     },
     "createdDate": "",
     "lastUpdateDate": ""
@@ -112,9 +112,9 @@ Property | Type |  Description
   "terms": "",
   "imageUrls": [
     {
-       "ppi": 0,
-       "url": "",
-       "width": 0
+      "ppi": 0,
+      "url": "",
+      "width": 0
     }
   ],
   "requirements": {
@@ -141,9 +141,9 @@ Property | Type |  Description
 ### Image Model
 ```json
 {
-    "ppi": 0,
-    "url": "",
-    "width": 0
+  "ppi": 0,
+  "url": "",
+  "width": 0
 }
 ```
 
