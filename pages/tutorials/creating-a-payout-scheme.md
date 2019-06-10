@@ -10,15 +10,13 @@ icon_class: icon_documents_alt icon
 # Creating a Payout Scheme
 If you are want to payout money to your customer then your Tenant will need at least one Payout Scheme setup. Payout Schemes define the rules around which rewards, ie. Amazon, etc., are presented to your customers.
 
-For this tutorial we will create a Payout Scheme for a Tenant using the REST API's. 
-
-For more information on Payout Schemes, see the [Payout Schemes in Core Concepts](/pages/guides/core-concepts/#payout-schemes).
+For more information on Payout Schemes, see the [Payout Schemes in Getting Started](/pages/getting-started/payout-schemes/).
 
 # Prerequisites
 Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
-- A valid `Management Bearer Token` derived from a `Tenant API Key`. If you don't have one, see the tutorial [Aquiring a Management Bearer Token](#aquire-management-bearer-token).
-- The `rewardId` of one or more Rewards from the Rewards Catalog. If you don't have any, see the tutorial [Searching the Rewards Catalog](/pages/tutorials/searching-the-rewards-catalog) first.
+- A valid `Management Bearer Token` derived from a `Tenant API Key`
+- The `rewardId` of one or more Rewards from the Rewards Catalog. If you don't have any, see the tutorial [Searching the Rewards Catalog](/pages/tutorials/searching-the-rewards-catalog)
 
 # Create a new Payout Scheme
 Using the `Management Bearer Token` we can create a new Payout Scheme.
@@ -106,11 +104,11 @@ In the previous step, the response included a `drafts` collection. We'll use the
 #### Request
 Call the endpoint below, replacing **`YOUR_SCHEME_ID`** and **`YOUR_DRAFT_ID`** with your actual values.
 
-`POST https://sandbox-api.imburse.net/schemes/YOUR_SCHEME_ID/drafts/YOUR_DRAFT_ID/publish`
+`POST https://sandbox-api.imburse.net/v1/schemes/payout/YOUR_SCHEME_ID/drafts/YOUR_DRAFT_ID/publish`
 
 Using the example response from the previous step we will call the Publish endpoint with our values:
 
-`POST https://sandbox-api.imburse.net/schemes/8a7f806f-782a-498d-9627-b742f0a89c40/drafts/5a8b5f84-a799-44ba-96c2-8006daa7088b/publish`
+`POST https://sandbox-api.imburse.net/v1/schemes/payout/8a7f806f-782a-498d-9627-b742f0a89c40/drafts/5a8b5f84-a799-44ba-96c2-8006daa7088b/publish`
 
 #### Response
 You will see that the `publishedDraftId` property is now referencing the draft we created earlier.
@@ -151,4 +149,4 @@ You will see that the `publishedDraftId` property is now referencing the draft w
 ```
 
 # What's Next?
-- [Creating a Payout Instruction](/pages/tutorials/creating-a-payout-instruction)
+- [Creating a Transaction](/pages/tutorials/creating-a-transaction)

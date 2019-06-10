@@ -16,7 +16,7 @@ The Imburse Platform is structured as a modern, decoupled web application with a
 - Secure
 - Ease of use 
 - Performance
-- REST APIs
+- HTTP APIs
 - Client Portal UI
 - Support for multi-tenancy and individual organization deployments
 

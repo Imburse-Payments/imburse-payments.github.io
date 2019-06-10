@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Quickstart Developer Tutorial
+title: Quickstart Processing a Transaction API Tutorial
 toc: get-payout-bearer-token
 body_color: body-orange
 section_name: Tutorials
@@ -14,7 +14,7 @@ This tutorial will take you through getting a Payout Bearer Token using a Tenant
 Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
 - Familiar with creating an HMAC token using an API Key.
-- A `Tenant API Key`. See the tutorial [Creating a Tenant API Key](/pages/tutorials/creating-a-tenant-security-key) here if you need to create one.
+- A `Tenant API Key`. See the tutorial [Creating a Tenant API Key](/pages/tutorials/creating-a-tenant-api-key) here if you need to create one.
 
 # Get Payout Bearer Token
 You will need to generate an HMAC token for the following following request using a `Tenant API Key`.
@@ -42,5 +42,5 @@ The `Payout Bearer Token` will be contained in the `accessToken` property of the
 
 # What's Next?
 
-- [Processing a Payout Instruction](/pages/tutorials/processing-a-payout-instruction)
+- [Get Payout Options](/pages/tutorials/get-payout-options)
 

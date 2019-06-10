@@ -1,25 +1,23 @@
 ---
 layout: default
 title: Quickstart Developer Tutorial
-toc: tutorial-creating-a-payout-instruction
-body_color: body-orange
+toc: tutorial-creating-a-transaction
+body_color: body-pink
 section_name: Tutorials
 last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
 ---
-# Creating a Payout Instruction
-To payout money to your customers, you need to generate a Payout Instruction object. A Payout Instruction tells Imburse when and how much to payout to your customer.
+# Creating a Transaction
+To payout money to your customers, you need to generate a Transaction object. A Transaction tells Imburse when and how much to payout to your customer.
 
-For this tutorial we will using the REST API's.
-
-For more information on the Payout Instructions, see the [Payout Instructions in Core Concepts](/pages/guides/core-concepts/#payout-instructions).
+For more information on the Transactions, see the [Transactions in Getting Started](/pages/getting-started/transactions).
 
 # Prerequisites
 Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
-- A valid `Payout Bearer Token` derived from a `Tenant API Key`. If you don't have one, see the tutorial [Aquiring a Payout Bearer Token](#aquire-payout-bearer-token).
+- A valid `Management Bearer Token` derived from a `Tenant API Key`
 
 # Steps
-The steps involved to create a payment instruction are:
+The steps involved to create a Transaction are:
 
 1. Create an Order
 2. Create an Instruction for the Order
@@ -27,7 +25,7 @@ The steps involved to create a payment instruction are:
 Each Order can have multiple Instructions. In this tutorial we will only create 1 instruction. You can repeat Step 2 for as many instructions you need to add to the order. Just change the Instruction Ref to make sure they are unique per instruction.
 
 ## Step 1 - Create the Order
-Using the `Payout Bearer Token` we can create an Order.
+Using the `Management Bearer Token` we can create an Order.
 
 #### Request
 Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
@@ -79,7 +77,7 @@ curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/colle
 The response will be `200 - OK`
 
 # What's Next?
-- [Get Payout Options](/pages/tutorials/get-payout-options)
+- [Get Payout Bearer Token](/pages/tutorials/get-payout-bearer-token)
 
 
 

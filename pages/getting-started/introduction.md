@@ -8,7 +8,7 @@ last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
 ---
 # Introduction
-The Imburse API is organized around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
+The Imburse API is organized around HTTP endpoints. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
 
 You can use the Imburse API in sandbox mode, which does not affect your live data.
 
@@ -58,7 +58,7 @@ For example:
 Your original request will need to be fixed before resubmitting.
 
 ## Access Control
-Each API method in the REST API documentation is decorated with a *Role Required* attribute. To execute any API methods successfully, your API Key would need to have the role name specified added to the `roles` property.
+Each API method in the API documentation is decorated with a *Role Required* attribute. To execute any API methods successfully, your API Key would need to have the role name specified added to the `roles` property.
 
 See the [Account Management - Account Roles](/pages/getting-started/account-management/#account-roles) and [Account Management - Tenant Roles](/pages/getting-started/account-managament/#tenant-roles) for lists of the available roles.
 
@@ -71,8 +71,6 @@ If you need to contact us about a specific request, providing the correlation id
 
 ## Metadata
 The Payment Order objects have a metadata parameter. You can use this parameter to attach key-value data to these Imburse objects.
-
-You can specify up to 50 keys, with key names up to 40 characters long and values up to 500 characters long.
 
 Metadata is useful for storing additional, structured information on an object. As an example, you could store your user's full name and corresponding unique identifier from your system on a Imburse Payment Order object. Metadata is not used by Imburse. We will simply return your metadata to you in webhook responses relating to the Payment Order. You can then use this to give added context to your webhook response.
 

@@ -10,14 +10,12 @@ icon_class: icon_documents_alt icon
 # Searching the Rewards Catalog
 If you are looking to create a Payout Scheme that offers Rewards, Gift cards, etc. to your customers, you will need to search the Rewards Catalog to store the resultant `rewardId` against your Reward Group.
 
-For this tutorial we will search the Rewards Catalog using the REST API's. 
-
-For more information on the Rewards Catalog, see the [Rewards Catalog in Core Concepts](/pages/guides/core-concepts/#rewards-catalog).
+For more information on the Rewards Catalog, see the [Rewards Catalog in Getting Started](/pages/getting-started/rewards-catalog).
 
 # Prerequisites
 Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
-- A valid `Management Bearer Token` derived from a `Tenant API Key`. If you don't have one, see the tutorial [Aquiring a Management Bearer Token](#aquire-management-bearer-token).
+- A valid `Management Bearer Token` derived from a `Tenant API Key`
 
 # Search the Rewards Catalog
 Using the `Management Bearer Token` aquired in Step 1, we can now search the Rewards Catalog.

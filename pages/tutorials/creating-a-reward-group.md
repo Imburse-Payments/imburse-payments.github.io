@@ -10,15 +10,13 @@ icon_class: icon_documents_alt icon
 # Creating a Reward Group
 If you are want to payout money to your customer then your Tenant will need at least one Payout Scheme setup. Payout Schemes define the rules around which rewards, ie. Amazon, etc., are presented to your customers.
 
-For this tutorial we will create a Payout Scheme for a Tenant using the REST API's. 
-
-For more information on Payout Schemes, see the [Payout Schemes in Core Concepts](/pages/guides/core-concepts/#payout-schemes).
+For more information on Reward Groups, see the [Reward Groups in Getting Started](/pages/getting-started/reward-groups).
 
 # Prerequisites
 Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
-- A valid `Management Bearer Token` derived from a `Tenant API Key`. If you don't have one, see the tutorial [Aquiring a Management Bearer Token](#aquire-management-bearer-token).
-- The `rewardId` of one or more Rewards from the Rewards Catalog. If you don't have any, see the tutorial [Searching the Rewards Catalog](/pages/tutorials/searching-the-rewards-catalog) first.
+- A valid `Management Bearer Token` derived from a `Tenant API Key`
+- The `rewardId` of one or more Rewards from the Rewards Catalog. If you don't have any, see the tutorial [Searching the Rewards Catalog](/pages/tutorials/searching-the-rewards-catalog)
 
 # Creat the Reward Group
 Using the `Management Bearer Token` we can create a new Reward Group.

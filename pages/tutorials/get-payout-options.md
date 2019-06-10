@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Quickstart Developer Tutorial
+title: Quickstart Processing a Transaction API Tutorial
 toc: tutorial-get-payout-options
 body_color: body-orange
 section_name: Tutorials
@@ -10,14 +10,12 @@ icon_class: icon_documents_alt icon
 # Get Payout Options
 The payout options are what you may need to present to your customer as part of the payout process you are developing.
 
-For this tutorial we will be using the REST API's.
-
-For more information on the getting payout options, see the [Payout Options in Core Concepts](/pages/guides/core-concepts/#payout-options).
+For more information on the getting payout options, see the [Payout Options in Getting Started](/pages/getting-started/payment-options).
 
 # Prerequisites
 Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
-- A valid `Management Bearer Token` derived from a `Tenant API Key`. If you don't have one, see the tutorial [Aquiring a Management Bearer Token](#aquire-management-bearer-token).
+- A valid `Payout Bearer Token`
 
 # How are Payout Options determined?
 The payout options are determined by the following steps.

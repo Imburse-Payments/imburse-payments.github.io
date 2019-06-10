@@ -15,7 +15,7 @@ This tutorial will take you through getting a Collect Bearer Token using a Tenan
 Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
 - Familiar with creating an HMAC token using an API Key.
-- A `Tenant API Key`. See the tutorial [Creating a Tenant API Key](/pages/tutorials/creating-a-tenant-security-key) here if you need to create one.
+- A `Tenant API Key`. See the tutorial [Creating a Tenant API Key](/pages/tutorials/creating-a-tenant-api-key) here if you need to create one.
 
 # Get Collect Bearer Token
 You will need to generate an HMAC token for the following following request using a `Tenant API Key`.

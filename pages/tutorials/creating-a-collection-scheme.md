@@ -10,15 +10,13 @@ icon_class: icon_documents_alt icon
 # Creating a Collection Scheme
 If you are need to collect funds from your customer then your Tenant will need at least one Collection Scheme setup. Collection Schemes define the rules around which payment methods, such as Visa, Mastercard, PayPal, etc, are presented to your customers.
 
-For this tutorial we will create a Colection Scheme for a Tenant using the REST API's. 
-
-For more information on Collection Schemes, see the [Collection Schemes in Core Concepts](/pages/guides/core-concepts/#collection-schemes).
+For more information on Collection Schemes, see the [Collection Schemes in Getting Started](/pages/getting-started/collection-schemes/).
 
 # Prerequisites
 Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
-- A valid `Management Bearer Token` derived from a `Tenant API Key`. If you don't have one, see the tutorial [Aquiring a Management Bearer Token](#aquire-management-bearer-token).
-- The `appId` of an App you have previously installed that you want to add to this Collection Scheme. If you don't have one, see the tutorial [Installing and Configuring an App](/pages/tutorials/installing-and-configuring-an-app).
+- A valid `Management Bearer Token` derived from a `Tenant API Key`
+- The `appId` of an App you have previously installed that you want to add to this Collection Scheme. If you don't have one, see the tutorial [Installing and Configuring an App](/pages/tutorials/installing-and-configuring-an-app)
 
 # Create the Collection Scheme
 Using your `Management Bearer Token` we can create a new Collection Scheme.
@@ -107,11 +105,11 @@ In the previous step, the response included a `drafts` collection. We'll use the
 #### Request
 Call the endpoint below, replacing **`YOUR_SCHEME_ID`** and **`YOUR_DRAFT_ID`** with your actual values.
 
-`POST https://sandbox-api.imburse.net/schemes/YOUR_SCHEME_ID/drafts/YOUR_DRAFT_ID/publish`
+`POST https://sandbox-api.imburse.net/v1/schemes/collect/YOUR_SCHEME_ID/drafts/YOUR_DRAFT_ID/publish`
 
 Using the example response from the previous step we will call the Publish endpoint with our values:
 
-`POST https://sandbox-api.imburse.net/schemes/8a7f806f-782a-498d-9627-b742f0a89c40/drafts/5a8b5f84-a799-44ba-96c2-8006daa7088b/publish`
+`POST https://sandbox-api.imburse.net/v1/schemes/collect/8a7f806f-782a-498d-9627-b742f0a89c40/drafts/5a8b5f84-a799-44ba-96c2-8006daa7088b/publish`
 
 
 #### Response
