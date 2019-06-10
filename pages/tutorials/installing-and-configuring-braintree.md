@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Installing and configuring Braintree
+title: App Installation and Configuration Tutorials
 toc: tutorial-installing-and-configuring-braintree
-body_color: body-pink
+body_color: body-primary
 section_name: Tutorials
 last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
 ---
-# Installing and configuring Braintree
+# Braintree SDK
 This tutorial will take you through installing and configuring the Braintree App.
 
 # Prerequisites

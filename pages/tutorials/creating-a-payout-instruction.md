@@ -2,7 +2,7 @@
 layout: default
 title: Quickstart Developer Tutorial
 toc: tutorial-creating-a-payout-instruction
-body_color: body-pink
+body_color: body-orange
 section_name: Tutorials
 last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon

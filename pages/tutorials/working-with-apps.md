@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Working with Apps
+title: App Installation and Configuration Tutorials
 toc: working-with-apps
-body_color: body-pink
+body_color: body-primary
 section_name: Tutorials
 last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
@@ -21,7 +21,7 @@ Tango Card | TANGOCARD_RAAS | Tango Card | Payout rewards
 
 Where the Provider is not Imburse, you may need an existing Account with that Provider. For some Providers, such as Tango Card, Imburse can create new accounts for you.
 
-# Marketplace Functions
+# Functions
 The Marketplace has endpoints to perform the following functions:
 
 - [Get list of Apps](#get-list-of-apps)
@@ -148,10 +148,10 @@ Response Code:
 }
 ```
 
-# Updating an App
-Use the following endpoint to update any installed App.
+# Configuring an App
+Use the following endpoint to configure any installed App.
 
-`https://sandbox-api.imbursepayments.com/v1/marketplace/installed/{AppId}/configuration`
+`https://sandbox-api.imbursepayments.com/v1/apps/installed/{AppId}/configuration`
 
 Replace the `{AppId}` placeholder value with the App Id for the App you want to update.
 In our example request, we'll be using the Braintree App (AppId `BRAINTREE_SDK`).
@@ -160,7 +160,7 @@ In our example request, we'll be using the Braintree App (AppId `BRAINTREE_SDK`)
 
 #### Request
 ```curl
-curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/marketplace/installed/BRAINTREE_SDK/configuration" \
+curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/apps/installed/BRAINTREE_SDK/configuration" \
   --header "Authorization: Bearer {management-bearer-token}" \
   --header "Content-Type: application/json" \
   --data "{
@@ -212,7 +212,7 @@ In our example request, we'll be using the Braintree App (AppId `BRAINTREE_SDK`)
 
 #### Request
 ```curl
-curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/marketplace/installed/braintree_sdk/uninstall" \
+curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/apps/installed/braintree_sdk/uninstall" \
   --header "Authorization: Bearer {management-bearer-token}" \
   --header "Content-Type: application/json"
 ```

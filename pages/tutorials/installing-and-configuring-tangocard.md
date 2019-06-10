@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Installing and configuring Tango Card
+title: App Installation and Configuration Tutorials
 toc: tutorial-installing-and-configuring-tangocard
-body_color: body-pink
+body_color: body-primary
 section_name: Tutorials
 last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
 ---
-# Installing and configuring Tango Card
+# Tango Card RaaS
 
 # Prerequisites
 Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
