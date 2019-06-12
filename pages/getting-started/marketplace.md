@@ -38,6 +38,84 @@ Provider | App Id | Description
 Braintree | BRAINTREE_SDK | Provides credit card and PayPal collection payment options. Operates worldwide.
 Tango Card | TANGOCARD_RAAS | Provides reward payout options. Operates worldwide.
 
+
+# Models
+The following models are used in the Marketplace:
+
+### App Model
+```json
+{
+    "developerId": "",
+    "developerName": "",
+    "appId": "",
+    "name": " SDK",
+    "iconUrl": "",
+    "description": "",
+    "tags": [
+        ""
+    ],
+    "supportedPaymentMethods": [
+        {
+            "id": "",
+            "name": "",
+            "iconUrl": "",
+            "tags": [
+            ""
+            ],
+            "isCreditCard": true,
+            "supportsDirectSale": true,
+            "supportsRecurring": true,
+            "providerWarningRequired": false
+        }
+    ],
+    "supportedCountries": [
+        ""
+    ],
+    "supportedCurrencies": [
+        ""
+    ]
+}
+```
+
+Property | Type | Description
+-|-
+`developerId` | string | The Id of the developer.
+`developerName` | string | The name of the developer.
+`appId` | string | The Id of the app.
+`name` | string | The name of the app.
+`iconUrl` | string | Url to the apps icon.
+`description` | string | Description of the app.
+`tags` | array | A array of strings that define the apps capabiliies or catagories.
+`supportedPaymentMethods` | array or [Payment Method models](#payment-method-model) | An array of the payment methods this app supports.
+`supportedCountries` | array | An array of countries this App supports.
+`supportedCurrencies` | array | An array of currencies this App supports.
+
+### Payment Method Model
+```json
+{
+    "id": "",
+    "name": "",
+    "iconUrl": "",
+    "tags": [
+        ""
+    ],
+    "isCreditCard": true,
+    "supportsDirectSale": true,
+    "supportsRecurring": true,
+    "providerWarningRequired": false
+}
+```
+Property | Type | Description
+-|-
+`id` | string | The Id of the payment method
+`name` | string | The name of the payment method.
+`iconUrl` | string | The url to the apps icon.
+`tags` | array | A array of strings that define the payment methods capabiliies or catagories.
+`isCreditCard` | bool | `true` if this payment method is a credit card; otherwise `false`.
+`supportsDirectSale` | bool | `true` if this payment method supports direct sales; otherwise `false`.
+`supportsRecurring` | bool | `true` if this payment method supports recurring payments; otherwise `false`.
+`providerWarningRequired` | bool | `true` if this payment method requires you to check with you provider if the payment method is actually activated.<br/>This will be true with American Express with Braintree.
+
 ## Installing an App
 Call the **install** endpoint below, replacing **`YOUR_APP_ID`** with your actual App Id.
 

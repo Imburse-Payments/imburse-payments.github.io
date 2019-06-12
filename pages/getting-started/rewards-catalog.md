@@ -19,7 +19,7 @@ You will need a Tenant API Key to perform Reward Catalog functions.
 ## Functions
 The available authentication functions are:
 
-- Get a list of Rewards by Ids
+- Get all Rewards
 - Search Catalog
 
 ## API Documentation
@@ -28,7 +28,7 @@ All the Authentication API functions are fully documented in the [Reward Catalog
 ## Models
 The following models are used in the Reward Catalog.
 
-### Reward Catalog Model
+### Detailed Reward Model
 ```json
 {
     "rewardId": "",
@@ -92,6 +92,9 @@ Property | Type |  Description
 `exchangeRateRule` | string | -
 `isWholeAmountValueRequired` | bool | If `true` the amount must be a whole number. ie 1, 2, 5, 20, etc.<br/>If `false` then decimal values are allowed. ie. 2.50, 5.99, 20.40, etc.
 `valueType` | string | Either `VARIABLE_VALUE` or `FIXED_VALUE`.<br/>Variable values will use the `minValue` and `maxValue` properties.<br/>Fixed values will use the `fixedValue` property
+`fixedValue` | decimal | For `FIXED_VALUE` value types, this will be the reward amount; otherwise it will be empty.
+`maxValue` | decimal | For `VARIABLE_VALUE` value types, this will be the maximum value the reward can payout; other it will be empty.
+`minValue` | decimal | For `VARIABLE_VALUE` value types, this will be the minimum value the reward can payout; other it will be empty.
 `credentialTypes` | string array | -
 `redemptionInstructions` | string | The redemptions instructions that need to be supplied<br/>to your customer for them to redeem the reward.
 `tags` | string array | -
@@ -170,6 +173,45 @@ Property | Type |  Description
 `disclaimerInstructions` | string | The brands disclaimer instructions.
 `displayInstructions` | string | Instructions for displaying the brand logos etc.
 `termsAndConditionsInstructions`  | string | Terms and conditions for brand usage in HTML format.
+
+### Summary Reward Model
+Returns a lightweight subset of the [Detailed Reward Model](#detailed-reward-model) properties.
+
+```json
+{
+  "rewardId": "",
+  "rewardName": "",
+  "brandName": "",
+  "appId": "",
+  "appName": "",
+  "countries": [
+    ""
+  ],
+  "currencyCode": "",
+  "isWholeAmountValueRequired": false,
+  "valueType": "",
+  "fixedValue": null,
+  "maxValue": 0,
+  "minValue": 0,
+  "imageUrl": ""
+}
+```
+
+Property | Type |  Description
+-|-
+`rewardId` | guid | The unique id for this reward.
+`rewardName` | string | The name of this reward.
+`brandName` | string | The name of the brand.
+`appID` | string | The Id of the App that supplies the rewards.
+`appName` | string | The name of the App that supplies the rewards.
+`countries` | string array | An array of Country codes that this reward is supported in.
+`currencyCode` | string | The currency code that this reward supports.
+`isWholeAmountValueRequired` | bool | If `true` the amount must be a whole number. ie 1, 2, 5, 20, etc.<br/>If `false` then decimal values are allowed. ie. 2.50, 5.99, 20.40, etc.
+`valueType` | string | Either `VARIABLE_VALUE` or `FIXED_VALUE`.<br/>Variable values will use the `minValue` and `maxValue` properties.<br/>Fixed values will use the `fixedValue` property
+`fixedValue` | decimal | For `FIXED_VALUE` value types, this will be the reward amount; otherwise it will be empty.
+`maxValue` | decimal | For `VARIABLE_VALUE` value types, this will be the maximum value the reward can payout; other it will be empty.
+`minValue` | decimal | For `VARIABLE_VALUE` value types, this will be the minimum value the reward can payout; other it will be empty.
+`imageUrl` | string | A url to the image for the reward.
 
 #### The Reward Id
 The Reward Id is a unique identifier for each reward.

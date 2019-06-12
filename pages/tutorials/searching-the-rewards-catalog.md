@@ -150,13 +150,8 @@ Each Reward in the response array returns everything you would need to present t
             "tags": [
                 ""
             ],
-            "value": {
-                "greaterThan": null,
-                "greaterThanOrEqualTo": 0.01,
-                "lessThan": null,
-                "lessThanOrEqualTo": 1000
-            },
             "valueType": "VARIABLE_VALUE",
+            "fixedValue": null,
             "maxValue": 1000,
             "minValue": 0.01
         },
@@ -246,14 +241,9 @@ Each Reward in the response array returns everything you would need to present t
             "status": "active",
             "tags": [
                 ""
-            ],
-            "value": {
-                "greaterThan": null,
-                "greaterThanOrEqualTo": 5,
-                "lessThan": null,
-                "lessThanOrEqualTo": 100
-            },
+            ],           
             "valueType": "VARIABLE_VALUE",
+            "fixedValue": null,
             "maxValue": 100,
             "minValue": 5
         }
