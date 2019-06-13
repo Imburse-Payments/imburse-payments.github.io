@@ -8,9 +8,9 @@ last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
 ---
 # Claiming and Redeeming a Reward
-A reward needs to be claimed and then redeeming in order for you to allow you customers to redeem the reward value.
+A reward needs to be claimed and then redeemed in order for you to allow your customers to redeem the reward value.
 
-For more information on the Rewards Catalog, see the [Claiming a Reward in Getting Started](/pages/getting-started/claiming-and-redeeming-a-reward).
+For more information see the [Claiming a Reward in Getting Started](/pages/getting-started/claiming-and-redeeming-a-reward).
 
 # Prerequisites
 Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
@@ -19,12 +19,12 @@ Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you
 
 
 # Steps to Redeem a Reward
-The act of claiming and redeeming a reward sees that the reward is paid for. The redeem response will include the appropriate details needed to allow your customer to redeem their selected reward with the reward provider. ie. Amazon, etc.
+The act of claiming and redeeming a reward makes sure that the reward is paid for. The redeem response will include the appropriate details needed to allow your customer to redeem their selected reward with the reward provider. ie. Amazon, etc.
 
 The process to redeem a reward is a 3 step procedure.
 
 1. Claim a Reward
-2. Check that the Reward has been successfully claimed
+2. Check if the claim is successful
 3. Redeem the Reward
 
 ## Step 1 - Claim the Reward
@@ -47,7 +47,7 @@ curl --location --request GET "https://sandbox-api.imbursepayments.com/v1/transa
 #### Response
 The response is `201 - Accpted` with the following custom header.
 
-**Note: The `taskId` on the end of the location header is a unique to claiming this reward. Each claim will have a different `taskId`.**
+**Note: The `taskId` on the end of the location header is unique to claiming this reward. Each claim will have a different `taskId`.**
 
 Header Name | Value
 -|-
@@ -57,7 +57,7 @@ The `{taskId}` placeholder will be a GUID and will look like this: `8f482020-965
 
 We will use the header value in the next step.
 
-## Step 2 - Check if claim is successful
+## Step 2 - Check if the claim is successful
 Repeatedly call the `check` endpoint, returned in the header response from Step 1, until the reward has been succesfully claimed.
 
 #### Request
@@ -83,7 +83,7 @@ We would recommend polling every 250ms (1/4 of a second) until the `201 - Create
 **Note: There will be variances in processing times depending on your rewards provider.**
 
 ## Step 3 - Redeem the Reward
-If you received the `201 - Created` response from Step 2 then the your reward has been successfully claimed!
+If you received the `201 - Created` response from Step 2 then the your reward has been successfully claimed.
 
 #### Request
 Replace the `{payout-bearer-token}` placeholder value with the `Payout Bearer Token` value.
@@ -122,13 +122,4 @@ These will need to be displayed or sent to your customer.
 }
 ```
 
-Mandatory information to provide your customer would be the `claimCode`, the `expirationDate`, and the `redemptionInstructions`, which instuct your customer how to make the claim.
-
-
-
-
-
-
-
-
-
+Mandatory information to provide your customer would be the `claimCode`, the `expirationDate`, and the `redemptionInstructions`, which instucts your customer how to make the claim.

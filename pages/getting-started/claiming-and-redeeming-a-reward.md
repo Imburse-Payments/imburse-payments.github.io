@@ -16,9 +16,9 @@ You will need a Tenant API Key to process a reward.
 ## Functions
 The available functions are:
 
-- Claims a Reward
-- Check for the task completion
-- Redeem a Reward
+1. Claim a Reward
+2. Check if the claim is successful
+3. Redeem the Reward
 
 ## API Documentation
 All the Payment Order API functions are fully documented in the [Transaction API documentation](https://api-docs.imbursepayments.com/?version=latest#09f68806-2b90-433d-9f6d-684cfef1d890).
@@ -108,7 +108,7 @@ Expect the following responses:
 
 Response Code | Action to take
 -|-
-`200 - OK` | Claim still being processed, continue polling this endpoint.
+`200 - OK` | Claim still being processed, continue polling this endpoint by repeating Step 2.
 `201 - Created` | Reward has been claimed successfully. You can now call the `Redeem a Reward` endpoint - see Step 3.
 
 We would recommend polling every 250ms (1/4 of a second) until the `201 - Created` response is returned.
