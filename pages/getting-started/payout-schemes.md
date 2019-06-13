@@ -24,6 +24,7 @@ The available Payout Scheme functions are:
 - Get a Draft
 - Update Draft
 - Publish a Draft
+- Delete a Draft
 - Delete a Scheme
 
 ## API Documentation
