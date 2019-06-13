@@ -14,11 +14,11 @@ The Imburse Platform is structured as a modern, decoupled web application with a
 ##### Key platform highlights
 - Redundency - Geo redundent platform deployments in multiple regions
 - Secure
-- Ease of use 
+- Easy of use
 - Performance
 - HTTP APIs
 - Client Portal UI
-- Support for multi-tenancy and individual organization deployments
+- Support for multi-tenancy and individual organizational deployments
 
 ## How things fit together
 <img src="/assets/images/guides/getting-started/imburse-platform.png" style="width:600px;" title="Imburse Platform" alt="Imburse Platform"/>
