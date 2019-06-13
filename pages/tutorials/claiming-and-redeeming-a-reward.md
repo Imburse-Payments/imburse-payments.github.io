@@ -19,7 +19,7 @@ Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you
 
 
 # Steps to Redeem a Reward
-The act of claiming and redeeming a reward makes sure that the reward is paid for. The redeem response will include the appropriate details needed to allow your customer to redeem their selected reward with the reward provider. ie. Amazon, etc.
+The act of claiming and redeeming a reward ensures the reward is paid for and ready for redemption. The redeem response will include the appropriate details needed to allow your customer to redeem their selected reward with the reward provider. ie. Amazon, etc.
 
 The process to redeem a reward is a 3 step procedure.
 
