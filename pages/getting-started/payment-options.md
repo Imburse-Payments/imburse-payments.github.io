@@ -1,13 +1,14 @@
 ---
 layout: default
-title: Getting Started
+title: Payment Options
 toc: getting-started-payout-payment-options
 body_color: body-primary
-section_name: Getting Started
+section_name: Payment Options
 last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
+breadcrumbs: "Getting Started,getting-started"
 ---
-# Payout Payment Options
+# Payment Options
 The Payout Payment Options are a list of payment options that you can present to your customers. This could be rewards or cash payment options.
 
 ## Access Requirements

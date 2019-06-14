@@ -11,7 +11,17 @@
         </div>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{ site.baseurl }}/index.html">Home</a></li>
-            <li class="breadcrumb-item active"><a href="{{ site.baseurl }}/documentation.html">Documentation</a></li>
+
+            {% assign breadcrumbs = page.breadcrumbs | split: "|" %}
+
+            {% for breadcrumb in breadcrumbs %}
+ 
+                {% assign item = breadcrumb | split: "," %}
+
+                <li class="breadcrumb-item active"><a href="{{ site.baseurl }}/{{ item[1] }}">{{ item[0] }}</a></li>
+
+            {% endfor %}
+
             <li class="breadcrumb-item active">{{ page.section_name }}</li>
         </ol>
     </div>

@@ -1,11 +1,12 @@
 ---
 layout: default
-title: Quickstart Developer Tutorial
+title: Installing and Configuraing an App
 toc: tutorial-installing-and-configuring-an-app
 body_color: body-pink
-section_name: Tutorials
+section_name: Installing and Configuraing an App
 last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
+breadcrumbs: "Tutorials,tutorials"
 ---
 # Installing and Configuraing an App
 Each Tenant will need at least one App integration installed. App integrations allow Imburse to transact with the App provider on your behalf.

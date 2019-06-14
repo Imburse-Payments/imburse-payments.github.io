@@ -1,14 +1,15 @@
 ---
 layout: default
-title: Getting Started
+title: Claiming and Redeeming a Reward
 toc: getting-started-claiming-and-redeeming-a-reward
 body_color: body-primary
-section_name: Getting Started
+section_name: Claiming and Redeeming a Reward
 last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
+breadcrumbs: "Getting Started,getting-started"
 ---
 # Claiming and Redeeming a Reward
-Once your customer has chosen a reward you will need to claim and then redeem the reward. 
+Once your customer has chosen a reward you will need to claim and then redeem the reward.
 
 ## Access Requirements
 You will need a Tenant API Key to process a reward.

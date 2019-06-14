@@ -1,11 +1,12 @@
 ---
 layout: default
-title: Quickstart Processing a Transaction API Tutorial
+title: Claiming and Redeeming a Reward
 toc: tutorial-claiming-and-redeeming-a-reward
 body_color: body-orange
-section_name: Tutorials
+section_name: Claiming and Redeeming a Reward
 last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
+breadcrumbs: "Tutorials,tutorials"
 ---
 # Claiming and Redeeming a Reward
 A reward needs to be claimed and then redeemed in order for you to allow your customers to redeem the reward value.

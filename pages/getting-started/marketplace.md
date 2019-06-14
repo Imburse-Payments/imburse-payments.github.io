@@ -1,11 +1,12 @@
 ---
 layout: default
-title: Getting Started
+title: Marketplace
 toc: getting-started-marketplace
 body_color: body-primary
-section_name: Getting Started
+section_name: Marketplace
 last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
+breadcrumbs: "Getting Started,getting-started"
 ---
 # Marketplace
 The Marketplace API functions allow you to find and install Apps into your Tenant.

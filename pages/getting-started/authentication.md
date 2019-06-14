@@ -1,11 +1,12 @@
 ---
 layout: default
-title: Getting Started
+title: Authentication
 toc: getting-started-authentication
 body_color: body-primary
 section_name: Authentication
 last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
+breadcrumbs: "Getting Started,getting-started"
 ---
 # Authentication
 Imburse authenticates your API requests using your Account’s or Tenant's API keys. If you do not include your key when making an API request, or use one that is incorrect or outdated, Imburse returns an error.

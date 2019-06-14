@@ -3,9 +3,10 @@ layout: default
 title: Creating a Payout Scheme
 toc: tutorial-creating-a-payout-scheme
 body_color: body-pink
-section_name: Tutorials
+section_name: Creating a Payout Scheme
 last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
+breadcrumbs: "Tutorials,tutorials"
 ---
 # Creating a Payout Scheme
 If you are want to payout money to your customer then your Tenant will need at least one Payout Scheme setup. Payout Schemes define the rules around which rewards, ie. Amazon, etc., are presented to your customers.

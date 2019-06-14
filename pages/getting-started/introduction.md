@@ -1,11 +1,12 @@
 ---
 layout: default
-title: Getting Started
+title: Introduction
 toc: getting-started-introduction
 body_color: body-primary
 section_name: Introduction
 last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
+breadcrumbs: "Getting Started,getting-started"
 ---
 # Introduction
 The Imburse API is organized around HTTP endpoints. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.

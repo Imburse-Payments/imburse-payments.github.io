@@ -1,11 +1,12 @@
 ---
 layout: default
-title: Getting Started
+title: Collection Schemes
 toc: getting-started-collection-schemes
 body_color: body-primary
-section_name: Getting Started
+section_name: Collection Schemes
 last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
+breadcrumbs: "Getting Started,getting-started"
 ---
 # Collection Schemes
 The Collection Scheme API functions allows you to setup and configure a Collection Scheme that define the available payment options available to your customers.

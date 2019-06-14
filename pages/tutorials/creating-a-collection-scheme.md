@@ -1,11 +1,12 @@
 ---
 layout: default
-title: Quickstart Developer Tutorial
+title: Creating a Collection Scheme
 toc: tutorial-creating-a-collection-scheme
 body_color: body-pink
-section_name: Tutorials
+section_name: Creating a Collection Scheme
 last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
+breadcrumbs: "Tutorials,tutorials"
 ---
 # Creating a Collection Scheme
 If you are need to collect funds from your customer then your Tenant will need at least one Collection Scheme setup. Collection Schemes define the rules around which payment methods, such as Visa, Mastercard, PayPal, etc, are presented to your customers.

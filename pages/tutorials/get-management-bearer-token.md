@@ -1,11 +1,12 @@
 ---
 layout: default
-title: Quickstart Developer Tutorial
-toc: aquire-management-bearer-token
+title: Get a Management Bearer Token
+toc: get-management-bearer-token
 body_color: body-pink
-section_name: Tutorials
+section_name: Get a Management Bearer Token
 last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
+breadcrumbs: "Tutorials,tutorials"
 ---
 # Get a Management Bearer Token
 This tutorial will take you through getting a Mangement Bearer Token using a Tenant API Key.

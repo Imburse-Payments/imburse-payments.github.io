@@ -1,11 +1,12 @@
 ---
 layout: default
-title: Getting Started
+title: Payout Schemes
 toc: getting-started-payout-schemes
 body_color: body-primary
-section_name: Getting Started
+section_name: Payout Schemes
 last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
+breadcrumbs: "Getting Started,getting-started"
 ---
 # Payout Schemes
 The Payout Scheme API functions allows you to setup and configure a Payout Scheme that define the available payout options available to your customers.

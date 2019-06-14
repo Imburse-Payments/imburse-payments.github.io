@@ -1,11 +1,12 @@
 ---
 layout: default
-title: Getting Started
+title: Reward Groups
 toc: getting-started-reward-groups
 body_color: body-primary
 section_name: Reward Groups
 last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
+breadcrumbs: "Getting Started,getting-started"
 ---
 # Reward Groups
 Reward Groups are named collections of rewards that you can reference in your Payout Collection Rules. You can add as many Reward Groups as you need.

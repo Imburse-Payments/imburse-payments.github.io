@@ -1,11 +1,12 @@
 ---
 layout: default
-title: Quickstart Developer Tutorial
+title: Searching the Rewards Catalog
 toc: tutorial-searching-the-rewards-catalog
 body_color: body-pink
-section_name: Tutorials
+section_name: Searching the Rewards Catalog
 last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
+breadcrumbs: "Tutorials,tutorials"
 ---
 # Searching the Rewards Catalog
 If you are looking to create a Payout Scheme that offers Rewards, Gift cards, etc. to your customers, you will need to search the Rewards Catalog to store the resultant `rewardId` against your Reward Group.
@@ -141,8 +142,3 @@ Each Reward in the response array returns everything you would need to present t
 
 # What's Next?
 - [Create a Reward Group](/pages/tutorials/creating-a-reward-group)
-
-
-
-
-

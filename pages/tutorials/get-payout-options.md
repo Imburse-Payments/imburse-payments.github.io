@@ -1,11 +1,12 @@
 ---
 layout: default
-title: Quickstart Processing a Transaction API Tutorial
+title: Get Payout Options
 toc: tutorial-get-payout-options
 body_color: body-orange
-section_name: Tutorials
+section_name: Get Payout Options
 last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
+breadcrumbs: "Tutorials,tutorials"
 ---
 # Get Payout Options
 The payout options are what you may need to present to your customer as part of the payout process you are developing.

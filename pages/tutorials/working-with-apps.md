@@ -1,11 +1,12 @@
 ---
 layout: default
-title: App Installation and Configuration Tutorials
+title: Working with Apps
 toc: working-with-apps
 body_color: body-primary
-section_name: Tutorials
+section_name: Working with Apps
 last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
+breadcrumbs: "Tutorials,tutorials"
 ---
 # Working with Apps
 The Imburse Marketplace is where you will find all the Apps Imburse can integrate with and is the starting place for installing Apps into your Tenant.

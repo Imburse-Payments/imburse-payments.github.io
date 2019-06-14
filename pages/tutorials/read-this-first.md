@@ -1,11 +1,12 @@
 ---
 layout: default
-title: Quickstart Developer Tutorial
+title: Before you begin
 toc:
 body_color: body-pink
-section_name: Tutorials
+section_name: Before you begin
 last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
+breadcrumbs: "Tutorials,tutorials"
 ---
 # Before you begin
 This tutorial series will take you through the process of creating a new Tenant and configuring Apps and Schemes to enable the Tenant to collect money or payout rewards.

@@ -1,11 +1,12 @@
 ---
 layout: default
-title: Getting Started
+title: Rewards Catalog
 toc: getting-started-rewards-catalog
 body_color: body-primary
-section_name: Getting Started
+section_name: Rewards Catalog
 last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
+breadcrumbs: "Getting Started,getting-started"
 ---
 # Rewards Catalog
 The Rewards Catalog is a searchable catalog of the rewards, gift cards, and rewards offered by all Imburses' reward partners - in one place.

@@ -1,11 +1,12 @@
 ---
 layout: default
-title: Getting Started
+title: Apps
 toc: getting-started-apps
 body_color: body-primary
-section_name: Getting Started
+section_name: Apps
 last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
+breadcrumbs: "Getting Started,getting-started"
 ---
 # Apps
 The Apps API functions allow you to find, configure, and uninstall your tenant apps.

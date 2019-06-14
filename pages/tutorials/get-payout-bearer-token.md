@@ -1,11 +1,12 @@
 ---
 layout: default
-title: Quickstart Processing a Transaction API Tutorial
+title: Get a Payout Bearer Token
 toc: get-payout-bearer-token
 body_color: body-orange
-section_name: Tutorials
+section_name: Get a Payout Bearer Token
 last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
+breadcrumbs: "Tutorials,tutorials"
 ---
 # Get a Payout Bearer Token
 This tutorial will take you through getting a Payout Bearer Token using a Tenant API Key.
