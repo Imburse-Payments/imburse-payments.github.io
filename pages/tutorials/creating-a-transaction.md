@@ -60,14 +60,14 @@ Replace the `{management-bearer-token}` placeholder value with the `Management B
 
 Replace the `{customerRef}` and `{orderRef}` placeholder values with the suiteable value to indentity the customer and order respectively. Usually this would be the customer reference and order reference you have in your internal systems.
 
-Replace the the `{open_date}` and `{due_date}` properties with more relevant dates. Date format is `yyy-mm-dd`. The Due Date needs to be on or after the Open Date.
+Replace the `instructionRef`, `amount`, `{open_date}`, and `{due_date}` properties with more relevant data. Date format is `yyy-mm-dd`. The Due Date needs to be on or after the Open Date.
 
 ```curl
 curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/collect/customer/{customerRef}/order/{orderRef}/instruction" \
   --header "Authorization: Bearer {{management-token}}" \
   --header "Content-Type: application/json" \
   --data "{
-	\"instructionRef\": \"PI01\",
+	\"instructionRef\": \"01\",
 	\"amount\": \"210.00\",
 	\"openDate\": \"{open_date}\",
 	\"dueDate\": \"{due_date}\"
@@ -75,7 +75,41 @@ curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/colle
 ```
 
 #### Response
-The response will be `200 - OK`
+The response will be `201 - Created`
+
+```json
+{
+    "instructionRef": "01",
+    "status": "OPEN",
+    "detail": {
+        "amount": 40.5,
+        "currency": {
+            "id": "GBP",
+            "code": "GBP",
+            "name": "Pound Sterling",
+            "symbol": "£"
+        },
+        "country": {
+            "id": "UK",
+            "code": "UK",
+            "name": "Great Britain",
+            "currency": {
+                "id": "GBP",
+                "code": "GBP",
+                "name": "Pound Sterling",
+                "symbol": "£"
+            }
+        }
+    },
+    "scheme": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "openDate": {
+        "value": "2019-06-14T10:12:08.239Z"
+    },
+    "dueDate": {
+        "value": "2019-06-14T10:12:08.239Z"
+    }
+}
+```
 
 # What's Next?
 - [Get Payout Bearer Token](/pages/tutorials/get-payout-bearer-token)

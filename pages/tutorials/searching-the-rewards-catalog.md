@@ -26,12 +26,11 @@ Replace the `{management-bearer-token}` placeholder value with the `Management B
 
 You can filter the results by supplying parameters in the request.
 
-
-- `appId` - Mandatory. Filter by a particular App Id. ie. `TANGOCARD_RAAS`.
-- `brandName` - Optional. Filter by a brand, ie. Amazon, Mastercard, etc.
-- `countries` - Optional. Filter by country where the reward can be redeemded. You can specify multiple countries by separating with a comma. ie. `GB` or `GB,DE,FR` etc.
-- `currencies` - Optional. Filter by the currency the reward can by redeemed in. You can specify multiple currencies by separating with a comma. ie. `EUR` or `GBP,EUR` etc.
-- `amount` - Optional. Filter by the amount the reward is for. Some rewards are fixed value, ie. `5.00`; others are valid for any amount within a range. Specify the amount the you want to payout to filter the rewards accordingly.
+- `appId` - **Mandatory** - Filter by a particular App Id. ie. `TANGOCARD_RAAS`.
+- `brandName` - **Optional** - Filter by a brand, ie. Amazon, Mastercard, etc.
+- `countries` - **Optional** - Filter by country where the reward can be redeemded. You can specify multiple countries by separating with a comma. ie. `GB` or `GB,DE,FR` etc.
+- `currencies` - **Optional** - Filter by the currency the reward can by redeemed in. You can specify multiple currencies by separating with a comma. ie. `EUR` or `GBP,EUR` etc.
+- `amount` - **Optional** - Filter by the amount the reward is for. Some rewards are fixed value, ie. `5.00`; others are valid for any amount within a range. Specify the amount the you want to payout to filter the rewards accordingly.
 
 In the example request below we have specified `TANGOCARD_RAAS` as the App Id, `Amazon` as the brand, and countries as `GB`. The amount is `5.00`.
 
@@ -42,21 +41,9 @@ curl --location --request GET "https://sandbox-api.imbursepayments.com/v1/catalo
 ```
 
 #### Response
-The response will contain all the rewards that match our filter parameters. Please note that for brevity in this tutorial we are only showing 1 of the 10+ results that would otherwise return for this request.
+The response will contain all the rewards that match the filter parameters. Please note that for brevity in this tutorial we are only showing 1 of the 10+ results that would otherwise return for this request.
 
 The `rewardId` property value is what you will need to save for referencing this rewards later in a Reward Group.
-
-Each Reward in the response array returns everything you would need to present the reward to your customers:
-
-- Reward Id
-- Brand name
-- Description
-- Image urls of various sizes
-- Terms of use
-- Countries of use
-- Currency
-- Redemption instructions
-- Value (fixed or variable)
 
 ```json
 {

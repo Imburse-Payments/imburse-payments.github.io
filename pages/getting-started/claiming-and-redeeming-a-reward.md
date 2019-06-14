@@ -31,24 +31,18 @@ The following model is returned when the Redeem Reward endpoint is called.
 ```json
 {
   "credentials": {
-    "expirationDate": "",
-    "claimCode": ""
+    "expirationDate": "string",
+    "claimCode": "string"
   },
   "credentialList": [
     {
-      "label": "",
-      "value": "",
-      "rewardType": null,
-      "credentialType": ""
-    },
-    {
-      "label": "",
-      "value": "",
-      "rewardType": null,
-      "credentialType": ""
+      "label": "string",
+      "value": "string",
+      "rewardType": "string",
+      "credentialType": "string"
     }
   ],
-  "redemptionInstructions": ""
+  "redemptionInstructions": "string"
 }
 ```
 
@@ -61,10 +55,10 @@ Property | Type | Description
 ### Credential Model
 ```json
 {
-  "label": "",
-  "value": "",
-  "rewardType": null,
-  "credentialType": ""
+  "label": "string",
+  "value": "string",
+  "rewardType": "string",
+  "credentialType": "string"
 }
 ```
 
@@ -73,10 +67,12 @@ Property | Type | Description
 `label` | string | Matches one of the entries in the `credentials` list.
 `value` | string | The value of the credentials.<br/><br/>For example, if `label` was `Claim Code` then the `value` will be<br/>the claims code for the reward ie. `S5WQ-Z2SP5S-GLB3`.
 `rewardType` | string | See *Reward Types* below.
-`credentialType` | string | See *Credential Types* below.
+`credentialType` | string | See *Credential Types* below.<br/><br/>Use the Credential Types to determine the best format for your UI.
 
 #### Reward Types
 We return the following types of reward credentials. If your integration requires displaying reward data in app or creating custom reward emails you may need to add logic to parse the returned reward data correctly.
+
+**Note - we are continuously expanding our catalog and it is likely that new reward types will arise over time. For this reason we recommend a fallback / default to handle unspecified types as text.
 
 Reward Type | Description | Integration Example
 -|-|-
@@ -87,6 +83,21 @@ Reward Type | Description | Integration Example
 
 #### Credential Types
 The following credential types are available.
+
+Credential Type | Description
+-|-
+`barcodeNumber` | A numeric or alphanumeric string that provides a human readable version of the information embedded in a barcode. This is typically used in conjunction with the barcodeUrl credential.
+`barcodeUrl` | A URL for a barcode image. This is typically used in conjunction with the barcodeNumber credential.
+`bypassUrl` | A landing page URL that includes secondary credential information. This removes the need for the recipient to input secondary credentials on the landing page.
+`cardCode` | A numeric or alphanumeric string.
+`cardNumber` | A numeric or alphanumeric string.
+`cvc2` | A 3-digit numeric code used as a secondary credential for financial products.
+`eventNumber` | A secondary credential that is numeric or alphanumeric string.
+`expirationDate` | A date after which the issued reward will no longer be redeemable.
+`pin` | Personal Identification Number. A secondary credential that is a numeric or alphanumeric string.
+`redemptionUrl` | A landing page URL where reward credentials and redemption information are typically presented. The landing page may or may not require the recipient to enter one or more secondary credentials to `complete the reward redemption process.
+`secretCode` | A secondary credential that is numeric or alphanumeric string.
+
 
 ## Steps to Redeem a Reward
 The act of claiming and redeeming a reward ensures the reward is paid for and ready for redemption. The redeem response will include the appropriate details needed to allow your customer to redeem their selected reward with the reward provider. ie. Amazon, etc.
@@ -117,8 +128,8 @@ We would recommend polling every 250ms (1/4 of a second) until the `201 - Create
 **Note: There will be variances in processing times depending on your rewards provider.**
 
 #### Step 3 - Redeem the Reward
-If you received the `201 - Created` response from Step 2 then the your reward has been successfully claimed! 
+If you received the `201 - Created` response from Step 2 then the your reward has been successfully claimed!
 
 You can now call the `/v1/transaction/reward/redeem` endpoint to redeem your reward. This will return your a[Reward Redemption Model](#reward-redemption-model).
 
-Mandatory information to provide your customer would be the `claimCode`, the `expirationDate`, and the `redemptionInstructions`, which instuct your customer how to make the claim.
+Use the `credential list` items to help you render a UI for your customer together with  the `redemptionInstructions`, which instuct your customer how to redeem the reward.

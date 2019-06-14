@@ -45,7 +45,7 @@ POST https://sandbox-api.imburse.net/marketplace/installed/YOUR_APP_ID/configura
 An example request for the **BRAINTREE_SDK** app would be:
 
 ```
-POST https://sandbox-api.imburse.net/marketplace/installed/BRAINTREE_SDK/configuration
+POST https://sandbox-api.imburse.net/marketplace/installed/braintree_sdk/configuration
 ```
 
 and the corresponding body content:
@@ -74,7 +74,7 @@ POST https://sandbox-api.imburse.net/marketplace/installed/YOUR_APP_ID/uninstall
 
 For example, to uninstall the **BRAINTREE_SDK** App, we would call the following endpoint:
 ```
-POST https://sandbox-api.imburse.net/marketplace/installed/BRAINTREE_SDK/uninstall
+POST https://sandbox-api.imburse.net/marketplace/installed/braintree_sdk/uninstall
 ```
 
 

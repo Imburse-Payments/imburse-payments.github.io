@@ -40,106 +40,83 @@ The response will contain all the rewards appropriate for the customers payment 
 
 ```json
 {
-    "rewards": [
-        {
-            "brand": {
-                "brandKey": "B644898",
-                "brandName": "Amazon.co.uk",
-                "createdDate": "2016-07-12T23:53:33Z",
-                "description": "<p>Amazon.co.uk Gift Cards* can be redeemed towards millions of items at www.amazon.co.uk. Amazon.co.uk&#39;s huge selection includes products in Books, Electronics, Music, MP3 Downloads, Film &amp; TV, Clothing, Video Games, Software, Sports &amp; Outdoors, Toys, Baby, Computers &amp; Office, Home &amp; Garden, Jewellery, Beauty, DIY &amp; Home Improvement, Office Products, Camera &amp; Photo, Pet Supplies, and more. Amazon.co.uk is the place to find and discover almost anything you want to buy online at a great price.</p>\r\n",
-                "disclaimer": "<p>*Restrictions apply. For complete terms and conditions, visit:&nbsp;<a href=\"http://www.amazon.co.uk/gc-legal\">www.amazon.co.uk/gc-legal</a>.</p>\r\n",
-                "imageUrls": [
-                    {
-                        "ppi": 326,
-                        "ratioHeight": 5,
-                        "ratioWidth": 8,
-                        "url": "https://dwwvg90koz96l.cloudfront.net/images/brands/b314742-80w-326ppi.png",
-                        "width": 80
-                    },
-                    {
-                        "ppi": 326,
-                        "ratioHeight": 5,
-                        "ratioWidth": 8,
-                        "url": "https://dwwvg90koz96l.cloudfront.net/images/brands/b314742-130w-326ppi.png",
-                        "width": 130
-                    },
-                    {
-                        "ppi": 326,
-                        "ratioHeight": 5,
-                        "ratioWidth": 8,
-                        "url": "https://dwwvg90koz96l.cloudfront.net/images/brands/b314742-200w-326ppi.png",
-                        "width": 200
-                    },
-                    {
-                        "ppi": 326,
-                        "ratioHeight": 5,
-                        "ratioWidth": 8,
-                        "url": "https://dwwvg90koz96l.cloudfront.net/images/brands/b314742-278w-326ppi.png",
-                        "width": 278
-                    },
-                    {
-                        "ppi": 326,
-                        "ratioHeight": 5,
-                        "ratioWidth": 8,
-                        "url": "https://dwwvg90koz96l.cloudfront.net/images/brands/b314742-300w-326ppi.png",
-                        "width": 300
-                    },
-                    {
-                        "ppi": 326,
-                        "ratioHeight": 5,
-                        "ratioWidth": 8,
-                        "url": "https://dwwvg90koz96l.cloudfront.net/images/brands/b314742-1200w-326ppi.png",
-                        "width": 1200
-                    }
-                ],
-                "lastUpdateDate": "2017-12-28T19:11:48Z",
-                "requirements": {
-                    "alwaysShowDisclaimer": false,
-                    "disclaimerInstructions": "",
-                    "displayInstructions": "<ol>\r\n\t<li><strong>Guidelines for use of the logo:&nbsp;</strong>&nbsp;The logos and graphics can not be changed in any way and must be used according to the&nbsp;usage&nbsp;guidelines available at&nbsp;<a href=\"https://www.amazon.co.uk/b?node=14235247031\">https://www.amazon.co.uk/b?node=14235247031</a>.&nbsp;&nbsp;Download our logos from the &quot;Additional Resources&quot; section.&nbsp; Please only use the logos provided on this page.</li>\r\n\t<li><strong>Use the correct product name:</strong>&nbsp; &quot;Amazon.co.uk Gift Card&quot; is our name.&nbsp; Our three-word product name is always capitalized and should not be broken up.&nbsp; It is not a gift certificate or e-gift card. If you are describing the gift card value display the pound amount first &ldquo;&pound;XX&nbsp;<a href=\"http://amazon.co.uk/\">Amazon.co.uk</a>&nbsp;Gift Card&rdquo;.</li>\r\n\t<li><strong>Display the disclaimer:&nbsp;</strong>&nbsp;When using our logo or product name, please always display the following disclaimer: &quot;*Restrictions apply. For complete terms and conditions, visit:&nbsp;<a href=\"https://www.amazon.de/gp/help/customer/display.html/ref=s9_acss_bw_cg_GCBCDTM_md1_w?nodeId=505028&amp;pf_rd_m=A3JWKAKR8XB7XF&amp;pf_rd_s=merchandised-search-1&amp;pf_rd_r=PYRMZX6Z9K41WE13H40E&amp;pf_rd_t=101&amp;pf_rd_p=bc3e74fb-34f0-4efb-b327-851efc3bddc4&amp;pf_rd_i=14235495031\">amazon.com/gc-legal</a>.&quot;</li>\r\n\t<li><strong>Amazon is not a sponsor:</strong>&nbsp;&nbsp;Your use of the Amazon brand should not imply partnership or sponsorship.&nbsp; You agree not to misrepresent the relationship between Amazon and your business.</li>\r\n\t<li><strong>Nothing is &quot;free&quot;:&nbsp;&nbsp;</strong>No statements can refer to the vouchers for free, free or for free as these terms have strong implications for customers.</li>\r\n\t<li><strong>Subject Line:</strong>&nbsp; If you deliver the Amazon.co.uk Gift Card by email, the&nbsp;Subject Line cannot&nbsp;imply that Amazon has sent the gift card.&nbsp; An example of a&nbsp;GOOD&nbsp;Subject Line is: &quot;MyCompany sent you an Amazon.co.uk Gift Card!&quot;&nbsp; An example of a&nbsp;BAD Subject Line is:&nbsp; &quot;Amazon.co.uk sent you a gift card!&quot;</li>\r\n</ol>\r\n",
-                    "termsAndConditionsInstructions": ""
-                },
-                "shortDescription": "<p>Amazon.co.uk Gift Cards* can be redeemed towards millions of items at <a href=\"http://www.amazon.co.uk\">www.amazon.co.uk</a>.</p>\r\n",
-                "status": "active",
-                "terms": "<p>*<a href=\"http://amazon.co.uk/\">Amazon.co.uk</a>&nbsp;is not a sponsor of this promotion.&nbsp;<a href=\"http://amazon.co.uk/\">Amazon.co.uk</a>&nbsp;Gift Cards (&quot;GCs&quot;) may be redeemed on the&nbsp;<a href=\"http://amazon.co.uk/\">Amazon.co.uk</a>&nbsp;website towards the purchase of eligible products available on&nbsp;<a href=\"http://www.amazon.co.uk/\">www.amazon.co.uk</a>. GCs cannot be reloaded, resold, transferred for value, redeemed for cash or applied to any other account.&nbsp;<a href=\"http://amazon.co.uk/\">Amazon.co.uk</a>&nbsp;is not responsible if a GC is lost, stolen, destroyed or used without permission. See&nbsp;<a href=\"http://www.amazon.co.uk/gc-legal\">www.amazon.co.uk/gc-legal</a>for complete terms and conditions. GCs are issued by Amazon EU S.&agrave; r.l. All Amazon &reg;, &trade; &amp; &copy; are IP of&nbsp;<a href=\"http://amazon.com/\">Amazon.com</a>, Inc. or its affiliates.</p>\r\n"
-            },
-            "countries": [
-                "GB",
-                "IE"
-            ],
-            "createdDate": "2016-08-26T00:38:00.445Z",
-            "credentialTypes": [
-                "cardNumber",
-                "expirationDate"
-            ],
-            "currencyCode": "GBP",
-            "exchangeRateRule": "",
-            "isWholeAmountValueRequired": false,
-            "lastUpdateDate": "2018-03-22T00:19:38.988Z",
-            "provider": {
-                "id": "TANGOCARD",
-                "name": "Tango Card"
-            },
-            "providerRewardId": "U139281",
-            "redemptionInstructions": "<p>|&nbsp;&nbsp;<a href=\"https://www.amazon.co.uk/gp/css/gc/payment/view-gc-balance?claimCode=\">Apply to Account</a>&nbsp; |&nbsp;&nbsp;<a href=\"http://www.amazon.co.uk/gc-redeem\">How to Use</a>&nbsp; |</p>\r\n\r\n<p>To redeem your gift card, follow these steps:</p>\r\n\r\n<ol>\r\n\t<li>Visit <a href=\"http://www.amazon.co.uk/redeem\">www.amazon.co.uk/redeem</a></li>\r\n\t<li>Enter the claim code when prompted.</li>\r\n</ol>\r\n\r\n<p>Your gift card claim code may also be entered when prompted during the checkout process but you will not be able to redeem your gift card using the <a href=\"http://amazon.co.uk/\">Amazon.co.uk</a> 1-Click&reg; service or downloadable e-books unless you first redeem the gift card through Your Account.</p>\r\n\r\n<p>If you have questions about redeeming your gift card, please visit <a href=\"http://www.amazon.co.uk/gc-redeem\">www.amazon.co.uk/gc-redeem</a>.&nbsp;</p>\r\n",
-            "rewardId": "ffdae9c9-1bfd-55d3-f6cc-9b1de1874241",
-            "rewardName": "Amazon.co.uk Gift Card",
-            "rewardType": "gift card",
-            "status": "active",
-            "tags": [
-                ""
-            ],
-            "value": {
-                "greaterThan": null,
-                "greaterThanOrEqualTo": 0.01,
-                "lessThan": null,
-                "lessThanOrEqualTo": 1000
-            },
-            "valueType": "VARIABLE_VALUE",
-            "maxValue": 1000,
-            "minValue": 0.01
+  "rewards": [
+    {
+      "rewardId": "6a30bdaa-483a-2b3f-e28e-0158d0cf07c2",
+      "rewardName": "Amazon.de Kupony",
+      "rewardType": "gift card",
+      "status": "active",
+      "countries": [
+        "PL"
+      ],
+      "currencyCode": "EUR",
+      "exchangeRateRule": null,
+      "isWholeAmountValueRequired": false,
+      "valueType": "VARIABLE_VALUE",
+      "fixedValue": null,
+      "maxValue": 5000,
+      "minValue": 0.01,
+      "credentialTypes": [
+        "cardNumber",
+        "expirationDate"
+      ],
+      "redemptionInstructions": "<p><strong>Aby zrealizować kupon, wykonaj następujące czynności:</strong></p>\r\n\r\n<ol>\r\n\t<li>Przejdź na stronę&nbsp;<a href=\"https://translate.google.com/translate?hl=en&amp;prev=_t&amp;sl=auto&amp;tl=pl&amp;u=http://www.amazon.de/Geschenkgutscheine/b%3Fie%3DUTF8%26node%3D1571256031\">www.amazon.de/gp/gc</a>.&nbsp;Kliknij &quot;&nbsp;Wykorzystaj kupon&nbsp;&quot; i&nbsp;po wyświetleniu monitu&nbsp;wpisz&nbsp;kod&nbsp;kuponu&nbsp;.</li>\r\n\t<li>Kwoty kupon&oacute;w są automatycznie dodawane do kwalifikujących się zam&oacute;wień podczas procesu anulowania subskrypcji.</li>\r\n\t<li>Pozostałe kwoty r&oacute;żnic w zam&oacute;wieniu należy uregulować inną metodą płatności.</li>\r\n</ol>\r\n\r\n<p>Możesz&nbsp;także wpisać kod&nbsp;kuponu,&nbsp;jeśli pojawi się monit podczas procesu wypisania się.&nbsp;Odkupienie vouchera nie jest jednak możliwe w przypadku korzystania z usługi&nbsp;<a href=\"http://www.amazon.de\">Amazon.de</a>&nbsp;1-Click&reg;, chyba że pierwszy raz wykorzystasz kupon za pośrednictwem swojego konta.</p>\r\n\r\n<p><strong>To redeem the code, please proceed as follows:</strong></p>\r\n\r\n<ol>\r\n\t<li>Go to&nbsp;<a href=\"https://translate.google.com/translate?hl=en&amp;prev=_t&amp;sl=auto&amp;tl=en&amp;u=http://www.amazon.de/Geschenkgutscheine/b%3Fie%3DUTF8%26node%3D1571256031\">www.amazon.de/gp/gc</a>.&nbsp;Click &quot;Redeem Gift Card&quot; and enter the&nbsp;Claim Code when prompted.</li>\r\n\t<li>Gift Card amounts will be applied automatically to eligible orders during the checkout process.</li>\r\n\t<li>You must pay for any remaining balance on your order with another payment method.</li>\r\n</ol>\r\n\r\n<p>Your gift card claim code may also be entered when prompted during the checkout process but you will not be able to redeem your gift card using the&nbsp;<a href=\"http://amazon.de/\">Amazon.de</a>&nbsp;1-Click&reg; service or downloadable e-books unless you first redeem the gift card through Your Account.</p>\r\n",
+      "tags": [],
+      "app": {
+        "appId": "TANGOCARD_RAAS",
+        "name": "tangocard_raas - todo: schema needs to be defined."
+      },
+      "brand": {
+        "brandKey": "B050503",
+        "brandName": "Amazon.de Poland",
+        "status": "active",
+        "description": "<p>Kupony&nbsp;<a href=\"http://amazon.de/\">Amazon.de</a>&nbsp;można liczyć na miliony artykuł&oacute;w na stronie&nbsp;<a href=\"http://www.amazon.de/\">www.amazon.de</a>&nbsp;i niekt&oacute;rych witrynach stowarzyszonych. Ogromny wyb&oacute;r&nbsp;<a href=\"http://amazon.de/\">Amazon.de</a>&nbsp;obejmuje produkty w kategoriach książek, elektroniki, muzyki, plik&oacute;w MP3, film&oacute;w i telewizja, odzież, gry wideo, oprogramowanie, sport i na zewnątrz, zabawki, niemowlę, komputer i biuro, dom i ogr&oacute;d, biżuteria, uroda, majsterkowanie, artykuły biurowe, aparat fotograficzny i fotograficzny, akcesoria dla zwierząt i nie tylko.&nbsp;<a href=\"http://ammazon.com/\">A</a><a href=\"http://www.Amazon.de\">mazon.de</a>&nbsp;to miejsce, w kt&oacute;rym znajduj i odkrywaj prawie wszystko, co chcesz kupić online po konkurencyjnej cenie.&nbsp;</p>\r\n\r\n<p><a href=\"http://amazon.de/\">Amazon.de</a>&nbsp;Gift Cards* can be redeemed towards millions of items at&nbsp;<a href=\"http://www.amazon.de/\">www.amazon.de</a>.&nbsp;<a href=\"http://amazon.de/\">Amazon.de</a>&rsquo;s huge selection includes products in Books, Electronics, Music, MP3 Downloads, Film &amp; TV, Clothing, Video Games, Software, Sports &amp; Outdoors, Toys, Baby, Computers &amp; Office, Home &amp; Garden, Jewelry, Beauty, DIY &amp; Home Improvement, Office Products, Camera &amp; Photo, Pet Supplies, and more.&nbsp;<a href=\"http://amazon.de/\">Amazon.de</a>&nbsp;is the place to find and discover almost anything you want to buy online at a great price.</p>\r\n",
+        "shortDescription": "<p>Kupony&nbsp;<a href=\"http://amazon.de/\">Amazon.de</a>&nbsp;można zaliczyć do milion&oacute;w artykuł&oacute;w na stronie&nbsp;<a href=\"http://www.amazon.de/\">www.amazon.de</a>.</p>\r\n\r\n<p><a href=\"http://amazon.de/\">Amazon.de</a>&nbsp;Gift Cards* can be redeemed towards millions of items at&nbsp;<a href=\"http://www.amazon.de/\">www.amazon.de</a>.</p>\r\n",
+        "disclaimer": "<p>*Obowiązują ograniczenia. Pełne warunki korzystania z usługi można znaleźć na stronie: <a href=\"http://www.amazon.de/gc-legal\">amazon.de/gc-legal</a></p>\r\n\r\n<p>*Restrictions apply. For complete terms and conditions, visit:&nbsp;<a href=\"http://www.amazon.de/gc-legal\">amazon.de/gc-legal</a></p>\r\n",
+        "terms": "<p>*Obowiązują ograniczenia. Pełne warunki korzystania z usługi można znaleźć na stronie: <a href=\"http://www.amazon.de/gc-legal\">amazon.de/gc-legal</a></p>\r\n\r\n<p>*Restrictions apply. For complete terms and conditions, visit:&nbsp;<a href=\"http://www.amazon.de/gc-legal\">amazon.de/gc-legal</a></p>\r\n",
+        "imageUrls": [
+          {
+            "ppi": 326,
+            "url": "https://dwwvg90koz96l.cloudfront.net/images/brands/b050503-80w-326ppi.png",
+            "width": 80
+          },
+          {
+            "ppi": 326,
+            "url": "https://dwwvg90koz96l.cloudfront.net/images/brands/b050503-130w-326ppi.png",
+            "width": 130
+          },
+          {
+            "ppi": 326,
+            "url": "https://dwwvg90koz96l.cloudfront.net/images/brands/b050503-200w-326ppi.png",
+            "width": 200
+          },
+          {
+            "ppi": 326,
+            "url": "https://dwwvg90koz96l.cloudfront.net/images/brands/b050503-278w-326ppi.png",
+            "width": 278
+          },
+          {
+            "ppi": 326,
+            "url": "https://dwwvg90koz96l.cloudfront.net/images/brands/b050503-300w-326ppi.png",
+            "width": 300
+          },
+          {
+            "ppi": 326,
+            "url": "https://dwwvg90koz96l.cloudfront.net/images/brands/b050503-1200w-326ppi.png",
+            "width": 1200
+          }
+        ],
+        "requirements": {
+          "alwaysShowDisclaimer": false,
+          "disclaimerInstructions": "",
+          "displayInstructions": "",
+          "termsAndConditionsInstructions": ""
         }
-    ]
+      },
+      "createdDate": "2019-06-04T16:25:39.4803963",
+      "lastUpdateDate": "2019-06-04T16:25:39.4803964"
+    }
+  ]
 }
 ```
 

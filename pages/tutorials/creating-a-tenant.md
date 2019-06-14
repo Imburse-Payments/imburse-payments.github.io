@@ -26,7 +26,7 @@ Using the `Management Bearer Token` aquired in Step 1, we can now create a new T
 Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
 
 ```curl
-curl --location --request POST "https://sandbox-api.imbursepayments.com/management/v1/account/tenants" \
+curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/account/tenants" \
   --header "Authorization: Bearer {management-bearer-token}" \
   --header "Content-Type: application/json" \
   --data "{

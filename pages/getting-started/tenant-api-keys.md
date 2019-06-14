@@ -31,11 +31,11 @@ The following models are used to manage Tenant API Keys.
 ### API Key Model
 ```json
 {
-	"accountId": "",
-	"tenantId": "",
-	"publicKey": "",
-	"privateKey": "",
-	"roles": []
+	"accountId": "string",
+	"tenantId": "string",
+	"publicKey": "string",
+	"privateKey": "string",
+	"roles": [ "string" ]
 }
 ```
 

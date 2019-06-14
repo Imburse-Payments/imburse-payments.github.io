@@ -46,22 +46,22 @@ The following models are used in the Marketplace:
 ### App Model
 ```json
 {
-    "developerId": "",
-    "developerName": "",
-    "appId": "",
-    "name": " SDK",
-    "iconUrl": "",
-    "description": "",
+    "developerId": "string",
+    "developerName": "string",
+    "appId": "string",
+    "name": " string",
+    "iconUrl": "string",
+    "description": "string",
     "tags": [
-        ""
+        "string"
     ],
     "supportedPaymentMethods": [
         {
-            "id": "",
-            "name": "",
-            "iconUrl": "",
+            "id": "string",
+            "name": "string",
+            "iconUrl": "string",
             "tags": [
-            ""
+                "string"
             ],
             "isCreditCard": true,
             "supportsDirectSale": true,
@@ -70,10 +70,10 @@ The following models are used in the Marketplace:
         }
     ],
     "supportedCountries": [
-        ""
+        "string"
     ],
     "supportedCurrencies": [
-        ""
+        "string"
     ]
 }
 ```
@@ -94,11 +94,11 @@ Property | Type | Description
 ### Payment Method Model
 ```json
 {
-    "id": "",
-    "name": "",
-    "iconUrl": "",
+    "id": "string",
+    "name": "string",
+    "iconUrl": "string",
     "tags": [
-        ""
+        "string"
     ],
     "isCreditCard": true,
     "supportsDirectSale": true,
@@ -126,7 +126,7 @@ POST https://sandbox-api.imburse.net/marketplace/apps/YOUR_APP_ID/install
 
 For example, to install the **BRAINTREE_SDK** App, we would call the following endpoint:
 ```
-POST https://sandbox-api.imburse.net/marketplace/apps/BRAINTREE_SDK/install
+POST https://sandbox-api.imburse.net/marketplace/apps/braintree_sdk/install
 ```
 
 **Note: Only one instance of an App can be installed into your Tenant.**

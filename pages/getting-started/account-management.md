@@ -53,18 +53,18 @@ The following models are used to define Accounts, Tenants, and API Keys.
 ### Account Model
 ```json
 {
-	"accountId": "",
-	"imburseAccountRef": "",
-	"companyName": "",
-	"billingContactFirstName": "",
-	"billingContactLastName": "",
+	"accountId": "string",
+	"imburseAccountRef": "string",
+	"companyName": "string",
+	"billingContactFirstName": "string",
+	"billingContactLastName": "string",
 	"billingContactAddress": {
-		"streetAddress": "",
-		"extendedStreetAddress": "",
-		"locality": "",
-		"region": "",
-		"postCode": "",
-		"country": "",
+		"streetAddress": "string",
+		"extendedStreetAddress": "string",
+		"locality": "string",
+		"region": "string",
+		"postCode": "string",
+		"country": "string",
 	}
 }
 ```
@@ -81,12 +81,12 @@ Property | Type | Mandatory | Description
 ### Address Model
 ```json
 {
-    "streetAddress": "",
-    "extendedStreetAddress": "",
-    "locality": "",
-    "region": "",
-    "postCode": "",
-    "country": "",
+    "streetAddress": "string",
+    "extendedStreetAddress": "string",
+    "locality": "string",
+    "region": "string",
+    "postCode": "string",
+    "country": "string",
 }
 ```
 
@@ -104,11 +104,11 @@ This model applies to both Account API Keys and Tenant API Keys.
 
 ```json
 {
-	"accountId": "",
-	"tenantId": "",
-	"publicKey": "",
-	"privateKey": "",
-	"roles": []
+	"accountId": "string",
+	"tenantId": "string",
+	"publicKey": "string",
+	"privateKey": "string",
+	"roles": [ "string" ]
 }
 ```
 
@@ -123,16 +123,16 @@ Property | Type | Mandatory | Description
 ### Tenant Model
 ```json
 {
-	"id": "",
-	"accountId": "",
-	"name": "",
+	"id": "string",
+	"accountId": "string",
+	"name": "string",
 	"address": {
-		"streetAddress": "",
-		"extendedStreetAddress": "",
-		"locality": "",
-		"region": "",
-		"postCode": "",
-		"country": ""
+		"streetAddress": "string",
+		"extendedStreetAddress": "string",
+		"locality": "string",
+		"region": "string",
+		"postCode": "string",
+		"country": "string"
 	}
 }
 ```

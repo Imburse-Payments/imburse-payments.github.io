@@ -95,32 +95,32 @@ curl --location --request GET "https://sandbox-api.imbursepayments.com/v1/transa
 ```
 
 #### Response
-The response will contain the reward claim code, expiration date, and the redemption instructions.
+The response will contain the credentials to redeem a reward, in the example the claim code, expiration date, and the redemption instructions.
 
 These will need to be displayed or sent to your customer.
 
 ```json
 {
-  "credentials": {
-    "Expiration Date": "string",
-    "Claim Code": "string"
-  },
-  "credentialList": [
-    {
-      "label": "string",
-      "value": "string",
-      "rewardType": null,
-      "credentialType": "string"
+    "credentials": {
+        "Gutscheincode - Claim Code": "2A28-HVZ86C-GABK",
+        "Verfallsdatum - Expiration Date": "2029-06-14T21:59:59Z"
     },
-    {
-      "label": "string",
-      "value": "string",
-      "rewardType": null,
-      "credentialType": "string"
-    }
-  ],
-  "redemptionInstructions": "string"
+    "credentialList": [
+        {
+            "label": "Gutscheincode - Claim Code",
+            "value": "2A28-HVZ86C-GABK",
+            "rewardType": null,
+            "credentialType": "cardNumber"
+        },
+        {
+            "label": "Verfallsdatum - Expiration Date",
+            "value": "2029-06-14T21:59:59Z",
+            "rewardType": null,
+            "credentialType": "expirationDate"
+        }
+    ],
+    "redemptionInstructions": "<p><strong>Zur Einl&ouml;sung des Gutscheins gehen Sie bitte wie folgt vor:</strong></p><ol><li>Gehen Sie auf&nbsp;<a href=\\\"http://www.amazon.de/Geschenkgutscheine/b?ie=UTF8&amp;node=1571256031\\\">www.amazon.de/gp/gc</a>. Klicken Sie auf &bdquo;Gutschein einl&ouml;sen&ldquo; und geben Sie den Gutscheincode ein, wenn Sie dazu aufgefordert werden.</li><li>Gutscheinbetr&auml;ge werden w&auml;hrend des Abmeldevorgangs automatisch auf zur Teilnahme berechtigte Bestellungen angerechnet.</li><li>Verbleibende Differenzbetr&auml;ge Ihrer Bestellung sind mittels einer anderen Zahlungsmethode zu begleichen.</li></ol><p>Sie k&ouml;nnen die Gutscheincode auch eingeben, wenn Sie w&auml;hrend des Abmeldevorgangs dazu aufgefordert werden. Die Einl&ouml;sung Ihres Gutscheins ist bei der Nutzung des&nbsp;<a href=\\\"http://amazon.de/\\\">Amazon.de</a>&nbsp;1-Click&reg; Services jedoch nicht m&ouml;glich, es sei denn, Sie l&ouml;sen den Gutschein zun&auml;chst &uuml;ber Ihr Konto ein.</p><p><strong>To redeem the code, please proceed as follows:</strong></p><ol><li>Go to&nbsp;<a href=\\\"https://translate.google.com/translate?hl=en&amp;prev=_t&amp;sl=auto&amp;tl=en&amp;u=http://www.amazon.de/Geschenkgutscheine/b%3Fie%3DUTF8%26node%3D1571256031\\\">www.amazon.de/gp/gc</a>.&nbsp;Click &quot;Redeem Gift Card&quot; and enter the&nbsp;Claim Code when prompted.</li><li>Gift Card amounts will be applied automatically to eligible orders during the checkout process.</li><li>You must pay for any remaining balance on your order with another payment method.</li></ol><p>Your gift card claim code may also be entered when prompted during the checkout process but you will not be able to redeem your gift card using the&nbsp;<a href=\\\"http://amazon.de/\\\">Amazon.de</a>&nbsp;1-Click&reg; service or downloadable e-books unless you first redeem the gift card through Your Account.</p>"
 }
 ```
 
-Mandatory information to provide your customer would be the `claimCode`, the `expirationDate`, and the `redemptionInstructions`, which instucts your customer how to make the claim.
+Mandatory information to provide your customer would be the `credentials` and the `redemptionInstructions`, which instucts your customer on how to redeem the reward.

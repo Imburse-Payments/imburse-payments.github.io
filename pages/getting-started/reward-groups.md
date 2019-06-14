@@ -34,8 +34,8 @@ The following models are used to define a Reward Group.
 ### Reward Group Model
 ```json
 {
-  "rewardGroupId": "",
-  "name": "",
+  "rewardGroupId": "string",
+  "name": "string",
   "rewards": [
     {
       "rewardId": "string",
@@ -55,7 +55,7 @@ Property | Type | Mandatory | Description
 ### Reward Item Model
 ```json
 {
-  "rewardId": "",
+  "rewardId": "string",
   "enabled": true
 }
 ```

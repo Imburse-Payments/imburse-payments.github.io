@@ -17,7 +17,7 @@ For more information on Collection Schemes, see the [Collection Schemes in Getti
 Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
 - A valid `Management Bearer Token` derived from a `Tenant API Key`
-- The `appId` of an App you have previously installed that you want to add to this Collection Scheme. If you don't have one, see the tutorial [Installing and Configuring an App](/pages/tutorials/installing-and-configuring-an-app)
+- The `appId` of an App you have previously installed that you want to add to this Collection Scheme.
 
 # Create the Collection Scheme
 Using your `Management Bearer Token` we can create a new Collection Scheme.

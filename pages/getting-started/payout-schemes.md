@@ -67,12 +67,12 @@ The following models are used to define a Payout Scheme.
           ],
 		  "rewardGroups":[
 			{
-			  "rewardGroupId":""
+			  "rewardGroupId": "string"
 			}
 		  ]
         }
       ],
-	  "lastModified": ""
+	  "lastModified": "string"
     }
   ]
 }
@@ -114,12 +114,12 @@ Property | Type | Mandatory | Description
 		],
 		"rewardGroups":[
 		  {
-			"rewardGroupId":""
+			"rewardGroupId": "string"
 		  }
 		]
 	  }
 	],
-	"lastModified": ""
+	"lastModified": "string"
 }
 ```
 
@@ -155,7 +155,7 @@ Property | Type | Mandatory | Description
   ],
   "rewardGroups":[
 		{
-			"rewardGroupId":""
+			"rewardGroupId": "string"
 		}
   ]
 }
@@ -192,7 +192,7 @@ Property | Type | Mandatory | Description
 ### Reward Group Model
 ```json
 {
-  "rewardGroupId": ""
+  "rewardGroupId": "string"
 }
 ```
 

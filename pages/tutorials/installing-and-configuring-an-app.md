@@ -13,7 +13,7 @@ Each Tenant will need at least one App integration installed. App integrations a
 
 See the [App tutorials](#/pages/tutorials) for more information on the particular App you would like to install.
 
-For more information on Apps and Marketplace, see the [Apps in Core Concepts](/pages/guides/core-concepts/#apps).
+For more information on Apps and Marketplace, see the [Apps in Getting Started](/pages/getting-started/apps).
 
 # What's Next?
 - [Searching the Rewards Catalog](/pages/tutorials/searching-the-rewards-catalog)

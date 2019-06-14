@@ -39,6 +39,8 @@ The Marketplace has endpoints to perform the following functions:
 Returns a list of all Apps available in the Marketplace.
 
 #### Request
+Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
+
 ```curl
 curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/marketplace/apps" \
   --header "Authorization: Bearer {management-bearer-token}" \
@@ -76,9 +78,10 @@ Replace the `{AppId}` placeholder value with the App Id for the App you want to 
 In our example request, we'll be using the Braintree App (AppId `BRAINTREE_SDK`).
 
 #### Request
+Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
 
 ```curl
-curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/marketplace/apps/BRAINTREE_SDK" \
+curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/marketplace/apps/braintree_sdk" \
   --header "Authorization: Bearer {management-bearer-token}" \
   --header "Content-Type: application/json"
 }"
@@ -109,8 +112,10 @@ In our example request, we'll be using the Braintree App (AppId `BRAINTREE_SDK`)
 
 
 #### Request
+Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
+
 ```curl
-curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/marketplace/apps/BRAINTREE_SDK/install" \
+curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/marketplace/apps/braintree_sdk/install" \
   --header "Authorization: Bearer {management-bearer-token}" \
   --header "Content-Type: application/json" \
   --data "{
@@ -160,8 +165,10 @@ In our example request, we'll be using the Braintree App (AppId `BRAINTREE_SDK`)
 **Note: The body of the request will be different between Apps.**
 
 #### Request
+Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
+
 ```curl
-curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/apps/installed/BRAINTREE_SDK/configuration" \
+curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/apps/installed/braintree_sdk/configuration" \
   --header "Authorization: Bearer {management-bearer-token}" \
   --header "Content-Type: application/json" \
   --data "{

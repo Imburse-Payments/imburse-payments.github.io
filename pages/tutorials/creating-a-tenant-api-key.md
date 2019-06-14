@@ -20,7 +20,7 @@ Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you
 - Familiar with creating an HMAC token using an API Key
 
 In addition, you should also have:
-- The `Tenant Id` for a Tenant you have previously created - If you don't have one, see the tutorial [Creating a Tenant](/pages/tutorials/creating-a-tenant) first.
+- The `Tenant Id` for a Tenant you have previously created.
 
 # Create a new Tenant API Key
 Using the `Management Bearer Token` we can create a new Tenant API Key.
@@ -33,18 +33,18 @@ Replace the `{tenantId}` placeholder value with the Tenant `id` for the Tenant y
 ###### Roles
 The `roles` value in the request is important as it sets the permissions this API Key can have.
 
-In the example request below, we are setting the roles to `t.g.super` which will give the Tenant API Key administration access to everything for the Tenant.
+In the example request below, we are setting the roles to `tenant-admin` which will give the Tenant API Key administration access to everything for the Tenant.
 
 **Note: In reality you would only grant the minimum necessary permissions for your Tenant API Keys.**
 
-For more information on the `roles` values, see [What is a Tenant API Key](/pages/guides/core-concepts/#what-is-a-tenant-api-key) in the Core Concepts documentation.
+For more information on the `roles` values, see [Account Management in Getting Started](/pages/getting-started/account-management).
 
 ```curl
-curl --location --request POST "https://sandbox-api.imbursepayments.com/management/v1/tenant/{tenantId}/keys" \
+curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/tenant/{tenantId}/keys" \
   --header "Authorization: Bearer {management-bearer-token}" \
   --header "Content-Type: application/json" \
   --data "{
-	\"roles\": ["t.sup.a]
+	\"roles\": [\"tenant-admin\"]
 }"
 ```
 
