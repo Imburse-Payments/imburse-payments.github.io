@@ -101,10 +101,6 @@ These will need to be displayed or sent to your customer.
 
 ```json
 {
-    "credentials": {
-        "Gutscheincode - Claim Code": "2A28-HVZ86C-GABK",
-        "Verfallsdatum - Expiration Date": "2029-06-14T21:59:59Z"
-    },
     "credentialList": [
         {
             "label": "Gutscheincode - Claim Code",
@@ -123,4 +119,4 @@ These will need to be displayed or sent to your customer.
 }
 ```
 
-Mandatory information to provide your customer would be the `credentials` and the `redemptionInstructions`, which instucts your customer on how to redeem the reward.
+You would need use the `credentialList` to help format the Claim Code etc. for you customer's UI and also display the `redemptionInstructions`, which instucts your customer on how to redeem the reward.

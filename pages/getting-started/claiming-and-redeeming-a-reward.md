@@ -30,10 +30,6 @@ The following model is returned when the Redeem Reward endpoint is called.
 ### Reward Redemption Model
 ```json
 {
-  "credentials": {
-    "expirationDate": "string",
-    "claimCode": "string"
-  },
   "credentialList": [
     {
       "label": "string",
@@ -48,7 +44,6 @@ The following model is returned when the Redeem Reward endpoint is called.
 
 Property | Type | Description
 -|-|-
-`credentials` | array | A Key-Value pair list of properties unique to this reward<br/>The most common are `expirationDate` and `claimCode`.<br/><br/>These are localized to the language of the country the reward is for.
 `credentialList` | array of [Credential Models](#credential-models) | An array of Credential models<br/><br/>Can help you present the credentials to your customer.
 `redemptionInstructions` | decimal | The redemption instructions to present to your customer.
 
@@ -64,8 +59,8 @@ Property | Type | Description
 
 Property | Type | Description
 -|-|-
-`label` | string | Matches one of the entries in the `credentials` list.
-`value` | string | The value of the credentials.<br/><br/>For example, if `label` was `Claim Code` then the `value` will be<br/>the claims code for the reward ie. `S5WQ-Z2SP5S-GLB3`.
+`label` | string | A friendly string that you can use to `label` the `value` property in a UI.<br/>For example, if the reward was an Amazon gift card then the label might be `Amazon Gift Card claim code:`.
+`value` | string | The value of the credentials.<br/><br/>For example, if `label` was `Amazon Gift Card claim code:` then the `value` would be<br/>the claims code for the reward ie. `S5WQ-Z2SP5S-GLB3`.
 `rewardType` | string | See *Reward Types* below.
 `credentialType` | string | See *Credential Types* below.<br/><br/>Use the Credential Types to determine the best format for your UI.
 
