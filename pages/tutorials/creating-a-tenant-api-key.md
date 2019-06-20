@@ -62,7 +62,7 @@ The newly created `publicKey` and `privateKey` values will be required when you 
 	"publicKey": "a123456b-c12c-123d-1ab4-18bd8c8e88a3",
 	"privateKey": "AGHYR1aWYgHgyjhJLkVCd7b8XfAVeA4tuFwCQl3X64Y=",
     "roles": [
-        "t.g.super"
+        "tenant-admin"
     ]
 }
 ```
