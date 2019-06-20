@@ -13,4 +13,7 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/plugins/elegant_font/css/style.css">
     <link id="theme-style" rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
     <link id="theme-style" rel="stylesheet" href="{{ site.baseurl }}/assets/css/highlight.css">
+    {% if site.google_analytics and jekyll.environment == 'production' %}
+    {% include analytics.html %}
+    {% endif %}
 </head>
