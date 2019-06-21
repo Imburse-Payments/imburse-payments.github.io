@@ -14,6 +14,11 @@ The Tenant API Key API functions allow a user to perform Tenant API Key administ
 ## Access Requirements
 You will need a Tenant API Key to perform Tenant Management functions.
 
+For more information on creating a Management Bearer Token, see:
+
+- [Getting Started - Authentication](/pages/getting-started/authentication)
+- [Tutorials - Get a Management Bearer Token](/pages/tutorials/get-management-bearer-token/)
+
 ## Functions
 The available functions are:
 

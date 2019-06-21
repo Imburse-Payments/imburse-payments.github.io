@@ -11,6 +11,11 @@ breadcrumbs: "Getting Started,getting-started"
 # Transactions
 A Transaction consists of an Order object and one or more Instruction objects. The instruction objects enable Imburse to collect or payout money. The relationship between these objects is explained below.
 
+For more information on creating a Management Bearer Token, see:
+
+- [Getting Started - Authentication](/pages/getting-started/authentication)
+- [Tutorials - Get a Management Bearer Token](/pages/tutorials/get-management-bearer-token/)
+
 ## Access Requirements
 You will need a Tenant API Key to perform Transaction functions.
 

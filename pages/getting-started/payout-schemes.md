@@ -14,6 +14,11 @@ The Payout Scheme API functions allows you to setup and configure a Payout Schem
 ## Access Requirements
 You will need a Tenant API Key to perform Payout Scheme Management functions.
 
+For more information on creating a Management Bearer Token, see:
+
+- [Getting Started - Authentication](/pages/getting-started/authentication)
+- [Tutorials - Get a Management Bearer Token](/pages/tutorials/get-management-bearer-token/)
+
 ## Functions
 The available Payout Scheme functions are:
 

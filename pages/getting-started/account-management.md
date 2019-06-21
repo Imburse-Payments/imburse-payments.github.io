@@ -14,6 +14,11 @@ The Account Management API functions allow a user to perform both Account level 
 ## Access Requirements
 You will need an Account API Key to perform Account Management functions.
 
+For more information on creating a Management Bearer Token, see:
+
+- [Getting Started - Authentication](/pages/getting-started/authentication)
+- [Tutorials - Get a Management Bearer Token](/pages/tutorials/get-management-bearer-token/)
+
 ## Functions
 The Account functions can be broken down into to levels:
 

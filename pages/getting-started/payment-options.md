@@ -14,6 +14,11 @@ The Payout Payment Options are a list of payment options that you can present to
 ## Access Requirements
 You will need a Tenant API Key to perform Payment Option and related object functions.
 
+For more information on creating a Payout Bearer Token, see:
+
+- [Getting Started - Authentication](/pages/getting-started/authentication)
+- [Tutorials - Get a Payout Bearer Token](/pages/tutorials/get-payout-bearer-token/)
+
 ## Functions
 The available functions are:
 

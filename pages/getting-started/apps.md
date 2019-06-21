@@ -16,6 +16,11 @@ Configuring an App permits Imburse to transact with the provider of the App on y
 ## Access Requirements
 You will need a Tenant API Key to perform App functions.
 
+For more information on creating a Management Bearer Token, see:
+
+- [Getting Started - Authentication](/pages/getting-started/authentication)
+- [Tutorials - Get a Management Bearer Token](/pages/tutorials/get-management-bearer-token/)
+
 ## Functions
 Each App provided by Imburse has a standard set of API endpoints.
 

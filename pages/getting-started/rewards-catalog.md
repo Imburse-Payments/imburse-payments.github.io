@@ -17,6 +17,11 @@ The API has calls that allow you to view the items in the Rewards Catalog, along
 ## Access Requirements
 You will need a Tenant API Key to perform Reward Catalog functions.
 
+For more information on creating a Management Bearer Token, see:
+
+- [Getting Started - Authentication](/pages/getting-started/authentication)
+- [Tutorials - Get a Management Bearer Token](/pages/tutorials/get-management-bearer-token/)
+
 ## Functions
 The available authentication functions are:
 

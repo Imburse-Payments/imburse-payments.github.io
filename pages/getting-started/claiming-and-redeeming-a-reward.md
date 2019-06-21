@@ -14,6 +14,11 @@ Once your customer has chosen a reward you will need to claim and then redeem th
 ## Access Requirements
 You will need a Tenant API Key to process a reward.
 
+For more information on creating a Payout Bearer Token, see:
+
+- [Getting Started - Authentication](/pages/getting-started/authentication)
+- [Tutorials - Get a Payout Bearer Token](/pages/tutorials/get-payout-bearer-token/)
+
 ## Functions
 The available functions are:
 
