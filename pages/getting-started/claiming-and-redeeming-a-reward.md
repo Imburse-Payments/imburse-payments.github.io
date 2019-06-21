@@ -125,6 +125,6 @@ We would recommend polling every 250ms (1/4 of a second) until the `201 - Create
 #### Step 3 - Redeem the Reward
 If you received the `201 - Created` response from Step 2 then the your reward has been successfully claimed!
 
-You can now call the `/v1/transaction/reward/redeem` endpoint to redeem your reward. This will return your a[Reward Redemption Model](#reward-redemption-model).
+You can now call the `/v1/transaction/reward/redeem` endpoint to redeem your reward. This will return your a [Reward Redemption Model](#reward-redemption-model).
 
 Use the `credential list` items to help you render a UI for your customer together with  the `redemptionInstructions`, which instuct your customer how to redeem the reward.

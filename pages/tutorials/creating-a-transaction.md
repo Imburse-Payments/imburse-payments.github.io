@@ -35,13 +35,13 @@ The `metadata` property can be filled with arbitary key-value-pairs that help co
 
 ```curl
 curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/collect/customer/{customerRef}/order" \
-  --header "Authorization: Bearer {management-token}" \
+  --header "Authorization: Bearer {management-bearer-token}" \
   --header "Content-Type: application/json" \
   --data "{
   \"orderRef\": \"REF1\",
   \"currency\": \"EUR\",
   \"country\": \"DE\",
-  \"scheme\": \"string\",
+  \"scheme\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",
   \"metadata\": {
     \"someInternalRef1\": \"my-internal-ref\",
     \"someInternalRef2\": \"another-internal-ref\"
@@ -64,7 +64,7 @@ Replace the `instructionRef`, `amount`, `{open_date}`, and `{due_date}` properti
 
 ```curl
 curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/collect/customer/{customerRef}/order/{orderRef}/instruction" \
-  --header "Authorization: Bearer {{management-token}}" \
+  --header "Authorization: Bearer {{management-bearer-token}}" \
   --header "Content-Type: application/json" \
   --data "{
 	\"instructionRef\": \"01\",

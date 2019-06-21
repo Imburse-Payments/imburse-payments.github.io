@@ -27,8 +27,15 @@ You will need to generate an HMAC token for the following following request usin
 Replace the `{hmac-token}` placeholder value with your actual HMAC token.
 
 ```curl
-curl --location --request POST "https://sandbox-api.imbursepayments.com/identity/v1/hmac/payout" \
+curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/identity/hmac/payout" \
   --header "Authorization: Hmac {hmac-token}"
+  --header "Content-Type: application/json" \
+  --data "{
+	\"customerRef\": \"my-customer-ref\",
+	\"orderRef\": \"1\",
+	\"instructionRef\": \"1\"
+}
+"
 ```
 
 #### Response

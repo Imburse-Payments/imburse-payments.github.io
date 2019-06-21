@@ -19,7 +19,6 @@ Your API keys are available in the Client Portal, however, you cannot get the pr
 The available authentication functions are:
 
 - Create a Management Bearer Token
-- Create a Collect API Bearer Token
 - Create a Payout API Bearer Token
 
 ## API Documentation
@@ -59,13 +58,12 @@ The diagram below shows the 4 steps of the authentication flow.
 
 
 #### Step 1 - Create a HMAC Authorization request to the Identity API
-The Identity API can create 3 different types of Bearer Token for you. The one you need will depend on what you are trying to do. The table below shows the 3 types of task and the corresponding Identity API endpoint to call to get the appropriate Bearer Token.
+The Identity API can create 2 different types of Bearer Token for you. The one you need will depend on what you are trying to do. The table below shows the 2 types of task and the corresponding Identity API endpoint to call to get the appropriate Bearer Token.
 
 Task | Identity endpoint to use
 -|-
 Management tasks in your account<br/>or tenants, including creating customer orders | Choose `Create Management API Bearer Token`
 Processing a payout instruction<br/>or requesting payout options | Choose `Create Payout API Bearer Token`
-Processing a collection instruction<br/>or requesting collection options | Choose `Create Collect API Bearer Token`
 
 Using your the `publicKey` and `privateKey` of your API Key you must now create an HMAC token from your request. See the example in our [Github Repository](https://github.com/Imburse-Payments/hmac-examples).
 
@@ -85,7 +83,7 @@ The response from the Identity API, irrespective of the endpoint called, will be
 }
 ```
 
-Extract the `accessToken` property from the response object. This is your `Bearer Token` for accessing the Management and Transaction APIs here on in.
+Extract the `accessToken` property from the response object. This is your `Bearer Token` for accessing your selected API - either Management or Transaction.
 
 #### Step 3 - Create a Bearer Authorization request to the Management/Transaction API
 Using the `Bearer Token` returned in Step 2, you can now proceed to make requests to the Management/Transaction APIs.

@@ -31,7 +31,7 @@ The `rewards` property is an array of the Reward Ids of the Rewards you want to 
 
 ```curl
 curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/reward-groups" \
-  --header "Authorization: Bearer {management-token}" \
+  --header "Authorization: Bearer {management-bearer-token}" \
   --header "Content-Type: application/json" \
   --data "{
 	\"name\": \"Amazon Rewards - Germany and France\",

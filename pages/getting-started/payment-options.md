@@ -12,7 +12,7 @@ breadcrumbs: "Getting Started,getting-started"
 The Payout Payment Options are a list of payment options that you can present to your customers. This could be rewards or cash payment options.
 
 ## Access Requirements
-You will need a Tenant API Key to perform Payment Instruction and related object functions.
+You will need a Tenant API Key to perform Payment Option and related object functions.
 
 ## Functions
 The available functions are:
