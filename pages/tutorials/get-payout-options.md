@@ -121,7 +121,7 @@ The response will contain all the rewards appropriate for the customers payment 
 ```
 
 # What's Next?
-- [Processing a Reward](/pages/tutorials/processing-a-reward)
+- [Claiming and Redeeming a Reward](/pages/tutorials/claiming-and-redeeming-a-reward)
 
 
 
