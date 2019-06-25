@@ -46,7 +46,7 @@ curl --location --request GET "https://sandbox-api.imbursepayments.com/v1/transa
 ```
 
 #### Response
-The response is `201 - Accpted` with the following custom header.
+The response is `202 - Accepted` with the following custom header.
 
 **Note: The `taskId` on the end of the location header is unique to claiming this reward. Each claim will have a different `taskId`.**
 
