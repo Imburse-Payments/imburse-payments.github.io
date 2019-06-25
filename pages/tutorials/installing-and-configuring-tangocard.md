@@ -42,13 +42,6 @@ curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/apps/
 #### Response
 Response code `200 - OK`
 
-```json
-{
-    "customerIdentifier": "your-new-tangocard-customer-id",
-    "accountIdentifier": "your-new-tangocard-account-id"
-}
-```
-
 # Step 3 - Top up the Tango Card account
 A new account will have a zero credit balance so we need to top this up with funds before it can be used.
 
