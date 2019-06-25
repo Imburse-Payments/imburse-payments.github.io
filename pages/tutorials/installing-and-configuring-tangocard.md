@@ -49,8 +49,8 @@ Response code `200 - OK`
 }
 ```
 
-# Step 3 - Top up your Tango Card account
-A new account will not have a credit balance so we need to top this up with funds.
+# Step 3 - Top up the Tango Card account
+A new account will have a zero credit balance so we need to top this up with funds before it can be used.
 
 Choose an `amount` to satisfy the rewards you want to payout. You can always top it up again.
 
