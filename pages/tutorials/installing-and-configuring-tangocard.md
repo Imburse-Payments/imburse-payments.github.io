@@ -29,20 +29,14 @@ curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/marke
 #### Response
 The response will be response code `200 - OK`.
 
-# Step 2 - Configuration
-After installing, we can now configure the Tango Card App.
+
+# Step 2 - Create a Tango Card account
+After installing, we can now create the Tango Card account.
 
 #### Request
-The `customerIdentifier` and `accountIdentifier` properties are specific to the Tango Card. Leave these blank for Imburse to generate these ids for you or, if you already have a Tango Card account, you can put your current `customerIdentifier` and `accountIdentifier` values here instead.
-
 ```curl
-curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/marketplace/installed/tangocard-raas/configure" \
-  --header "Authorization: Bearer {management-bearer-token}" \
-  --header "Content-Type: application/json" \
-  --data "{
-    \"customerIdentifier\": \"tangocard-customer-id\",
-    \"accountIdentifier\": \"tangocard-account-id\"
-}"
+curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/apps/installed/tangocard_raas/account" \
+  --header "Authorization: Bearer {management-bearer-token}"
 ```
 
 #### Response
@@ -50,7 +44,23 @@ Response code `200 - OK`
 
 ```json
 {
-    "customerIdentifier": "tangocard-customer-id",
-    "accountIdentifier": "tangocard-account-id"
+    "customerIdentifier": "your-new-tangocard-customer-id",
+    "accountIdentifier": "your-new-tangocard-account-id"
 }
 ```
+
+# Step 3 - Top up your Tango Card account
+A new account will not have a credit balance so we need to top this up with funds.
+
+Choose an `amount` to satisfy the rewards you want to payout. You can always top it up again.
+
+#### Request
+```curl
+curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/apps/installed/tangocard_raas/deposit-funds" \
+  --header "Authorization: Bearer {management-bearer-token}" \
+  --header "Content-Type: application/json" \
+  -data "{\"amount\":0}"
+```
+
+#### Response
+Response code `200 - OK`
