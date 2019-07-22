@@ -18,7 +18,7 @@ Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you
 - Familiar with creating an HMAC token using an API Key.
 
 # Get Management Bearer Token
-You will need to generate an HMAC token for the following following request using a `Tenant API Key`.
+You will need to generate an HMAC token for the following request using a `Tenant API Key`.
 
 **Note: If you already have a valid `Management Bearer Token` derived from a `Tenant API Key` then you can skip this tutorial. Use your existing `Management Bearer Token` rather than creating a new one. You don't have to create a new `Management Bearer Token` for each request.**
 

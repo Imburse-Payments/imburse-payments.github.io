@@ -36,6 +36,7 @@ You can consider a Tenant as either a company, department, or organization.
 An [Account](#accounts) can have **multiple** Tenants.
 
 A Tenant is where you will store configuration for:
+- [Users](#users)
 - [API Keys](#api-keys)
 - [Apps](#apps)
 - [Reward Groups](#reward-groups)
@@ -44,6 +45,10 @@ A Tenant is where you will store configuration for:
 - [Notifications](#webhooks)
 
 Tenants do not share information with each other and are a self contained and isolated entity within a multi-tenancy system.
+
+## Users
+Adding users to your Tenant's gives them access to the Imburse Portal.
+A user has one or more roles attributed to them and these roles govern their access level.
 
 ## API Keys
 An API Key is a **Public and Private key set** and is used as a means of securing your request during the authenticaion process.

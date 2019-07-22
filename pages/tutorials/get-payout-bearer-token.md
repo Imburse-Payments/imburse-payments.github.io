@@ -14,21 +14,20 @@ This tutorial will take you through getting a Payout Bearer Token using a Tenant
 # Prerequisites
 Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
-- Familiar with creating an HMAC token using an API Key.
-- A `Tenant API Key`. See the tutorial [Creating a Tenant API Key](/pages/tutorials/creating-a-tenant-api-key) here if you need to create one.
+- A valid `Management Bearer Token` derived from a `Tenant API Key`
 
 # Get Payout Bearer Token
-You will need to generate an HMAC token for the following following request using a `Tenant API Key`.
+You will need to generate an Payout Bearer Token for the following request using a `Tenant API Key`.
 
 **Note: If you already have a valid `Payout Bearer Token` derived from a `Tenant API Key` then you can skip this tutorial. Use your existing `Payout Bearer Token` rather than creating a new one. You don't have to create a new `Payout Bearer Token` for each request.**
 
 
 #### Request
-Replace the `{hmac-token}` placeholder value with your actual HMAC token.
+Replace the `{management-bearer-token}` placeholder value with your actual Management Bearer token.
 
 ```curl
-curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/identity/hmac/payout" \
-  --header "Authorization: Hmac {hmac-token}"
+curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/identity/payout" \
+  --header "Authorization: Bearer {management-bearer-token}"
   --header "Content-Type: application/json" \
   --data "{
 	\"customerRef\": \"my-customer-ref\",

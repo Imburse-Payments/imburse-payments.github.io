@@ -72,7 +72,8 @@ The following models are used to define a Payout Scheme.
           ],
 		  "rewardGroups":[
 			{
-			  "rewardGroupId": "string"
+			  "rewardGroupId": "string",
+			  "exclusions": [ "string" ]
 			}
 		  ]
         }
@@ -119,7 +120,8 @@ Property | Type | Mandatory | Description
 		],
 		"rewardGroups":[
 		  {
-			"rewardGroupId": "string"
+			"rewardGroupId": "string",
+			"exclusions": [ "string" ]
 		  }
 		]
 	  }
@@ -160,7 +162,8 @@ Property | Type | Mandatory | Description
   ],
   "rewardGroups":[
 		{
-			"rewardGroupId": "string"
+			"rewardGroupId": "string",
+			"exclusions": [ "string" ]
 		}
   ]
 }
@@ -170,8 +173,8 @@ Property | Type | Mandatory | Description
 -|-
 `currencies` | string | No | An array of `Currency Codes`.<br/>Leave blank to apply this rule to any currency.
 `countries` | string | No | An array of `Country Codes`.<br/>Leave blank to apply this rule to any country.
-`highValueInclusive` | decimal | Yes | The upper value limit this rule would apply to.<br/>Leave empty for any value.<br/>If an expliciet value is specified it must be greater than or equal to `lowValueInclusive`.
-`lowValueInclusive` | decimal | Yes | The lower value limit this rule would apply to.<br/>Leave empty for any value.<br/>If an explicit value is specified it must be greater than 0 and less than or equal to `highValueInclusive`.
+`highValueInclusive` | decimal | Yes | The upper value limit this rule would apply to.<br/>Leave empty for any value.<br/>If an expliciet value is specified it must be greater<br/>than or equal to `lowValueInclusive`.
+`lowValueInclusive` | decimal | Yes | The lower value limit this rule would apply to.<br/>Leave empty for any value.<br/>If an explicit value is specified it must be greater<br/>than 0 and less than or equal to `highValueInclusive`.
 `apps` | Array of [App models](#app-model) | Yes | The apps configured for this rule.
 `rewardGroups` | Array of [Reward Group models](#reward-group-model) | Yes | The reward groups configured for this rule.
 
@@ -197,13 +200,15 @@ Property | Type | Mandatory | Description
 ### Reward Group Model
 ```json
 {
-  "rewardGroupId": "string"
+  "rewardGroupId": "string",
+  "exclusions": [ "string" ]
 }
 ```
 
 Property | Type | Mandatory | Description
 -|-
-`rewardGroupId` | string | Yes | The `RewardGroupId` of an existing Reward Group you have previously setup.
+`rewardGroupId` | string | Yes | The `RewardGroupId` of an existing Reward Group<br/>you have previously setup.
+`exclusions` | Array of strings | No | An array of the `rewardId` that should be excluded as an option<br/>for your customers.<br/><br/>Useful when a reward group contains more<br/>rewards than you want to offer.
 
 ## Scheme Setup
 A Scheme consists of a three main components:
@@ -254,6 +259,10 @@ The `rewardGroupId` property should be set to the Reward Group Id of a previousl
 
 All the reward from the specified Reward Group will be available to your customers if the Rule is matched.
 
+To **exclude** certain rewards from being available to you customer, set the `exclusions` property to be a list of the reward ids you want to exclude.
+
+**Note:** Each reward id that you specify in `exclusions` must be a valid reward id contained in the specified reward group.
+
 ## How and when are Rules matched?
 Rules are only evaluated when requesting the Payout Options for a Transaction. This is typically called when you are looking to present the available payout options in a UI for your customer to select from.
 
@@ -284,4 +293,4 @@ When the API request to get the available payout options is executed for the Tra
 
 Rule **1** rule is **ignored** as the value filter is outside the range of payout value.
 
-Rule **2** rule is **matched** on currency, country, and value range. The payment options returned would be those configured in the matching rule - the Amazon reward matching the Transaction country, which in this example is DE (Germany).
+Rule **2** rule is **matched** on currency, country, and value range. The payment options returned would be those configured in the matching rule - the Amazon reward matching the Transaction country, which in this example is DE (Germany). If you had any `exclusions` specified for the reward group then these rewards would also be filtered out at this point too.
