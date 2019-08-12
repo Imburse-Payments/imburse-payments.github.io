@@ -31,6 +31,7 @@ The Account functions can be broken down into to levels:
 - Create new Keys
 - Get a list of all Keys
 - Get a key by its Public Key value
+- Update a Key
 - Delete a Key
 
 ##### The Tenant functions available from your Account are:
@@ -39,9 +40,11 @@ The Account functions can be broken down into to levels:
 - Get a list of all Tenants
 - Get a Tenant by its Id
 - Update a Tenant
+- Deactivate a Tenant
 - Create new Tenant API Keys
 - Get a list of all Tenant API Keys
 - Get a Tenant API Key by its Public Key value
+- Update a Tenant API Key
 - Delete a Tenant API Key
 
 **Note:** - The Tenant functions available to an Account are limited to Tenant creation and Tenant API Keys only.
@@ -111,16 +114,19 @@ This model applies to both Account API Keys and Tenant API Keys.
 {
 	"accountId": "string",
 	"tenantId": "string",
+	"name": "string",
 	"publicKey": "string",
 	"privateKey": "string",
 	"roles": [ "string" ]
 }
 ```
 
+
 Property | Type | Mandatory | Description
 -|-
 `accountId` | string | Yes | The Id of the Account that owns the key.<br/><br/>**<mark>Only applicable to Account API Keys.</mark>**
 `tenantId` | string | No | The Id of the Tenant that owns the key.<br/><br/>**<mark>Only applicable to Tenant API Keys.</mark>**
+`name` | string | Yes | A friendly name for this Key.<br/><br/>**<mark>If no name is specified a default name of `API Key` will be set.</mark>**
 `publicKey` | string | Yes | The Public Key portion of the API Key.
 `privateKey` | string | Yes | The Private Key portion of the API Key.<br/><br/>**<mark>The Private Key value cannot be retrived once created<br/>so it's important this is captured and stored somewhere safely.</mark>**
 `roles` | Array of strings | Yes | The roles given to this Key.<br/>These will be either [Account Roles](#account-roles) or [Tenant Roles](#tenant-roles).

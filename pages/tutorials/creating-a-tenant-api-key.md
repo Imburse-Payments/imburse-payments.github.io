@@ -30,6 +30,9 @@ Replace the `{management-bearer-token}` placeholder value with the `Management B
 
 Replace the `{tenantId}` placeholder value with the Tenant `id` for the Tenant you want to create the API Key for.
 
+###### Name
+You can give the new Tenant API Key a friendly name by setting the `name` property. If you don't set the name, a name will be generated for you. 
+
 ###### Roles
 The `roles` value in the request is important as it sets the permissions this API Key can have.
 
@@ -44,7 +47,8 @@ curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/tenan
   --header "Authorization: Bearer {management-bearer-token}" \
   --header "Content-Type: application/json" \
   --data "{
-	\"roles\": [\"tenant-admin\"]
+    \"name\": \"Admin Key\",
+    \"roles\": [\"tenant-admin\"]
 }"
 ```
 
@@ -59,11 +63,12 @@ The newly created `publicKey` and `privateKey` values will be required when you 
 {
   "tenantId": "88fdb12a-14dc-419c-b74c-422e2c25cfe7",
   "accountId": "53ca62f5-b124-447d-b593-2f7ea4fecdcc",
-	"publicKey": "a123456b-c12c-123d-1ab4-18bd8c8e88a3",
-	"privateKey": "AGHYR1aWYgHgyjhJLkVCd7b8XfAVeA4tuFwCQl3X64Y=",
-    "roles": [
-        "tenant-admin"
-    ]
+  "name": "Admin Key",
+  "publicKey": "a123456b-c12c-123d-1ab4-18bd8c8e88a3",
+  "privateKey": "AGHYR1aWYgHgyjhJLkVCd7b8XfAVeA4tuFwCQl3X64Y=",
+  "roles": [
+    "tenant-admin"
+  ]
 }
 ```
 
