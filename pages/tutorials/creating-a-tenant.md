@@ -14,13 +14,13 @@ You will need to create and configure at least one Tenant in your account in ord
 This tutorial offers step-by-step instructions for create a new Tenant in your Account.
 
 # Prerequisites
-Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
+As well as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
 - An Account API Key
 - Familiar with creating an HMAC token using an API Key
 
 # Create a new Tenant
-Using the `Management Bearer Token` aquired in Step 1, we can now create a new Tenant.
+Using the `Management Bearer Token` acquired in Step 1, we can now create a new Tenant.
 
 #### Request
 Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
@@ -62,8 +62,3 @@ The `tenantId` property will be the id of your newly created Tenant.
 # What's Next?
 
 - [Create a Tenant API Key](/pages/tutorials/creating-a-tenant-api-key)
-
-
-
-
-

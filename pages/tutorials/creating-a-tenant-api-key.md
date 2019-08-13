@@ -14,7 +14,7 @@ Each Tenant you create will need at least one Tenant API Key adding in order to 
 This tutorial offers step-by-step instructions for creating a new Tenant API Key for a specific Tenant.
 
 # Prerequisites
-Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
+As well as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
 - An Account API Key
 - Familiar with creating an HMAC token using an API Key
@@ -57,7 +57,7 @@ The `publicKey` and `privateKey` values are generated for you for this new key.
 
 **Note: You will need to store the public and private key values safely as the private key will not be presented again.**
 
-The newly created `publicKey` and `privateKey` values will be required when you need to aquire a Tenant derived Management Bearer Token.
+The newly created `publicKey` and `privateKey` values will be required when you need to acquire a Tenant derived Management Bearer Token.
 
 ```json
 {

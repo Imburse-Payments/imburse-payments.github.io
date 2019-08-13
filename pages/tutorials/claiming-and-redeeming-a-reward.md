@@ -14,7 +14,7 @@ A reward needs to be claimed and then redeemed in order for you to allow your cu
 For more information see the [Claiming a Reward in Getting Started](/pages/getting-started/claiming-and-redeeming-a-reward).
 
 # Prerequisites
-Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
+As well as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
 - A valid `Payout Bearer Token`
 
@@ -59,7 +59,7 @@ The `{taskId}` placeholder will be a GUID and will look like this: `8f482020-965
 We will use the header value in the next step.
 
 ## Step 2 - Check if the claim is successful
-Repeatedly call the `check` endpoint, returned in the header response from Step 1, until the reward has been succesfully claimed.
+Repeatedly call the `check` endpoint, returned in the header response from Step 1, until the reward has been successfully claimed.
 
 #### Request
 Replace the `{payout-bearer-token}` placeholder value with the `Payout Bearer Token` value.
@@ -119,4 +119,4 @@ These will need to be displayed or sent to your customer.
 }
 ```
 
-You would need use the `credentialList` to help format the Claim Code etc. for you customer's UI and also display the `redemptionInstructions`, which instucts your customer on how to redeem the reward.
+You would need use the `credentialList` to help format the Claim Code etc. for you customer's UI and also display the `redemptionInstructions`, which instructs your customer on how to redeem the reward.

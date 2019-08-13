@@ -14,7 +14,7 @@ The payout options are what you may need to present to your customer as part of 
 For more information on the getting payout options, see the [Payout Options in Getting Started](/pages/getting-started/payment-options).
 
 # Prerequisites
-Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
+As well as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
 - A valid `Payout Bearer Token`
 
@@ -122,8 +122,3 @@ The response will contain all the rewards appropriate for the customers payment 
 
 # What's Next?
 - [Claiming and Redeeming a Reward](/pages/tutorials/claiming-and-redeeming-a-reward)
-
-
-
-
-

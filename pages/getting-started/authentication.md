@@ -9,7 +9,7 @@ icon_class: icon_documents_alt icon
 breadcrumbs: "Getting Started,getting-started"
 ---
 # Authentication
-Imburse authenticates your API requests using your Account’s or Tenant's API keys. If you do not include your key when making an API request, or use one that is incorrect or outdated, Imburse returns an error.
+Imburse authenticates your API requests using your Accounts or Tenant's API keys. If you do not include your key when making an API request, or use one that is incorrect or outdated, Imburse returns an error.
 
 Every account is provided with one Account API Key at registration time. All API requests exist in either sandbox or production modes and your accounts, tenants, apps, schemes, and so forth in one mode cannot be manipulated in the other.
 
@@ -31,15 +31,15 @@ Once authenticated via the HMAC authentication scheme, we return you a Bearer to
 
 The HMAC scheme is extremely secure but is computationally quite expensive, both on the client and the server; hence why we respond with a Bearer token once authenticated.
 
-The Bearer token we respond with is a crpytic string signed on the Imburse platform and validated on the server for each API request.
+The Bearer token we respond with is a cryptic string signed on the Imburse platform and validated on the server for each API request.
 
 ## Account API Keys vs Tenant API Keys
-Your account is the top level in a 2-teir heiarachy. Your account can have many Tenants. We have separate API Keys for Accounts and Tenants:
+Your account is the top level in a 2-tier hierarchy. Your account can have many Tenants. We have separate API Keys for Accounts and Tenants:
 
 - **Account API Key** - access to create new Account API Keys, create new Tenants, and create new Tenant API Keys for your Tenants.
 - **Tenant API Key** - access to configuring the Tenants Apps, Schemes, Payment Orders, and so forth.
 
-Which securiry key you use when authenticating determines the context you are in - either Account or Tenant.
+Which security key you use when authenticating determines the context you are in - either Account or Tenant.
 
 ## Tenant Self Service vs Account Controlled
 As the account owner, you can setup your Tenants in two ways:

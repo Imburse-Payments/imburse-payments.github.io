@@ -132,4 +132,4 @@ If you received the `201 - Created` response from Step 2 then the your reward ha
 
 You can now call the `/v1/transaction/reward/redeem` endpoint to redeem your reward. This will return your a [Reward Redemption Model](#reward-redemption-model).
 
-Use the `credential list` items to help you render a UI for your customer together with  the `redemptionInstructions`, which instuct your customer how to redeem the reward.
+Use the `credential list` items to help you render a UI for your customer together with  the `redemptionInstructions`, which instructs your customer how to redeem the reward.

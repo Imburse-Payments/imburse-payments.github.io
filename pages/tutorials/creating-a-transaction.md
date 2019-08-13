@@ -14,7 +14,7 @@ To payout money to your customers, you need to generate a Transaction object. A 
 For more information on the Transactions, see the [Transactions in Getting Started](/pages/getting-started/transactions).
 
 # Prerequisites
-Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
+As well as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 - A valid `Management Bearer Token` derived from a `Tenant API Key`
 
 # Steps
@@ -30,8 +30,8 @@ Using the `Management Bearer Token` we can create an Order.
 
 #### Request
 Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
-Replace the `{customerRef}` placeholder value with the a suitable value to indentity this customer. Usually this would be the customer reference you have from your internal systems.
-The `metadata` property can be filled with arbitary key-value-pairs that help contextualize the order for you. We will pass the metadata back to you in the webhook notifications for you internal systems to disseminate.
+Replace the `{customerRef}` placeholder value with the a suitable value to identity this customer. Usually this would be the customer reference you have from your internal systems.
+The `metadata` property can be filled with arbitrary key-value-pairs that help contextualize the order for you. We will pass the metadata back to you in the webhook notifications for you internal systems to disseminate.
 
 ```curl
 curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/collect/customer/{customerRef}/order" \
@@ -58,7 +58,7 @@ Using the `Payout Bearer Token` we can create an Instruction.
 #### Request
 Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
 
-Replace the `{customerRef}` and `{orderRef}` placeholder values with the suiteable value to indentity the customer and order respectively. Usually this would be the customer reference and order reference you have in your internal systems.
+Replace the `{customerRef}` and `{orderRef}` placeholder values with the suitable value to identity the customer and order respectively. Usually this would be the customer reference and order reference you have in your internal systems.
 
 Replace the `instructionRef`, `amount`, `{open_date}`, and `{due_date}` properties with more relevant data. Date format is `yyy-mm-dd`. The Due Date needs to be on or after the Open Date.
 

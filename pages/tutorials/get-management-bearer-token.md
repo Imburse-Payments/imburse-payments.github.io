@@ -9,10 +9,10 @@ icon_class: icon_documents_alt icon
 breadcrumbs: "Tutorials,tutorials"
 ---
 # Get a Management Bearer Token
-This tutorial will take you through getting a Mangement Bearer Token using a Tenant API Key.
+This tutorial will take you through getting a Management Bearer Token using a Tenant API Key.
 
 # Prerequisites
-Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
+As well as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
 - A `Tenant API Key`. See the tutorial [Creating a Tenant API Key](/pages/tutorials/creating-a-tenant-api-key) here if you need to create one.
 - Familiar with creating an HMAC token using an API Key.

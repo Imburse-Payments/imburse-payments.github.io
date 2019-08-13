@@ -9,7 +9,7 @@ icon_class: icon_documents_alt icon
 breadcrumbs: "Getting Started,getting-started"
 ---
 # Rewards Catalog
-The Rewards Catalog is a searchable catalog of the rewards, gift cards, and rewards offered by all Imburses' reward partners - in one place.
+The Rewards Catalog is a searchable catalog of the rewards, gift cards, and rewards offered by all Imburse's reward partners - in one place.
 
 The API has calls that allow you to view the items in the Rewards Catalog, along with the details you will need for ordering items and displaying item information.
 
@@ -82,7 +82,7 @@ Every reward in the catalog has three values associated with it:
 
 A reward can be either a Variable value or a Fixed value. The `valueType` property determines this.
 
-- **Fixed Value** - For rewards that are for a fixed value, the `fixedValue` value will be specifed. For example a gift card that is only for €20.00.
+- **Fixed Value** - For rewards that are for a fixed value, the `fixedValue` value will be specified. For example a gift card that is only for €20.00.
 - **Variable Value** - For rewards that are for variable value, the `minValue` will be the minimum allowed reward value and the `maxValue` will the maximum allowed reward value. For example Amazon Gift Cards can be from €1.00 to €1,000.00.
 
 #### Searching the Catalog

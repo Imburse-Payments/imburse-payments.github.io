@@ -203,7 +203,7 @@ Credential Type | Description
 `secretCode` | A secondary credential that is numeric or alphanumeric string.
 
 ## Payment Options
-The payment options that are selected to return in the response come from processsing through the scheme rules engine. This is documented in [Payout Schemes - How and when are Rules matched?](/pages/getting-started/payout-schemes/#how-and-when-are-rules-matched).
+The payment options that are selected to return in the response come from processing through the scheme rules engine. This is documented in [Payout Schemes - How and when are Rules matched?](/pages/getting-started/payout-schemes/#how-and-when-are-rules-matched).
 
 The resultant list of Reward objects can then be used in your UI to your customers.
 

@@ -59,7 +59,7 @@ Property | Type | Mandatory | Description
 `currency` | string | Yes | The currency this Order should be processed in.<br/>Used to filter available payment options.
 `country` | string | Yes | The country this Order is related to.<br/>Used to filter available payment options.
 `scheme` | guid | Yes | The `schemeId` this order should use filter available payment options.
-`metadata` | Array of key-value pairs | No | Use this parameter to attach key-value data to the Order.<br/><br/>You can specify up to 50 keys, with key names up to 40 characters long and values up to 500 characters long.<br/><br/>Metadata is useful for storing additional, structured information on an object. As an example, you could store your user's full name and corresponding unique identifier from your system. The matadata is not used by Imburse. We will simply return your metadata to you in webhook responses relating to the Order. You can then use this to give you added context to the webhook response.
+`metadata` | Array of key-value pairs | No | Use this parameter to attach key-value data to the Order.<br/><br/>You can specify up to 50 keys, with key names up to 40 characters long and values up to 500 characters long.<br/><br/>Metadata is useful for storing additional, structured information on an object. As an example, you could store your user's full name and corresponding unique identifier from your system. The metadata is not used by Imburse. We will simply return your metadata to you in webhook responses relating to the Order. You can then use this to give you added context to the webhook response.
 
 ### Instruction Model
 ```json

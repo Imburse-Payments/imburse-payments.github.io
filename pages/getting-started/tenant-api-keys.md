@@ -49,14 +49,14 @@ Property | Type | Mandatory | Description
 `accountId` | string | Yes | The Id of the Account that owns the Tenant.
 `tenantId` | string | No | The Tenant Id this Key belongs to.
 `publicKey` | string | Yes | The Public Key portion of the API Key.
-`privateKey` | string | Yes | The Private Key portion of the API Key.<br/><br/>**<mark>The Private Key value cannot be retrived once created<br/>so it's important this is stored somewhere safe.</mark>**
+`privateKey` | string | Yes | The Private Key portion of the API Key.<br/><br/>**<mark>The Private Key value cannot be retrieved once created<br/>so it's important this is stored somewhere safe.</mark>**
 `roles` | Array of strings | Yes | The roles given to this Key.
 
 
 **Creating New Keys**<br/>
 Creating a new key will return the Private Key value in the response object.
 
-<mark>This Private Key value cannot be retrived again so it's imperitive you store the Private Key value somewhere safe once created.</mark>
+<mark>This Private Key value cannot be retrieved again so it's imperative you store the Private Key value somewhere safe once created.</mark>
 
 
 **Deleting a Key**<br/>

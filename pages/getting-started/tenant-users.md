@@ -60,7 +60,7 @@ Property | Type | Description
 
 
 **Inviting New Users**<br/>
-Each new user must be **invited** to the tenancy. An email will be sent to the `emailAddress` specified which the recipient must then accept before having access to the Imburse Portal. If a users doesn't receive the email or misplaces it, there is a **resend invitiation** method that can be actioned.
+Each new user must be **invited** to the tenancy. An email will be sent to the `emailAddress` specified which the recipient must then accept before having access to the Imburse Portal. If a users doesn't receive the email or misplaces it, there is a **resend invitation** method that can be actioned.
 
 **Accepting** an invitation is not part of the API as this is a process that is executed by the recipient using the Imburse Portal.
 

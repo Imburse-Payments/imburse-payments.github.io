@@ -74,7 +74,7 @@ Property | Type | Mandatory | Description
 When adding a new Reward Group, the name must be unique. The name is displayed in the Client Portal UI to identify the Reward Groups added to a Payout Collection Rule.
 
 ### Enabling & Disabling a Reward
-An alternative to permantly removing a Reward from the Reward Group is to `disable` it. Use this functionality when particular rewards should not be available to your customers.
+An alternative to permanently removing a Reward from the Reward Group is to `disable` it. Use this functionality when particular rewards should not be available to your customers.
 
 Set the `enabled` property of the applicable [Reward Item Model](#reward-item-model) to `false` to disable the reward. Set it back to `true` re-enable it.
 

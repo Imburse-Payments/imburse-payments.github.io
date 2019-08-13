@@ -14,7 +14,7 @@ If you are want to payout money to your customer then your Tenant will need at l
 For more information on Payout Schemes, see the [Payout Schemes in Getting Started](/pages/getting-started/payout-schemes/).
 
 # Prerequisites
-Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
+As well as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
 - A valid `Management Bearer Token` derived from a `Tenant API Key`
 - The `rewardId` of one or more Rewards from the Rewards Catalog.

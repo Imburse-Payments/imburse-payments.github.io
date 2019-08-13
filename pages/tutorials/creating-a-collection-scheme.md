@@ -14,7 +14,7 @@ If you are need to collect funds from your customer then your Tenant will need a
 For more information on Collection Schemes, see the [Collection Schemes in Getting Started](/pages/getting-started/collection-schemes/).
 
 # Prerequisites
-Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
+As well as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
 - A valid `Management Bearer Token` derived from a `Tenant API Key`
 - The `appId` of an App you have previously installed that you want to add to this Collection Scheme.

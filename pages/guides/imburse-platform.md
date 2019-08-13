@@ -12,7 +12,7 @@ icon_class: icon_documents_alt icon
 The Imburse Platform is structured as a modern, decoupled web application with a sensible service-based architecture.
 
 ##### Key platform highlights
-- Redundency - Geo redundent platform deployments in multiple regions
+- Redundancy - Geo redundant platform deployments in multiple regions
 - Secure
 - Easy of use
 - Performance
@@ -75,7 +75,7 @@ Imburse support the following currencies. All API functions that reference a Cur
 
 Alphabetic Code | Name
 -|-
-BRL | Brazillian Real
+BRL | Brazilian Real
 CAD | Canadian Dollar
 CHF | Swiss Franc
 EUR | Euro

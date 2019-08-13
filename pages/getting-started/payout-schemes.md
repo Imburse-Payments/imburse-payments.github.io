@@ -173,7 +173,7 @@ Property | Type | Mandatory | Description
 -|-
 `currencies` | string | No | An array of `Currency Codes`.<br/>Leave blank to apply this rule to any currency.
 `countries` | string | No | An array of `Country Codes`.<br/>Leave blank to apply this rule to any country.
-`highValueInclusive` | decimal | Yes | The upper value limit this rule would apply to.<br/>Leave empty for any value.<br/>If an expliciet value is specified it must be greater<br/>than or equal to `lowValueInclusive`.
+`highValueInclusive` | decimal | Yes | The upper value limit this rule would apply to.<br/>Leave empty for any value.<br/>If an explicit value is specified it must be greater<br/>than or equal to `lowValueInclusive`.
 `lowValueInclusive` | decimal | Yes | The lower value limit this rule would apply to.<br/>Leave empty for any value.<br/>If an explicit value is specified it must be greater<br/>than 0 and less than or equal to `highValueInclusive`.
 `apps` | Array of [App models](#app-model) | Yes | The apps configured for this rule.
 `rewardGroups` | Array of [Reward Group models](#reward-group-model) | Yes | The reward groups configured for this rule.
@@ -266,7 +266,7 @@ To **exclude** certain rewards from being available to you customer, set the `ex
 ## How and when are Rules matched?
 Rules are only evaluated when requesting the Payout Options for a Transaction. This is typically called when you are looking to present the available payout options in a UI for your customer to select from.
 
-The Rules should be saved with the first Rule having the narrowest set of filters to the last Rule having the broadest. When Rules are evaluted, the first Rule is  evaluated first.
+The Rules should be saved with the first Rule having the narrowest set of filters to the last Rule having the broadest. When Rules are evaluated, the first Rule is  evaluated first.
 
 ##### Example
 Assume we have a Transaction request with the following details:
@@ -286,7 +286,7 @@ And a scheme with the following Rules configured:
 
 Rule # | Currencies | Countries | Low Value | High Value | Configured Reward Groups
 -|-|-|-|-|-
-1 | **EUR** | (any) | **1** | **20** | Amazon and Cofee Shops
+1 | **EUR** | (any) | **1** | **20** | Amazon and Coffee Shops
 2 | **EUR** | (any) | **21** | (any) | Amazon
 
 When the API request to get the available payout options is executed for the Transaction, the rules will be evaluated in the order they are saved.

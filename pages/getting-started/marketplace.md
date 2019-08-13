@@ -91,7 +91,7 @@ Property | Type | Description
 `name` | string | The name of the app.
 `iconUrl` | string | Url to the apps icon.
 `description` | string | Description of the app.
-`tags` | array | A array of strings that define the apps capabiliies or catagories.
+`tags` | array | A array of strings that define the apps capabilities or categories.
 `supportedPaymentMethods` | array or [Payment Method models](#payment-method-model) | An array of the payment methods this app supports.
 `supportedCountries` | array | An array of countries this App supports.
 `supportedCurrencies` | array | An array of currencies this App supports.
@@ -116,7 +116,7 @@ Property | Type | Description
 `id` | string | The Id of the payment method
 `name` | string | The name of the payment method.
 `iconUrl` | string | The url to the apps icon.
-`tags` | array | A array of strings that define the payment methods capabiliies or catagories.
+`tags` | array | A array of strings that define the payment methods capabilities or categories.
 `isCreditCard` | bool | `true` if this payment method is a credit card; otherwise `false`.
 `supportsDirectSale` | bool | `true` if this payment method supports direct sales; otherwise `false`.
 `supportsRecurring` | bool | `true` if this payment method supports recurring payments; otherwise `false`.

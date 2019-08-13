@@ -17,7 +17,7 @@ The components are:
 - [API Keys](#api-keys)
 - [Apps](#apps)
 - [Reward Groups](#reward-groups)
-- [Collecion Schemes](#collection-schemes)
+- [Collection Schemes](#collection-schemes)
 - [Payout Schemes](#payout-schemes)
 - [Notifications](#webhooks)
 
@@ -26,7 +26,7 @@ The components are:
 ## Accounts
 As an organization signed up to the Imburse Platform you will have been setup with an Account.
 
-This Account is where Imburse will direct any invoices to aswell as using your Account contact details to connect with you.
+This Account is where Imburse will direct any invoices to as well as using your Account contact details to connect with you.
 
 Your Account is also the administrative root of your Imburse Platform and it will hold one or more of your [Tenants](/pages/guides/getting-started/what-is-a-tenant/).
 
@@ -40,7 +40,7 @@ A Tenant is where you will store configuration for:
 - [API Keys](#api-keys)
 - [Apps](#apps)
 - [Reward Groups](#reward-groups)
-- [Collecion Schemes](#collection-schemes)
+- [Collection Schemes](#collection-schemes)
 - [Payout Schemes](#payout-schemes)
 - [Notifications](#webhooks)
 
@@ -51,7 +51,7 @@ Adding users to your Tenant's gives them access to the Imburse Portal.
 A user has one or more roles attributed to them and these roles govern their access level.
 
 ## API Keys
-An API Key is a **Public and Private key set** and is used as a means of securing your request during the authenticaion process.
+An API Key is a **Public and Private key set** and is used as a means of securing your request during the authentication process.
 The API Key has one or more roles attributed to it and these roles govern the API Keys' API access.
 
 **Account API Keys** can manage accounts and create and manage tenant API Keys.
@@ -65,7 +65,7 @@ The Marketplace is the place to go to find, add, and configure the [Apps](#apps)
 Apps are components that you can install and configure into your Tenant that provide capabilities for you customers such as collecting credit card or PayPal payments, or paying out rewards.
 
 ## Rewards
-A reward is something you can give to your customers in recognition of an acheivment; for example if a customer is deemed to have driven well, and makes no car insurance claims, they could be offered an Amazon Gift Card or a cash alternative. The Imburse platform offers hundreds of reward types from many different brands in most countries.
+A reward is something you can give to your customers in recognition of an achievement; for example if a customer is deemed to have driven well, and makes no car insurance claims, they could be offered an Amazon Gift Card or a cash alternative. The Imburse platform offers hundreds of reward types from many different brands in most countries.
 
 ## Rewards Catalog
 The Rewards Catalog is a searchable collection of [Rewards](#rewards) offered by Imburse via its partners.

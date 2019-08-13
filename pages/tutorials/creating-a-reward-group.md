@@ -14,12 +14,12 @@ If you are want to payout money to your customer then your Tenant will need at l
 For more information on Reward Groups, see the [Reward Groups in Getting Started](/pages/getting-started/reward-groups).
 
 # Prerequisites
-Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
+As well as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
 - A valid `Management Bearer Token` derived from a `Tenant API Key`
 - The `rewardId` of one or more Rewards from the Rewards Catalog.
 
-# Creat the Reward Group
+# Create the Reward Group
 Using the `Management Bearer Token` we can create a new Reward Group.
 
 #### Request
@@ -48,9 +48,9 @@ You will need this `id` value in any future operations relating to this Reward G
 {
   "id": "3704a0c2-519a-4905-94eb-ade50f85e360",
   "name": "Amazon Rewards - Germany and France",
-  "rewards": [ 
-    "44a7b4a2-35f3-4a99-a189-ec6ea5265be6", 
-    "96b83d27-cbb4-46e5-aa14-260c09e27494" 
+  "rewards": [
+    "44a7b4a2-35f3-4a99-a189-ec6ea5265be6",
+    "96b83d27-cbb4-46e5-aa14-260c09e27494"
   ]
 }
 ```

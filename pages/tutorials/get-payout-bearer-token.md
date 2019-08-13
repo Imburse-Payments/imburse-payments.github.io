@@ -12,7 +12,7 @@ breadcrumbs: "Tutorials,tutorials"
 This tutorial will take you through getting a Payout Bearer Token using a Tenant API Key.
 
 # Prerequisites
-Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
+As well as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
 - A valid `Management Bearer Token` derived from a `Tenant API Key`
 
@@ -50,4 +50,3 @@ The `Payout Bearer Token` will be contained in the `accessToken` property of the
 # What's Next?
 
 - [Get Payout Options](/pages/tutorials/get-payout-options)
-

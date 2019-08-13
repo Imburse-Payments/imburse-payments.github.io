@@ -14,12 +14,12 @@ If you are looking to create a Payout Scheme that offers Rewards, Gift cards, et
 For more information on the Rewards Catalog, see the [Rewards Catalog in Getting Started](/pages/getting-started/rewards-catalog).
 
 # Prerequisites
-Aswell as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
+As well as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
 - A valid `Management Bearer Token` derived from a `Tenant API Key`
 
 # Search the Rewards Catalog
-Using the `Management Bearer Token` aquired in Step 1, we can now search the Rewards Catalog.
+Using the `Management Bearer Token` acquired in Step 1, we can now search the Rewards Catalog.
 
 #### Request
 Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
@@ -28,7 +28,7 @@ You can filter the results by supplying parameters in the request.
 
 - `appId` - **Mandatory** - Filter by a particular App Id. ie. `TANGOCARD_RAAS`.
 - `brandName` - **Optional** - Filter by a brand, ie. Amazon, Mastercard, etc.
-- `countries` - **Optional** - Filter by country where the reward can be redeemded. You can specify multiple countries by separating with a comma. ie. `GB` or `GB,DE,FR` etc.
+- `countries` - **Optional** - Filter by country where the reward can be redeemed. You can specify multiple countries by separating with a comma. ie. `GB` or `GB,DE,FR` etc.
 - `currencies` - **Optional** - Filter by the currency the reward can by redeemed in. You can specify multiple currencies by separating with a comma. ie. `EUR` or `GBP,EUR` etc.
 - `amount` - **Optional** - Filter by the amount the reward is for. Some rewards are fixed value, ie. `5.00`; others are valid for any amount within a range. Specify the amount the you want to payout to filter the rewards accordingly.
 

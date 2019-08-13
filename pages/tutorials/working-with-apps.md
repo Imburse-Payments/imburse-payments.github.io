@@ -32,7 +32,7 @@ The Marketplace has endpoints to perform the following functions:
 - [Uninstalling an App](#uninstalling-an-app)
 
 # Prerequisites
-- A valid `Management Bearer Token` derived from a `Tenant API Key`. If you don't have one, see the tutorial [Aquiring a Management Bearer Token](#aquire-management-bearer-token).
+- A valid `Management Bearer Token` derived from a `Tenant API Key`. If you don't have one, see the tutorial [Acquiring a Management Bearer Token](#acquire-management-bearer-token).
 
 
 # Get list of Apps
@@ -208,7 +208,7 @@ Response Code:
 ```
 
 # Uninstalling an App
-You can only uninstall an App if it is not being referenced in an existing Collection Scheme or Payout Scheme. Attemping to uninstall a referenced App will fail with an appropriate error mesasge.
+You can only uninstall an App if it is not being referenced in an existing Collection Scheme or Payout Scheme. Attempting to uninstall a referenced App will fail with an appropriate error message.
 
 Use the following endpoint to update any installed App.
 

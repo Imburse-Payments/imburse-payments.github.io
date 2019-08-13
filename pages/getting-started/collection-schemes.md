@@ -154,7 +154,7 @@ Property | Type | Mandatory | Description
 -|-
 `currencies` | string | No | An array of `Currency Codes`.<br/>Leave blank to apply this rule to any currency.
 `countries` | string | No | An array of `Country Codes`.<br/>Leave blank to apply this rule to any country.
-`highValueInclusive` | decimal | Yes | The upper value limit this rule would apply to.<br/>Leave empty for any value.<br/>If an expliciet value is specified it must be greater than or equal to `lowValueInclusive`.
+`highValueInclusive` | decimal | Yes | The upper value limit this rule would apply to.<br/>Leave empty for any value.<br/>If an explicit value is specified it must be greater than or equal to `lowValueInclusive`.
 `lowValueInclusive` | decimal | Yes | The lower value limit this rule would apply to.<br/>Leave empty for any value.<br/>If an explicit value is specified it must be greater than 0 and less than or equal to `highValueInclusive`.
 `apps` | Array of [App models](#app-model) | Yes | The apps configured for this rule.
 
@@ -225,14 +225,12 @@ All the payment methods from the specified App will be available to your custome
 
 Leaving the `excludedPaymentMethods` property blank will not exclude any payment methods.
 
-
-
-The order the Apps are saved inis used as a decider when multiple apps provide overlapping payment options. For example, if you add 2 apps offering Visa payments the app with the lowest `priority` would be selected to provide Visa payments.
+The order the Apps are saved is used as a decider when multiple apps provide overlapping payment options. For example, if you add 2 apps offering Visa payments then the app with the lowest `priority` would be selected to provide Visa payments.
 
 ## How and when are Rules matched?
 Rules are only evaluated when requesting the Collect Options for an Order. This is typically called when you are looking to present the available collection options in a UI for your customer to select from.
 
-The Rules should be saved with the first Rule having the narrowest set of filters to the last Rule having the broadest. When Rules are evaluted, the first Rule is  evaluated first.
+The Rules should be saved with the first Rule having the narrowest set of filters to the last Rule having the broadest. When Rules are evaluated, the first Rule is  evaluated first.
 
 **Example 1**
 

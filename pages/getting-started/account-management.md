@@ -128,7 +128,7 @@ Property | Type | Mandatory | Description
 `tenantId` | string | No | The Id of the Tenant that owns the key.<br/><br/>**<mark>Only applicable to Tenant API Keys.</mark>**
 `name` | string | Yes | A friendly name for this Key.<br/><br/>**<mark>If no name is specified a default name of `API Key` will be set.</mark>**
 `publicKey` | string | Yes | The Public Key portion of the API Key.
-`privateKey` | string | Yes | The Private Key portion of the API Key.<br/><br/>**<mark>The Private Key value cannot be retrived once created<br/>so it's important this is captured and stored somewhere safely.</mark>**
+`privateKey` | string | Yes | The Private Key portion of the API Key.<br/><br/>**<mark>The Private Key value cannot be retrieved once created<br/>so it's important this is captured and stored somewhere safely.</mark>**
 `roles` | Array of strings | Yes | The roles given to this Key.<br/>These will be either [Account Roles](#account-roles) or [Tenant Roles](#tenant-roles).
 
 ### Tenant Model
@@ -177,10 +177,10 @@ When your Account was initially setup you would have been issued with an Account
 
 You can setup additional Account API Keys as you require.
 
-**<mark>Important - Creating an Account API Key will generate your Public Key and Private Key values. The Private Key value cannot be retrived after creation so it's important this is safely stored.</mark>**
+**<mark>Important - Creating an Account API Key will generate your Public Key and Private Key values. The Private Key value cannot be retrieved after creation so it's important this is safely stored.</mark>**
 
 ##### Account Roles
-The capabilies of an Account API Key are dependent on the **Account Roles** that are assigned to it. The following table shows the **Account Roles** that are available:
+The capabilities of an Account API Key are dependent on the **Account Roles** that are assigned to it. The following table shows the **Account Roles** that are available:
 
 Account Role Name | Description
 -|-
@@ -215,7 +215,7 @@ A Tenant cannot be deleted once created.
 ##### Tenant API Keys
 A Tenant can have as many Tenant API Keys as you require.
 
-**<mark>Important - Creating a Tenant API Key will generate you Public Key and Private Key values. The Private Key value cannot be retrived after creation so it's important this is stored somewhere safe.</mark>**
+**<mark>Important - Creating a Tenant API Key will generate you Public Key and Private Key values. The Private Key value cannot be retrieved after creation so it's important this is stored somewhere safe.</mark>**
 
 ##### Tenant Roles
 The following **Tenant Roles** are available:
@@ -258,5 +258,5 @@ As the Account holder, you can control the creation of Tenant API Keys and the p
 
 Depending upon the nature of your business, you may want to restrict what your Tenants can do by only creating Tenant API Keys with limited functionality; including restricting a Tenant from creating their own keys.
 
-Conversly, you could also create just one Tenant API Key that has permissions to create further Tenant API Keys; in effect making the Tenant fully independent from the Account holder and able to self provision within the Tenant.
+Conversely, you could also create just one Tenant API Key that has permissions to create further Tenant API Keys; in effect making the Tenant fully independent from the Account holder and able to self provision within the Tenant.
 
