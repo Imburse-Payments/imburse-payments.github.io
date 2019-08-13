@@ -14,7 +14,7 @@ Each Tenant you create will need at least one Tenant API Key adding in order to 
 This tutorial offers step-by-step instructions for creating a new Tenant API Key for a specific Tenant.
 
 # Prerequisites
-As well as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
+In addition to familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
 - An Account API Key
 - Familiar with creating an HMAC token using an API Key

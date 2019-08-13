@@ -14,7 +14,7 @@ You will need to create and configure at least one Tenant in your account in ord
 This tutorial offers step-by-step instructions for create a new Tenant in your Account.
 
 # Prerequisites
-As well as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
+In addition to familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
 - An Account API Key
 - Familiar with creating an HMAC token using an API Key

@@ -14,7 +14,7 @@ To payout money to your customers, you need to generate a Transaction object. A 
 For more information on the Transactions, see the [Transactions in Getting Started](/pages/getting-started/transactions).
 
 # Prerequisites
-As well as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
+In addition to familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 - A valid `Management Bearer Token` derived from a `Tenant API Key`
 
 # Steps

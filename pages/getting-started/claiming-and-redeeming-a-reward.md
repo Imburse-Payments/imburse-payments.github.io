@@ -100,7 +100,7 @@ Credential Type | Description
 
 
 ## Steps to Redeem a Reward
-The act of claiming and redeeming a reward ensures the reward is paid for and ready for redemption. The redeem response will include the appropriate details needed to allow your customer to redeem their selected reward with the reward provider. ie. Amazon, etc.
+The act of claiming and redeeming a reward ensures the reward is paid for and ready for redemption. The redeem response will include the appropriate details needed to allow your customer to redeem their selected reward with the reward provider, ie. Amazon, etc.
 
 The process to redeem a reward is a 3 step procedure.
 
@@ -132,4 +132,4 @@ If you received the `201 - Created` response from Step 2 then the your reward ha
 
 You can now call the `/v1/transaction/reward/redeem` endpoint to redeem your reward. This will return your a [Reward Redemption Model](#reward-redemption-model).
 
-Use the `credential list` items to help you render a UI for your customer together with  the `redemptionInstructions`, which instructs your customer how to redeem the reward.
+Use the `credential list` items to help you render a UI for your customer together with the `redemptionInstructions`, which instruct your customer on how to redeem the reward.

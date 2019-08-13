@@ -12,10 +12,10 @@ breadcrumbs: "Tutorials,tutorials"
 This tutorial will take you through installing and configuring the Braintree App.
 
 # Prerequisites
-As well as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
+In addition to familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
 - An account with [Braintree Payments](https://www.braintreepayments.com target="_blank").
-- A valid `Management Bearer Token` derived from a `Tenant API Key`. If you don't have one, see the tutorial [Acquiring a Management Bearer Token](#acquire-management-bearer-token).
+- A valid `Management Bearer Token` derived from a `Tenant API Key`.
 
 # Step 1 - Installation
 Using the `Management Bearer Token` we can now install a new Braintree App.

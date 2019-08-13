@@ -11,9 +11,9 @@ breadcrumbs: "Tutorials,tutorials"
 # Tango Card RaaS
 
 # Prerequisites
-As well as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
+In addition to familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
-- A valid `Management Bearer Token` derived from a `Tenant API Key`. If you don't have one, see the tutorial [Acquiring a Management Bearer Token](#acquire-management-bearer-token).
+- A valid `Management Bearer Token` derived from a `Tenant API Key`.
 - If you already have an account with Tango Card you can use your existing `customerIdentifier` and `accountIdentifier` details. Have these handy if you want to use them.
 
 # Step 1 - Installation

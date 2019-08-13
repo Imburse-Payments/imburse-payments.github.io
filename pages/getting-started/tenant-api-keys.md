@@ -60,6 +60,6 @@ Creating a new key will return the Private Key value in the response object.
 
 
 **Deleting a Key**<br/>
-Deleting a Key will immediately prohibit that keys access to ALL APIS.
+Once deleted, the API key cannot be used to access any APIs.
 
 <mark>This action cannot be undone.</mark>

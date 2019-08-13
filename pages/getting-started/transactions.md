@@ -78,7 +78,7 @@ Property | Type | Mandatory | Description
 `openDate` | date | Yes | The earliest date this payment can be executed.<br/><br/>Date format is `YYYY-MM-DD`.
 `dueDate` | date | Yes | The date in which a manual payment is to be settled by, or if automated, will be taken on.<br/><br/>Date format is `YYYY-MM-DD`.<br/><br/>After this date we could send you missed payment webhook notifications.
 
-## Transaction Setup
+## Transaction set up
 A Transaction consists of a two components:
 
 - Order

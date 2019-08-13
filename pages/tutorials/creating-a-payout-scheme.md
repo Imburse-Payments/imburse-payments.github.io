@@ -9,12 +9,12 @@ icon_class: icon_documents_alt icon
 breadcrumbs: "Tutorials,tutorials"
 ---
 # Creating a Payout Scheme
-If you are want to payout money to your customer then your Tenant will need at least one Payout Scheme setup. Payout Schemes define the rules around which rewards, ie. Amazon, etc., are presented to your customers.
+If you are want to payout money to your customer then your Tenant will need at least one Payout Scheme set up. Payout Schemes define the rules around which rewards, ie. Amazon, etc., are presented to your customers.
 
 For more information on Payout Schemes, see the [Payout Schemes in Getting Started](/pages/getting-started/payout-schemes/).
 
 # Prerequisites
-As well as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
+In addition to familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
 - A valid `Management Bearer Token` derived from a `Tenant API Key`
 - The `rewardId` of one or more Rewards from the Rewards Catalog.

@@ -42,10 +42,10 @@ Your account is the top level in a 2-tier hierarchy. Your account can have many 
 Which security key you use when authenticating determines the context you are in - either Account or Tenant.
 
 ## Tenant Self Service vs Account Controlled
-As the account owner, you can setup your Tenants in two ways:
+As the account owner, you can set up your Tenants in two ways:
 
 - **Tenant Self Service** - Set them up with a Tenant API Key granted with full-access and **SHARE** the public and private key with the Tenant. With a full-access Tenant API Key the Tenant can self administer themselves, including setting up more Tenant API Keys for other team members.
-- **Account Controlled** - Setup a Tenant API Key but **DO NOT SHARE** the public and private key with the Tenant. You can still use the Tenant API Key to administer the Tenant but the account owner will have to perform the requests on behalf of the Tenant.
+- **Account Controlled** - Set up a Tenant API Key but **DO NOT SHARE** the public and private key with the Tenant. You can still use the Tenant API Key to administer the Tenant but the account owner will have to perform the requests on behalf of the Tenant.
 
 **Note: All of your Tenant's do not need to be configured the same.**
 

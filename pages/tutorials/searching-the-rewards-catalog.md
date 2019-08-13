@@ -14,7 +14,7 @@ If you are looking to create a Payout Scheme that offers Rewards, Gift cards, et
 For more information on the Rewards Catalog, see the [Rewards Catalog in Getting Started](/pages/getting-started/rewards-catalog).
 
 # Prerequisites
-As well as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
+In addition to familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
 - A valid `Management Bearer Token` derived from a `Tenant API Key`
 

@@ -9,7 +9,7 @@ icon_class: icon_documents_alt icon
 breadcrumbs: "Getting Started,getting-started"
 ---
 # Collection Schemes
-The Collection Scheme API functions allows you to setup and configure a Collection Scheme that define the available payment options available to your customers.
+The Collection Scheme API functions allows you to set up and configure a Collection Scheme that define the available payment options available to your customers.
 
 ## Access Requirements
 You will need a Tenant API Key to perform Collection Scheme Management functions.
@@ -80,7 +80,7 @@ The following models are used to define a Collection Scheme.
 
 Property | Type | Mandatory | Description
 -|-
-`schemeId` | guid | Yes | Auto generated upon creation.
+`schemeId` | guid | Yes | Auto-generated upon creation.
 `publishedDraftId` | Guid | No | When a draft is published, the `publishedDraftId` will<br/>be the id of the draft. It will be empty until a draft is published.
 `drafts` | Array of [Draft models](#rule-model) | Yes | Drafts for this scheme.
 
@@ -119,9 +119,9 @@ Property | Type | Mandatory | Description
 
 Property | Type | Mandatory | Description
 -|-
-`draftId` | guid | Yes | Auto generated upon creation.
+`draftId` | guid | Yes | Auto-generated upon creation.
 `name` | string | Yes | A unique name for this draft.
-`code` | string | No | An optional code for this draft to uniquely<br/>identify later in webhook notifications etc.
+`code` | string | No | An optional code for this draft to uniquely<br/>identify it later in webhook notifications etc.
 `rules` | Array of [Rule models](#rule-model) | Yes | Rules for this scheme.
 `lastModified` | datetime | - | The date and time the draft was last modified.
 
@@ -177,7 +177,7 @@ Property | Type | Mandatory | Description
 `availablePaymentMethods` | Array of strings | No | An array of `paymentMethods` that are available from the<br/>matching `appId` above.
 `excludedPaymentMethods` | Array of strings | No | An array of `paymentMethods` that<br/>you want to exclude from the rule.
 
-## Scheme Setup
+## Scheme set up
 A Scheme consists of a three main components:
 
 - Drafts
@@ -225,7 +225,7 @@ All the payment methods from the specified App will be available to your custome
 
 Leaving the `excludedPaymentMethods` property blank will not exclude any payment methods.
 
-The order the Apps are saved is used as a decider when multiple apps provide overlapping payment options. For example, if you add 2 apps offering Visa payments then the app with the lowest `priority` would be selected to provide Visa payments.
+The `priority` of the Apps within a rule will be used as a decider when multiple apps provide the same payment options. For example, if you add 2 apps offering `Visa` payments then the app with the lowest `priority` would be selected to provide Visa payments.
 
 ## How and when are Rules matched?
 Rules are only evaluated when requesting the Collect Options for an Order. This is typically called when you are looking to present the available collection options in a UI for your customer to select from.

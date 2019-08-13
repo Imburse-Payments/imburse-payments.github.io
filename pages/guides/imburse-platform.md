@@ -14,7 +14,7 @@ The Imburse Platform is structured as a modern, decoupled web application with a
 ##### Key platform highlights
 - Redundancy - Geo redundant platform deployments in multiple regions
 - Secure
-- Easy of use
+- Ease of use
 - Performance
 - HTTP APIs
 - Client Portal UI
@@ -25,7 +25,7 @@ The Imburse Platform is structured as a modern, decoupled web application with a
 
 
 # Supported Countries
-Imburse support the following countries. All API functions that reference a country will use the **ISO 3166-1 alpha-2** country code format.
+Imburse supports the following countries. All API functions that reference a country will use the **ISO 3166-1 alpha-2** country code format.
 
 Alpha 2 Code | Name
 -|-
@@ -71,7 +71,7 @@ GB|United Kingdom
 US|United States of America
 
 # Supported Currencies
-Imburse support the following currencies. All API functions that reference a Currency Code will use the **ISO 4217 alphabetic code** format.
+Imburse supports the following currencies. All API functions that reference a Currency Code will use the **ISO 4217 alphabetic code** format.
 
 Alphabetic Code | Name
 -|-

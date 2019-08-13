@@ -9,12 +9,12 @@ icon_class: icon_documents_alt icon
 breadcrumbs: "Tutorials,tutorials"
 ---
 # Creating a Collection Scheme
-If you are need to collect funds from your customer then your Tenant will need at least one Collection Scheme setup. Collection Schemes define the rules around which payment methods, such as Visa, Mastercard, PayPal, etc, are presented to your customers.
+If you are need to collect funds from your customer then your Tenant will need at least one Collection Scheme set up. Collection Schemes define the rules around which payment methods, such as Visa, Mastercard, PayPal, etc, are presented to your customers.
 
 For more information on Collection Schemes, see the [Collection Schemes in Getting Started](/pages/getting-started/collection-schemes/).
 
 # Prerequisites
-As well as familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
+In addition to familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
 - A valid `Management Bearer Token` derived from a `Tenant API Key`
 - The `appId` of an App you have previously installed that you want to add to this Collection Scheme.

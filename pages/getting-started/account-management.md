@@ -128,7 +128,7 @@ Property | Type | Mandatory | Description
 `tenantId` | string | No | The Id of the Tenant that owns the key.<br/><br/>**<mark>Only applicable to Tenant API Keys.</mark>**
 `name` | string | Yes | A friendly name for this Key.<br/><br/>**<mark>If no name is specified a default name of `API Key` will be set.</mark>**
 `publicKey` | string | Yes | The Public Key portion of the API Key.
-`privateKey` | string | Yes | The Private Key portion of the API Key.<br/><br/>**<mark>The Private Key value cannot be retrieved once created<br/>so it's important this is captured and stored somewhere safely.</mark>**
+`privateKey` | string | Yes | The Private Key portion of the API Key.<br/><br/>**<mark>The Private Key value cannot be retrieved after creation<br/>so it's important it is captured and stored somewhere safe.</mark>**
 `roles` | Array of strings | Yes | The roles given to this Key.<br/>These will be either [Account Roles](#account-roles) or [Tenant Roles](#tenant-roles).
 
 ### Tenant Model
@@ -155,7 +155,7 @@ Property | Type | Mandatory | Description
 `name` | string | Yes | The Tenant name.
 `address` | [Address](#address-model) model | Yes | The Tenants address.
 
-## Account Setup
+## Account Set up
 An Account has access to four main components:
 
 - Account
@@ -170,14 +170,14 @@ The diagram below shows the relationship between these four components.
 ### Account
 The Account is the root of the system. The Account API Keys and Tenants are child objects of the Account.
 
-Your Account is setup by Imburse upon registration.
+Your Account is set up by Imburse upon registration.
 
 ### Account API Keys
-When your Account was initially setup you would have been issued with an Account API Key to allow you to access the APIs.
+When your Account was initially set up you would have been issued with an Account API Key to allow you to access the APIs.
 
-You can setup additional Account API Keys as you require.
+You can set up additional Account API Keys as you require.
 
-**<mark>Important - Creating an Account API Key will generate your Public Key and Private Key values. The Private Key value cannot be retrieved after creation so it's important this is safely stored.</mark>**
+**<mark>Important - Creating an Account API Key will generate your Public Key and Private Key values. The Private Key value cannot be retrieved after creation so it's important it is captured and stored somewhere safe.</mark>**
 
 ##### Account Roles
 The capabilities of an Account API Key are dependent on the **Account Roles** that are assigned to it. The following table shows the **Account Roles** that are available:
@@ -215,7 +215,7 @@ A Tenant cannot be deleted once created.
 ##### Tenant API Keys
 A Tenant can have as many Tenant API Keys as you require.
 
-**<mark>Important - Creating a Tenant API Key will generate you Public Key and Private Key values. The Private Key value cannot be retrieved after creation so it's important this is stored somewhere safe.</mark>**
+**<mark>Important - Creating a Tenant API Key will generate you Public Key and Private Key values. The Private Key value cannot be retrieved after creation so it's important it is captured and stored somewhere safe.</mark>**
 
 ##### Tenant Roles
 The following **Tenant Roles** are available:

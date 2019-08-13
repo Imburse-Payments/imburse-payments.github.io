@@ -138,7 +138,7 @@ Property | Type |  Description
 `status` | string | Either `active` or `inactive`.
 `description` | string | The description of the brand.
 `shortDescription` | string | A short version of the description of the brand.
-`disclaimer` | string | The brands disclaimer.
+`disclaimer` | string | The brand's disclaimer.
 `terms` | string | The terms of use for the brand.
 `imageUrls` | Array of [Image Models](#image-model) | Brand approved images, in various sizes, that you can use in your UI.
 `requirements` | [Brand Requirements Model](#brand-requirements-model) | The brand's requirements.
@@ -159,7 +159,7 @@ Property | Type |  Description
 `width` | integer | The pixel width of the image.
 
 
-### Requirements Model
+### Brand Requirements Model
 ```json
 {
   "alwaysShowDisclaimer": false,
@@ -199,7 +199,7 @@ Credential Type | Description
 `eventNumber` | A secondary credential that is numeric or alphanumeric string.
 `expirationDate` | A date after which the issued reward will no longer be redeemable.
 `pin` | Personal Identification Number. A secondary credential that is a numeric or alphanumeric string.
-`redemptionUrl` | A landing page URL where reward credentials and redemption information are typically presented. The landing page may or may not require the recipient to enter one or more secondary credentials to `complete the reward redemption process.
+`redemptionUrl` | A landing page URL where reward credentials and redemption information are typically presented. The landing page may or may not require the recipient to enter one or more secondary credentials to complete the reward redemption process.
 `secretCode` | A secondary credential that is numeric or alphanumeric string.
 
 ## Payment Options

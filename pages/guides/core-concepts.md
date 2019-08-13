@@ -24,11 +24,11 @@ The components are:
 <img src="/assets/images/guides/getting-started/concept-overview.png" style="width:900px;" title="Overview" alt="Overview"/>
 
 ## Accounts
-As an organization signed up to the Imburse Platform you will have been setup with an Account.
+As an organization which signed up to the Imburse Platform you will have been provided with a set up Account.
 
-This Account is where Imburse will direct any invoices to as well as using your Account contact details to connect with you.
+This Account is where Imburse will direct any invoices to in addition to using your Account contact details to connect with you.
 
-Your Account is also the administrative root of your Imburse Platform and it will hold one or more of your [Tenants](/pages/guides/getting-started/what-is-a-tenant/).
+Your Account is also the administrative root of your Imburse Platform and it will hold one or more of your [Tenants](#tenants).
 
 ## Tenants
 You can consider a Tenant as either a company, department, or organization.
@@ -47,14 +47,14 @@ A Tenant is where you will store configuration for:
 Tenants do not share information with each other and are a self contained and isolated entity within a multi-tenancy system.
 
 ## Users
-Adding users to your Tenant's gives them access to the Imburse Portal.
+Adding users to your Tenants gives them access to the Imburse Portal.
 A user has one or more roles attributed to them and these roles govern their access level.
 
 ## API Keys
 An API Key is a **Public and Private key set** and is used as a means of securing your request during the authentication process.
 The API Key has one or more roles attributed to it and these roles govern the API Keys' API access.
 
-**Account API Keys** can manage accounts and create and manage tenant API Keys.
+**Account API Keys** can manage accounts and create and manage the Tenant API Keys.
 
 **Tenant API Keys** can manage everything for the Tenant. ie, Apps, Schemes, etc.
 
@@ -84,7 +84,7 @@ A Payout Scheme is an arrangement of rules that dictate the payout options, such
 ## Webhooks
 Webhooks, also known as Web Callbacks or an HTTP push API, is a way for an application to provide other applications with near real-time information.
 
-Imburse use Webhooks to provide you with near real-time notifications to your internal systems, such as when a payment is settled etc.
+Imburse uses Webhooks to provide you with near real-time notifications to your internal systems, such as when a payment is settled etc.
 
 ## Transactions
 A Transaction holds order and instruction details that allow Imburse to collect or payout money on your behalf.

@@ -9,7 +9,7 @@ icon_class: icon_documents_alt icon
 breadcrumbs: "Getting Started,getting-started"
 ---
 # Payout Schemes
-The Payout Scheme API functions allows you to setup and configure a Payout Scheme that define the available payout options available to your customers.
+The Payout Scheme API functions allows you to set up and configure a Payout Scheme that define the available payout options available to your customers.
 
 ## Access Requirements
 You will need a Tenant API Key to perform Payout Scheme Management functions.
@@ -86,7 +86,7 @@ The following models are used to define a Payout Scheme.
 
 Property | Type | Mandatory | Description
 -|-
-`schemeId` | guid | Yes | Auto generated upon creation.
+`schemeId` | guid | Yes | Auto-generated upon creation.
 `publishedDraftId` | Guid | No | When a draft is published, the `publishedDraftId` will<br/>be the id of the draft. It will be empty until a draft is published.
 `drafts` | Array of [Draft models](#rule-model) | Yes | Drafts for this scheme.
 
@@ -132,7 +132,7 @@ Property | Type | Mandatory | Description
 
 Property | Type | Mandatory | Description
 -|-
-`draftId` | guid | Yes | Auto generated upon creation.
+`draftId` | guid | Yes | Auto-generated upon creation.
 `name` | string | Yes | A unique name for this draft.
 `code` | string | No | An optional code for this draft to uniquely<br/>identify later in webhook notifications etc.
 `rules` | Array of [Rule models](#rule-model) | Yes | Rules for this scheme.
@@ -207,10 +207,10 @@ Property | Type | Mandatory | Description
 
 Property | Type | Mandatory | Description
 -|-
-`rewardGroupId` | string | Yes | The `RewardGroupId` of an existing Reward Group<br/>you have previously setup.
+`rewardGroupId` | string | Yes | The `RewardGroupId` of an existing Reward Group<br/>you have previously set up.
 `exclusions` | Array of strings | No | An array of the `rewardId` that should be excluded as an option<br/>for your customers.<br/><br/>Useful when a reward group contains more<br/>rewards than you want to offer.
 
-## Scheme Setup
+## Scheme set up
 A Scheme consists of a three main components:
 
 - Drafts
@@ -255,7 +255,7 @@ The order the rules are saved in will be the exact same order when you get a Sch
 ### Reward Groups
 The Reward Group components in a Rule describes the Reward Groups, and by extension the rewards from those Reward Groups, that will be available when the Rule is matched - see [How and when are Rules matched?](#how-and-when-are-rules-matched) below.
 
-The `rewardGroupId` property should be set to the Reward Group Id of a previously setup Reward Group in your Tenant.
+The `rewardGroupId` property should be set to the Reward Group Id of a previously set up Reward Group in your Tenant.
 
 All the reward from the specified Reward Group will be available to your customers if the Rule is matched.
 
