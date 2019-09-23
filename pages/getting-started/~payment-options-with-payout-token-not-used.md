@@ -4,7 +4,7 @@ title: Payment Options
 toc: getting-started-payout-payment-options
 body_color: body-primary
 section_name: Payment Options
-last_updated: September 23rd, 2019
+last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
 breadcrumbs: "Getting Started,getting-started"
 ---
@@ -22,10 +22,10 @@ For more information on creating a Management Bearer Token, see:
 ## Functions
 The available functions are:
 
-- Get Payout Payment Options
+- Get Payout Options
 
 ## API Documentation
-All the Payout Schemes functions are fully documented in the [Payout Schemes API documentation](https://api-docs.imbursepayments.com/?version=latest#ebd01177-836e-4c2e-bfc9-c4dbfc07feb1).
+All the Transaction functions are fully documented in the [Schemes API documentation](https://api-docs.imbursepayments.com/?version=latest#09f68806-2b90-433d-9f6d-684cfef1d890).
 
 ## Models
 The following models are used for Payment Options:
