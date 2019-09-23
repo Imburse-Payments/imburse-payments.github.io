@@ -1,36 +1,35 @@
 ---
 layout: default
-title: Claiming and Redeeming a Reward
-toc: getting-started-claiming-and-redeeming-a-reward
+title: Claiming a Reward
+toc: getting-started-claiming-a-reward
 body_color: body-primary
-section_name: Claiming and Redeeming a Reward
-last_updated: May 31st, 2019
+section_name: Claiming a Reward
+last_updated: September 23rd, 2019
 icon_class: icon_documents_alt icon
 breadcrumbs: "Getting Started,getting-started"
 ---
-# Claiming and Redeeming a Reward
+# Claiming a Reward
 Once your customer has chosen a reward you will need to claim and then redeem the reward.
 
 ## Access Requirements
 You will need a Tenant API Key to process a reward.
 
-For more information on creating a Payout Bearer Token, see:
+For more information on creating a Management Bearer Token, see:
 
 - [Getting Started - Authentication](/pages/getting-started/authentication)
-- [Tutorials - Get a Payout Bearer Token](/pages/tutorials/get-payout-bearer-token/)
+- [Tutorials - Get a Management Bearer Token](/pages/tutorials/get-management-bearer-token/)
 
 ## Functions
 The available functions are:
 
 1. Claim a Reward
-2. Check if the claim is successful
-3. Redeem the Reward
+2. Get the reward
 
 ## API Documentation
 All the Payment Order API functions are fully documented in the [Transaction API documentation](https://api-docs.imbursepayments.com/?version=latest#09f68806-2b90-433d-9f6d-684cfef1d890).
 
 ## Models
-The following model is returned when the Redeem Reward endpoint is called.
+The following model is returned when the Claim endpoint is called.
 
 ### Reward Redemption Model
 ```json
@@ -72,7 +71,7 @@ Property | Type | Description
 #### Reward Types
 We return the following types of reward credentials. If your integration requires displaying reward data in app or creating custom reward emails you may need to add logic to parse the returned reward data correctly.
 
-**Note - we are continuously expanding our catalog and it is likely that new reward types will arise over time. For this reason we recommend a fallback / default to handle unspecified types as text.
+**Note - we are continuously expanding our catalog and it is likely that new reward types will arise over time. For this reason we recommend a fallback / default to handle unspecified types as text.**
 
 Reward Type | Description | Integration Example
 -|-|-
@@ -99,37 +98,28 @@ Credential Type | Description
 `secretCode` | A secondary credential that is numeric or alphanumeric string.
 
 
-## Steps to Redeem a Reward
-The act of claiming and redeeming a reward ensures the reward is paid for and ready for redemption. The redeem response will include the appropriate details needed to allow your customer to redeem their selected reward with the reward provider, ie. Amazon, etc.
+## Steps to Claim a Reward
+The act of claiming a reward ensures the reward is paid for and ready for redemption. The redeem response will include the appropriate details needed to allow your customer to redeem their selected reward with the reward provider, ie. Amazon, etc.
 
 The process to redeem a reward is a 3 step procedure.
 
 1. Claim a Reward
-2. Check that the Reward has been successfully claimed
-3. Redeem the Reward
+2. Get the Reward
 
 #### Step 1 - Claim a Reward
-Call the `/v1/transaction/reward/claim` endpoint to immediately receive a `TaskId` in the response.
+Call the `/v1/order-management/{orderRef}/instruction/{instructionRef}` endpoint to immediately receive a `TransactionId` in the response.
 
-The time taken to claim a reward can vary so we will give you a `TaskId` to check against while we process the claim in the background.
+The time taken to claim a reward can vary so we give you a `TransactionId` to check against while we process the claim in the background.
 
-#### Step 2 - Check if claim is successful
-Call the `/v1/transaction/check/{task-id}` endpoint, replacing `{task-id}` with the actual Task Id from Step 1.
+#### Step 2 - Get the Reward
+Call the `/v1/customer-vault/{customerRef}/reward/{financialInstrumentId}/transaction/{transactionId}` endpoint, replacing `{transactionId}` with the actual Transaction Id from Step 1.
 
-Expect the following responses:
-
-Response Code | Action to take
--|-
-`200 - OK` | Claim still being processed, continue polling this endpoint by repeating Step 2.
-`201 - Created` | Reward has been claimed successfully. You can now call the `Redeem a Reward` endpoint - see Step 3.
-
-We would recommend polling every 250ms (1/4 of a second) until the `201 - Created` response is returned.
+Check the `status` property. If the status is still `SETTLING` we need to repeat Step 2. We would recommend polling every second until the `status` changes from `SETTLING`.
 
 **Note: There will be variances in processing times depending on your rewards provider.**
 
-#### Step 3 - Redeem the Reward
-If you received the `201 - Created` response from Step 2 then the your reward has been successfully claimed!
+When the `status` changes to either `SETTLED` or `FAILED` the transaction is complete.
 
-You can now call the `/v1/transaction/reward/redeem` endpoint to redeem your reward. This will return your a [Reward Redemption Model](#reward-redemption-model).
+When the `status` is `SETTLED`, the `data` property will contain a [Reward Redemption Model](#reward-redemption-model).
 
 Use the `credential list` items to help you render a UI for your customer together with the `redemptionInstructions`, which instruct your customer on how to redeem the reward.

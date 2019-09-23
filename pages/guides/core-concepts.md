@@ -4,7 +4,7 @@ title: Core Concepts
 toc: core-concepts
 body_color: body-green
 section_name: Core Concepts
-last_updated: May 31st, 2019
+last_updated: September 23rd, 2019
 icon_class: icon_documents_alt icon
 ---
 # Overview
@@ -70,7 +70,7 @@ A reward is something you can give to your customers in recognition of an achiev
 ## Rewards Catalog
 The Rewards Catalog is a searchable collection of [Rewards](#rewards) offered by Imburse via its partners.
 
-The API has calls that allow you to view the items in the catalog, along with the details you will need for ordering and redeeming with the provider.
+The API has calls that allow you to view the items in the catalog, along with the details you will need for redeeming with the provider.
 
 ## Reward Groups
 A Reward Group is a collection of one or more [Rewards](#rewards), curated by you. Multiple Rewards Groups can be created that can then be shared between your [Payout Schemes](#payout-schemes).

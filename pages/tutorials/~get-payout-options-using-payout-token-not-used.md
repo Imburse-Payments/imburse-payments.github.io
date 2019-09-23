@@ -4,7 +4,7 @@ title: Get Payout Options
 toc: tutorial-get-payout-options
 body_color: body-orange
 section_name: Get Payout Options
-last_updated: September 23rd, 2019
+last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
 breadcrumbs: "Tutorials,tutorials"
 ---
@@ -16,22 +16,23 @@ For more information on the getting payout options, see the [Payout Options in G
 # Prerequisites
 In addition to familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
- A valid `Management Bearer Token` derived from a `Tenant API Key`
+- A valid `Payout Bearer Token`
+
+# How are Payout Options determined?
+The payout options are determined by the following steps.
+1. The Payout Bearer Token you created in the previous tutorial holds the customer ref, order ref, and instruction ref.
+2. We lookup the payout instruction using the references from step 1 to give us the Scheme, Country, Currency, and instruction value.
+3. Using the data from step 2, we then run through the Scheme Rules, looking for a match on Country, Currency, and value. We then return the payout reward options for the matching rule.
 
 # Get the Payout Options
-Using the `Management Bearer Token` we can get the Payout Options.
+Using the `Payout Bearer Token` we can get the Payout Options.
 
 #### Request
-Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
+Replace the `{payout-bearer-token}` placeholder value with the `Payout Bearer Token` value.
 
 ```curl
-curl --location --request GET "https://sandbox-api.imbursepayments.com/v1/schemes/payout/{schemeId}/options" \
-  --header "Authorization: Bearer {management-bearer-token}"
-  --data "{
-    \"amount\": 10.00,
-    \"currency\": \"EUR\",
-    \"country\": \"DE\"
-  }"
+curl --location --request GET "https://sandbox-api.imbursepayments.com/v1/payout/options" \
+  --header "Authorization: Bearer {payout-bearer-token}"
 ```
 
 #### Response

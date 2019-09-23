@@ -4,7 +4,7 @@ title: Creating a Transaction
 toc: tutorial-creating-a-transaction
 body_color: body-pink
 section_name: Creating a Transaction
-last_updated: May 31st, 2019
+last_updated: September 23rd, 2019
 icon_class: icon_documents_alt icon
 breadcrumbs: "Tutorials,tutorials"
 ---
@@ -23,25 +23,27 @@ The steps involved to create a Transaction are:
 1. Create an Order
 2. Create an Instruction for the Order
 
-Each Order can have multiple Instructions. In this tutorial we will only create 1 instruction. You can repeat Step 2 for as many instructions you need to add to the order. Just change the Instruction Ref to make sure they are unique per instruction.
+Each Order can have multiple Instructions. In this tutorial we will only create 1 instruction. You can repeat Step 2 for as many instructions you need to add to the order. Just change the Instruction Ref to make sure they are unique per instruction in an order. You can optionally create the instructions during the creation of the order too. For our example we'll seperate the requests.
+
 
 ## Step 1 - Create the Order
 Using the `Management Bearer Token` we can create an Order.
 
 #### Request
 Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
-Replace the `{customerRef}` placeholder value with the a suitable value to identity this customer. Usually this would be the customer reference you have from your internal systems.
+
+Replace the `orderRef` property value ((REF1 in the example below) with the a suitable value to identity this order. Usually this would be the order reference you have from your internal systems.
+
 The `metadata` property can be filled with arbitrary key-value-pairs that help contextualize the order for you. We will pass the metadata back to you in the webhook notifications for you internal systems to disseminate.
 
+
 ```curl
-curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/collect/customer/{customerRef}/order" \
+curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/order-management" \
   --header "Authorization: Bearer {management-bearer-token}" \
   --header "Content-Type: application/json" \
   --data "{
   \"orderRef\": \"REF1\",
-  \"currency\": \"EUR\",
-  \"country\": \"DE\",
-  \"scheme\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",
+  \"instructions\": [],
   \"metadata\": {
     \"someInternalRef1\": \"my-internal-ref\",
     \"someInternalRef2\": \"another-internal-ref\"
@@ -50,64 +52,60 @@ curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/colle
 ```
 
 #### Response
-The response will be `200 - OK`
+The response will be `201 - Created`
 
 ## Step 2 - Create the Instruction
-Using the `Payout Bearer Token` we can create an Instruction.
+Using the `Management Bearer Token` we can create an Instruction.
 
 #### Request
 Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
 
-Replace the `{customerRef}` and `{orderRef}` placeholder values with the suitable value to identity the customer and order respectively. Usually this would be the customer reference and order reference you have in your internal systems.
+Replace the `{orderRef}` placeholder value with the same Order Ref value you gave in Step 1.
 
-Replace the `instructionRef`, `amount`, `{open_date}`, and `{due_date}` properties with more relevant data. Date format is `yyy-mm-dd`. The Due Date needs to be on or after the Open Date.
+Replace the `instructionRef`, `amount`, and `{settled_by_date}` properties with more relevant data. Date format is `yyy-mm-dd`.
 
 ```curl
-curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/collect/customer/{customerRef}/order/{orderRef}/instruction" \
+curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/order-management/{orderRef}/instruction" \
   --header "Authorization: Bearer {{management-bearer-token}}" \
   --header "Content-Type: application/json" \
   --data "{
-	\"instructionRef\": \"01\",
+	\"instructionRef\": \"I01\",
+	\"customerRef\": \"C01\",
+	\"direction\": \"01\",
+	\"instrumentId\": \"a1ab5f63-3f3a-4562-b3fc-98963f66af12\",
 	\"amount\": \"210.00\",
-	\"openDate\": \"{open_date}\",
-	\"dueDate\": \"{due_date}\"
+    \"currency\": \"EUR\",
+    \"country\": \"DE\",
+	\"settledByDate\": \"{settled_by_date}\"
+    \"scheme\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",
+    \"metadata\": []
     }"
 ```
 
 #### Response
 The response will be `201 - Created`
 
+
 ```json
 {
-    "instructionRef": "01",
-    "status": "OPEN",
-    "detail": {
-        "amount": 40.5,
-        "currency": {
-            "id": "GBP",
-            "code": "GBP",
-            "name": "Pound Sterling",
-            "symbol": "£"
-        },
-        "country": {
-            "id": "UK",
-            "code": "UK",
-            "name": "Great Britain",
-            "currency": {
-                "id": "GBP",
-                "code": "GBP",
-                "name": "Pound Sterling",
-                "symbol": "£"
-            }
-        }
+    "direction": "",
+    "status": "",
+    "customerRef": "C01",
+    "financialInstrument": {
+        "financialInstrumentId": "a1ab5f63-3f3a-4562-b3fc-98963f66af12",
+        "source": "",
+        "canUpdate": true
     },
-    "scheme": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-    "openDate": {
-        "value": "2019-06-14T10:12:08.239Z"
+    "amount": 210,
+    "currency": "EUR",
+    "country": "DE",
+    "settledByDate": "2020-12-31T00:00:00.000Z",
+    "Scheme": {
+        "schemeId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "source": "",
+        "canUpdate": true
     },
-    "dueDate": {
-        "value": "2019-06-14T10:12:08.239Z"
-    }
+    "metaData": []
 }
 ```
 
