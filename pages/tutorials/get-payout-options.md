@@ -25,13 +25,8 @@ Using the `Management Bearer Token` we can get the Payout Options.
 Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
 
 ```curl
-curl --location --request GET "https://sandbox-api.imbursepayments.com/v1/schemes/payout/{schemeId}/options" \
+curl --location --request GET "https://sandbox-api.imbursepayments.com/v1/schemes/payout/{schemeId}/options?amount=10.00&currency=EUR&country=DE" \
   --header "Authorization: Bearer {management-bearer-token}"
-  --data "{
-    \"amount\": 10.00,
-    \"currency\": \"EUR\",
-    \"country\": \"DE\"
-  }"
 ```
 
 #### Response
