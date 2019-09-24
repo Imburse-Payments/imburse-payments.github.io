@@ -114,9 +114,7 @@ The response will be `201 - Created`
 ```
 
 # What's Next?
-- [Get Payout Bearer Token](/pages/tutorials/get-payout-bearer-token)
-
-
+- [Claiming a Reward](/pages/tutorials/claiming-a-reward)
 
 
 
