@@ -9,7 +9,7 @@ icon_class: icon_documents_alt icon
 breadcrumbs: "Getting Started,getting-started"
 ---
 # Claiming a Reward
-Once your customer has chosen a reward you will need to claim and then redeem the reward.
+Once you have created an order and instruction, you can then claim the reward.
 
 ## Access Requirements
 You will need a Tenant API Key to process a reward.
@@ -111,13 +111,13 @@ Credential Type | Description
 ## Steps to Claim a Reward
 The act of claiming a reward ensures the reward is paid for and ready for redemption. The redeem response will include the appropriate details needed to allow your customer to redeem their selected reward with the reward provider, ie. Amazon, etc.
 
-The process to redeem a reward is a 3 step procedure.
+The process to claim a reward is a 2 step procedure.
 
 1. Claim a Reward
 2. Get the Reward
 
 #### Step 1 - Claim a Reward
-Call the `/v1/order-management/{orderRef}/instruction/{instructionRef}` endpoint to immediately receive a link to a `TransactionId` in the response headers.
+Call the `/v1/order-management/{orderRef}/instruction/{instructionRef}/claim-reward` endpoint to immediately receive a link to a `TransactionId` in the response headers.
 
 The time taken to claim a reward can vary so we give you a `TransactionId` to check against while we process the claim in the background.
 

@@ -1,29 +1,29 @@
 ---
 layout: default
-title: Creating a Transaction
-toc: tutorial-creating-a-transaction
-body_color: body-pink
-section_name: Creating a Transaction
+title: Orders and Instructions
+toc: tutorial-orders-and-instructions
+body_color: body-blue
+section_name: Orders and Instructions
 last_updated: September 23rd, 2019
 icon_class: icon_documents_alt icon
 breadcrumbs: "Tutorials,tutorials"
 ---
-# Creating a Transaction
-To payout money to your customers, you need to generate a Transaction object. A Transaction tells Imburse when and how much to payout to your customer.
+# Orders and Instructions
+To payout money to or collect money from your customers, you need to generate Orders and Instructions. An Instruction tells Imburse when and how much to payout to or collect from your customer.
 
-For more information on the Transactions, see the [Transactions in Getting Started](/pages/getting-started/transactions).
+For more information on Order Management, see [Order Management in Getting Started](/pages/getting-started/order-management).
 
 # Prerequisites
 In addition to familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 - A valid `Management Bearer Token` derived from a `Tenant API Key`
 
 # Steps
-The steps involved to create a Transaction are:
+The steps involved in managing orders are:
 
 1. Create an Order
 2. Create an Instruction for the Order
 
-Each Order can have multiple Instructions. In this tutorial we will only create 1 instruction. You can repeat Step 2 for as many instructions you need to add to the order. Just change the Instruction Ref to make sure they are unique per instruction in an order. You can optionally create the instructions during the creation of the order too. For our example we'll separate the requests.
+Each Order can have multiple Instructions. In this tutorial we will only create one instruction. Repeat *Step 2* for each instruction you need to add to an order. Just change the Instruction Ref to make sure they are unique per instruction in an order. You can optionally create the instructions during the creation of the order too. For our example we'll separate the requests.
 
 
 ## Step 1 - Create the Order
@@ -48,10 +48,6 @@ curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/order
     \"someInternalRef2\": \"another-internal-ref\"
   },
   \"customerDefaults\": {
-    "\financialInstrumentIds\": {
-    },
-    \"schemeIds\": {
-    }
   }
 }"
 ```
@@ -84,7 +80,7 @@ curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/order
 	\"settledByDate\": \"{settled_by_date}\"
   \"scheme\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",
   \"metadata\": []
-    }"
+  }"
 ```
 
 #### Response

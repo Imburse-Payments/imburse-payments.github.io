@@ -86,5 +86,5 @@ Webhooks, also known as Web Callbacks or an HTTP push API, is a way for an appli
 
 Imburse uses Webhooks to provide you with near real-time notifications to your internal systems, such as when a payment is settled etc.
 
-## Transactions
-A Transaction holds order and instruction details that allow Imburse to collect or payout money on your behalf.
+## Orders and Instructions
+Orders and instructions hold the necessary details to allow Imburse to collect or payout money on your behalf.

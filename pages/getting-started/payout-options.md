@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Payment Options
-toc: getting-started-payout-payment-options
+title: Payout Options
+toc: getting-started-payout-options
 body_color: body-primary
-section_name: Payment Options
+section_name: Payout Options
 last_updated: September 23rd, 2019
 icon_class: icon_documents_alt icon
 breadcrumbs: "Getting Started,getting-started"
@@ -22,65 +22,69 @@ For more information on creating a Management Bearer Token, see:
 ## Functions
 The available functions are:
 
-- Get Payout Payment Options
+- Get Payout Options
 
 ## API Documentation
-All the Payout Schemes functions are fully documented in the [Payout Schemes API documentation](https://api-docs.imbursepayments.com/?version=latest#ebd01177-836e-4c2e-bfc9-c4dbfc07feb1).
+All the Payout Options functions are fully documented in the [Payout Options API documentation](https://api-docs.imbursepayments.com/?version=latest#d333ea84-805c-4456-8ad7-c825a4806bbf).
 
 ## Models
-The following models are used for Payment Options:
+The following models are used for Payout Options:
+
 
 ###  Reward Model
 ```json
 {
-    "rewardId": "string",
-    "rewardName": "string",
-    "rewardType": "string",
-    "status": "string",
-    "countries": [
-      "string"
-    ],
-    "currencyCode": "string",
-    "exchangeRateRule": null,
-    "isWholeAmountValueRequired": false,
-    "valueType": "string",
-    "fixedValue": null,
-    "maxValue": 0,
-    "minValue": 0,
-    "credentialTypes": [
-      "string"
-    ],
-    "redemptionInstructions": "string",
-    "tags": [ "string" ],
-    "app": {
-      "appId": "string",
-      "name": "string"
-    },
-    "brand": {
-      "brandKey": "string",
-      "brandName": "string",
+  "rewards": [
+    {
+      "rewardId": "string",
+      "rewardName": "string",
+      "rewardType": "string",
       "status": "string",
-      "description": "string",
-      "shortDescription": "string",
-      "disclaimer": "string",
-      "terms": "string",
-      "imageUrls": [
-      {
-        "ppi": 0,
-        "url": "string",
-        "width": 0
-      }
+      "countries": [
+        "string"
       ],
-      "requirements": {
-        "alwaysShowDisclaimer": false,
-        "disclaimerInstructions": "string",
-        "displayInstructions": "string",
-        "termsAndConditionsInstructions": "string"
-      }
-    },
-    "createdDate": "string",
-    "lastUpdateDate": "string"
-}
+      "currencyCode": "string",
+      "exchangeRateRule": null,
+      "isWholeAmountValueRequired": false,
+      "valueType": "string",
+      "fixedValue": null,
+      "maxValue": 0,
+      "minValue": 0,
+      "credentialTypes": [
+        "string"
+      ],
+      "redemptionInstructions": "string",
+      "tags": [ "string" ],
+      "app": {
+        "appId": "string",
+        "name": "string"
+      },
+      "brand": {
+        "brandKey": "string",
+        "brandName": "string",
+        "status": "string",
+        "description": "string",
+        "shortDescription": "string",
+        "disclaimer": "string",
+        "terms": "string",
+        "imageUrls": [
+        {
+          "ppi": 0,
+          "url": "string",
+          "width": 0
+        }
+        ],
+        "requirements": {
+          "alwaysShowDisclaimer": false,
+          "disclaimerInstructions": "string",
+          "displayInstructions": "string",
+          "termsAndConditionsInstructions": "string"
+        }
+      },
+      "createdDate": "string",
+      "lastUpdateDate": "string"
+    }
+  ]
 ```
 
 Property | Type |  Description

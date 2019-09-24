@@ -11,7 +11,7 @@ breadcrumbs: "Tutorials,tutorials"
 # Get Payout Options
 The payout options are what you may need to present to your customer as part of the payout process you are developing.
 
-For more information on the getting payout options, see the [Payout Options in Getting Started](/pages/getting-started/payment-options).
+For more information on the getting payout options, see the [Payout Options in Getting Started](/pages/getting-started/payout-options).
 
 # Prerequisites
 In addition to familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
