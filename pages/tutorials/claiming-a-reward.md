@@ -39,7 +39,7 @@ Replace the `{instructionRef}` placeholder value with the instruction ref.
 Replace the `{reward-id}` placeholder with the id of the reward you wish to claim.
 
 ```curl
-curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/order-management/{orderRef}/instruction/{instructionRef}" \
+curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/order-management/{orderRef}/instruction/{instructionRef}/claim-reward" \
   --header "Authorization: Bearer {management-bearer-token}
   --header "Content-Type: application/json" \
   --data "{
@@ -61,10 +61,10 @@ The `{transactionId}` placeholder will be a GUID and will look something like th
 We will use the header value in the next step.
 
 ## Step 2 - Get the Reward
-If you received the `201 - Created` response from Step 1 then the your claim has been successfully submitted.
+If you received the `201 - Created` response from Step 1 then the your claim has been successfully submitted and we can now get the reward.
 
 #### Request
-We must now repeatedly poll the transaction endpoint, returned in the header response from Step 1, until the response `status` property changes from `SETTLING` to either `SETTLED` or `FAILED`.
+We must now repeatedly poll the endpoint returned in the header response from Step 1, until the response `status` property changes from `SETTLING` to either `SETTLED` or `FAILED`.
 
 The values for `customer-ref`, `financial-instrument-id`, and `transaction-id` will be pre-filled with appropriate values from Step 1.
 
@@ -85,7 +85,7 @@ If the `status` is `SETTLED` then the `data` will contain the credentials to red
 ```json
 {
     "status": "SETTLED",
-    "data": 
+    "data":
       {
         "credentialList": [
             {

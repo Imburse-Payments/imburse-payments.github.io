@@ -50,12 +50,31 @@ The following models are used to define a Transaction:
       "currency": "string",
       "country": "string",
       "settledByDate": "string",
-      "schemeId": "string"
+      "schemeId": "string",
+      "metadata": {
+        "additionalProp1": "string",
+        "additionalProp2": "string",
+        "additionalProp3": "string"
+      }
     }
   ],
-  "metadata": [
-    { "key_value_pair_1": "string" }
-  ]
+  "metadata": {
+    "additionalProp1": "string",
+    "additionalProp2": "string",
+    "additionalProp3": "string"
+  },
+  "customerDefaults": {
+    "financialInstrumentIds": {
+      "additionalProp1": "string",
+      "additionalProp2": "string",
+      "additionalProp3": "string"
+    },
+    "schemeIds": {
+      "additionalProp1": "string",
+      "additionalProp2": "string",
+      "additionalProp3": "string"
+    }
+  }
 }
 ```
 
@@ -106,7 +125,7 @@ The diagram below shows the two components that make up a Transaction.
 <img src="/assets/images/guides/getting-started/transactions-hierarchy.png" style="width:400px;" title="Transactions" alt="Transactions"/>
 
 ### Orders
-The Order object specifies the order reference, metadata, and also holds any instructions for the order. 
+The Order object specifies the order reference, metadata, and also holds any instructions for the order.
 
 ##### Adding Orders
 An order must be given a unique order ref.
@@ -114,7 +133,7 @@ An order must be given a unique order ref.
 You can add as many orders into the system as required.
 
 ### Instructions
-An Order requires one or more Instructions to be set up. These Instructions act as a *payment schedule* and contain the amount to be transacted, the direction of payment (either payout or collection), the currency and country and the scheme id. 
+An Order requires one or more Instructions to be set up. These Instructions act as a *payment schedule* and contain the amount to be transacted, the direction of payment (either payout or collection), the currency and country and the scheme id.
 
 The currency, country, and scheme id will be used to at execution time to filter the appropriate payout or collection payment methods.
 

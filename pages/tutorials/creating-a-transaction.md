@@ -23,7 +23,7 @@ The steps involved to create a Transaction are:
 1. Create an Order
 2. Create an Instruction for the Order
 
-Each Order can have multiple Instructions. In this tutorial we will only create 1 instruction. You can repeat Step 2 for as many instructions you need to add to the order. Just change the Instruction Ref to make sure they are unique per instruction in an order. You can optionally create the instructions during the creation of the order too. For our example we'll seperate the requests.
+Each Order can have multiple Instructions. In this tutorial we will only create 1 instruction. You can repeat Step 2 for as many instructions you need to add to the order. Just change the Instruction Ref to make sure they are unique per instruction in an order. You can optionally create the instructions during the creation of the order too. For our example we'll separate the requests.
 
 
 ## Step 1 - Create the Order
@@ -45,8 +45,13 @@ curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/order
   \"orderRef\": \"REF1\",
   \"instructions\": [],
   \"metadata\": {
-    \"someInternalRef1\": \"my-internal-ref\",
     \"someInternalRef2\": \"another-internal-ref\"
+  },
+  \"customerDefaults\": {
+    "\financialInstrumentIds\": {
+    },
+    \"schemeIds\": {
+    }
   }
 }"
 ```
@@ -74,17 +79,16 @@ curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/order
 	\"direction\": \"01\",
 	\"instrumentId\": \"a1ab5f63-3f3a-4562-b3fc-98963f66af12\",
 	\"amount\": \"210.00\",
-    \"currency\": \"EUR\",
-    \"country\": \"DE\",
+  \"currency\": \"EUR\",
+  \"country\": \"DE\",
 	\"settledByDate\": \"{settled_by_date}\"
-    \"scheme\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",
-    \"metadata\": []
+  \"scheme\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",
+  \"metadata\": []
     }"
 ```
 
 #### Response
 The response will be `201 - Created`
-
 
 ```json
 {

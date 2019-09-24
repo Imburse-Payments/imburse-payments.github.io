@@ -26,25 +26,35 @@ The available functions are:
 2. Get the reward
 
 ## API Documentation
-All the Payment Order API functions are fully documented in the [Transaction API documentation](https://api-docs.imbursepayments.com/?version=latest#09f68806-2b90-433d-9f6d-684cfef1d890).
+All the Payment Order API functions are fully documented in the [Transaction API documentation](https://api-docs.imbursepayments.com/?version=latest#b45704ff-b4ee-4123-b93f-0bc5d175b492).
 
 ## Models
-The following model is returned when the Claim endpoint is called.
+The following model is returned when the Get a Reward endpoint is called.
 
-### Reward Redemption Model
+### Claim Status Model
 ```json
 {
-  "credentialList": [
-    {
-      "label": "string",
-      "value": "string",
-      "rewardType": "string",
-      "credentialType": "string"
-    }
-  ],
-  "redemptionInstructions": "string"
+  "status": "string",
+  "data": {
+    "credentialList": [
+      {
+        "label": "string",
+        "value": "string",
+        "rewardType": "string",
+        "credentialType": "string"
+      }
+    ],
+    "redemptionInstructions": "string"
+  }
 }
 ```
+
+Property | Type | Description
+-|-|-
+`status` | string | The status of the claim. Possible values are `SETTLING` (default), `SETTLED`, and `FAILED`.
+`data` | [Reward Claim Model](#reward-claim-model) object | Value is `null` until the status is `SETTLED`.
+
+### Reward Claim Model
 
 Property | Type | Description
 -|-|-
@@ -107,7 +117,7 @@ The process to redeem a reward is a 3 step procedure.
 2. Get the Reward
 
 #### Step 1 - Claim a Reward
-Call the `/v1/order-management/{orderRef}/instruction/{instructionRef}` endpoint to immediately receive a `TransactionId` in the response.
+Call the `/v1/order-management/{orderRef}/instruction/{instructionRef}` endpoint to immediately receive a link to a `TransactionId` in the response headers.
 
 The time taken to claim a reward can vary so we give you a `TransactionId` to check against while we process the claim in the background.
 
@@ -120,6 +130,6 @@ Check the `status` property. If the status is still `SETTLING` we need to repeat
 
 When the `status` changes to either `SETTLED` or `FAILED` the transaction is complete.
 
-When the `status` is `SETTLED`, the `data` property will contain a [Reward Redemption Model](#reward-redemption-model).
+When the `status` is `SETTLED`, the `data` property will contain a [Reward Claim Model](#reward-claim-model).
 
 Use the `credential list` items to help you render a UI for your customer together with the `redemptionInstructions`, which instruct your customer on how to redeem the reward.
