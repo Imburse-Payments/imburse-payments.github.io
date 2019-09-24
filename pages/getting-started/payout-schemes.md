@@ -32,6 +32,7 @@ The available Payout Scheme functions are:
 - Publish a Draft
 - Delete a Draft
 - Delete a Scheme
+- Get payout options for a Scheme
 
 ## API Documentation
 All the Payout Scheme API functions are fully documented in the [Payout Scheme API documentation](https://api-docs.imbursepayments.com/?version=latest#57551b22-20a1-4c0a-874c-9243c4a9eb10).
