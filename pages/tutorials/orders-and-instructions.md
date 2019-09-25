@@ -15,7 +15,7 @@ For more information on Order Management, see [Order Management in Getting Start
 
 # Prerequisites
 In addition to familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
-- A valid `Management Bearer Token` derived from a `Tenant API Key`
+- A valid `Access Token` derived from a `Tenant API Key`
 
 # Steps
 The steps involved in managing orders are:
@@ -23,23 +23,29 @@ The steps involved in managing orders are:
 1. Create an Order
 2. Create an Instruction for the Order
 
-Each Order can have multiple Instructions. In this tutorial we will only create one instruction. Repeat *Step 2* for each instruction you need to add to an order. Just change the Instruction Ref to make sure they are unique per instruction in an order. You can optionally create the instructions during the creation of the order too. For our example we'll separate the requests.
+Each Order can have multiple Instructions. I
+
+n this tutorial we will only create one instruction. 
+
+Repeat *Step 2* for each instruction you need to add to an order. Just change the Instruction Ref to make sure they are unique per instruction in an order. 
+
+You can optionally create the instructions during the creation of the order too. For our example we'll use separate requests.
 
 
 ## Step 1 - Create the Order
-Using the `Management Bearer Token` we can create an Order.
+Using the `Access Token` we can create an Order.
 
 #### Request
-Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
+Replace the `{access-token}` placeholder value with the `Access Token` value.
 
-Replace the `orderRef` property value ((REF1 in the example below) with the a suitable value to identity this order. Usually this would be the order reference you have from your internal systems.
+Replace the `orderRef` property value (REF1 in the example below) with the a suitable value to identity this Order. Usually this would be the order reference you have from your internal systems.
 
 The `metadata` property can be filled with arbitrary key-value-pairs that help contextualize the order for you. We will pass the metadata back to you in the webhook notifications for you internal systems to disseminate.
 
 
 ```curl
 curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/order-management" \
-  --header "Authorization: Bearer {management-bearer-token}" \
+  --header "Authorization: Bearer {access-token}" \
   --header "Content-Type: application/json" \
   --data "{
   \"orderRef\": \"REF1\",
@@ -56,10 +62,10 @@ curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/order
 The response will be `201 - Created`
 
 ## Step 2 - Create the Instruction
-Using the `Management Bearer Token` we can create an Instruction.
+Using the `Access Token` we can create an Instruction.
 
 #### Request
-Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
+Replace the `{access-token}` placeholder value with the `Access Token` value.
 
 Replace the `{orderRef}` placeholder value with the same Order Ref value you gave in Step 1.
 
@@ -67,7 +73,7 @@ Replace the `instructionRef`, `amount`, and `{settled_by_date}` properties with 
 
 ```curl
 curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/order-management/{orderRef}/instruction" \
-  --header "Authorization: Bearer {{management-bearer-token}}" \
+  --header "Authorization: Bearer {{access-token}}" \
   --header "Content-Type: application/json" \
   --data "{
 	\"instructionRef\": \"I01\",
@@ -110,7 +116,4 @@ The response will be `201 - Created`
 ```
 
 # What's Next?
-- [Claiming a Reward](/pages/tutorials/claiming-a-reward)
-
-
-
+- [Get Payout Options](/pages/tutorials/get-payout-options)

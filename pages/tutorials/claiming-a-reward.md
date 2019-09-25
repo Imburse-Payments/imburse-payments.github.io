@@ -16,7 +16,7 @@ For more information see the [Claiming a Reward in Getting Started](/pages/getti
 # Prerequisites
 In addition to familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
- A valid `Management Bearer Token` derived from a `Tenant API Key`
+ A valid `Access Token` derived from a `Tenant API Key`
 
 # Steps to Claim a Reward
 The act of claiming a reward ensures the reward is paid for and ready for redemption. The claim response will include the appropriate details needed to allow your customer to redeem their selected reward with the reward provider. ie. Amazon, etc.
@@ -27,10 +27,10 @@ The process to claim a reward is a 2 step procedure.
 3. Get the Reward
 
 ## Step 1 - Claim the Reward
-Using the `Management Bearer Token` we can claim the reward.
+Using the `Access Token` we can claim the reward.
 
 #### Request
-Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
+Replace the `{access-token}` placeholder value with the `Access Token` value.
 
 Replace the `{orderRef}` placeholder value with the order ref.
 
@@ -40,7 +40,7 @@ Replace the `{reward-id}` placeholder with the id of the reward you wish to clai
 
 ```curl
 curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/order-management/{orderRef}/instruction/{instructionRef}/claim-reward" \
-  --header "Authorization: Bearer {management-bearer-token}
+  --header "Authorization: Bearer {access-token}
   --header "Content-Type: application/json" \
   --data "{
       \"rewardId\": \"{reward-id}\"
@@ -74,7 +74,7 @@ We would recommend polling every 1 second until the status changes to `SETTLING`
 
 ```curl
 curl --location --request GET "https://sandbox-api.imbursepayments.com/v1/customer-vault/{customer-ref}/reward/{financial-instrument-id}/transaction/{transaction-id}" \
-  --header "Authorization: Bearer {management-bearer-token}"
+  --header "Authorization: Bearer {access-token}"
 ```
 
 #### Response

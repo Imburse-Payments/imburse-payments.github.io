@@ -14,10 +14,10 @@ The Tenant User functions allow a user to administer users for a specific Tenant
 ## Access Requirements
 You will need a Tenant API Key to perform Tenant Management functions.
 
-For more information on creating a Management Bearer Token, see:
+For more information on creating a Access Token, see:
 
 - [Getting Started - Authentication](/pages/getting-started/authentication)
-- [Tutorials - Get a Management Bearer Token](/pages/tutorials/get-management-bearer-token/)
+- [Tutorials - Get a Access Token](/pages/tutorials/get-access-token/)
 
 ## Functions
 The available functions are:
@@ -60,7 +60,7 @@ Property | Type | Description
 
 
 **Inviting New Users**<br/>
-Each new user must be **invited** to the tenancy. An email will be sent to the `emailAddress` specified which the recipient must then accept before having access to the Imburse Portal. If a users doesn't receive the email or misplaces it, there is a **resend invitation** method that can be actioned.
+Each new user must be **invited** to the tenancy. An email will be sent to the `emailAddress` specified which the recipient must then accept before having access to the Imburse Portal. If a user doesn't receive the email or misplaces it, then the **resend invitation** method can be actioned.
 
 **Accepting** an invitation is not part of the API as this is a process that is executed by the recipient using the Imburse Portal.
 

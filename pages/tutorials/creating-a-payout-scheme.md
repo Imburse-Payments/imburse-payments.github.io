@@ -16,11 +16,11 @@ For more information on Payout Schemes, see the [Payout Schemes in Getting Start
 # Prerequisites
 In addition to familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
-- A valid `Management Bearer Token` derived from a `Tenant API Key`
+- A valid `Access Token` derived from a `Tenant API Key`
 - The `rewardId` of one or more Rewards from the Rewards Catalog.
 
 # Create a new Payout Scheme
-Using the `Management Bearer Token` we can create a new Payout Scheme.
+Using the `Access Token` we can create a new Payout Scheme.
 
 By default your new Payout Scheme will be in draft only. It will need to be Published before it can be used for paying out.
 
@@ -33,7 +33,7 @@ Note: The scheme we are creating has the following properties:
 
 ```curl
 curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/schemes/collect" \
-  --header "Authorization: Bearer {management-bearer-token}" \
+  --header "Authorization: Bearer {access-token}" \
   --header "Content-Type: application/json" \
   --data "{
 	    \"name\": \"Motor Insurance - EUROPE - Payout\",

@@ -23,10 +23,10 @@ In addition, you should also have:
 - The `Tenant Id` for a Tenant you have previously created.
 
 # Create a new Tenant API Key
-Using the `Management Bearer Token` we can create a new Tenant API Key.
+Using the `Access Token` we can create a new Tenant API Key.
 
 #### Request
-Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
+Replace the `{access-token}` placeholder value with the `Access Token` value.
 
 Replace the `{tenantId}` placeholder value with the Tenant `id` for the Tenant you want to create the API Key for.
 
@@ -44,7 +44,7 @@ For more information on the `roles` values, see [Account Management in Getting S
 
 ```curl
 curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/tenant/{tenantId}/keys" \
-  --header "Authorization: Bearer {management-bearer-token}" \
+  --header "Authorization: Bearer {access-token}" \
   --header "Content-Type: application/json" \
   --data "{
     \"name\": \"Admin Key\",
@@ -57,7 +57,7 @@ The `publicKey` and `privateKey` values are generated for you for this new key.
 
 **Note: You will need to store the public and private key values safely as the private key will not be presented again.**
 
-The newly created `publicKey` and `privateKey` values will be required when you need to acquire a Tenant derived Management Bearer Token.
+The newly created `publicKey` and `privateKey` values will be required when you need to acquire a Tenant derived Access Token.
 
 ```json
 {
@@ -73,4 +73,4 @@ The newly created `publicKey` and `privateKey` values will be required when you 
 ```
 
 # What's Next?
-- [Get a Management Bearer Token](/pages/tutorials/get-management-bearer-token)
+- [Get a Access Token](/pages/tutorials/get-access-token)

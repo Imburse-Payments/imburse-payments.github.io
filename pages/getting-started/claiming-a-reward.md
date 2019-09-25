@@ -14,10 +14,10 @@ Once you have created an order and instruction, you can then claim the reward.
 ## Access Requirements
 You will need a Tenant API Key to process a reward.
 
-For more information on creating a Management Bearer Token, see:
+For more information on creating a Access Token, see:
 
 - [Getting Started - Authentication](/pages/getting-started/authentication)
-- [Tutorials - Get a Management Bearer Token](/pages/tutorials/get-management-bearer-token/)
+- [Tutorials - Get a Access Token](/pages/tutorials/get-access-token/)
 
 ## Functions
 The available functions are:
@@ -73,10 +73,10 @@ Property | Type | Description
 
 Property | Type | Description
 -|-|-
-`label` | string | A friendly string that you can use to `label` the `value` property in a UI.<br/>For example, if the reward was an Amazon gift card then the label might be `Amazon Gift Card claim code:`.
-`value` | string | The value of the credentials.<br/><br/>For example, if `label` was `Amazon Gift Card claim code:` then the `value` would be<br/>the claims code for the reward ie. `S5WQ-Z2SP5S-GLB3`.
+`label` | string | A friendly string that you can use to `label` the `value` property in a UI.<br/><br/>For example, if the reward was an Amazon gift card<br/>then the label might be `Amazon Gift Card claim code`.
+`value` | string | The value of the credentials.<br/><br/>For example, if `label` was `Amazon Gift Card claim code`<br/>then the `value` would be the claims code for the reward<br/>ie. `S5WQ-Z2SP5S-GLB3`.
 `rewardType` | string | See *Reward Types* below.
-`credentialType` | string | See *Credential Types* below.<br/><br/>Use the Credential Types to determine the best format for your UI.
+`credentialType` | string | Use the Credential Types to determine the best format for your UI.<br/><br/>See [Credential Types](#credential-types) below.
 
 #### Reward Types
 We return the following types of reward credentials. If your integration requires displaying reward data in app or creating custom reward emails you may need to add logic to parse the returned reward data correctly.
@@ -91,20 +91,20 @@ Reward Type | Description | Integration Example
 `date` | ISO datetime | Display in localized date format based on locale of reward according to RFC 3339, i.e. `2016-01-01T00:00:00Z`.
 
 #### Credential Types
-The following credential types are available.
+Credential Types specify the type(s) of data that a reward will give you. Common ones are `cardNumber` and `expirationDate` but any from the following list can be found in rewards.
 
 Credential Type | Description
 -|-
-`barcodeNumber` | A numeric or alphanumeric string that provides a human readable version of the information embedded in a barcode. This is typically used in conjunction with the barcodeUrl credential.
-`barcodeUrl` | A URL for a barcode image. This is typically used in conjunction with the barcodeNumber credential.
-`bypassUrl` | A landing page URL that includes secondary credential information. This removes the need for the recipient to input secondary credentials on the landing page.
+`barcodeNumber` | A numeric or alphanumeric string that provides a human readable version<br/>of the information embedded in a barcode.<br/>This is typically used in conjunction with the barcodeUrl credential.
+`barcodeUrl` | A URL for a barcode image.<br/>This is typically used in conjunction with the barcodeNumber credential.
+`bypassUrl` | A landing page URL that includes secondary credential information.<br/>This removes the need for the recipient to input<br/>secondary credentials on the landing page.
 `cardCode` | A numeric or alphanumeric string.
 `cardNumber` | A numeric or alphanumeric string.
 `cvc2` | A 3-digit numeric code used as a secondary credential for financial products.
 `eventNumber` | A secondary credential that is numeric or alphanumeric string.
 `expirationDate` | A date after which the issued reward will no longer be redeemable.
 `pin` | Personal Identification Number. A secondary credential that is a numeric or alphanumeric string.
-`redemptionUrl` | A landing page URL where reward credentials and redemption information are typically presented. The landing page may or may not require the recipient to enter one or more secondary credentials to `complete the reward redemption process.
+`redemptionUrl` | A landing page URL where reward credentials and redemption information are<br/>typically presented.<br/>The landing page may or may not require the recipient to enter one or more<br/>secondary credentials to complete the reward redemption process.
 `secretCode` | A secondary credential that is numeric or alphanumeric string.
 
 

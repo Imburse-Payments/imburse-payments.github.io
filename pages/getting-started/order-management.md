@@ -14,10 +14,10 @@ Managing Orders consists of Order objects and one or more child Instruction obje
 ## Access Requirements
 You will need a Tenant API Key to perform Order Management functions.
 
-For more information on creating a Management Bearer Token, see:
+For more information on creating a Access Token, see:
 
 - [Getting Started - Authentication](/pages/getting-started/authentication)
-- [Tutorials - Get a Management Bearer Token](/pages/tutorials/get-management-bearer-token/)
+- [Tutorials - Get a Access Token](/pages/tutorials/get-access-token/)
 
 ## Functions
 The available Order Management functions are:
@@ -90,9 +90,9 @@ The following models are used to manage Orders and Instructions.
 Property | Type | Mandatory | Description
 -|-
 `orderRef` | string | Yes | A unique reference for an Order.<br/>Usually correlates to your customers order reference<br/>in you own internal systems.
-`instructions` | Array of [Instruction models](#instruction-model) | No | Use this parameter to add any instructions to the order.<br/>Instructions can also be added after the order is created by<br/>using additional endpoint calls.
-`metadata` | Array of key-value pairs | No | Use this parameter to attach key-value data to the Order.<br/><br/>You can specify up to 50 keys, with key names up to<br/>40 characters long and values up to 500 characters long.<br/><br/>Metadata is useful for storing additional, structured<br/>information on an object.<br/><br/>As an example, you could store your user's full name and <br/> corresponding unique identifier from your system.<br/><br/>The metadata is not used by Imburse. We will simply return<br/>your metadata to you in webhook responses<br/>relating to the Order.<br/><br/>You can then use this to give you added<br/>context to the webhook response.
-`customerDefaults` | Key values pairs | Allow you set default properties for a given `customerRef` value<br/>for your instructions.<br/><br/>See [Customer Defaults](#customer-defaults) below.
+`instructions` | Array of [Instruction models](#instruction-model) | No | Use this parameter to add any instructions to the order.<br/>Instructions can also be added after the order is created<br/>by using additional endpoint calls.
+`metadata` | Array of key-value pairs | No | Use this parameter to attach key-value data to the Order.<br/><br/>You can specify up to 50 keys, with key names up to<br/>40 characters long and values up to 500 characters long.<br/><br/>Metadata is useful for storing additional, structured<br/>information on an object.<br/><br/>As an example, you could store your customers<br/>unique identifier from your system.<br/><br/>The metadata is not used by Imburse.<br/>We will return your metadata to you<br/>in webhook responses relating to the Order.<br/><br/>You can then use this to give you added<br/>context to the webhook response.
+`customerDefaults` | Key values pairs | No | Allow you set default properties for a<br/>given `customerRef` value for your instructions.<br/><br/>See [Customer Defaults](#customer-defaults) below.
 
 ### Instruction Model
 ```json

@@ -14,10 +14,10 @@ The Collection Scheme API functions allows you to set up and configure a Collect
 ## Access Requirements
 You will need a Tenant API Key to perform Collection Scheme Management functions.
 
-For more information on creating a Management Bearer Token, see:
+For more information on creating a Access Token, see:
 
 - [Getting Started - Authentication](/pages/getting-started/authentication)
-- [Tutorials - Get a Management Bearer Token](/pages/tutorials/get-management-bearer-token/)
+- [Tutorials - Get a Access Token](/pages/tutorials/get-access-token/)
 
 ## Functions
 The available Collection Scheme functions are:

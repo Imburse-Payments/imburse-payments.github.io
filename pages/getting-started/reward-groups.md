@@ -16,10 +16,10 @@ An example of a Reward Group could be all the country specific Amazon Gift Card 
 ## Access Requirements
 You will need a Tenant API Key to perform Reward Group functions.
 
-For more information on creating a Management Bearer Token, see:
+For more information on creating a Access Token, see:
 
 - [Getting Started - Authentication](/pages/getting-started/authentication)
-- [Tutorials - Get a Management Bearer Token](/pages/tutorials/get-management-bearer-token/)
+- [Tutorials - Get a Access Token](/pages/tutorials/get-access-token/)
 
 ## Functions
 The available authentication functions are:

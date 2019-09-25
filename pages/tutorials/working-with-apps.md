@@ -32,17 +32,17 @@ The Marketplace has endpoints to perform the following functions:
 - [Uninstalling an App](#uninstalling-an-app)
 
 # Prerequisites
-- A valid `Management Bearer Token` derived from a `Tenant API Key`.
+- A valid `Access Token` derived from a `Tenant API Key`.
 
 # Get list of Apps
 Returns a list of all Apps available in the Marketplace.
 
 #### Request
-Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
+Replace the `{access-token}` placeholder value with the `Access Token` value.
 
 ```curl
 curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/marketplace/apps" \
-  --header "Authorization: Bearer {management-bearer-token}" \
+  --header "Authorization: Bearer {access-token}" \
   --header "Content-Type: application/json"
 }"
 ```
@@ -77,11 +77,11 @@ Replace the `{AppId}` placeholder value with the App Id for the App you want to 
 In our example request, we'll be using the Braintree App (AppId `BRAINTREE_SDK`).
 
 #### Request
-Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
+Replace the `{access-token}` placeholder value with the `Access Token` value.
 
 ```curl
 curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/marketplace/apps/braintree_sdk" \
-  --header "Authorization: Bearer {management-bearer-token}" \
+  --header "Authorization: Bearer {access-token}" \
   --header "Content-Type: application/json"
 }"
 ```
@@ -111,11 +111,11 @@ In our example request, we'll be using the Braintree App (AppId `BRAINTREE_SDK`)
 
 
 #### Request
-Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
+Replace the `{access-token}` placeholder value with the `Access Token` value.
 
 ```curl
 curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/marketplace/apps/braintree_sdk/install" \
-  --header "Authorization: Bearer {management-bearer-token}" \
+  --header "Authorization: Bearer {access-token}" \
   --header "Content-Type: application/json" \
   --data "{
     \"merchantId\": \"Ov6Y2kneVSyJSpoXBVnAGw0OTDzl0Jkg\",
@@ -164,11 +164,11 @@ In our example request, we'll be using the Braintree App (AppId `BRAINTREE_SDK`)
 **Note: The body of the request will be different between Apps.**
 
 #### Request
-Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
+Replace the `{access-token}` placeholder value with the `Access Token` value.
 
 ```curl
 curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/apps/installed/braintree_sdk/configuration" \
-  --header "Authorization: Bearer {management-bearer-token}" \
+  --header "Authorization: Bearer {access-token}" \
   --header "Content-Type: application/json" \
   --data "{
     \"merchantId\": \"Ov6Y2kneVSyJSpoXBVnAGw0OTDzl0Jkg\",
@@ -220,7 +220,7 @@ In our example request, we'll be using the Braintree App (AppId `BRAINTREE_SDK`)
 #### Request
 ```curl
 curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/apps/installed/braintree_sdk/uninstall" \
-  --header "Authorization: Bearer {management-bearer-token}" \
+  --header "Authorization: Bearer {access-token}" \
   --header "Content-Type: application/json"
 ```
 

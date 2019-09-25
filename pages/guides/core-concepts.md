@@ -93,4 +93,6 @@ Orders and instructions hold the necessary details to allow Imburse to collect o
 Financial Instruments represent a payment method owned by a customer. Examples of a Financial Instrument would be a Credit Card number, Direct Debit Mandate or an Authorised Reward amount. Financial Instruments may have support for Credit and / or  Debit type transactions.
 
 ## Transactions
-When Imburse executes an Instruction on your behalf, a Transaction is created. Transactions can be either a credit or debit type. Credit transactions pay out to your customers. Debit transactions collect from your customers.
+Both Credit and Debit transactions must exist against a Financial Instrument. In most cases your Order Instruction will generate and execute a transaction when required assuming the Order Instruction has a valid Financial Instrument.
+
+Credit transactions pay out to your customers. Debit transactions collect from your customers.

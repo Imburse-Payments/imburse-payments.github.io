@@ -16,11 +16,11 @@ For more information on Collection Schemes, see the [Collection Schemes in Getti
 # Prerequisites
 In addition to familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
-- A valid `Management Bearer Token` derived from a `Tenant API Key`
+- A valid `Access Token` derived from a `Tenant API Key`
 - The `appId` of an App you have previously installed that you want to add to this Collection Scheme.
 
 # Create the Collection Scheme
-Using your `Management Bearer Token` we can create a new Collection Scheme.
+Using your `Access Token` we can create a new Collection Scheme.
 
 By default your new Collection Scheme will be in draft only. It will need to be Published before it can be used for collecting money.
 
@@ -34,7 +34,7 @@ Note: The scheme we are creating has the following properties:
 
 ```curl
 curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/schemes/collect" \
-  --header "Authorization: Bearer {management-bearer-token}" \
+  --header "Authorization: Bearer {access-token}" \
   --header "Content-Type: application/json" \
   --data "{
 	    \"name\": \"Motor Insurance - EUROPE\",

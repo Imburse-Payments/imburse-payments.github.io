@@ -14,10 +14,10 @@ The Account Management API functions allow a user to perform both Account level 
 ## Access Requirements
 You will need an Account API Key to perform Account Management functions.
 
-For more information on creating a Management Bearer Token, see:
+For more information on creating a Access Token, see:
 
 - [Getting Started - Authentication](/pages/getting-started/authentication)
-- [Tutorials - Get a Management Bearer Token](/pages/tutorials/get-management-bearer-token/)
+- [Tutorials - Get a Access Token](/pages/tutorials/get-access-token/)
 
 ## Functions
 The Account functions can be broken down into to levels:
@@ -40,20 +40,20 @@ The Account functions can be broken down into to levels:
 - Get a list of all Tenants
 - Get a Tenant by its Id
 - Update a Tenant
-- Deactivate a Tenant
+- Delete a Tenant
 - Create new Tenant API Keys
 - Get a list of all Tenant API Keys
 - Get a Tenant API Key by its Public Key value
 - Update a Tenant API Key
 - Delete a Tenant API Key
 
-**Note:** - The Tenant functions available to an Account are limited to Tenant creation and Tenant API Keys only.
+**Note:** - The Tenant functions available to an Account are limited to Tenant creation / deletion and Tenant API Keys only.
 
-For configuring Schemes, Apps, and other Tenant objects, you must use a **Tenant API Key**.
+For configuring Schemes, Apps, Reward Groups, and other Tenant objects, you must use a **Tenant API Key**.
 
 
 ## API Documentation
-All the Account Management API functions are fully documented in the [Account API documentation](https://api-docs.imbursepayments.com/#d4a8fee4-7343-464f-9b3f-bf42e81619e2).
+All the Account Management API functions are fully documented in the [Account API documentation](https://api-docs.imbursepayments.com/?version=latest#456e7322-a286-48bd-83ce-c60cb2a288dc).
 
 ## Models
 The following models are used to define Accounts, Tenants, and API Keys.
@@ -155,7 +155,7 @@ Property | Type | Mandatory | Description
 `name` | string | Yes | The Tenant name.
 `address` | [Address](#address-model) model | Yes | The Tenants address.
 
-## Account Set up
+## Account Setup
 An Account has access to four main components:
 
 - Account

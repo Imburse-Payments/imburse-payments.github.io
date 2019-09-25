@@ -13,16 +13,16 @@ breadcrumbs: "Tutorials,tutorials"
 # Prerequisites
 In addition to familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
-- A valid `Management Bearer Token` derived from a `Tenant API Key`.
+- A valid `Access Token` derived from a `Tenant API Key`.
 - If you already have an account with Tango Card you can use your existing `customerIdentifier` and `accountIdentifier` details. Have these handy if you want to use them.
 
 # Step 1 - Installation
-Using the `Management Bearer Token` we can now install a new Tango Card App.
+Using the `Access Token` we can now install a new Tango Card App.
 
 #### Request
 ```curl
 curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/marketplace/apps/tangocard-raas/install" \
-  --header "Authorization: Bearer {management-bearer-token}" \
+  --header "Authorization: Bearer {access-token}" \
   --header "Content-Type: application/json"
 ```
 
@@ -36,7 +36,7 @@ After installing, we can now create the Tango Card account.
 #### Request
 ```curl
 curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/apps/installed/tangocard_raas/account" \
-  --header "Authorization: Bearer {management-bearer-token}"
+  --header "Authorization: Bearer {access-token}"
 ```
 
 #### Response
@@ -50,7 +50,7 @@ Choose an `amount` to satisfy the rewards you want to payout. You can always top
 #### Request
 ```curl
 curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/apps/installed/tangocard_raas/deposit-funds" \
-  --header "Authorization: Bearer {management-bearer-token}" \
+  --header "Authorization: Bearer {access-token}" \
   --header "Content-Type: application/json" \
   -data "{\"amount\":0}"
 ```

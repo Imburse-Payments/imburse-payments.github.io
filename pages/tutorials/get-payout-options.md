@@ -16,17 +16,17 @@ For more information on the getting payout options, see the [Payout Options in G
 # Prerequisites
 In addition to familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
- A valid `Management Bearer Token` derived from a `Tenant API Key`
+ A valid `Access Token` derived from a `Tenant API Key`
 
 # Get the Payout Options
-Using the `Management Bearer Token` we can get the Payout Options.
+Using the `Access Token` we can get the Payout Options.
 
 #### Request
-Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
+Replace the `{access-token}` placeholder value with the `Access Token` value.
 
 ```curl
 curl --location --request GET "https://sandbox-api.imbursepayments.com/v1/schemes/payout/{schemeId}/options?amount=10.00&currency=EUR&country=DE" \
-  --header "Authorization: Bearer {management-bearer-token}"
+  --header "Authorization: Bearer {access-token}"
 ```
 
 #### Response

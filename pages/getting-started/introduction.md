@@ -24,6 +24,13 @@ Production API endpoint: **https://api.imbursepayments.com**
 
 If you have a dedicated environment, then the specific endpoint would have been communicated via your account manager.
 
+## Correlation IDs
+Each API request has an associated correlation identifier. You can find this value in the response object under `correlation-id` when errors in the range 400 - 599 are returned.
+
+You can also pass in your own **custom** correlation identifier into the request header `X-Correlation-ID`.
+
+If you need to contact us about a specific request, providing the correlation identifier will ensure the fastest possible resolution.
+
 ## Error Codes
 Imburse uses conventional HTTP response codes to indicate the success or failure of an API request. In general, codes in the **2xx** range indicate success, codes in the **4xx** range indicate an error that failed given the information provided (e.g., a required parameter was omitted, etc.), and codes in the **5xx** range indicate an error with Imburse's servers,
 
@@ -43,39 +50,44 @@ Response Code | Meaning
 500, 501, 502, 503, 504 | **Internal Server Error** - Something went wrong on Imburse's servers.
 
 ## Error Handling
-All `400 - Bad Request` responses will return a structured response containing one or more error codes:
-
-For example:
+All errors responses will return structured json containing one or more error codes:
 
 ```json
 {
-    "errorCodes": [
-        "SCHEME_ID_INVALID",
-        "SCHEME_NAME_REQUIRED"
-    ]
+  "timestamp": 1569248349,
+  "correlationId": "0HLPSRAQ7S0I6:00000002",
+  "errors": [
+    {
+      "errorCode": "TENANT_ID_IS_REQUIRED",
+      "message": "Please reference [0HLPSRAQ7S0I6:00000002] when contacting support.",
+      "messageTemplate": "Please reference {correlationId} when contacting support.",
+      "metadata": {
+        "correlationId": "0HLPSRAQ7S0I6:00000002"
+      }
+    }
+  ]
 }
 ```
 
-Your original request will need to be fixed before resubmitting.
+The outer `correlationid` property is the Imburse correlation id.
+
+The inner `correlationId` property within `errors` will be either your own custom `X-Correlation-Id` if that was passed in to the original request or it will be the Imburse correlation id.
 
 ## Access Control
 Each API method in the API documentation is decorated with a *Role Required* attribute. To execute any API methods successfully, your API Key would need to have the role name specified added to the `roles` property.
 
 See the [Account Management - Account Roles](/pages/getting-started/account-management/#account-roles) and [Account Management - Tenant Roles](/pages/getting-started/account-management/#tenant-roles) for lists of the available roles.
 
-## Correlation IDs
-Each API request has an associated correlation identifier. You can find this value in the response object under `correlation-id` when errors in the range 500 are returned.
-
-You can also pass in your own **custom** correlation identifier into the request header `X-Correlation-ID`.
-
-If you need to contact us about a specific request, providing the correlation identifier will ensure the fastest possible resolution.
-
 ## Metadata
-The Payment Order objects have a metadata parameter. You can use this parameter to attach key-value data to these Imburse objects.
+The Order and Instruction API requests take a `metadata` property as part of the request object. You can use this parameter to attach `key-value` data to the entity being created.
 
-Metadata is useful for storing additional, structured information on an object. As an example, you could store your user's full name and corresponding unique identifier from your system on a Imburse Payment Order object. Metadata is not used by Imburse. We will simply return your metadata to you in webhook responses relating to the Payment Order. You can then use this to give added context to your webhook response.
+Metadata is useful for storing additional, structured information on an object. 
 
-Do not store any sensitive information (personally identifiable information, card details, etc.) as metadata.
+As an example, you could store your customers full name and corresponding customer id from your own system in an Order entity. 
+
+Metadata is not used by Imburse. We will simply return your metadata to you in webhook responses relating to the Order. You can then use this to give added context to your webhook response.
+
+**Please do not store any sensitive information (personally identifiable information, card details, etc.) as metadata.**
 
 ## Versioning
 When we make backwards-incompatible changes to the API, we release new, numbered versions. The current version is **V1**. When a new version is released we will post an API upgrade guide and changelog.

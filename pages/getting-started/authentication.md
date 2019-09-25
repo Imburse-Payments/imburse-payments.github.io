@@ -18,11 +18,10 @@ Your API keys are available in the Client Portal, however, you cannot get the pr
 ## Functions
 The available authentication functions are:
 
-- Create a Management Bearer Token
-- Create a Payout API Bearer Token
+- Create an Access Token
 
 ## API Documentation
-All the Authentication API functions are fully documented in the [Identity API documentation](https://api-docs.imbursepayments.com/?version=latest#f6bf99b9-ca03-47b5-a667-8e1a5a625b0e).
+All the Authentication API functions are fully documented in the [Identity API documentation](https://api-docs.imbursepayments.com/?version=latest#a277483a-7eea-4ca5-8786-953801685626).
 
 ## HMAC and Bearer Tokens
 HMAC (Hashed Message Authentication Code), is a specific type of MAC involving a cryptographic hash function and a secret cryptographic key. It is used to simultaneously verify both the **data integrity** and the **authentication** of a message. We use the HMAC authentication process for your initial authentication into the Imburse platform.
@@ -85,8 +84,8 @@ The response from the Identity API, irrespective of the endpoint called, will be
 
 Extract the `accessToken` property from the response object. This is your `Bearer Token` for accessing your selected API - either Management or Transaction.
 
-#### Step 3 - Create a Bearer Authorization request to the Management/Transaction API
-Using the `Bearer Token` returned in Step 2, you can now proceed to make requests to the Management/Transaction APIs.
+#### Step 3 - Create a Bearer Authorization request to the API
+Using the `Bearer Token` returned in Step 2, you can now proceed to make requests to the API.
 
 Add the following `Authorization` header to your request.
 
@@ -94,5 +93,5 @@ Add the following `Authorization` header to your request.
 Authorization Bearer <bearer-token>
 ```
 
-#### Step 4 - Management/Transaction API response
-If you make a request to an endpoint that you don't have access to then your request will fail. It can also fail if the Bearer Token has expired. An appropriate status code and response object will be returned accordingly.
+#### Step 4 - API responses
+If you make a request to an endpoint that you don't have access to then your request will fail. It can also fail if the Bearer Token has expired. An appropriate status code and error response object will be returned accordingly.

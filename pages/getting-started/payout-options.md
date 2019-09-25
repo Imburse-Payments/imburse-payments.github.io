@@ -8,16 +8,16 @@ last_updated: September 23rd, 2019
 icon_class: icon_documents_alt icon
 breadcrumbs: "Getting Started,getting-started"
 ---
-# Payment Options
-The Payout Options are a list of payment options that you can present to your customers. This could be rewards or cash equivalent payout options.
+# Payout Options
+The Payout Options are a list of options that you can present to your customers. This could be a list of rewards that you have curated in your scheme or other cash equivalent options.
 
 ## Access Requirements
-You will need a Tenant API Key to perform Payment Option and related object functions.
+You will need a Tenant API Key to perform get the Payout Options.
 
-For more information on creating a Management Bearer Token, see:
+For more information on creating a Access Token, see:
 
 - [Getting Started - Authentication](/pages/getting-started/authentication)
-- [Tutorials - Get a Management Bearer Token](/pages/tutorials/get-management-bearer-token/)
+- [Tutorials - Get a Access Token](/pages/tutorials/get-access-token/)
 
 ## Functions
 The available functions are:
@@ -98,9 +98,9 @@ Property | Type |  Description
 `exchangeRateRule` | string | TBD
 `isWholeAmountValueRequired` | bool | If `true` the amount must be a whole number. ie 1, 2, 5, 20, etc.<br/>If `false` then decimal values are allowed. ie. 2.50, 5.99, 20.40, etc.
 `valueType` | string | Either `VARIABLE_VALUE` or `FIXED_VALUE`.<br/>Variable values will use the `minValue` and `maxValue` properties.<br/>Fixed values will use the `fixedValue` property
-`fixedValue` | decimal | For `FIXED_VALUE` value types, this will be the reward amount; otherwise it will be empty.
-`maxValue` | decimal | For `VARIABLE_VALUE` value types, this will be the maximum value the reward can payout; other it will be empty.
-`minValue` | decimal | For `VARIABLE_VALUE` value types, this will be the minimum value the reward can payout; other it will be empty.
+`fixedValue` | decimal | For `FIXED_VALUE` value types, this will be the reward amount;<br/>otherwise it will be empty.
+`maxValue` | decimal | For `VARIABLE_VALUE` value types, this will be the maximum value<br/>the reward can payout;<br/>other it will be empty.
+`minValue` | decimal | For `VARIABLE_VALUE` value types, this will be the minimum value<br/>the reward can payout;<br/>other it will be empty.
 `credentialTypes` | string array | An array of [Credential Types](#credential-types) used by the reward.
 `redemptionInstructions` | string | The redemptions instructions that need to be supplied<br/>to your customer for them to redeem the reward.
 `tags` | string array | (Not currently implemented)
@@ -194,20 +194,20 @@ Credential Types specify the type(s) of data that a reward will give you. Common
 
 Credential Type | Description
 -|-
-`barcodeNumber` | A numeric or alphanumeric string that provides a human readable version of the information embedded in a barcode. This is typically used in conjunction with the barcodeUrl credential.
-`barcodeUrl` | A URL for a barcode image. This is typically used in conjunction with the barcodeNumber credential.
-`bypassUrl` | A landing page URL that includes secondary credential information. This removes the need for the recipient to input secondary credentials on the landing page.
+`barcodeNumber` | A numeric or alphanumeric string that provides a human readable version<br/>of the information embedded in a barcode.<br/>This is typically used in conjunction with the barcodeUrl credential.
+`barcodeUrl` | A URL for a barcode image.<br/>This is typically used in conjunction with the barcodeNumber credential.
+`bypassUrl` | A landing page URL that includes secondary credential information.<br/>This removes the need for the recipient to input<br/>secondary credentials on the landing page.
 `cardCode` | A numeric or alphanumeric string.
 `cardNumber` | A numeric or alphanumeric string.
 `cvc2` | A 3-digit numeric code used as a secondary credential for financial products.
 `eventNumber` | A secondary credential that is numeric or alphanumeric string.
 `expirationDate` | A date after which the issued reward will no longer be redeemable.
 `pin` | Personal Identification Number. A secondary credential that is a numeric or alphanumeric string.
-`redemptionUrl` | A landing page URL where reward credentials and redemption information are typically presented. The landing page may or may not require the recipient to enter one or more secondary credentials to complete the reward redemption process.
+`redemptionUrl` | A landing page URL where reward credentials and redemption information are<br/>typically presented.<br/>The landing page may or may not require the recipient to enter one or more<br/>secondary credentials to complete the reward redemption process.
 `secretCode` | A secondary credential that is numeric or alphanumeric string.
 
-## Payment Options
-The payment options that are selected to return in the response come from processing through the scheme rules engine. This is documented in [Payout Schemes - How and when are Rules matched?](/pages/getting-started/payout-schemes/#how-and-when-are-rules-matched).
+## The Payout Options
+The payout options that are returned in the response come from processing through the scheme rules engine. This is documented in [Payout Schemes - How and when are Rules matched?](/pages/getting-started/payout-schemes/#how-and-when-are-rules-matched).
 
 The resultant list of Reward objects can then be used in your UI to your customers.
 

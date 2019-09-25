@@ -14,10 +14,10 @@ The Marketplace API functions allow you to find and install Apps into your Tenan
 ## Access Requirements
 You will need a Tenant API Key to perform  Marketplace functions.
 
-For more information on creating a Management Bearer Token, see:
+For more information on creating a Access Token, see:
 
 - [Getting Started - Authentication](/pages/getting-started/authentication)
-- [Tutorials - Get a Management Bearer Token](/pages/tutorials/get-management-bearer-token/)
+- [Tutorials - Get a Access Token](/pages/tutorials/get-access-token/)
 
 ## Functions
 Each App provided by Imburse has a standard set of API endpoints.

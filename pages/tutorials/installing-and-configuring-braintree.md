@@ -15,15 +15,15 @@ This tutorial will take you through installing and configuring the Braintree App
 In addition to familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
 - An account with [Braintree Payments](https://www.braintreepayments.com target="_blank").
-- A valid `Management Bearer Token` derived from a `Tenant API Key`.
+- A valid `Access Token` derived from a `Tenant API Key`.
 
 # Step 1 - Installation
-Using the `Management Bearer Token` we can now install a new Braintree App.
+Using the `Access Token` we can now install a new Braintree App.
 
 #### Request
 ```curl
 curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/marketplace/apps/braintree_sdk/install" \
-  --header "Authorization: Bearer {management-bearer-token}" \
+  --header "Authorization: Bearer {access-token}" \
   --header "Content-Type: application/json" \
 ```
 
@@ -41,7 +41,7 @@ The `settings` property is a collection of `setting` objects that determine the 
 
 ```curl
 curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/marketplace/installed/braintree_sdk/configure" \
-  --header "Authorization: Bearer {management-bearer-token}" \
+  --header "Authorization: Bearer {access-token}" \
   --header "Content-Type: application/json" \
   --data "{
     \"merchantId\": \"Ov6Y2kneVSyJSpoXBVnAGw0OTDzl0Jkg\",

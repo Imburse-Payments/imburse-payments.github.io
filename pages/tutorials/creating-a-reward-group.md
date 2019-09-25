@@ -16,14 +16,14 @@ For more information on Reward Groups, see the [Reward Groups in Getting Started
 # Prerequisites
 In addition to familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
-- A valid `Management Bearer Token` derived from a `Tenant API Key`
+- A valid `Access Token` derived from a `Tenant API Key`
 - The `rewardId` of one or more Rewards from the Rewards Catalog.
 
 # Create the Reward Group
-Using the `Management Bearer Token` we can create a new Reward Group.
+Using the `Access Token` we can create a new Reward Group.
 
 #### Request
-Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
+Replace the `{access-token}` placeholder value with the `Access Token` value.
 
 The `name` property can be anything you like in order for you to identify this Reward Group later.
 
@@ -31,7 +31,7 @@ The `rewards` property is an array of the Reward Ids of the Rewards you want to 
 
 ```curl
 curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/reward-groups" \
-  --header "Authorization: Bearer {management-bearer-token}" \
+  --header "Authorization: Bearer {access-token}" \
   --header "Content-Type: application/json" \
   --data "{
 	\"name\": \"Amazon Rewards - Germany and France\",

@@ -20,14 +20,14 @@ In addition to familiarity with the [Core Concepts](/pages/guides/core-concepts)
 - Familiar with creating an HMAC token using an API Key
 
 # Create a new Tenant
-Using the `Management Bearer Token` acquired in Step 1, we can now create a new Tenant.
+Using the `Access Token` acquired in Step 1, we can now create a new Tenant.
 
 #### Request
-Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
+Replace the `{access-token}` placeholder value with the `Access Token` value.
 
 ```curl
 curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/account/tenants" \
-  --header "Authorization: Bearer {management-bearer-token}" \
+  --header "Authorization: Bearer {access-token}" \
   --header "Content-Type: application/json" \
   --data "{
     \"name\": \"Test tenant\",

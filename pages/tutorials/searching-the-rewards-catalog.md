@@ -16,13 +16,13 @@ For more information on the Rewards Catalog, see the [Rewards Catalog in Getting
 # Prerequisites
 In addition to familiarity with the [Core Concepts](/pages/guides/core-concepts), you'll need the following:
 
-- A valid `Management Bearer Token` derived from a `Tenant API Key`
+- A valid `Access Token` derived from a `Tenant API Key`
 
 # Search the Rewards Catalog
-Using the `Management Bearer Token` acquired in Step 1, we can now search the Rewards Catalog.
+Using the `Access Token` acquired in Step 1, we can now search the Rewards Catalog.
 
 #### Request
-Replace the `{management-bearer-token}` placeholder value with the `Management Bearer Token` value.
+Replace the `{access-token}` placeholder value with the `Access Token` value.
 
 You can filter the results by supplying parameters in the request.
 
@@ -37,7 +37,7 @@ In the example request below we have specified `TANGOCARD_RAAS` as the App Id, `
 
 ```curl
 curl --location --request GET "https://sandbox-api.imbursepayments.com/v1/catalog?appId=TANGOCARD&brandName=&countries=GB&currencies=&amount=5.0" \
-  --header "Authorization: Bearer {management-bearer-token}"
+  --header "Authorization: Bearer {access-token}"
 ```
 
 #### Response
