@@ -113,7 +113,7 @@ Property | Type | Mandatory | Description
 -|-
 `instructionRef` | string | Yes | A unique reference for an Instruction.<br/>Usually correlates to your to a month number.
 `customerRef` | string | Yes | A reference for your customer
-`direction` | string | Yes | Either `CREDIT` or `DEBIT`.
+`direction` | string | Yes | Either `CREDIT` or `DEBIT`.<br/><br/>Use `CREDIT` for paying out to your customer.<br/>Use `DEBIT` for collecting money from your customer.
 `instrumentId` | string | Yes | The Id of the financial instruction to use for this instruction.
 `amount` | decimal | Yes | The amount this Instruction should collect or payout.<br/>Also used to filter available payment options.
 `currency` | string | Yes | The currency this Order should be processed in.<br/>Used to filter available payment options.
