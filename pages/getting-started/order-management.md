@@ -190,6 +190,13 @@ An order must be given a unique order ref.
 
 You can add as many orders into the system as required.
 
+The response when creating a new order will be variable, depending on if you are submitting instructions with the order or not.
+
+Order Creation Type | Response
+-|-
+Without instructions | `201 - Created`
+With instructions | `202 - Accepted`
+
 ##### Customer Defaults
 The `customerDefaults` property allows you to set some default properties for a given `customerRef`. You can set the `financialInstrumentId`, the `schemeId` and any `metadata` once per order.
 
@@ -213,16 +220,14 @@ null | null | null
 The `metadata` in the `customerDefaults` works slightly differently. The instruction will inherit the customer default metadata if the `key` does not already exists in the instruction metadata.
 
 ### Instructions
-An Order requires one or more Instructions to be set up. These Instructions act as a *payment schedule* and contain the amount to be transacted, the direction of payment (either payout or collection), the currency and country and the scheme id.
+An Order requires one or more Instructions to be set up. These Instructions act as a *payment schedule* and contain the amount to be transacted, the direction of payment, the currency and country, and the scheme id.
 
-The currency, country, and scheme id will be used to at execution time to filter the appropriate payout or collection payment methods.
+The `currency`, `country`, and `schemeId` will be used at execution time to filter for the appropriate payment methods.
 
 ##### Adding Instructions
 An instruction must be given a unique instruction Ref - unique to the order. This reference can be used in the future to look up or make amendments to an instruction.
 
 An example instruction reference could be the payment month - 01, 02, 03, and so forth.
-
-You can add as many Instructions to an Order as required.
 
 ##### Updating Instructions
 An Instruction can be updated so long as its `status` is either `INCOMPLETE` or `READY`.
