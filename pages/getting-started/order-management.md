@@ -140,7 +140,7 @@ Property | Type | Mandatory | Description
 `country` | string | Yes | The country this Instruction is related to.
 `scheme` | A [Scheme Model](#scheme-model) | Yes | The scheme this instruction will use.
 `settledByDate` | date | No | The date in which a payment is to be settled by,<br/>or if automated, will be taken on.<br/><br/>Date format is `YYYY-MM-DD`.<br/><br/>After this date we would send you missed payment<br/>webhook notifications.
-`metadata` | Array of key-value pairs | No | Metadata is useful for storing additional, structured<br/>information on an object.<br/><br/>The metadata is not used by Imburse. We will simply return<br/>your metadata to you in webhook responses<br/>relating to the instruction.<br/><br/>You can then use this to give you added<br/>context to the webhook response.
+`metadata` | Array of key-value pairs | No | Metadata is useful for storing additional, structured<br/>information on an object.<br/><br/>The metadata is not used by Imburse.<br/>We will return<br/>your metadata to you in webhook responses<br/>relating to the Instruction.<br/><br/>You can then use this to give you added<br/>context to the webhook response.
 
 ### Financial Instrument Model
 ```json
