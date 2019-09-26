@@ -42,15 +42,23 @@ The following models are used to manage Orders and Instructions.
   "orderRef": "string",
   "instructions": [
     {
-      "instructionRef": "string",
-      "customerRef": "string",
       "direction": "string",
-      "instrumentId": "string",
+      "status": "string",
+      "customerRef": "string",
+      "financialInstrument": {
+        "financialInstrumentId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "source": "string",
+        "canUpdate": true
+      },
       "amount": 0,
       "currency": "string",
       "country": "string",
       "settledByDate": "string",
-      "schemeId": "string",
+      "scheme": {
+        "schemeId": "string",
+        "source": "string",
+        "canUpdate": true
+      },
       "metadata": {
         "additionalProp1": "string",
         "additionalProp2": "string",
@@ -65,17 +73,14 @@ The following models are used to manage Orders and Instructions.
   },
   "customerDefaults": {
         "customerRef1": {
-            "financialInstrumentId": "string",
-            "schemeId": "string",
-            "metadata": {
-                "additionalProp1": "string",
-                "additionalProp2": "string",
-                "additionalProp3": "string"
-            }
-        },
-        "customerRef2": {
-            "financialInstrumentId": "string",
-            "schemeId": "string",
+            "financialInstrument": {
+              "financialInstrumentId": "string",
+              "source": "string"
+            },
+            "scheme": {
+              "schemeId": "string",
+              "source": "string"
+            },
             "metadata": {
                 "additionalProp1": "string",
                 "additionalProp2": "string",
@@ -97,32 +102,75 @@ Property | Type | Mandatory | Description
 ### Instruction Model
 ```json
 {
-  "instructionRef": "string",
-  "customerRef": "string",
   "direction": "string",
-  "instrumentId": "string",
+  "status": "string",
+  "customerRef": "string",
+  "financialInstrument": {
+    "financialInstrumentId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "source": "string",
+    "canUpdate": true
+  },
   "amount": 0,
   "currency": "string",
   "country": "string",
   "settledByDate": "string",
-  "schemeId": "string"
+  "scheme": {
+    "schemeId": "string",
+    "source": "string",
+    "canUpdate": true
+  },
+  "metadata": {
+    "additionalProp1": "string",
+    "additionalProp2": "string",
+    "additionalProp3": "string"
+  }
 }
 ```
 
 Property | Type | Mandatory | Description
 -|-
-`instructionRef` | string | Yes | A unique reference for an Instruction.<br/>Usually correlates to your to a month number.
-`customerRef` | string | Yes | A reference for your customer
+`direction` | string | Yes | The direction the instruction is for.<br/><br/>Available values are<br/><br/>`CREDIT`<br/>`DEBIT`
+`status` | string | Yes | The status of the instruction.<br/>Expected values are<br/><br/>`INCOMPLETE`<br/>`READY`<br/>`LATE`<br/>`PROCESSING`<br/>`SETTLED`<br/>`FAILED`<br/>`VOID`
+`instructionRef` | string | Yes | A unique reference for an Instruction.<br/>For example, a month number.
+`customerRef` | string | Yes | A reference for your customer.<br/>If you are setting `customerDefaults` on the order<br/>then this will need to match a `customerRef` from the `customerDefaults`.
 `direction` | string | Yes | Either `CREDIT` or `DEBIT`.<br/><br/>Use `CREDIT` for paying out to your customer.<br/>Use `DEBIT` for collecting money from your customer.
-`instrumentId` | string | Yes | The Id of the financial instruction to use for this instruction.
-`amount` | decimal | Yes | The amount this Instruction should collect or payout.<br/>Also used to filter available payment options.
-`currency` | string | Yes | The currency this Order should be processed in.<br/>Used to filter available payment options.
-`country` | string | Yes | The country this Order is related to.<br/>Used to filter available payment options.
-`schemeId` | guid | Yes | The `schemeId` this order should use to<br/>filter available payment options.
+`financialInstrument` | A [Financial Instrument Model](#financial-instrument-model) | Yes | The financial instrument this instruction will use.
+`amount` | decimal | Yes | The amount this Instruction should collect or payout.
+`currency` | string | Yes | The currency this Instruction should be processed in.
+`country` | string | Yes | The country this Instruction is related to.
+`scheme` | A [Scheme Model](#scheme-model) | Yes | The scheme this instruction will use.
 `settledByDate` | date | No | The date in which a payment is to be settled by,<br/>or if automated, will be taken on.<br/><br/>Date format is `YYYY-MM-DD`.<br/><br/>After this date we would send you missed payment<br/>webhook notifications.
 `metadata` | Array of key-value pairs | No | Metadata is useful for storing additional, structured<br/>information on an object.<br/><br/>The metadata is not used by Imburse. We will simply return<br/>your metadata to you in webhook responses<br/>relating to the instruction.<br/><br/>You can then use this to give you added<br/>context to the webhook response.
 
+### Financial Instrument Model
+```json
+{
+  "financialInstrumentId": "string",
+  "source": "string",
+  "canUpdate": true
+}
+```
 
+Property | Type | Description
+-|-
+`financialInstrumentId` | string | The Id of the financial instrument to use for this instruction.
+`source` | string | Source indicates where the `financialInstrumentId` was set.<br/>Expected values are:<br/><br/>`NONE` - Not set at all<br/>`CUSTOMER_DEFAULT` - Value is set in Customer Default on the Order<br/>`CUSTOMER` - Customer update the value<br/>`TENANT` - Tenant updated the value<br/>`SYSTEM_GENERATED` - System generated the value
+`canUpdate` | boolean | If the `status` of the instruction is `INCOMPLETE` or `READY`<br/>then the this `financialInstrumentId` can be updated.<br/><br/>This only applies to Instructions.<br/>The `schemeId` can always be updated in the `customerDefaults` on the Order.
+
+### Scheme Model
+```json
+{
+  "schemeId": "string",
+  "source": "string",
+  "canUpdate": true
+}
+```
+
+Property | Type | Description
+-|-
+`schemeId` | guid | The `schemeId` this order should use to<br/>filter available payment options.
+`source` | string | Source indicates where the `schemeId` was set.<br/>Expected values are:<br/><br/>`NONE` - Not set at all<br/>`CUSTOMER_DEFAULT` - Value is set in Customer Default on the Order<br/>`CUSTOMER` - Customer update the value<br/>`TENANT` - Tenant updated the value<br/>`SYSTEM_GENERATED` - System generated the value
+`canUpdate` | boolean | If the `status` of the instruction is `INCOMPLETE` or `READY`<br/>then the `schemeId` can be updated.<br/><br/>This only applies to Instructions.<br/>The `schemeId` can always be updated in the `customerDefaults` on the Order.
 
 ## Order Setup
 Managing orders consists of managing two components:
@@ -177,4 +225,4 @@ An example instruction reference could be the payment month - 01, 02, 03, and so
 You can add as many Instructions to an Order as required.
 
 ##### Updating Instructions
-An Instruction can be updated so long as it hasn't been processed.
+An Instruction can be updated so long as its `status` is either `INCOMPLETE` or `READY`.

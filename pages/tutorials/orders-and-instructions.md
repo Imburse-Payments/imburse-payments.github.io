@@ -79,7 +79,7 @@ curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/order
 	\"instructionRef\": \"I01\",
 	\"customerRef\": \"C01\",
 	\"direction\": \"01\",
-	\"instrumentId\": \"a1ab5f63-3f3a-4562-b3fc-98963f66af12\",
+	\"financialInstrumentId\": \"a1ab5f63-3f3a-4562-b3fc-98963f66af12\",
 	\"amount\": \"210.00\",
   \"currency\": \"EUR\",
   \"country\": \"DE\",
