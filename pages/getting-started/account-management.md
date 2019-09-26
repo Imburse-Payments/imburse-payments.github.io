@@ -95,7 +95,7 @@ Property | Type | Mandatory | Description
 `billingContactLastName` | string | Yes | Last name of your billing contact name.
 `billingContactAddress` | [Address](#address-model) model | Yes | Your organizations billing address.
 `tenantCreationRequiresApproval` | boolean | Yes | When set to `true` new tenants will have to go through</br/> an approval process.<br/><br/>Users with the role `account-tenant-approval`<br/>can see and approve or reject the new tenant.
-`license` : [License Model](#license-model) | n/a | Your organizations current license details.
+`license` | [License Model](#license-model) | n/a | Your organizations current license details.
 
 ### Address Model
 ```json
