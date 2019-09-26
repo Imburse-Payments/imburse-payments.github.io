@@ -23,9 +23,7 @@ The steps involved in managing orders are:
 1. Create an Order
 2. Create an Instruction for the Order
 
-Each Order can have multiple Instructions. I
-
-n this tutorial we will only create one instruction. 
+Each Order can have multiple Instructions. In this tutorial we will only create one instruction.
 
 Repeat *Step 2* for each instruction you need to add to an order. Just change the Instruction Ref to make sure they are unique per instruction in an order. 
 
@@ -78,8 +76,8 @@ curl --location --request POST "https://sandbox-api.imbursepayments.com/v1/order
   --data "{
 	\"instructionRef\": \"I01\",
 	\"customerRef\": \"C01\",
-	\"direction\": \"01\",
-	\"financialInstrumentId\": \"a1ab5f63-3f3a-4562-b3fc-98963f66af12\",
+	\"direction\": \"CREDIT\",
+	\"financialInstrumentId\": \"\",
 	\"amount\": \"210.00\",
   \"currency\": \"EUR\",
   \"country\": \"DE\",
@@ -98,8 +96,8 @@ The response will be `201 - Created`
     "status": "",
     "customerRef": "C01",
     "financialInstrument": {
-        "financialInstrumentId": "a1ab5f63-3f3a-4562-b3fc-98963f66af12",
-        "source": "",
+        "financialInstrumentId": "",
+        "source": "NONE",
         "canUpdate": true
     },
     "amount": 210,

@@ -33,6 +33,7 @@ The Account functions can be broken down into to levels:
 - Get a key by its Public Key value
 - Update a Key
 - Delete a Key
+- Get License History
 
 ##### The Tenant functions available from your Account are:
 
@@ -61,19 +62,27 @@ The following models are used to define Accounts, Tenants, and API Keys.
 ### Account Model
 ```json
 {
-	"accountId": "string",
-	"imburseAccountRef": "string",
-	"companyName": "string",
-	"billingContactFirstName": "string",
-	"billingContactLastName": "string",
-	"billingContactAddress": {
-		"streetAddress": "string",
-		"extendedStreetAddress": "string",
-		"locality": "string",
-		"region": "string",
-		"postCode": "string",
-		"country": "string",
-	}
+  "accountId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "imburseAccountRef": "string",
+  "companyName": "string",
+  "billingContactFirstName": "string",
+  "billingContactLastName": "string",
+  "billingContactAddress": {
+    "streetAddress": "string",
+    "extendedAddress": "string",
+    "locality": "string",
+    "region": "string",
+    "postCode": "string",
+    "country": "string"
+  },
+  "license": {
+    "licenseId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "licenseName": "string",
+    "maxTenants": 0,
+    "maxTransactions": 0,
+    "maxCollectApps": 0,
+    "maxPayoutApps": 0
+  }
 }
 ```
 
@@ -85,6 +94,7 @@ Property | Type | Mandatory | Description
 `billingContactFirstName` | string | Yes | First name of your billing contact name.
 `billingContactLastName` | string | Yes | Last name of your billing contact name.
 `billingContactAddress` | [Address](#address-model) model | Yes | Your organizations billing address.
+`license` : [License Model](#license-model) | n/a | Your organizations current license details.
 
 ### Address Model
 ```json
@@ -106,6 +116,28 @@ Property | Type | Mandatory | Description
 `region` | string | Yes | Region / Country / State of your organizations address.
 `postCode` | string | Yes | Post Code / Zip Code of your organizations address.
 `country` | string | Yes | The country of your organizations address.
+
+
+### License Model
+```json
+{
+	"licenseId": "string",
+	"licenseName": "string",
+	"maxTenants": 0,
+	"maxTransactions": 0,
+	"maxCollectApps": 0,
+	"maxPayoutApps": 0
+}
+```
+
+Property | Type | Description
+-|-
+`licenseId` | string | The license Id.
+`licenseName` | string | The license name.
+`maxTenants` | string |  Max number of tenants for this license.
+`maxTransactions` | string | Max number of transactions your license entitles you to.<br/><br/>A value of `-1` indicates unlimited.
+`maxCollectApps` | string | Max number of apps allowing collections your license entitles you to.<br/><br/>A value of `-1` indicates unlimited.
+`maxPayoutApps` | string | Max number of apps allowing payouts your license entitles you to.<br/><br/>A value of `-1` indicates unlimited.
 
 ### API Key Model
 This model applies to both Account API Keys and Tenant API Keys.

@@ -24,7 +24,13 @@ The available Order Management functions are:
 
 - Create an Order
 - Get an Order
-- Update an Order
+- Update Metadata
+- Delete Metadata
+- Update Customer Defaults
+- Update Financial Instrument Id for a Customer Default
+- Update Scheme Id for a Customer Default
+- Update Metadata for a Customer Default
+- Delete a Customer Default
 - Create a Instruction
 - Get a Instruction
 - Update a Instruction
