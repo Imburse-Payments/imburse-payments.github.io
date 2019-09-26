@@ -94,6 +94,7 @@ Property | Type | Mandatory | Description
 `billingContactFirstName` | string | Yes | First name of your billing contact name.
 `billingContactLastName` | string | Yes | Last name of your billing contact name.
 `billingContactAddress` | [Address](#address-model) model | Yes | Your organizations billing address.
+`tenantCreationRequiresApproval` | boolean | Yes | When set to `true` new tenants will have to go through</br/> an approval process.<br/><br/>Users with the role `account-tenant-approval`<br/>can see and approve or reject the new tenant.
 `license` : [License Model](#license-model) | n/a | Your organizations current license details.
 
 ### Address Model
@@ -223,8 +224,9 @@ Account Role Name | Description
 `account-api-key-write` | API Key Management read + write access
 `account-tenant-read` | Tenant Management read access
 `account-tenant-write` | Tenant Management read + write access
+`account-tenant-approval` | Users can approve new Tenant requests.<br/><br/>Only applies to Accounts that have `tenantCreationRequiresApproval` set to `true`
 
-An Account API Key can have multiple roles assigned to provide the access needed.
+An Account API Key can have multiple roles assigned to provide the required access.
 
 ##### Adding an Account API Key
 When adding an API Key, the response from the API will contain the new Private Key value. This Private Key will only be issued once and should be stored securely.
