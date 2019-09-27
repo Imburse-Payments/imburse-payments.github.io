@@ -8,7 +8,7 @@ last_updated: May 31st, 2019
 icon_class: icon_documents_alt icon
 breadcrumbs: "Tutorials,tutorials"
 ---
-# Get a Access Token
+# Get an Access Token
 This tutorial will take you through getting a Access Token using a Tenant API Key.
 
 # Prerequisites
@@ -17,7 +17,7 @@ In addition to familiarity with the [Core Concepts](/pages/guides/core-concepts)
 - A `Tenant API Key`. See the tutorial [Creating a Tenant API Key](/pages/tutorials/creating-a-tenant-api-key) here if you need to create one.
 - Familiar with creating an HMAC token using an API Key.
 
-# Get Access Token
+# Getting the Access Token
 You will need to generate an HMAC token for the following request using a `Tenant API Key`.
 
 **Note: If you already have a valid `Access Token` derived from a `Tenant API Key` then you can skip this tutorial. Use your existing `Access Token` rather than creating a new one. You don't have to create a new `Access Token` for each request.**
