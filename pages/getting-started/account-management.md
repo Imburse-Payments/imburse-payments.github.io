@@ -224,7 +224,7 @@ Account Role Name | Description
 `account-api-key-write` | API Key Management read + write access
 `account-tenant-read` | Tenant Management read access
 `account-tenant-write` | Tenant Management read + write access
-`account-tenant-approval` | Users can approve new Tenant requests.<br/><br/>Only applies to Accounts that have `tenantCreationRequiresApproval` set to `true`
+`account-tenant-approval` | Users can approve new Tenant requests.<br/><br/>See [Tenant Approvals](#tenant-approvals) below for more information.
 
 An Account API Key can have multiple roles assigned to provide the required access.
 
