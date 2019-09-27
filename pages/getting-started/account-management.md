@@ -246,6 +246,17 @@ You can add as many Tenants to your Account as you require.
 
 A Tenant cannot be deleted once created.
 
+##### Tenant Approvals
+If you would like to **approve** new tenants before they are used then you can set the `tenantCreationRequiresApproval` property to `true` on the Account. 
+
+You will also need to make sure you have **at least one** user that has the role `account-tenant-approval`. 
+
+Users with this role will be **notified** to their user email address that a new tenant request is awaiting approval.
+
+Any user in this role can then log into the Client Portal and see the list of tenants awaiting approval.
+
+A tenant that is awaiting approval can be either **approved** or **rejected**.
+
 ##### Tenant API Keys
 A Tenant can have as many Tenant API Keys as you require.
 
