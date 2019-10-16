@@ -56,15 +56,11 @@ The diagram below shows the 4 steps of the authentication flow.
 <img src="/assets/images/guides/getting-started/authentication-overview.png" style="width:600px;" title="Authentication Flow" alt="Authentication Flow"/>
 
 
-#### Step 1 - Create a HMAC Authorization request to the Identity API
-The Identity API can create 2 different types of Bearer Token for you. The one you need will depend on what you are trying to do. The table below shows the 2 types of task and the corresponding Identity API endpoint to call to get the appropriate Bearer Token.
+#### Step 1 - Create a HMAC Authorization request to the APIs
+The Identity API creates an Access Token Token for to use in subsequence API calls
 
-Task | Identity endpoint to use
--|-
-Management tasks in your account<br/>or tenants, including creating customer orders | Choose `Create Management API Bearer Token`
-Processing a payout instruction<br/>or requesting payout options | Choose `Create Payout API Bearer Token`
 
-Using your the `publicKey` and `privateKey` of your API Key you must now create an HMAC token from your request. See the example in our [Github Repository](https://github.com/Imburse-Payments/hmac-examples).
+Using your the `publicKey` and `privateKey` of your API Key you must create an HMAC token from your request. See the example in our [Github Repository](https://github.com/Imburse-Payments/hmac-examples).
 
 Add the `Authorization` header to your request.
 
@@ -73,7 +69,7 @@ Authorization HMAC <hmac-token>
 ```
 
 #### Step 2 - Identity API response
-The response from the Identity API, irrespective of the endpoint called, will be an access token response:
+The response from the Identity API will be an access token response:
 
 ```json
 {
@@ -82,10 +78,11 @@ The response from the Identity API, irrespective of the endpoint called, will be
 }
 ```
 
-Extract the `accessToken` property from the response object. This is your `Bearer Token` for accessing your selected API - either Management or Transaction.
+Extract the `accessToken` property from the response object. This is your `Access Token` for accessing APIs.
+
 
 #### Step 3 - Create a Bearer Authorization request to the API
-Using the `Bearer Token` returned in Step 2, you can now proceed to make requests to the API.
+Using the `Access Token` returned in Step 2, you can now proceed to make requests to the API.
 
 Add the following `Authorization` header to your request.
 
@@ -93,5 +90,12 @@ Add the following `Authorization` header to your request.
 Authorization Bearer <bearer-token>
 ```
 
-#### Step 4 - API responses
+#### Step 4 - Add the Account Id and Tenant Id headers
+Most API requests will require either an `x-account-id` or both `x-account-id` and `x-tenant-id` headers. See the [OpenApi docs](https://sandbox-api.imbursepayments.com/docs/index.html target="_blank") for the specific parameters required for the API call you want to call.
+
+If the API call only requires the `x-account-id`, use Id of the Account associated with the Account API Key you are using for the request.
+
+If the API call requires the `x-account-id` *and* `x-tenant-id`, use the Id of the Account that your Tenant is related to for the `x-account-id`. For the Tenant Id, use the Id of the Tenant associated with the Tenant API Key you are using for the request.
+
+#### Step 5 - API responses
 If you make a request to an endpoint that you don't have access to then your request will fail. It can also fail if the Bearer Token has expired. An appropriate status code and error response object will be returned accordingly.
