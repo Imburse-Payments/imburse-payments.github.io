@@ -217,11 +217,7 @@ The capabilities of an Account API Key are dependent on the **Account Roles** th
 
 Account Role Name | Description
 -|-
-`account-admin` | Account Admin - Read + write access to **all** aspects of an Account
-`account-management-read` | Account Management read access
-`account-management-write` | Account Management read + write access
-`account-api-key-read` | API Key Management read access
-`account-api-key-write` | API Key Management read + write access
+`account-admin` | Account Admin access to **all** aspects of an Account, including Users and API Keys.
 `account-tenant-read` | Tenant Management read access
 `account-tenant-write` | Tenant Management read + write access
 `account-tenant-approval` | Users can approve new Tenant requests.<br/><br/>See [Tenant Approvals](#tenant-approvals) below for more information.
@@ -267,22 +263,16 @@ The following **Tenant Roles** are available:
 
 Tenant Role Name | Description
 -|-
-`tenant-admin` | Tenant Admin - Read + write access to **all** aspects of a Tenant
-`tenant-management-read` | Tenant Information read access
-`tenant-management-write` | Tenant Information read + write access
+`tenant-admin` | Tenant Admin - Read + write access to **all** aspects of a Tenant, including Users and API Keys.
+`tenant-management` | Tenant Information access
 `tenant-app-read` | Apps read access
 `tenant-app-write` | Apps read + write access
 `tenant-collect-scheme-read` | Collect Schemes read access
 `tenant-collect-scheme-write` | Collect Schemes read + write access
 `tenant-payout-scheme-read` | Payout Schemes read access
 `tenant-payout-scheme-write` | Payout Schemes read + write access
-`tenant-api-key-read` | API Keys read access
-`tenant-api-key-write` | API Keys read + write access
-`tenant-webhook-read` | Webhooks read access
-`tenant-webhook-write` | Webhooks read + write access
 `tenant-reward-group-read` | Reward Groups read access
 `tenant-reward-group-write` | Reward Groups write access
-`tenant-catalog-read` | Catalog read access
 `tenant-transaction-read` | Transactions read access
 `tenant-transaction-write` | Transactions read + write access
 
