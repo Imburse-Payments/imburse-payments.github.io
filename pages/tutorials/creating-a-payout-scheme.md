@@ -150,4 +150,4 @@ You will see that the `publishedDraftId` property is now referencing the draft w
 ```
 
 # What's Next?
-- [Creating a Transaction](/pages/tutorials/orders-and-instructions)
+- [Creating an Order and Instruction](/pages/tutorials/orders-and-instructions)
