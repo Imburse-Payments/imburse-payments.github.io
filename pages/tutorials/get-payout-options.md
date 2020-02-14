@@ -25,19 +25,19 @@ Using the `Access Token` we can get the Payout Options.
 Replace the `{access-token}` placeholder value with the `Access Token` value.
 
 ```curl
-curl --location --request GET "https://sandbox-api.imbursepayments.com/v1/schemes/payout/{schemeId}/options?amount=10.00&currency=EUR&country=DE" \
+curl --location --request GET "https://sandbox-api.imbursepayments.com/v1/schemes/payout/{schemeId}/options?amount=10.00&currency=EUR&country=DE&matchType=Exact" \
   --header "Authorization: Bearer {access-token}"
 ```
 
-##### The MatchType property
+##### The MatchType parameter
 The `matchType` parameter on the request determines how the reward value is matched against the requested `amount` parameter. 
 
 **Note: The default Match Type value if not specified on the URL will be `Exact`.**
 
-Match Type value | Description
+Value | Description
 -|-
-Exact | For Fixed value rewards, the requested amount must match the reward fixed value. For Variable value rewards, the requested amount must be within reward value range.
-Max   | For Fixed value rewards, the reward value must be less than OR equal to the requested amount. For Variable value rewards, the requested amount must be within reward value range.
+`Exact` | For Fixed value rewards, the requested amount must match the reward fixed value.<br/><br/>For Variable value rewards, the requested amount must be within reward value range.
+`Max`   | For Fixed value rewards, the reward value must be less than OR equal to the requested amount.<br/><br/>For Variable value rewards, the requested amount must be within reward value range.
 
 
 #### Response
