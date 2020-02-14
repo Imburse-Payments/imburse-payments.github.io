@@ -29,6 +29,17 @@ curl --location --request GET "https://sandbox-api.imbursepayments.com/v1/scheme
   --header "Authorization: Bearer {access-token}"
 ```
 
+##### The MatchType property
+The `matchType` parameter on the request determines how the reward value is matched against the requested `amount` parameter. 
+
+**Note: The default Match Type value if not specified on the URL will be `Exact`.**
+
+Match Type value | Description
+-|-
+Exact | For Fixed value rewards, the requested amount must match the reward fixed value. For Variable value rewards, the requested amount must be within reward value range.
+Max   | For Fixed value rewards, the reward value must be less than OR equal to the requested amount. For Variable value rewards, the requested amount must be within reward value range.
+
+
 #### Response
 The response will contain all the rewards appropriate for the customers payment instruction. Please note, for brevity in this tutorial we are only showing 1 result.
 
