@@ -62,7 +62,7 @@ The API Key has one or more roles attributed to it and these roles govern the AP
 The Marketplace is the place to go to find, add, and configure the [Apps](#apps) for your Tenant.
 
 ## Apps
-Apps are components that you can install and configure into your Tenant that provide capabilities for you customers such as collecting credit card or PayPal payments, or paying out rewards.
+Apps are components that you can install and configure into your Tenant that provide capabilities for your customers such as collecting credit card or PayPal payments, or paying out rewards.
 
 ## Rewards
 A reward is something you can give to your customers in recognition of an achievement; for example if a customer is deemed to have driven well, and makes no car insurance claims, they could be offered an Amazon Gift Card or a cash alternative. The Imburse platform offers hundreds of reward types from many different brands in most countries.
