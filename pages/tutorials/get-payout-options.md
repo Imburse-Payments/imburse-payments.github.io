@@ -30,7 +30,7 @@ curl --location --request GET "https://sandbox-api.imbursepayments.com/v1/scheme
 ```
 
 ##### The MatchType parameter
-The `matchType` parameter on the request determines how the reward value is matched against the requested `amount` parameter. 
+The `matchType` parameter on the request determines how the **Fixed** value rewards are matched against the requested amount parameter. 
 
 **Note: The default Match Type value if not specified on the URL will be `Exact`.**
 
