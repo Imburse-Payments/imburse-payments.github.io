@@ -31,12 +31,14 @@ You can filter the results by supplying parameters in the request.
 - `countries` - **Optional** - Filter by country where the reward can be redeemed. You can specify multiple countries by separating with a comma. ie. `GB` or `GB,DE,FR` etc.
 - `currencies` - **Optional** - Filter by the currency the reward can by redeemed in. You can specify multiple currencies by separating with a comma. ie. `EUR` or `GBP,EUR` etc.
 - `amount` - **Optional** - Filter by the amount the reward is for. Some rewards are fixed value, ie. `5.00`; others are valid for any amount within a range. Specify the amount the you want to payout to filter the rewards accordingly.
+- `showInactive` - **Optional** - Show the rewards that are marked as `inactive`. By default only 'active' rewards are shown.
 
-In the example request below we have specified `TANGOCARD_RAAS` as the App Id, `Amazon` as the brand, and countries as `GB`. The amount is `5.00`.
+
+In the example request below we have specified `TANGOCARD_RAAS` as the App Id, `iTunes` as the brand, and countries as `DE`. The amount is `5.00`.
 
 
 ```curl
-curl --location --request GET "https://sandbox-api.imbursepayments.com/v1/catalog?appId=TANGOCARD&brandName=&countries=GB&currencies=&amount=15.0" \
+curl --location --request GET "https://sandbox-api.imbursepayments.com/v1/catalog/search?appId=TANGOCARD&brandName=&countries=DE&currencies=&amount=15.0" \
   --header "Authorization: Bearer {access-token}"
 ```
 
