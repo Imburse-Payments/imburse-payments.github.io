@@ -36,7 +36,7 @@ In the example request below we have specified `TANGOCARD_RAAS` as the App Id, `
 
 
 ```curl
-curl --location --request GET "https://sandbox-api.imbursepayments.com/v1/catalog?appId=TANGOCARD&brandName=&countries=GB&currencies=&amount=5.0" \
+curl --location --request GET "https://sandbox-api.imbursepayments.com/v1/catalog?appId=TANGOCARD&brandName=&countries=GB&currencies=&amount=15.0" \
   --header "Authorization: Bearer {access-token}"
 ```
 
