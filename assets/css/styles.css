@@ -63,11 +63,8 @@ a:focus {
 
 code {
   /* background: #222; */
-  /* background: rgba(0,0,0,0.05); */
-  /* color: #333; */
-  background: rgba(255,255,255,0.05);
-  color: #c90000;
- 
+  background: rgba(0,0,0,0.05);
+  color: #333;  
   font-size: 12px;
   /* font-weight: bold; */
   font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
