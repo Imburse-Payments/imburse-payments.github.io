@@ -4,7 +4,7 @@ title: Searching the Rewards Catalog
 toc: tutorial-searching-the-rewards-catalog
 body_color: body-pink
 section_name: Searching the Rewards Catalog
-last_updated: May 31st, 2019
+last_updated: March 11th, 2020
 icon_class: icon_documents_alt icon
 breadcrumbs: "Tutorials,tutorials"
 ---
