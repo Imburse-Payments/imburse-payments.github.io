@@ -49,22 +49,82 @@ The `rewardId` property value is what you will need to save for referencing this
 {
   "rewards": [
     {
-      "rewardId": "6a30bdaa-483a-2b3f-e28e-0158d0cf07c2",
-      "rewardName": "Amazon.de Kupony",
-      "brandName": "Amazon.de Poland",
+      "rewardId": "3AE792C681E5A58EE307F92984E5F7E10086F396DA7852D9585A6F8EAA3C75A1",
+      "rewardName": "Geschenkkarte für App Store & iTunes über 15 €",
+      "brandName": "App Store & iTunes Germany",
       "appId": "TANGOCARD_RAAS",
-      "appName": "Tango Card RaaS",
+      "appName": "Tangocard",
       "countries": [
-        "PL"
+        "DE"
       ],
       "currencyCode": "EUR",
       "isWholeAmountValueRequired": false,
-      "valueType": "VARIABLE_VALUE",
-      "fixedValue": null,
-      "maxValue": 5000,
-      "minValue": 0.01,
-      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b050503-80w-326ppi.png"
-    }
+      "valueType": "FIXED_VALUE",
+      "fixedValue": 15,
+      "maxValue": null,
+      "minValue": null,
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b854769-300w-326ppi.png",
+      "status": "active",
+      "brand": {
+        "brandKey": "B405468",
+        "brandName": "App Store & iTunes Germany",
+        "status": "active",
+        "description": [
+          {
+            "languageCode": "de",
+            "text": "<p>Eine Karte. Millionen Möglichkeiten. Verwende die Geschenkkarte für App Store & iTunes, um Apps, Spiele, Musik, Filme und TV-Sendungen zu laden. Die Karte ist in verschiedenen Beträgen erhältlich und du kannst sie natürlich auch für In-App-Käufe oder Staffelpässe für TV-Sendungen einlösen – und sogar für iCloud-Speicher, damit du deine Dateien von all deinen Apple-Geräten sichern und abrufen kannst.</p>"
+          },
+          {
+            "languageCode": "en",
+            "text": "<p>One card, millions of ways to enjoy it. Use the App Store & iTunes Gift Card to get apps, games, music, movies and TV shows. Available in a variety of denominations - spend it on in-app content, books, TV show subscriptions or even iCloud storage to secure files from all your Apple devices.</p>"
+          }
+        ],
+        "shortDescription": [
+          {
+            "languageCode": "de",
+            "text": "<p>Eine Karte. Millionen Möglichkeiten. Einlösbar für Apps, Spiele, Musik, Filme und iCloud.</p>"
+          },
+          {
+            "languageCode": "en",
+            "text": "<p>One card, millions of ways to enjoy it. Use for apps, games, music, movies, and iCloud.</p>"
+          }
+        ],
+        "disclaimer": [
+          {
+            "languageCode": "de",
+            "text": "<p>© 2019 Apple Distribution International. Alle Rechte vorbehalten. Apple ist nicht mitwirkender oder Sponsor dieser Werbeaktion.</p>"
+          },
+          {
+            "languageCode": "en",
+            "text": "<p>© 2019 Apple Distribution International. All rights reserved. Apple is not a participant in or sponsor of this promotion.</p>"
+          }
+        ],
+        "terms": [
+          {
+            "languageCode": "de",
+            "text": "<p>Nur für Käufe in Deutschland bei Apple Media Services gültig. Für die Nutzung sind eine Apple-ID und die vorherige Annahme der Lizenz- und Nutzungsbestimmungen erforderlich. Das Einlösen gegen bar, die Rückgabe gegen Rückerstattung (es sei denn, im Fall eines gültiges Widerrufs), der Umtausch sowie. die Verwendung zum Kauf sonstiger Waren ist nicht möglich. Apple haftet nicht für Verluste oder Schäden, die aus dem zufälligen Untergang, dem Diebstahl oder aus einer rechtswidrigen Nutzung der Karte entstehen. Gesetzliche Rechte bleiben hiervon unberührt. iTunes-Karten werden von Apple Distribution International ausgestellt und geliefert. Beim Vertrieb der Karten handelt der Einzelhändler als Vertriebsmittler für und im Auftrag von Apple Distribution International. Die entsprechenden Bestimmungen sind hier einsehbar: <a href=\"http://apple.com/de/go/legal/gc\">apple.com/de/go/legal/gc</a>. Im iTunes Store/App Store gekaufte Inhalte sind ausschließlich zum persönlichen, rechtmäßigen Gebrauch bestimmt. Nicht für deutschsprachige eBooks verwendbar.</p>"
+          },
+          {
+            "languageCode": "en",
+            "text": "<p>Valid only on purchases made in Germany from Apple Media Services. Use requires an Apple ID & prior acceptance of license & usage terms. Not redeemable for cash, for resale, for shipments outside Germany & no refunds or exchanges (except as required by law). Data collection and use subject to Apple’s Privacy Policy; see <a href=\"http://apple.com/de/privacy\">apple.com/de/privacy</a>. Neither Apple nor Issuer is responsible for any loss or damage resulting from lost or stolen cards or for use without permission. Void where prohibited. Terms apply; see <a href=\"http://apple.com/de/go/legal/gc\">apple.com/de/go/legal/gc</a>. App Store & iTunes gift cards are issued and managed by Apple Value Services (“Issuer”).</p>"
+          }
+        ],
+        "imageUrls": [
+          {
+            "ppi": 326,
+            "ratioHeight": 5,
+            "ratioWidth": 8,
+            "url": "https://dwwvg90koz96l.cloudfront.net/images/brands/b854769-80w-326ppi.png",
+            "width": 80
+          }
+        ],
+        "requirements": {
+          "alwaysShowDisclaimer": true,
+          "disclaimerInstructions": "",
+          "displayInstructions": "",
+          "termsAndConditionsInstructions": ""
+        }
+     }
   ]
 }
 ```
